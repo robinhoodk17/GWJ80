@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgmdr51viqgar"]
+
+[ext_resource type="Script" uid="uid://d3f42h4xvq1m5" path="res://node_2d.gd" id="1_f5vyk"]
+[ext_resource type="Resource" uid="uid://c6tovgnwacf3x" path="res://input/move.tres" id="2_l4mp6"]
+[ext_resource type="Resource" uid="uid://v5u0dyabni7e" path="res://input/default_mapping_context.tres" id="3_x4jc6"]
+
+[node name="Node2D" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_f5vyk")
+jump_action = ExtResource("2_l4mp6")
+mapping_context = ExtResource("3_x4jc6")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
