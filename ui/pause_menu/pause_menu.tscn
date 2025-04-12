@@ -36,10 +36,23 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "Resume"
 
-[node name="Node" parent="Buttons/Resume" instance=ExtResource("2_le02u")]
+[node name="Node" parent="Buttons/Resume" node_paths=PackedStringArray("wait_for") instance=ExtResource("2_le02u")]
 connect_as_button = true
 entrance_animation = true
-hover_rotation = 0.2
+wait_for = NodePath("../../../Node")
+hover_rotation = 1.0
+random_entrance = true
+
+[node name="Restart" type="Button" parent="Buttons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Restart"
+
+[node name="Node" parent="Buttons/Restart" node_paths=PackedStringArray("wait_for") instance=ExtResource("2_le02u")]
+connect_as_button = true
+entrance_animation = true
+wait_for = NodePath("../../../Node")
+hover_rotation = 1.0
 random_entrance = true
 
 [node name="Settings" type="Button" parent="Buttons"]
@@ -47,10 +60,11 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "Settings"
 
-[node name="Node" parent="Buttons/Settings" instance=ExtResource("2_le02u")]
+[node name="Node" parent="Buttons/Settings" node_paths=PackedStringArray("wait_for") instance=ExtResource("2_le02u")]
 connect_as_button = true
 entrance_animation = true
-hover_rotation = 0.2
+wait_for = NodePath("../../../Node")
+hover_rotation = 1.0
 random_entrance = true
 
 [node name="Controls" type="Button" parent="Buttons"]
@@ -58,10 +72,11 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "Controls"
 
-[node name="Node" parent="Buttons/Controls" instance=ExtResource("2_le02u")]
+[node name="Node" parent="Buttons/Controls" node_paths=PackedStringArray("wait_for") instance=ExtResource("2_le02u")]
 connect_as_button = true
 entrance_animation = true
-hover_rotation = 0.2
+wait_for = NodePath("../../../Node")
+hover_rotation = 1.0
 random_entrance = true
 
 [node name="MainMenu" type="Button" parent="Buttons"]
@@ -70,10 +85,11 @@ layout_mode = 2
 text = "Main menu
 "
 
-[node name="Node" parent="Buttons/MainMenu" instance=ExtResource("2_le02u")]
+[node name="Node" parent="Buttons/MainMenu" node_paths=PackedStringArray("wait_for") instance=ExtResource("2_le02u")]
 connect_as_button = true
 entrance_animation = true
-hover_rotation = 0.2
+wait_for = NodePath("../../../Node")
+hover_rotation = 1.0
 random_entrance = true
 
 [node name="Quit" type="Button" parent="Buttons"]
@@ -81,10 +97,11 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "Quit"
 
-[node name="Node" parent="Buttons/Quit" instance=ExtResource("2_le02u")]
+[node name="Node" parent="Buttons/Quit" node_paths=PackedStringArray("wait_for") instance=ExtResource("2_le02u")]
 connect_as_button = true
 entrance_animation = true
-hover_rotation = 0.2
+wait_for = NodePath("../../../Node")
+hover_rotation = 1.0
 random_entrance = true
 
 [node name="BuildInfo" parent="." instance=ExtResource("2_q2yd3")]
@@ -98,3 +115,9 @@ offset_left = -25.0
 offset_top = -12.0
 grow_horizontal = 0
 grow_vertical = 0
+
+[node name="Node" parent="." instance=ExtResource("2_le02u")]
+entrance_animation = true
+entrance_time = 0.2
+entrance_transition = 11
+hover_easing = 1
