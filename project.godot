@@ -76,6 +76,10 @@ report/assert/verbose_warnings=false
 report/godot/script_error=false
 ui/toolbar/run_overall=true
 
+[global_group]
+
+floor=""
+
 [godot_resource_groups]
 
 auto_rebuild=true
@@ -168,6 +172,8 @@ toggle_mouse_camera={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true
 environment/defaults/default_clear_color=Color(0.0784314, 0.133333, 0.25098, 1)
 anti_aliasing/quality/screen_space_aa=1
