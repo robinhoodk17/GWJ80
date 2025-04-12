@@ -23,8 +23,9 @@ func update_ui(total_time : float) -> void:
 		3: run_text = "last chance"
 	@warning_ignore("integer_division")
 	var minutes : int = int(total_time)/60
-	var seconds : float = round_to_dec(total_time,3) - minutes*60
-	var minutes_text : String = str(run_text, " ", minutes, ":")
+	var seconds : float = 60 - (round_to_dec(total_time,3) - minutes*60)
+	minutes = 9 - minutes
+	var minutes_text : String = str(run_text, " 0", minutes, ":")
 	if seconds > 10:
 		text = str(minutes_text, "%05.3f" % seconds)
 	else: 
