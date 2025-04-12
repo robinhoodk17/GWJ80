@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bojsla6nqcf03"]
+[gd_scene load_steps=4 format=3 uid="uid://bojsla6nqcf03"]
 
 [ext_resource type="Script" uid="uid://bbe25uxhy3b0c" path="res://ui/game/game_ui.gd" id="1_67una"]
+[ext_resource type="Script" uid="uid://dd6l77iu3udmt" path="res://ui/game/timer.gd" id="2_d7okr"]
 [ext_resource type="PackedScene" uid="uid://dkr80d2pi0d41" path="res://addons/guide/debugger/guide_debugger.tscn" id="2_li4ca"]
 
 [node name="Game" type="Control" node_paths=PackedStringArray("default_focus_control")]
@@ -24,6 +25,7 @@ offset_right = 33.5
 offset_bottom = 23.0
 grow_horizontal = 2
 text = "Game UI"
+script = ExtResource("2_d7okr")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1

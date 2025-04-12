@@ -10,6 +10,7 @@ func _ready() -> void:
 func _connect_buttons() -> void:
 	if ui:
 		%Resume.pressed.connect(_resume)
+		%Restart.pressed.connect(_restart)
 		%Settings.pressed.connect(ui.go_to.bind("Settings"))
 		%Controls.pressed.connect(ui.go_to.bind("Controls"))
 		%MainMenu.pressed.connect(_main_menu)
@@ -24,12 +25,19 @@ func _input(event: InputEvent) -> void:
 		else:
 			get_tree().paused = true
 			ui.go_to("PauseMenu")
-			%Resume.grab_focus()
+			%Restart.grab_focus()
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 
 func _resume() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	if ui:
+		ui.go_to("Game")
+	get_tree().paused = false
+
+
+func _restart() -> void:
+	Globals._restart()
 	if ui:
 		ui.go_to("Game")
 	get_tree().paused = false
@@ -46,5 +54,5 @@ func quit() -> void:
 
 func show_ui() -> void:
 	show()
-	%Resume.grab_focus()
+	%Restart.grab_focus()
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE

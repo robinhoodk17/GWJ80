@@ -1,0 +1,128 @@
+[gd_scene load_steps=7 format=3 uid="uid://bx7w4lxia538q"]
+
+[ext_resource type="PackedScene" uid="uid://dsuv26yewcc0q" path="res://game/scenes/trial_stairs/trial_stairs.blend" id="1_vpeg1"]
+[ext_resource type="PackedScene" uid="uid://usp2lujggsnh" path="res://game/npc/trial/npc_trial.tscn" id="2_2m5y3"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_2m5y3"]
+vertices = PackedVector3Array(-0.5, 0.5, -0.0343914, 0.5, 0.5, -0.0343914, 0.75, 1, -1.28439, -0.75, 1, -1.28439, 10.5, 1, -14.0344, -10.5, 1, -14.0344, 10.5, 1, -1.28439, -10.5, 1, -1.28439, -0.75, -0.5, 1.46561, 0.75, -0.5, 1.46561, 0.625, -0.5, 0.715609, -0.625, -0.5, 0.715609, -10.5, -0.5, 5.46561, 10.5, -0.5, 5.46561, -10.5, -0.5, 1.46561, 10.5, -0.5, 1.46561)
+polygons = [PackedInt32Array(0, 3, 1), PackedInt32Array(1, 3, 2), PackedInt32Array(3, 5, 2), PackedInt32Array(2, 5, 4), PackedInt32Array(4, 6, 2), PackedInt32Array(3, 7, 5), PackedInt32Array(1, 10, 0), PackedInt32Array(0, 10, 11), PackedInt32Array(11, 10, 9), PackedInt32Array(11, 9, 8), PackedInt32Array(9, 13, 8), PackedInt32Array(8, 13, 12), PackedInt32Array(12, 14, 8), PackedInt32Array(9, 15, 13)]
+geometry_parsed_geometry_type = 1
+geometry_source_geometry_mode = 2
+geometry_source_group_name = &"floor"
+agent_max_climb = 1.0
+
+[sub_resource type="Animation" id="Animation_43thm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.0229697, -0.201941, 4.66269)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_2m5y3"]
+resource_name = "route1"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.0228993, -0.201941, 4.66269), Vector3(0, 0, 1.353), Vector3(0, 1.5, -1.252), Vector3(0, 1.5, -5.037)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 3.14159, 0)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(6),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"back_to_idle"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qhgfr"]
+_data = {
+&"RESET": SubResource("Animation_43thm"),
+&"route1": SubResource("Animation_2m5y3")
+}
+
+[node name="Node3D" type="Node3D"]
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_2m5y3")
+
+[node name="trial_stairs" parent="." instance=ExtResource("1_vpeg1")]
+
+[node name="StaticBody3D" parent="trial_stairs/floor" index="0" groups=["floor"]]
+
+[node name="NPC" parent="." node_paths=PackedStringArray("route_manager", "moving_times", "moving_locations", "routes") instance=ExtResource("2_2m5y3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0229697, -0.201941, 4.66269)
+collision_layer = 2
+collision_mask = 1
+route_manager = NodePath("RouteManager")
+moving_times = {
+1.0: NodePath("../Node3D/Upstairs")
+}
+moving_locations = {
+NodePath("../Node3D/Upstairs"): 0
+}
+routes = {
+NodePath("../Node3D/Upstairs"): "route1"
+}
+
+[node name="RouteManager" type="AnimationPlayer" parent="NPC"]
+libraries = {
+&"": SubResource("AnimationLibrary_qhgfr")
+}
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.0673544, -0.351057, 0.933928, -0.0252525, 0.936354, 0.350148, -0.99741, 7.46993e-09, -0.0719327, 17.9015, 7.53998, -1.4227)
+current = true
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="Upstairs" type="Marker3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.03662, -5.05351)
+
+[editable path="trial_stairs"]
+[editable path="NPC"]

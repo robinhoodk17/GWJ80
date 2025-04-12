@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://88f70ly0w5b4"]
+
+[ext_resource type="Script" uid="uid://cq7kng0d2y4lm" path="res://game/npc/master/npc.gd" id="1_gixkv"]
+
+[node name="NPC" type="StaticBody3D" node_paths=PackedStringArray("animation_player", "timer")]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_gixkv")
+animation_player = NodePath("AnimationPlayer")
+timer = NodePath("Timer")
+
+[node name="Collider" type="CollisionShape3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
