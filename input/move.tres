@@ -11,3 +11,4 @@ emit_as_godot_actions = false
 is_remappable = true
 display_name = "Move"
 display_category = ""
+metadata/_custom_type_script = "uid://c56e4jl2mxdir"

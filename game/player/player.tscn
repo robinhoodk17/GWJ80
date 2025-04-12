@@ -1,9 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://c813lymkbjvd"]
+[gd_scene load_steps=6 format=3 uid="uid://c813lymkbjvd"]
 
+[ext_resource type="Resource" uid="uid://c6tovgnwacf3x" path="res://input/move.tres" id="1_b2mth"]
+[ext_resource type="Resource" uid="uid://7bvnpytk6bwy" path="res://input/camera.tres" id="2_8soms"]
 [ext_resource type="PackedScene" uid="uid://bminmqpgueom7" path="res://game/player/little_cartoon_dog.glb" id="2_a4w0n"]
 
 [sub_resource type="GDScript" id="GDScript_b2mth"]
 script/source = "extends CharacterBody3D
+
+enum states{IDLE, WALKING, TALKING}
 
 @onready var _camera := %Camera3D as Camera3D
 @onready var _camera_pivot := %CameraPivot as Node3D
@@ -14,7 +18,8 @@ script/source = "extends CharacterBody3D
 @export var speed = 14
 # The downward acceleration when in the air, in meters per second squared.
 @export var fall_acceleration = 75
-
+@export var move_action : GUIDEAction
+@export var camera_rotation : GUIDEAction
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
@@ -28,7 +33,7 @@ var target_velocity = Vector3.ZERO
 
 func _physics_process(delta):
 	var direction = Vector3.ZERO
-
+	
 	if Input.is_action_pressed(\"move_right\"):
 		direction.x += 1
 	if Input.is_action_pressed(\"move_left\"):
@@ -59,6 +64,9 @@ func _physics_process(delta):
 
 [node name="Player" type="CharacterBody3D"]
 script = SubResource("GDScript_b2mth")
+mouse_sensitivity = 1.0
+move_action = ExtResource("1_b2mth")
+camera_rotation = ExtResource("2_8soms")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
@@ -71,9 +79,11 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1.1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="CameraPivot" type="Node3D" parent="."]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 0.750111, 0.661312, 0, -0.661312, 0.750111, 0, 7, 5)
 
 [node name="SpringArm3D" type="SpringArm3D" parent="CameraPivot"]
 spring_length = 3.0
 
 [node name="Camera3D" type="Camera3D" parent="CameraPivot"]
+unique_name_in_owner = true

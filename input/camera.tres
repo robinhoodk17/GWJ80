@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="GUIDEAction" load_steps=2 format=3 uid="uid://7bvnpytk6bwy"]
+
+[ext_resource type="Script" uid="uid://c56e4jl2mxdir" path="res://addons/guide/guide_action.gd" id="1_8hhj0"]
+
+[resource]
+script = ExtResource("1_8hhj0")
+name = &"Camera"
+action_value_type = 2
+block_lower_priority_actions = true
+emit_as_godot_actions = false
+is_remappable = true
+display_name = "Camera"
+display_category = ""

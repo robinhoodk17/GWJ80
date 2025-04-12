@@ -2,6 +2,7 @@ extends UiPage
 
 var pausable : bool = false
 @export var pause_action : GUIDEAction
+var current_run : int = 1
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	call_deferred("_connect_buttons")
@@ -37,10 +38,10 @@ func _resume() -> void:
 
 
 func _restart() -> void:
-	Globals._restart()
 	if ui:
 		ui.go_to("Game")
 	get_tree().paused = false
+	Globals._restart()
 
 
 func _main_menu() -> void:
