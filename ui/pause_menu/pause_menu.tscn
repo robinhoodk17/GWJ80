@@ -40,7 +40,7 @@ text = "Resume"
 connect_as_button = true
 entrance_animation = true
 wait_for = NodePath("../../../Node")
-hover_rotation = 1.0
+hover_rotation = 0.4
 random_entrance = true
 
 [node name="Restart" type="Button" parent="Buttons"]
@@ -52,7 +52,7 @@ text = "Restart"
 connect_as_button = true
 entrance_animation = true
 wait_for = NodePath("../../../Node")
-hover_rotation = 1.0
+hover_rotation = 0.4
 random_entrance = true
 
 [node name="Settings" type="Button" parent="Buttons"]
@@ -64,7 +64,7 @@ text = "Settings"
 connect_as_button = true
 entrance_animation = true
 wait_for = NodePath("../../../Node")
-hover_rotation = 1.0
+hover_rotation = 0.4
 random_entrance = true
 
 [node name="Controls" type="Button" parent="Buttons"]
@@ -76,7 +76,7 @@ text = "Controls"
 connect_as_button = true
 entrance_animation = true
 wait_for = NodePath("../../../Node")
-hover_rotation = 1.0
+hover_rotation = 0.4
 random_entrance = true
 
 [node name="MainMenu" type="Button" parent="Buttons"]
@@ -89,7 +89,7 @@ text = "Main menu
 connect_as_button = true
 entrance_animation = true
 wait_for = NodePath("../../../Node")
-hover_rotation = 1.0
+hover_rotation = 0.4
 random_entrance = true
 
 [node name="Quit" type="Button" parent="Buttons"]
@@ -101,7 +101,7 @@ text = "Quit"
 connect_as_button = true
 entrance_animation = true
 wait_for = NodePath("../../../Node")
-hover_rotation = 1.0
+hover_rotation = 0.4
 random_entrance = true
 
 [node name="BuildInfo" parent="." instance=ExtResource("2_q2yd3")]

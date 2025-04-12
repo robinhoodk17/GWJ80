@@ -1,22 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://bhsiyh7htemxt"]
+[gd_scene load_steps=5 format=3 uid="uid://bhsiyh7htemxt"]
 
 [ext_resource type="Script" uid="uid://dcan2834cyr68" path="res://game/game.gd" id="1_bub6j"]
 [ext_resource type="Resource" uid="uid://v5u0dyabni7e" path="res://input/default_mapping_context.tres" id="2_let6s"]
 [ext_resource type="PackedScene" uid="uid://u1vgfeia861q" path="res://ui/ui.tscn" id="2_rtcyu"]
-[ext_resource type="PackedScene" uid="uid://bx7w4lxia538q" path="res://game/scenes/trial_stairs/trial_stairs.tscn" id="4_4fuuu"]
+[ext_resource type="PackedScene" uid="uid://dxewndaibeelw" path="res://Game Jam Sky Scraper.tscn" id="4_4fuuu"]
 
-[sub_resource type="Environment" id="Environment_4fuuu"]
-ambient_light_color = Color(1, 1, 1, 1)
-
-[node name="Game_tscn" type="Node3D"]
+[node name="Game_tscn" type="Node2D"]
 script = ExtResource("1_bub6j")
 default_mapping_context = ExtResource("2_let6s")
 
 [node name="UI" parent="." instance=ExtResource("2_rtcyu")]
 
-[node name="Node3D" parent="." instance=ExtResource("4_4fuuu")]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_4fuuu")
+[node name="Game Jam Sky Scraper" parent="." instance=ExtResource("4_4fuuu")]
 
 [editable path="UI"]

@@ -70,7 +70,3 @@ mesh = SubResource("BoxMesh_wts3t")
 libraries = {
 &"": SubResource("AnimationLibrary_wts3t")
 }
-
-[node name="NavigationAgent3D" parent="." index="3"]
-height = 1.5
-debug_enabled = true
