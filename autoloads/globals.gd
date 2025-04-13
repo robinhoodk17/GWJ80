@@ -4,36 +4,35 @@ extends Node
 # If the function depends on the something in the game, it's a global.
 # If it's independent, it (probably) belongs in utils.gd
 @warning_ignore("unused_signal")
+## Use UI/MessageBox to display a status update message to the player
+@warning_ignore("unused_signal")
+signal post_ui_message(text: String)
+## Emitted by UI/Controls when a action is remapped
+@warning_ignore("unused_signal")
+signal controls_changed(config: GUIDERemappingConfig)
 signal restart
+
+const PREWRITTEN_CONTROLLER : PackedScene = preload("res://game/player/prewritten_controller.tscn")
+const PLAYER : PackedScene = preload("res://addons/srcoder_thirdperson_controller/player.tscn")
 var run_number : int = 1
 var run_limit : int = 3
 var current_time : float = 0.0
 var first_run : Array[Dictionary]
 var second_run : Array[Dictionary]
-const PREWRITTEN_CONTROLLER = preload("res://game/player/prewritten_controller.tscn")
-const PLAYER = preload("res://addons/srcoder_thirdperson_controller/player.tscn")
-
-## Use UI/MessageBox to display a status update message to the player
-@warning_ignore("unused_signal")
-signal post_ui_message(text: String)
-
-## Emitted by UI/Controls when a action is remapped
-@warning_ignore("unused_signal")
-signal controls_changed(config: GUIDERemappingConfig)
-
 var player_spawn_position : Vector3
 var player_spawn_rotation : Basis
 
+var sensitivity : float = 1.0
 func _restart() -> void:
 	run_number += 1
 	if run_number > run_limit:
 		get_tree().change_scene_to_file("res://game/scenes/results_page.tscn")
 		return
-	var new_player = PLAYER.instantiate()
+	var new_player : CharacterBody3D = PLAYER.instantiate()
 	get_tree().root.add_child(new_player)
 	new_player.global_position = player_spawn_position
 	new_player.global_basis = player_spawn_rotation
-	var new_controller = PREWRITTEN_CONTROLLER.instantiate()
+	var new_controller : prewritten = PREWRITTEN_CONTROLLER.instantiate()
 	match run_number -1:
 		1:
 			new_controller.frame_info = first_run

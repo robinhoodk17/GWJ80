@@ -1,7 +1,7 @@
 extends UiPage
 
 var _audio_bus_name_idx_mapping: Dictionary = {}
-
+@export var sensitivity_slider : HSlider
 
 func _ready() -> void:
 	Settings.load_settings()
@@ -11,7 +11,7 @@ func _ready() -> void:
 	for idx: int in range(0, AudioServer.bus_count):
 		_audio_bus_name_idx_mapping[AudioServer.get_bus_name(idx)] = idx
 	#print(JSON.stringify(_audio_bus_name_idx_mapping))
-
+	sensitivity_slider.value_changed.connect(sensitivity_changed)
 	for control: HSlider in %Audio.find_children("*", "HSlider"):
 		control.value_changed.connect(_on_audio_hslider_value_changed.bind(control.name))
 
@@ -23,6 +23,8 @@ func _input(event: InputEvent) -> void:
 		get_viewport().set_input_as_handled()
 		go_back()
 
+func sensitivity_changed(new_value : float):
+	Globals.sensitivity = new_value
 
 func _on_audio_hslider_value_changed(value: float, bus_name: String) -> void:
 	#print(bus_name, value / 100)

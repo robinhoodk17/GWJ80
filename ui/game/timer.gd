@@ -1,6 +1,6 @@
 extends Label
 
-var current_run = 1
+var current_run : int = 1
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Globals.restart.connect(on_restart)
