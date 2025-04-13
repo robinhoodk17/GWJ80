@@ -1,12 +1,15 @@
 extends Label
 
 var current_run : int = 1
+var start_counting : bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Globals.restart.connect(on_restart)
 
 
 func _process(delta: float) -> void:
+	if !start_counting:
+		return
 	Globals.current_time += delta
 	update_ui(Globals.current_time)
 

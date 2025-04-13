@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="GUIDEMappingContext" load_steps=66 format=3 uid="uid://v5u0dyabni7e"]
+[gd_resource type="Resource" script_class="GUIDEMappingContext" load_steps=69 format=3 uid="uid://v5u0dyabni7e"]
 
 [ext_resource type="Script" uid="uid://dg14s44mi7afd" path="res://addons/guide/guide_action_mapping.gd" id="1_qankv"]
 [ext_resource type="Resource" uid="uid://c6tovgnwacf3x" path="res://input/move.tres" id="2_fqwdo"]
@@ -123,6 +123,11 @@ x = 0
 y = 1
 joy_index = -1
 
+[sub_resource type="Resource" id="Resource_lidpv"]
+script = ExtResource("15_muy7p")
+lower_threshold = 0.4
+upper_threshold = 1.0
+
 [sub_resource type="Resource" id="Resource_qk04t"]
 script = ExtResource("3_6tx3g")
 override_action_settings = false
@@ -130,8 +135,9 @@ is_remappable = false
 display_name = ""
 display_category = ""
 input = SubResource("Resource_4telq")
-modifiers = Array[ExtResource("5_p3dbk")]([])
+modifiers = Array[ExtResource("5_p3dbk")]([SubResource("Resource_lidpv")])
 triggers = Array[ExtResource("8_s70ma")]([])
+metadata/_guide_modifiers_collapsed = true
 
 [sub_resource type="Resource" id="Resource_g4jrb"]
 script = ExtResource("1_qankv")
@@ -197,7 +203,7 @@ upper_threshold = 1.0
 
 [sub_resource type="Resource" id="Resource_hqffj"]
 script = ExtResource("15_s70ma")
-scale = Vector3(0.05, 0.05, 0.05)
+scale = Vector3(0.05, 0.025, 0.05)
 apply_delta_time = false
 
 [sub_resource type="Resource" id="Resource_btqog"]
@@ -227,6 +233,17 @@ script = ExtResource("15_muy7p")
 lower_threshold = 0.2
 upper_threshold = 1.0
 
+[sub_resource type="Resource" id="Resource_iw8t0"]
+script = ExtResource("15_s70ma")
+scale = Vector3(0.1, 0.05, 1)
+apply_delta_time = false
+
+[sub_resource type="Resource" id="Resource_t5pk0"]
+script = ExtResource("6_muy7p")
+x = true
+y = false
+z = false
+
 [sub_resource type="Resource" id="Resource_jfedn"]
 script = ExtResource("3_6tx3g")
 override_action_settings = false
@@ -234,14 +251,14 @@ is_remappable = false
 display_name = ""
 display_category = ""
 input = SubResource("Resource_blffm")
-modifiers = Array[ExtResource("5_p3dbk")]([SubResource("Resource_dl1op")])
+modifiers = Array[ExtResource("5_p3dbk")]([SubResource("Resource_dl1op"), SubResource("Resource_iw8t0"), SubResource("Resource_t5pk0")])
 triggers = Array[ExtResource("8_s70ma")]([])
 
 [sub_resource type="Resource" id="Resource_gj6mq"]
 script = ExtResource("1_qankv")
 action = ExtResource("13_muy7p")
 input_mappings = Array[ExtResource("3_6tx3g")]([SubResource("Resource_0ft8a"), SubResource("Resource_jfedn")])
-metadata/_guide_input_mappings_collapsed = true
+metadata/_guide_input_mappings_collapsed = false
 
 [sub_resource type="Resource" id="Resource_rln0t"]
 script = ExtResource("4_fqwdo")

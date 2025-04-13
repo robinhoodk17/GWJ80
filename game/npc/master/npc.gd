@@ -87,13 +87,14 @@ func display_prompt() -> void:
 		pop_up.pop_up_show()
 
 
-func turn_off_prompt():
+func turn_off_prompt() -> void:
 	if pop_up:
 		pop_up.turn_off_prompt()
 
 
-func interact():
+func interact() -> void:
 	Dialogic.start(timelines[current_location]).process_mode = Node.PROCESS_MODE_ALWAYS
 	Dialogic.process_mode = Node.PROCESS_MODE_ALWAYS
+	@warning_ignore("untyped_declaration")
 	Dialogic.timeline_ended.connect(func():get_tree().set('paused', false))
 	get_tree().paused = true
