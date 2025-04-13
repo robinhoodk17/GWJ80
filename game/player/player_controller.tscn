@@ -6,7 +6,8 @@
 [ext_resource type="Resource" uid="uid://7bvnpytk6bwy" path="res://input/camera.tres" id="3_so4lb"]
 [ext_resource type="Resource" uid="uid://dr3iky0gcpwi5" path="res://input/interact.tres" id="5_w85yc"]
 
-[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_exdnv"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_robka"]
+radius = 0.1
 
 [node name="camera_pivot" type="Node3D"]
 script = ExtResource("1_nv744")
@@ -17,7 +18,10 @@ interact_action = ExtResource("5_w85yc")
 
 [node name="SpringArm3D" type="SpringArm3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.512907, 0)
-shape = SubResource("SeparationRayShape3D_exdnv")
-spring_length = 0.5
+shape = SubResource("SphereShape3D_robka")
+spring_length = 2.5
 
 [node name="Camera3D" type="Camera3D" parent="SpringArm3D"]
+
+[node name="HoverTimer" type="Timer" parent="."]
+one_shot = true

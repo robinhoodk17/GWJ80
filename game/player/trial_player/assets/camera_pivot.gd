@@ -9,10 +9,14 @@ extends Node3D
 @export_category("Player Movement")
 @export var speed := 5.0
 @export var jump_velocity := 2.5
+@export var hover_delay : float = 0.25
 const ROTATION_SPEED := 6.0
+@export_category("Camera controls")
+@export var offset : Vector3 = Vector3(0.0, 1.5, 0.0)
 
 #slowly rotate the charcter to point in the direction of the camera_pivot
 @onready var playermodel : Node3D = $"../playermodel"
+@onready var hover_timer: Timer = $HoverTimer
 
 enum animation_state {IDLE,WALKING,JUMPING}
 var player_animation_state : animation_state = animation_state.IDLE
@@ -44,7 +48,7 @@ func _physics_process(delta: float) -> void:
 		running_sum += i
 	averaged_y = running_sum/dampened_y_array.size()
 	var target_camera_position = Vector3(player.global_position.x, averaged_y, player.global_position.z)
-	global_position = lerp(global_position, target_camera_position, delta * 3.0)
+	global_position = lerp(global_position, target_camera_position + offset, delta * 10.0)
 	var camera_rotation = camera_control.value_axis_2d
 	if camera_rotation:
 		rotate_y(camera_rotation.x * Globals.sensitivity)
@@ -52,9 +56,13 @@ func _physics_process(delta: float) -> void:
 	if not player.is_on_floor():
 		player.velocity += player.get_gravity() * delta
 
-	# Handle jump.
+	
+	if fly_action.value_bool:
+		if hover_timer.is_stopped():
+			player.velocity.y = 0.0
 	if fly_action.is_triggered():
 		player.velocity.y = jump_velocity
+		hover_timer.start(hover_delay)
 		
 	var talk : Dictionary = {"talk_started" : false, "npc" : null, "talk_result" : NPC.gamestate.NORMAL}
 	if interact_action.is_triggered():
