@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://dgaexk2mqn6j8"]
+
+[ext_resource type="Script" uid="uid://ctk7duxndd7bf" path="res://game/player/player_ready.gd" id="1_6sduc"]
+[ext_resource type="PackedScene" uid="uid://ccf670c6bkob8" path="res://game/player/trial_player/assets/character-male-e.glb" id="1_jt3wm"]
+[ext_resource type="Script" uid="uid://cb4ku2htwkhhc" path="res://game/player/interaction_detection.gd" id="4_gsgtm"]
+[ext_resource type="Material" uid="uid://dh4ugbf0mb2oy" path="res://materials/materials/wood-2.tres" id="4_q24nv"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_71pwh"]
+radius = 0.274773
+height = 0.721095
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6sduc"]
+size = Vector3(2, 0.470581, 3)
+
+[node name="Player" type="CharacterBody3D"]
+collision_layer = 2
+script = ExtResource("1_6sduc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.358072, 0)
+shape = SubResource("CapsuleShape3D_71pwh")
+
+[node name="playermodel" type="Node3D" parent="."]
+
+[node name="character-male-e2" parent="playermodel" instance=ExtResource("1_jt3wm")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.0071882, 0)
+
+[node name="Skeleton3D" parent="playermodel/character-male-e2/character-male-e" index="0"]
+bones/4/rotation = Quaternion(0, 0, -0.382683, 0.92388)
+bones/5/rotation = Quaternion(0, 0, 0.382683, 0.92388)
+
+[node name="body-mesh" parent="playermodel/character-male-e2/character-male-e/Skeleton3D" index="0"]
+material_overlay = ExtResource("4_q24nv")
+
+[node name="head-mesh" parent="playermodel/character-male-e2/character-male-e/Skeleton3D" index="1"]
+material_overlay = ExtResource("4_q24nv")
+
+[node name="InteractionDetection" type="Area3D" parent="playermodel"]
+collision_layer = 0
+collision_mask = 5
+script = ExtResource("4_gsgtm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="playermodel/InteractionDetection"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.264709, 0)
+shape = SubResource("BoxShape3D_6sduc")
+
+[editable path="playermodel/character-male-e2"]

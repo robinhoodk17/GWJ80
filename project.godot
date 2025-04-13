@@ -78,6 +78,10 @@ report/assert/verbose_warnings=false
 report/godot/script_error=false
 ui/toolbar/run_overall=true
 
+[global_group]
+
+interactable=""
+
 [godot_resource_groups]
 
 auto_rebuild=true
@@ -142,6 +146,12 @@ right={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":68,"key_label":0,"unicode":100,"location":0,"echo":false,"script":null)
 ]
 }
+
+[layer_names]
+
+3d_physics/layer_1="General"
+3d_physics/layer_2="Player"
+3d_physics/layer_3="NPC"
 
 [physics]
 

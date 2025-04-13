@@ -13,6 +13,7 @@ enum gamestate{NORMAL, SABOTAGED, HELPED}
 @export var moving_locations : Dictionary[Marker3D, gamestate]
 ##stores which animation to use to move somewhere
 @export var routes : Dictionary[Marker3D, String]
+@onready var pop_up: Node3D = $PopUp
 
 var moving_towards : Marker3D = null
 var current_state : states = states.IDLE
@@ -64,3 +65,18 @@ func restart() -> void:
 		if i < expected_time:
 			current_event = i
 	timer.start(current_event)
+
+
+func display_prompt() -> void:
+	if pop_up:
+		if pop_up.visible:
+			return
+		pop_up.pop_up_show()
+
+func turn_off_prompt():
+	if pop_up:
+		pop_up.turn_off_prompt()
+	
+func interact():
+	get_tree().paused = true
+	pass
