@@ -3,6 +3,7 @@ class_name NPC
 
 enum states{IDLE, WALKING, TALKING}
 enum gamestate{NORMAL, SABOTAGED, HELPED}
+@export var current_location : Marker3D
 @export var animation_player : AnimationPlayer
 @export var route_manager : AnimationPlayer
 @export var timer : Timer
@@ -11,6 +12,7 @@ enum gamestate{NORMAL, SABOTAGED, HELPED}
 @export var moving_times : Dictionary[float, Marker3D]
 ##stores where should it move to, depending on the npc state
 @export var moving_locations : Dictionary[Marker3D, gamestate]
+@export var timelines : Dictionary[Marker3D, String]
 ##stores which animation to use to move somewhere
 @export var routes : Dictionary[Marker3D, String]
 @onready var pop_up: Node3D = $PopUp
@@ -35,6 +37,7 @@ func _ready() -> void:
 
 
 func back_to_idle() -> void:
+	current_location = moving_towards
 	current_state = states.IDLE
 	animation_player.play("idle")
 
@@ -73,10 +76,15 @@ func display_prompt() -> void:
 			return
 		pop_up.pop_up_show()
 
+
 func turn_off_prompt():
 	if pop_up:
 		pop_up.turn_off_prompt()
-	
+
+
 func interact():
+	Dialogic.start(timelines[current_location]).process_mode = Node.PROCESS_MODE_ALWAYS
+	Dialogic.process_mode = Node.PROCESS_MODE_ALWAYS
+	Dialogic.timeline_ended.connect(func():get_tree().set('paused', false))
 	get_tree().paused = true
 	pass

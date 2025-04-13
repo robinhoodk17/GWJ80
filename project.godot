@@ -38,7 +38,10 @@ gdscript/warnings/inferred_declaration=1
 [dialogic]
 
 directories/dch_directory={}
-directories/dtl_directory={}
+directories/dtl_directory={
+"trial_timeline": "res://game/timelines/trial_npc/trial_timeline.dtl",
+"trial_timeline2": "res://game/timelines/trial_npc/trial_timeline2.dtl"
+}
 
 [display]
 

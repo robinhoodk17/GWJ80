@@ -50,10 +50,12 @@ func _physics_process(delta: float) -> void:
 	var frame_info : Dictionary = {"position" : player.global_position, "rotation" : playermodel.global_basis, "talk" : talk}
 	Globals.append_frame_data(frame_info)
 	
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var input_dir := move_action.value_axis_2d
+	#I added this Vector.ZERO because otherwise, the player keeps the last input after you unpause
+	var input_dir : Vector2 = Vector2.ZERO
+	if move_action.value_axis_2d:
+		input_dir = move_action.value_axis_2d
 	var direction = (basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	
 	if direction:
 		player.velocity.x = direction.x * speed
 		player.velocity.z = direction.z * speed
@@ -84,6 +86,6 @@ func rotate_model(direction: Vector3, delta : float) -> void:
 	playermodel.basis = lerp(playermodel.basis, Basis.looking_at(direction), 10.0 * delta)
 
 
-func  restarted():
+func  restarted() -> void:
 	player.global_position = original_position
 	player.global_basis = original_rotation

@@ -13,7 +13,7 @@ func turn_off_prompt() -> void:
 	hide()
 
 
-func pop_up_show():
+func pop_up_show() -> void:
 	show()
 	var formatter : GUIDEInputFormatter = GUIDEInputFormatter.for_active_contexts(100)
 	var input_label = await formatter.action_as_richtext_async(interact_action)
