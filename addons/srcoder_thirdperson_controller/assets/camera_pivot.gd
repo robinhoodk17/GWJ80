@@ -33,7 +33,7 @@ func  _ready() -> void:
 func _physics_process(delta: float) -> void:
 	var camera_rotation = camera_control.value_axis_2d
 	if camera_rotation:
-		rotate_y(camera_rotation.x)
+		rotate_y(camera_rotation.x * Globals.sensitivity)
 		spring_arm.rotation.x = clamp(spring_arm.rotation.x - camera_rotation.y,-0.6,0.4)
 	if not player.is_on_floor():
 		player.velocity += player.get_gravity() * delta

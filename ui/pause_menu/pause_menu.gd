@@ -38,6 +38,7 @@ func _resume() -> void:
 
 
 func _restart() -> void:
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	if ui:
 		ui.go_to("Game")
 	get_tree().paused = false
