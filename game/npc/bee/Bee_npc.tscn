@@ -7,7 +7,4 @@
 
 [node name="Bee" parent="." index="5" instance=ExtResource("2_vy478")]
 
-[node name="Plane_001" parent="Bee" index="8"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.690862, 0)
-
 [editable path="Bee"]
