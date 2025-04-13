@@ -3,11 +3,11 @@ class_name NPC
 
 enum states{IDLE, WALKING, TALKING}
 enum gamestate{NORMAL, SABOTAGED, HELPED}
-@export var current_location : Marker3D
 @export var animation_player : AnimationPlayer
 @export var route_manager : AnimationPlayer
 @export var timer : Timer
 @export var speed : float = 5.0
+@export var current_location : Marker3D
 ##stores the position to move to and the times (in seconds) when it happens
 @export var moving_times : Dictionary[float, Marker3D]
 ##stores where should it move to, depending on the npc state
@@ -29,6 +29,10 @@ func _ready() -> void:
 	original_rotation = global_basis
 	timer.timeout.connect(start_walking)
 	var expected_time : float = 6000
+	if animation_player.has_animation("idle"):
+		animation_player.play("idle")
+	if animation_player.has_animation("Idle"):
+		animation_player.play("Idle")
 	for i : float in moving_times.keys():
 		if i < expected_time:
 			current_event = i
@@ -39,7 +43,10 @@ func _ready() -> void:
 func back_to_idle() -> void:
 	current_location = moving_towards
 	current_state = states.IDLE
-	animation_player.play("idle")
+	if animation_player.has_animation("idle"):
+		animation_player.play("idle")
+	if animation_player.has_animation("Idle"):
+		animation_player.play("Idle")
 
 
 func start_walking() -> void:
@@ -47,7 +54,10 @@ func start_walking() -> void:
 	if moving_locations[possible_move] == current_gamestate:
 		moving_towards = possible_move
 		current_state = states.WALKING
+	if animation_player.has_animation("walk"):
 		animation_player.play("walk")
+	if animation_player.has_animation("Walk"):
+		animation_player.play("Walk")
 		route_manager.play(routes[moving_towards])
 
 	var candidate_time : float = 6000
@@ -87,4 +97,3 @@ func interact():
 	Dialogic.process_mode = Node.PROCESS_MODE_ALWAYS
 	Dialogic.timeline_ended.connect(func():get_tree().set('paused', false))
 	get_tree().paused = true
-	pass

@@ -8,30 +8,43 @@ extends Node3D
 
 @export_category("Player Movement")
 @export var speed := 5.0
-@export var jump_velocity := 4.5
+@export var jump_velocity := 2.5
 const ROTATION_SPEED := 6.0
 
 #slowly rotate the charcter to point in the direction of the camera_pivot
 @onready var playermodel : Node3D = $"../playermodel"
 
-enum animation_state {IDLE,RUNNING,JUMPING}
+enum animation_state {IDLE,WALKING,JUMPING}
 var player_animation_state : animation_state = animation_state.IDLE
-@onready var animation_player : AnimationPlayer = $"../playermodel/character-male-e2/AnimationPlayer"
+@onready var animation_player: AnimationPlayer = $"../playermodel/Butterfly/AnimationPlayer"
 @onready var player: CharacterBody3D = $".."
 @onready var spring_arm: SpringArm3D = $SpringArm3D
 @onready var interaction_detection: Area3D = $"../playermodel/InteractionDetection"
 
 var original_position : Vector3
 var original_rotation : Basis
-
+var dampened_y_array : Array[float] = [0.0, 0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0, 0.0, 0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]
+var current_y : int = 0
+var averaged_y : float = 0.0
 func  _ready() -> void:
 	Globals.restart.connect(restarted)
 	await get_tree().process_frame
 	original_position = player.global_position
 	original_rotation = player.global_basis
+	for i : int in range(dampened_y_array.size()):
+		dampened_y_array[i] = original_position.y
+		averaged_y = original_position.y
 
 
 func _physics_process(delta: float) -> void:
+	dampened_y_array[current_y] = player.global_position.y
+	current_y = (current_y + 1) % dampened_y_array.size()
+	var running_sum : float = 0.0
+	for i in dampened_y_array:
+		running_sum += i
+	averaged_y = running_sum/dampened_y_array.size()
+	var target_camera_position = Vector3(player.global_position.x, averaged_y, player.global_position.z)
+	global_position = lerp(global_position, target_camera_position, .8)
 	var camera_rotation = camera_control.value_axis_2d
 	if camera_rotation:
 		rotate_y(camera_rotation.x * Globals.sensitivity)
@@ -61,7 +74,7 @@ func _physics_process(delta: float) -> void:
 		player.velocity.z = direction.z * speed
 		#now rotate the model
 		rotate_model(direction, delta)
-		player_animation_state = animation_state.RUNNING
+		player_animation_state = animation_state.WALKING
 	else:
 		player.velocity.x = move_toward(player.velocity.x, 0, speed)
 		player.velocity.z = move_toward(player.velocity.z, 0, speed)
@@ -75,10 +88,10 @@ func _physics_process(delta: float) -> void:
 	match player_animation_state:
 		animation_state.IDLE:
 			animation_player.play("idle")
-		animation_state.RUNNING:
-			animation_player.play("sprint")
+		animation_state.WALKING:
+			animation_player.play("walk")
 		animation_state.JUMPING:
-			animation_player.play("jump")
+			animation_player.play("flap")
 
 
 func rotate_model(direction: Vector3, delta : float) -> void:
