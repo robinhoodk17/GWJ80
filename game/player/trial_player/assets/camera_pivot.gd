@@ -44,7 +44,7 @@ func _physics_process(delta: float) -> void:
 		running_sum += i
 	averaged_y = running_sum/dampened_y_array.size()
 	var target_camera_position = Vector3(player.global_position.x, averaged_y, player.global_position.z)
-	global_position = lerp(global_position, target_camera_position, .8)
+	global_position = lerp(global_position, target_camera_position, delta * 3.0)
 	var camera_rotation = camera_control.value_axis_2d
 	if camera_rotation:
 		rotate_y(camera_rotation.x * Globals.sensitivity)
