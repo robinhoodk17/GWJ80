@@ -58,7 +58,7 @@ func start_walking() -> void:
 		animation_player.play("walk")
 	if animation_player.has_animation("Walk"):
 		animation_player.play("Walk")
-		route_manager.play(routes[moving_towards])
+	route_manager.play(routes[moving_towards])
 
 	var candidate_time : float = 6000
 	for i : float in moving_times.keys():
