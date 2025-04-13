@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://bahvf2v6h6slc"]
 
-[ext_resource type="Script" uid="uid://bpq84bf3t0mv1" path="res://addons/srcoder_thirdperson_controller/assets/camera_pivot.gd" id="1_nv744"]
+[ext_resource type="Script" uid="uid://bpq84bf3t0mv1" path="res://game/player/trial_player/assets/camera_pivot.gd" id="1_nv744"]
 [ext_resource type="Resource" uid="uid://c6tovgnwacf3x" path="res://input/move.tres" id="2_spqa3"]
 [ext_resource type="Resource" uid="uid://b1fqbn0g2j3ff" path="res://input/fly.tres" id="3_robka"]
 [ext_resource type="Resource" uid="uid://7bvnpytk6bwy" path="res://input/camera.tres" id="3_so4lb"]

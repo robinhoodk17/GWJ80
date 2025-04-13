@@ -38,7 +38,10 @@ gdscript/warnings/inferred_declaration=1
 [dialogic]
 
 directories/dch_directory={}
-directories/dtl_directory={}
+directories/dtl_directory={
+"trial_timeline": "res://game/timelines/trial_npc/trial_timeline.dtl",
+"trial_timeline2": "res://game/timelines/trial_npc/trial_timeline2.dtl"
+}
 
 [display]
 
@@ -77,6 +80,10 @@ folder_colors={
 report/assert/verbose_warnings=false
 report/godot/script_error=false
 ui/toolbar/run_overall=true
+
+[global_group]
+
+interactable=""
 
 [godot_resource_groups]
 
@@ -143,9 +150,16 @@ right={
 ]
 }
 
+[layer_names]
+
+3d_physics/layer_1="General"
+3d_physics/layer_2="Player"
+3d_physics/layer_3="NPC"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
+3d/default_gravity=6.0
 common/physics_interpolation=true
 
 [rendering]

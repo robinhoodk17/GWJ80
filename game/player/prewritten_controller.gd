@@ -8,7 +8,7 @@ var physics_tick : int = 0
 
 func _ready() -> void:
 	player = $".."
-	$"../playermodel/character-male-e2/AnimationPlayer".play("walk")
+	$"../playermodel/Butterfly/AnimationPlayer".play("flap")
 	Globals.restart.connect(restarted)
 
 

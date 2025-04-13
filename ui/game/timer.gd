@@ -6,7 +6,6 @@ func _ready() -> void:
 	Globals.restart.connect(on_restart)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	Globals.current_time += delta
 	update_ui(Globals.current_time)

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcupkmds1o63m"]
+
+[ext_resource type="Script" uid="uid://bo6elnnhoph1q" path="res://game/player/dialogic_test.gd" id="1_v6loi"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_v6loi")

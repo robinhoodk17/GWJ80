@@ -13,7 +13,7 @@ signal controls_changed(config: GUIDERemappingConfig)
 signal restart
 
 const PREWRITTEN_CONTROLLER : PackedScene = preload("res://game/player/prewritten_controller.tscn")
-const PLAYER : PackedScene = preload("res://addons/srcoder_thirdperson_controller/player.tscn")
+const PLAYER : PackedScene = preload("res://game/player/trial_player/player.tscn")
 var run_number : int = 1
 var run_limit : int = 3
 var current_time : float = 0.0
