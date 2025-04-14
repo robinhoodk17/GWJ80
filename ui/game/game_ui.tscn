@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://bojsla6nqcf03"]
+[gd_scene load_steps=7 format=3 uid="uid://bojsla6nqcf03"]
 
 [ext_resource type="Script" uid="uid://bbe25uxhy3b0c" path="res://ui/game/game_ui.gd" id="1_67una"]
 [ext_resource type="Script" uid="uid://4we2y064qmhf" path="res://ui/game/timer.gd" id="2_d7okr"]
 [ext_resource type="PackedScene" uid="uid://dkr80d2pi0d41" path="res://addons/guide/debugger/guide_debugger.tscn" id="2_li4ca"]
+[ext_resource type="Script" uid="uid://e3vnvul07ssq" path="res://ui/game/inputs.gd" id="4_lkn3m"]
+[ext_resource type="Resource" uid="uid://b1fqbn0g2j3ff" path="res://input/fly.tres" id="5_2g71p"]
+[ext_resource type="Resource" uid="uid://dn3lfk06ljxi0" path="res://input/reset_camera.tres" id="6_b3mny"]
 
 [node name="Game" type="Control" node_paths=PackedStringArray("default_focus_control")]
 layout_mode = 3
@@ -50,3 +53,66 @@ text = "GUIDE Debugger"
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_constants/separation = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Glide:
+Hold"
+
+[node name="Label" type="RichTextLabel" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_outline_size = 5
+theme_override_font_sizes/normal_font_size = 15
+bbcode_enabled = true
+text = "Hello"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+script = ExtResource("4_lkn3m")
+action = ExtResource("5_2g71p")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "reset camera:"
+
+[node name="Label2" type="RichTextLabel" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_outline_size = 5
+theme_override_font_sizes/normal_font_size = 15
+bbcode_enabled = true
+text = "Hello"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+script = ExtResource("4_lkn3m")
+action = ExtResource("6_b3mny")

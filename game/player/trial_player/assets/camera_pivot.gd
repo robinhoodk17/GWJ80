@@ -5,9 +5,11 @@ extends Node3D
 @export var fly_action : GUIDEAction
 @export var camera_control : GUIDEAction
 @export var interact_action : GUIDEAction
+@export var reset_camera : GUIDEAction
 
 @export_category("Player Movement")
-@export var speed : float = 5.0
+@export var speed : float = 3.0
+@export var gliding_speed : float = 7.0
 @export var jump_velocity : float= 2.5
 @export var hover_delay : float = 0.25
 const ROTATION_SPEED : float = 6.0
@@ -17,7 +19,14 @@ const ROTATION_SPEED : float = 6.0
 @onready var camera_framing: Area3D = $SpringArm3D/Camera3D/CameraFraming
 @onready var camera_3d: Camera3D = $SpringArm3D/Camera3D
 @onready var camera_timer: Timer = $CameraTimer
-var camera_delay : float = 0.5
+var camera_delay : float = .75
+var reset_action_current_cooldown : float = 0.0
+var reset_action_cooldown : float = .75
+var reset_duration : float = 0.2
+var _target_rotation : Vector3 = Vector3.ZERO
+var reset_tween : Tween
+
+
 #slowly rotate the charcter to point in the direction of the camera_pivot
 @onready var playermodel : Node3D = $"../playermodel"
 @onready var hover_timer: Timer = $HoverTimer
@@ -45,6 +54,9 @@ func  _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
+	var current_speed : float = speed
+	if reset_action_current_cooldown < reset_action_cooldown:
+		reset_action_current_cooldown += delta
 	dampened_y_array[current_y] = player.global_position.y
 	current_y = (current_y + 1) % dampened_y_array.size()
 	var running_sum : float = 0.0
@@ -63,9 +75,11 @@ func _physics_process(delta: float) -> void:
 		#var target_basis : Basis = camera_3d.global_basis.looking_at(look_at_target.global_position)
 		#camera_3d.global_basis.slerp(target_basis, delta)
 	#camera_3d.look_at(look_at_target.global_position)
-
+	if reset_camera.is_triggered() and reset_action_current_cooldown >= reset_action_cooldown:
+		reset_action_current_cooldown = 0.0
+		position_camera_behind_player()
 	var camera_rotation : Vector2 = camera_control.value_axis_2d
-	if camera_rotation:
+	if camera_rotation and !(reset_tween and reset_tween.is_running()):
 		rotate_y(camera_rotation.x * Globals.sensitivity)
 		spring_arm.rotation.x = clamp(spring_arm.rotation.x - camera_rotation.y,-0.6,0.4)
 	if not player.is_on_floor():
@@ -75,6 +89,7 @@ func _physics_process(delta: float) -> void:
 	if fly_action.value_bool:
 		if hover_timer.is_stopped():
 			player.velocity.y = 0.0
+			current_speed = gliding_speed
 	if fly_action.is_triggered():
 		player.velocity.y = jump_velocity
 		hover_timer.start(hover_delay)
@@ -95,8 +110,8 @@ func _physics_process(delta: float) -> void:
 	var direction : Vector3 = (basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
 	if direction:
-		player.velocity.x = direction.x * speed
-		player.velocity.z = direction.z * speed
+		player.velocity.x = direction.x * current_speed
+		player.velocity.z = direction.z * current_speed
 		#now rotate the model
 		rotate_model(direction, delta)
 		player_animation_state = animation_state.WALKING
@@ -117,6 +132,19 @@ func _physics_process(delta: float) -> void:
 			animation_player.play("walk")
 		animation_state.JUMPING:
 			animation_player.play("flap")
+
+
+func position_camera_behind_player() -> void:
+	_tween_rotation(playermodel.get_rotation().y,  reset_duration)
+
+
+func _tween_rotation(target_y_rotation : float, duration : float = reset_duration) -> void:
+	_target_rotation.y = wrapf(target_y_rotation, rotation.y - PI, rotation.y + PI)
+	if reset_tween and reset_tween.is_running():
+		reset_tween.kill()
+	reset_tween = create_tween()
+	reset_tween.tween_property(self, "rotation", _target_rotation, duration)
+	
 
 
 func rotate_model(direction: Vector3, delta : float) -> void:
