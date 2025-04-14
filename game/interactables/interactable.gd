@@ -30,7 +30,7 @@ func _physics_process(delta: float) -> void:
 	current_refresh = (current_refresh + 1) % Globals.item_refresh_rate
 
 	if !grabbed and array_index >= positions_array.size():
-		velocity += get_gravity()
+		velocity += get_gravity() * delta
 		move_and_slide()
 
 	if grabbed:

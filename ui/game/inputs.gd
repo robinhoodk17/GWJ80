@@ -9,7 +9,7 @@ func _ready() -> void:
 
 func update_label() -> void:
 	show()
-	var formatter : GUIDEInputFormatter = GUIDEInputFormatter.for_active_contexts(15)
+	var formatter : GUIDEInputFormatter = GUIDEInputFormatter.for_active_contexts(30)
 	@warning_ignore("untyped_declaration")
 	var input_label  = await formatter.action_as_richtext_async(action)
 	text = "[center]%s[center]" % [input_label]

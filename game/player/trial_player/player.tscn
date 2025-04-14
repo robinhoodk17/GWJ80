@@ -9,7 +9,7 @@ margin = 0.01
 radius = 0.4
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6sduc"]
-size = Vector3(8, 2, 10)
+size = Vector3(2.5, 2, 3.5)
 
 [node name="Player" type="CharacterBody3D"]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
@@ -34,7 +34,7 @@ collision_mask = 5
 script = ExtResource("4_gsgtm")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="playermodel/InteractionDetection"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.265, -1.77734)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.572418)
 shape = SubResource("BoxShape3D_6sduc")
 
 [editable path="playermodel/Butterfly"]
