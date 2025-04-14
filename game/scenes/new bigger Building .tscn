@@ -1,4 +1,4 @@
-[gd_scene load_steps=172 format=4 uid="uid://dgmox4dyoefyf"]
+[gd_scene load_steps=173 format=4 uid="uid://dgmox4dyoefyf"]
 
 [ext_resource type="Script" uid="uid://1cbekppiubgu" path="res://game_jam_sky_scraper.gd" id="1_ddtqo"]
 [ext_resource type="Material" uid="uid://vldi8ulujtmb" path="res://carpet.tres" id="1_jb0kn"]
@@ -30,6 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://dgaexk2mqn6j8" path="res://game/player/trial_player/player.tscn" id="25_xd7o8"]
 [ext_resource type="PackedScene" uid="uid://bahvf2v6h6slc" path="res://game/player/player_controller.tscn" id="26_hy22j"]
 [ext_resource type="PackedScene" uid="uid://md7ncws5btwi" path="res://game/interactables/trial.tscn" id="30_nnyu4"]
+[ext_resource type="PackedScene" uid="uid://s60xl4keq2rt" path="res://game/npc/bear/bear_npc.tscn" id="31_ued37"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_hikrr"]
 _surfaces = [{
@@ -2744,6 +2745,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.827, 0.56683, 4.83043)
 [node name="Butterfly full_001" parent="Player/playermodel/Butterfly" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.961475, 0.274891, 0, -0.274891, 0.961475, 0.71502, 0.25416, 0)
 
+[node name="Butterfly full_002" parent="Player/playermodel/Butterfly" index="2"]
+transform = Transform3D(1, 0, 0, 0, 0.957391, -0.288793, 0, 0.288793, 0.957392, 0.71502, 0.25416, 0)
+
 [node name="InteractionDetection" parent="Player/playermodel" index="1"]
 collision_mask = 4
 
@@ -2770,8 +2774,43 @@ size = Vector3(10000, 10000, 1000)
 [node name="StaticBody3D" parent="." instance=ExtResource("30_nnyu4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.15307, 1.04172, -4.93034)
 
+[node name="NPC" parent="." node_paths=PackedStringArray("route_manager", "current_location", "moving_times", "moving_locations", "timelines", "routes") instance=ExtResource("31_ued37")]
+transform = Transform3D(-3, 0, -2.62268e-07, 0, 3, 0, 2.62268e-07, 0, -3, -2.71593, 0.541723, 5.48797)
+route_manager = NodePath("RouteManager")
+current_location = NodePath("../Places/Kitchen")
+moving_times = {
+610.0: NodePath("../Places/Kitchen")
+}
+moving_locations = {
+NodePath("../Places/Kitchen"): 0
+}
+timelines = {
+NodePath("../Places/Kitchen"): "trial_timeline"
+}
+routes = {
+NodePath("../Places/Kitchen"): "route1"
+}
+
+[node name="PopUp" parent="NPC" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.06876, 0)
+
+[node name="Sphere_001" parent="NPC/Cartoon Bear/rig/Skeleton3D" index="0"]
+transform = Transform3D(0.0377471, -1.31117e-05, -3.3013e-05, -3.31892e-05, -0.000516053, -0.0377436, 1.26591e-05, 0.0377436, -0.000516068, 0.0718712, 0.828039, 0.181788)
+
+[node name="Circle" parent="NPC/Cartoon Bear/rig/Skeleton3D" index="1"]
+transform = Transform3D(0.308932, -0.00315403, -7.67686e-05, 0.000839128, 0.0893893, -0.295732, 0.00304132, 0.295717, 0.0893932, -0.00634815, 0.513443, 0.202102)
+
+[node name="RouteManager" type="AnimationPlayer" parent="NPC"]
+
+[node name="Places" type="Node3D" parent="."]
+
+[node name="Kitchen" type="Marker3D" parent="Places"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.2876, 1.67507, 3.49074)
+
 [editable path="UI"]
 [editable path="UI/Game"]
 [editable path="Player"]
 [editable path="Player/playermodel/Butterfly"]
 [editable path="Player/camera_pivot"]
+[editable path="NPC"]
+[editable path="NPC/Cartoon Bear"]
