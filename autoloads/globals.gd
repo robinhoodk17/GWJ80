@@ -10,6 +10,10 @@ signal post_ui_message(text: String)
 ## Emitted by UI/Controls when a action is remapped
 @warning_ignore("unused_signal")
 signal controls_changed(config: GUIDERemappingConfig)
+@warning_ignore("unused_signal")
+signal found_item
+@warning_ignore("unused_signal")
+signal lost_item
 signal restart
 
 const PREWRITTEN_CONTROLLER : PackedScene = preload("res://game/player/prewritten_controller.tscn")
@@ -21,6 +25,8 @@ var first_run : Array[Dictionary]
 var second_run : Array[Dictionary]
 var player_spawn_position : Vector3
 var player_spawn_rotation : Basis
+#How many physics ticks pass between refreshing the position of items
+var item_refresh_rate : int = 10
 
 var sensitivity : float = 1.0
 func _restart() -> void:

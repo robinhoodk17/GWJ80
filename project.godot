@@ -39,6 +39,7 @@ gdscript/warnings/inferred_declaration=1
 
 directories/dch_directory={}
 directories/dtl_directory={
+"freeze_in_time": "res://game/timelines/freeze_in_time.dtl",
 "trial_timeline": "res://game/timelines/trial_npc/trial_timeline.dtl",
 "trial_timeline2": "res://game/timelines/trial_npc/trial_timeline2.dtl"
 }
@@ -84,6 +85,7 @@ ui/toolbar/run_overall=true
 [global_group]
 
 interactable=""
+item=""
 
 [godot_resource_groups]
 
