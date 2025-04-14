@@ -15,7 +15,7 @@ extends Node3D
 const ROTATION_SPEED : float = 6.0
 @export_category("Camera controls")
 @export var offset : Vector3 = Vector3(0.0, 1.5, 0.0)
-@onready var look_at_target: Node3D = $"../LookAtTarget"
+#@onready var look_at_target: Node3D = $"../LookAtTarget"
 @onready var camera_framing: Area3D = $SpringArm3D/Camera3D/CameraFraming
 @onready var camera_3d: Camera3D = $SpringArm3D/Camera3D
 @onready var camera_timer: Timer = $CameraTimer
@@ -25,6 +25,7 @@ var reset_action_cooldown : float = .75
 var reset_duration : float = 0.2
 var _target_rotation : Vector3 = Vector3.ZERO
 var reset_tween : Tween
+var reset_position_tween : Tween
 
 
 #slowly rotate the charcter to point in the direction of the camera_pivot
@@ -144,6 +145,11 @@ func _tween_rotation(target_y_rotation : float, duration : float = reset_duratio
 		reset_tween.kill()
 	reset_tween = create_tween()
 	reset_tween.tween_property(self, "rotation", _target_rotation, duration)
+	var target_position = player.global_position + offset
+	if reset_position_tween and reset_position_tween.is_running():
+		reset_position_tween.kill()
+	reset_position_tween = create_tween()
+	reset_position_tween.tween_property(self, "global_position", target_position, duration)
 	
 
 

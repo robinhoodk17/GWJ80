@@ -2,21 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3v73gufujfer"
-path.s3tc="res://.godot/imported/little_cartoon_dog_0.jpg-50aee268da6259392ea9612c6321e951.s3tc.ctex"
-path.etc2="res://.godot/imported/little_cartoon_dog_0.jpg-50aee268da6259392ea9612c6321e951.etc2.ctex"
+uid="uid://dk6hpwfo4rria"
+path.s3tc="res://.godot/imported/Backup Building _Plant_albedo000.png-253fe540a59a5c404785c74de2151a7d.s3tc.ctex"
+path.etc2="res://.godot/imported/Backup Building _Plant_albedo000.png-253fe540a59a5c404785c74de2151a7d.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "d1eaac4a8af34c91f2e7ed79e49faa5d"
+"md5": "7ec33965065712aaea4724fdab3afdec"
 }
 
 [deps]
 
-source_file="res://game/player/little_cartoon_dog_0.jpg"
-dest_files=["res://.godot/imported/little_cartoon_dog_0.jpg-50aee268da6259392ea9612c6321e951.s3tc.ctex", "res://.godot/imported/little_cartoon_dog_0.jpg-50aee268da6259392ea9612c6321e951.etc2.ctex"]
+source_file="res://Backup Building _Plant_albedo000.png"
+dest_files=["res://.godot/imported/Backup Building _Plant_albedo000.png-253fe540a59a5c404785c74de2151a7d.s3tc.ctex", "res://.godot/imported/Backup Building _Plant_albedo000.png-253fe540a59a5c404785c74de2151a7d.etc2.ctex"]
 
 [params]
 

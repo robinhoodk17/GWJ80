@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://vldi8ulujtmb"]
+
+[ext_resource type="Texture2D" uid="uid://dhpio0qrqvco5" path="res://Textures/Backup Building _Carpet fabric_albedo000.png" id="1_3qno8"]
+
+[resource]
+resource_name = "Carpet fabric"
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("1_3qno8")
+roughness = 0.0
+uv1_scale = Vector3(0.1, 0.1, 0.1)
+uv1_offset = Vector3(0, 0.5, 0)
