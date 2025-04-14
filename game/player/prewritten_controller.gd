@@ -17,7 +17,7 @@ func _physics_process(delta: float) -> void:
 		return
 	player.global_position = frame_info[physics_tick]["position"]
 	playermodel.global_basis = frame_info[physics_tick]["rotation"]
-	var current_talk = frame_info[physics_tick]["talk"]
+	var current_talk : Dictionary = frame_info[physics_tick]["talk"]
 	#print_debug(frame_info[physics_tick])
 	if current_talk["talk_started"]:
 		current_talk["npc"].current_gamestate = current_talk["talk_result"]

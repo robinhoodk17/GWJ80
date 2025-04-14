@@ -7,3 +7,4 @@ func _ready() -> void:
 	GUIDE.enable_mapping_context(default_mapping_context)
 	await  get_tree().process_frame
 	$UI.go_to("Game")
+	$UI/Game/Label.start_counting = true

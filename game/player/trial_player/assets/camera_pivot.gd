@@ -7,12 +7,20 @@ extends Node3D
 @export var interact_action : GUIDEAction
 
 @export_category("Player Movement")
-@export var speed := 5.0
-@export var jump_velocity := 2.5
-const ROTATION_SPEED := 6.0
-
+@export var speed : float = 5.0
+@export var jump_velocity : float= 2.5
+@export var hover_delay : float = 0.25
+const ROTATION_SPEED : float = 6.0
+@export_category("Camera controls")
+@export var offset : Vector3 = Vector3(0.0, 1.5, 0.0)
+@onready var look_at_target: Node3D = $"../LookAtTarget"
+@onready var camera_framing: Area3D = $SpringArm3D/Camera3D/CameraFraming
+@onready var camera_3d: Camera3D = $SpringArm3D/Camera3D
+@onready var camera_timer: Timer = $CameraTimer
+var camera_delay : float = 0.5
 #slowly rotate the charcter to point in the direction of the camera_pivot
 @onready var playermodel : Node3D = $"../playermodel"
+@onready var hover_timer: Timer = $HoverTimer
 
 enum animation_state {IDLE,WALKING,JUMPING}
 var player_animation_state : animation_state = animation_state.IDLE
@@ -40,21 +48,36 @@ func _physics_process(delta: float) -> void:
 	dampened_y_array[current_y] = player.global_position.y
 	current_y = (current_y + 1) % dampened_y_array.size()
 	var running_sum : float = 0.0
-	for i in dampened_y_array:
+	for i : float in dampened_y_array:
 		running_sum += i
 	averaged_y = running_sum/dampened_y_array.size()
-	var target_camera_position = Vector3(player.global_position.x, averaged_y, player.global_position.z)
-	global_position = lerp(global_position, target_camera_position, delta * 3.0)
-	var camera_rotation = camera_control.value_axis_2d
+	if camera_framing.get_overlapping_bodies().size() == 0:
+		var target_camera_position : Vector3 = Vector3(player.global_position.x, averaged_y, player.global_position.z)
+		global_position = lerp(global_position, target_camera_position + offset, delta * 5.0)
+		camera_timer.start(camera_delay)
+		#var target_basis : Basis = camera_3d.global_basis.looking_at(look_at_target.global_position)
+		#camera_3d.global_basis.slerp(target_basis, delta * 10.0)
+	elif !camera_timer.is_stopped():
+		var target_camera_position : Vector3 = Vector3(player.global_position.x, averaged_y, player.global_position.z)
+		global_position = lerp(global_position, target_camera_position + offset, delta * 5.0)
+		#var target_basis : Basis = camera_3d.global_basis.looking_at(look_at_target.global_position)
+		#camera_3d.global_basis.slerp(target_basis, delta)
+	#camera_3d.look_at(look_at_target.global_position)
+
+	var camera_rotation : Vector2 = camera_control.value_axis_2d
 	if camera_rotation:
 		rotate_y(camera_rotation.x * Globals.sensitivity)
 		spring_arm.rotation.x = clamp(spring_arm.rotation.x - camera_rotation.y,-0.6,0.4)
 	if not player.is_on_floor():
 		player.velocity += player.get_gravity() * delta
 
-	# Handle jump.
+	
+	if fly_action.value_bool:
+		if hover_timer.is_stopped():
+			player.velocity.y = 0.0
 	if fly_action.is_triggered():
 		player.velocity.y = jump_velocity
+		hover_timer.start(hover_delay)
 		
 	var talk : Dictionary = {"talk_started" : false, "npc" : null, "talk_result" : NPC.gamestate.NORMAL}
 	if interact_action.is_triggered():
@@ -67,7 +90,9 @@ func _physics_process(delta: float) -> void:
 	var input_dir : Vector2 = Vector2.ZERO
 	if move_action.value_axis_2d:
 		input_dir = move_action.value_axis_2d
-	var direction = (basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+		if !camera_timer.is_stopped():
+			camera_timer.start(camera_delay)
+	var direction : Vector3 = (basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
 	if direction:
 		player.velocity.x = direction.x * speed

@@ -23,7 +23,7 @@ func _input(event: InputEvent) -> void:
 		get_viewport().set_input_as_handled()
 		go_back()
 
-func sensitivity_changed(new_value : float):
+func sensitivity_changed(new_value : float) -> void:
 	Globals.sensitivity = new_value
 
 func _on_audio_hslider_value_changed(value: float, bus_name: String) -> void:
