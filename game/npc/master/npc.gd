@@ -92,7 +92,7 @@ func turn_off_prompt() -> void:
 		pop_up.turn_off_prompt()
 
 
-func interact() -> void:
+func interact(_playermodel, _player_controller) -> void:
 	Dialogic.start(timelines[current_location]).process_mode = Node.PROCESS_MODE_ALWAYS
 	Dialogic.process_mode = Node.PROCESS_MODE_ALWAYS
 	@warning_ignore("untyped_declaration")

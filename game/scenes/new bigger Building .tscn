@@ -1,4 +1,4 @@
-[gd_scene load_steps=171 format=4 uid="uid://dgmox4dyoefyf"]
+[gd_scene load_steps=172 format=4 uid="uid://dgmox4dyoefyf"]
 
 [ext_resource type="Script" uid="uid://1cbekppiubgu" path="res://game_jam_sky_scraper.gd" id="1_ddtqo"]
 [ext_resource type="Material" uid="uid://vldi8ulujtmb" path="res://carpet.tres" id="1_jb0kn"]
@@ -29,6 +29,7 @@
 [ext_resource type="PackedScene" uid="uid://u1vgfeia861q" path="res://ui/ui.tscn" id="25_hy22j"]
 [ext_resource type="PackedScene" uid="uid://dgaexk2mqn6j8" path="res://game/player/trial_player/player.tscn" id="25_xd7o8"]
 [ext_resource type="PackedScene" uid="uid://bahvf2v6h6slc" path="res://game/player/player_controller.tscn" id="26_hy22j"]
+[ext_resource type="PackedScene" uid="uid://md7ncws5btwi" path="res://game/interactables/trial.tscn" id="30_nnyu4"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_hikrr"]
 _surfaces = [{
@@ -2738,13 +2739,10 @@ material = ExtResource("3_xd7o8")
 
 [node name="Player" parent="." instance=ExtResource("25_xd7o8")]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.827, 0.56683, 0.415522)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.827, 0.56683, 4.83043)
 
 [node name="Butterfly full_001" parent="Player/playermodel/Butterfly" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.961475, 0.274891, 0, -0.274891, 0.961475, 0.71502, 0.25416, 0)
-
-[node name="Butterfly full_002" parent="Player/playermodel/Butterfly" index="2"]
-transform = Transform3D(1, 0, 0, 0, 0.957391, -0.288793, 0, 0.288793, 0.957392, 0.71502, 0.25416, 0)
 
 [node name="InteractionDetection" parent="Player/playermodel" index="1"]
 collision_mask = 4
@@ -2769,6 +2767,11 @@ directional_shadow_mode = 0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.8991, 25.834, -30.0061)
 size = Vector3(10000, 10000, 1000)
 
+[node name="StaticBody3D" parent="." instance=ExtResource("30_nnyu4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.15307, 1.04172, -4.93034)
+
+[editable path="UI"]
+[editable path="UI/Game"]
 [editable path="Player"]
 [editable path="Player/playermodel/Butterfly"]
 [editable path="Player/camera_pivot"]

@@ -1,6 +1,7 @@
 extends Node3D
 
 @export_category("GUIDE actions")
+@export var time_freeze : GUIDEAction
 @export var move_action : GUIDEAction
 @export var fly_action : GUIDEAction
 @export var camera_control : GUIDEAction
@@ -26,7 +27,8 @@ var reset_duration : float = 0.2
 var _target_rotation : Vector3 = Vector3.ZERO
 var reset_tween : Tween
 var reset_position_tween : Tween
-
+@export_subgroup("Item Manipulation")
+var grabbing : CharacterBody3D
 
 #slowly rotate the charcter to point in the direction of the camera_pivot
 @onready var playermodel : Node3D = $"../playermodel"
@@ -96,9 +98,17 @@ func _physics_process(delta: float) -> void:
 		hover_timer.start(hover_delay)
 		
 	var talk : Dictionary = {"talk_started" : false, "npc" : null, "talk_result" : NPC.gamestate.NORMAL}
+	if time_freeze.is_triggered():
+		if interaction_detection.showing_which != null:
+			if interaction_detection.showing_which.is_in_group("item"):
+				interaction_detection.showing_which.freeze_in_time()
 	if interact_action.is_triggered():
 		if interaction_detection.showing_which != null:
-			interaction_detection.showing_which.interact()
+			interaction_detection.showing_which.interact(playermodel, self)
+		else:
+			if grabbing != null:
+				grabbing.drop()
+				grabbing = null
 	var frame_info : Dictionary = {"position" : player.global_position, "rotation" : playermodel.global_basis, "talk" : talk}
 	Globals.append_frame_data(frame_info)
 	
@@ -145,7 +155,7 @@ func _tween_rotation(target_y_rotation : float, duration : float = reset_duratio
 		reset_tween.kill()
 	reset_tween = create_tween()
 	reset_tween.tween_property(self, "rotation", _target_rotation, duration)
-	var target_position = player.global_position + offset
+	var target_position : Vector3 = player.global_position + offset
 	if reset_position_tween and reset_position_tween.is_running():
 		reset_position_tween.kill()
 	reset_position_tween = create_tween()
