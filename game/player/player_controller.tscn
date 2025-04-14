@@ -10,29 +10,30 @@
 radius = 0.2
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_robka"]
-size = Vector3(3, 3.39, 4.52533)
+size = Vector3(1.5, 2.7002, 4.05367)
 
 [node name="camera_pivot" type="Node3D"]
+top_level = true
 script = ExtResource("1_nv744")
 move_action = ExtResource("2_robka")
 fly_action = ExtResource("3_w85yc")
 camera_control = ExtResource("4_5df8n")
 interact_action = ExtResource("5_bcob5")
-offset = Vector3(0, 2.5, 0)
 
 [node name="SpringArm3D" type="SpringArm3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0364162, 0)
 shape = SubResource("SphereShape3D_robka")
-spring_length = 0.5
+spring_length = 0.1
 
 [node name="Camera3D" type="Camera3D" parent="SpringArm3D"]
+fov = 60.0
 
 [node name="CameraFraming" type="Area3D" parent="SpringArm3D/Camera3D"]
 collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SpringArm3D/Camera3D/CameraFraming"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.055, -3.73734)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.905098, -3.973)
 shape = SubResource("BoxShape3D_robka")
 
 [node name="HoverTimer" type="Timer" parent="."]

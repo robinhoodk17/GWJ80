@@ -20,4 +20,4 @@ func _connect_buttons() -> void:
 
 func _start_game() -> void:
 	ui.get_node("PauseMenu").pausable = true
-	get_tree().change_scene_to_file("res://Game Jam Sky Scraper.tscn")
+	get_tree().change_scene_to_file("uid://dgmox4dyoefyf")

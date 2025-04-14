@@ -13,7 +13,7 @@ extends Node3D
 const ROTATION_SPEED : float = 6.0
 @export_category("Camera controls")
 @export var offset : Vector3 = Vector3(0.0, 1.5, 0.0)
-@onready var look_at_target: Node3D = $"../LookAtTarget"
+#@onready var look_at_target: Node3D = $"../LookAtTarget"
 @onready var camera_framing: Area3D = $SpringArm3D/Camera3D/CameraFraming
 @onready var camera_3d: Camera3D = $SpringArm3D/Camera3D
 @onready var camera_timer: Timer = $CameraTimer
