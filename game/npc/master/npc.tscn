@@ -6,11 +6,12 @@
 [sub_resource type="SphereShape3D" id="SphereShape3D_j63dq"]
 radius = 1.0
 
-[node name="NPC" type="CharacterBody3D" node_paths=PackedStringArray("animation_player", "timer") groups=["interactable"]]
+[node name="NPC" type="CharacterBody3D" node_paths=PackedStringArray("animation_player", "route_manager", "timer") groups=["interactable"]]
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("1_gixkv")
 animation_player = NodePath("AnimationPlayer")
+route_manager = NodePath("RouteManager")
 timer = NodePath("Timer")
 
 [node name="Collider" type="CollisionShape3D" parent="."]
@@ -25,3 +26,5 @@ one_shot = true
 
 [node name="PopUp" parent="." instance=ExtResource("2_j63dq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.703859, 0)
+
+[node name="RouteManager" type="AnimationPlayer" parent="."]

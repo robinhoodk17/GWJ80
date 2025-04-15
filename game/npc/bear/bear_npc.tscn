@@ -1,10 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://s60xl4keq2rt"]
+[gd_scene load_steps=4 format=3 uid="uid://s60xl4keq2rt"]
 
 [ext_resource type="PackedScene" uid="uid://88f70ly0w5b4" path="res://game/npc/master/npc.tscn" id="1_kr6oh"]
+[ext_resource type="Script" uid="uid://besjuj54iwv8k" path="res://game/npc/bear/bear_npc.gd" id="2_bf144"]
 [ext_resource type="PackedScene" uid="uid://rqud3jej7gk3" path="res://game/npc/bear/Cartoon Bear.tscn" id="2_pfgxg"]
 
-[node name="NPC" node_paths=PackedStringArray("animation_player") instance=ExtResource("1_kr6oh")]
-animation_player = NodePath("Cartoon Bear/AnimationPlayer")
+[node name="NPC" instance=ExtResource("1_kr6oh")]
+script = ExtResource("2_bf144")
 
 [node name="Cartoon Bear" parent="." index="5" instance=ExtResource("2_pfgxg")]
 
