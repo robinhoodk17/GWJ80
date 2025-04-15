@@ -1,31 +1,30 @@
-[gd_scene load_steps=229 format=4 uid="uid://dgmox4dyoefyf"]
+[gd_scene load_steps=228 format=4 uid="uid://dgmox4dyoefyf"]
 
-[ext_resource type="Script" uid="uid://1cbekppiubgu" path="res://game_jam_sky_scraper.gd" id="1_odb85"]
-[ext_resource type="Resource" uid="uid://v5u0dyabni7e" path="res://input/default_mapping_context.tres" id="2_fevv2"]
+[ext_resource type="Script" uid="uid://1cbekppiubgu" path="res://game/scenes/Bigger building made with csg boxeszip/game_jam_sky_scraper.gd" id="1_lmwtd"]
 [ext_resource type="Material" uid="uid://vldi8ulujtmb" path="res://carpet.tres" id="3_kcvwx"]
 [ext_resource type="Material" uid="uid://bk1dm3de6u0q7" path="res://roof.tres" id="4_6lxsc"]
-[ext_resource type="Texture2D" uid="uid://dbqs6jpq6yd4o" path="res://game/scenes/Bigger building made with csg boxeszip/Textures/Backup Building _Glass_albedo004.png" id="5_1c7ia"]
+[ext_resource type="Texture2D" uid="uid://dbqs6jpq6yd4o" path="res://Textures/Backup Building _Glass_albedo004.png" id="5_1c7ia"]
 [ext_resource type="Material" uid="uid://cerrltw6xernw" path="res://walls.tres" id="5_xt6ak"]
-[ext_resource type="Texture2D" uid="uid://cx1hbci2m7cca" path="res://game/scenes/Bigger building made with csg boxeszip/Textures/Backup Building _Rails_albedo000.png" id="6_0qjgy"]
-[ext_resource type="Texture2D" uid="uid://cu8ro8n164lvg" path="res://game/scenes/Bigger building made with csg boxeszip/Textures/Backup Building _Black_albedo000.png" id="7_mrlrf"]
-[ext_resource type="Texture2D" uid="uid://bl15a68txfrtk" path="res://game/scenes/Bigger building made with csg boxeszip/Textures/Backup Building _Glass_albedo000.png" id="8_ddwdy"]
-[ext_resource type="Texture2D" uid="uid://b001mpnd1445a" path="res://game/scenes/Bigger building made with csg boxeszip/Textures/Backup Building _keyboard ref.jpg" id="9_bu28o"]
-[ext_resource type="Texture2D" uid="uid://dg3i05wh8a2ji" path="res://game/scenes/Bigger building made with csg boxeszip/Textures/Backup Building _walls_albedo002.png" id="10_taked"]
-[ext_resource type="Texture2D" uid="uid://nvwvcmlf3dyc" path="res://game/scenes/Bigger building made with csg boxeszip/Textures/Backup Building _walls_albedo000.png" id="11_rtagh"]
-[ext_resource type="Texture2D" uid="uid://bd38tftgixtoa" path="res://game/scenes/Bigger building made with csg boxeszip/Textures/Backup Building _Material_albedo000.png" id="12_cs760"]
+[ext_resource type="Texture2D" uid="uid://cx1hbci2m7cca" path="res://Textures/Backup Building _Rails_albedo000.png" id="6_0qjgy"]
+[ext_resource type="Texture2D" uid="uid://cu8ro8n164lvg" path="res://Textures/Backup Building _Black_albedo000.png" id="7_mrlrf"]
+[ext_resource type="Texture2D" uid="uid://bl15a68txfrtk" path="res://Textures/Backup Building _Glass_albedo000.png" id="8_ddwdy"]
+[ext_resource type="Texture2D" uid="uid://b001mpnd1445a" path="res://Textures/Backup Building _keyboard ref.jpg" id="9_bu28o"]
+[ext_resource type="Texture2D" uid="uid://dg3i05wh8a2ji" path="res://Textures/Backup Building _walls_albedo002.png" id="10_taked"]
+[ext_resource type="Texture2D" uid="uid://nvwvcmlf3dyc" path="res://Textures/Backup Building _walls_albedo000.png" id="11_rtagh"]
+[ext_resource type="Texture2D" uid="uid://bd38tftgixtoa" path="res://Textures/Backup Building _Material_albedo000.png" id="12_cs760"]
 [ext_resource type="Material" uid="uid://dh4ugbf0mb2oy" path="res://materials/materials/wood-2.tres" id="13_b3p7c"]
-[ext_resource type="Texture2D" uid="uid://dnepoc7wgc1ho" path="res://game/scenes/Bigger building made with csg boxeszip/Textures/Game Jam Sky Scraper_1.png" id="14_bquv1"]
-[ext_resource type="Texture2D" uid="uid://bl7t1e5l0oiab" path="res://game/scenes/Bigger building made with csg boxeszip/Textures/Backup Building _Glass_albedo002.png" id="15_eqgia"]
-[ext_resource type="Texture2D" uid="uid://cmwlkgbxp7e1h" path="res://game/scenes/Bigger building made with csg boxeszip/Textures/Backup Building _Glass_albedo003.png" id="16_au23g"]
-[ext_resource type="Texture2D" uid="uid://ciapatvrrtbem" path="res://game/scenes/Bigger building made with csg boxeszip/Textures/Backup Building _Rails_albedo004.png" id="17_0nttb"]
-[ext_resource type="Texture2D" uid="uid://cge0q81x1o7tw" path="res://game/scenes/Bigger building made with csg boxeszip/Textures/Backup Building _Rails_albedo007.png" id="18_61k8r"]
-[ext_resource type="Texture2D" uid="uid://bu1rrqjctogw7" path="res://game/scenes/Bigger building made with csg boxeszip/Textures/Backup Building _Door frame_albedo000.png" id="19_k2u6g"]
-[ext_resource type="Texture2D" uid="uid://decusflg2vqcd" path="res://game/scenes/Bigger building made with csg boxeszip/Textures/Backup Building _Plant_albedo000.png" id="20_poytw"]
-[ext_resource type="Texture2D" uid="uid://c2nf3fk0uup1t" path="res://game/scenes/Bigger building made with csg boxeszip/Textures/Backup Building _Rails_albedo002.png" id="21_rltil"]
-[ext_resource type="Texture2D" uid="uid://cfn37ldwa5ste" path="res://game/scenes/Bigger building made with csg boxeszip/Textures/Backup Building _Light_albedo000.png" id="22_4pws7"]
-[ext_resource type="Texture2D" uid="uid://xtjn68v1esq5" path="res://game/scenes/Bigger building made with csg boxeszip/Textures/Backup Building _Couch_albedo000.png" id="23_j8s07"]
-[ext_resource type="Texture2D" uid="uid://dsfxgj5idgel7" path="res://game/scenes/Bigger building made with csg boxeszip/Textures/Backup Building _Water Cooler_albedo000.png" id="24_6p1rl"]
-[ext_resource type="Texture2D" uid="uid://ql7y0uxpa5hj" path="res://game/scenes/Bigger building made with csg boxeszip/Textures/Backup Building _Rails_albedo006.png" id="25_gk2bw"]
+[ext_resource type="Texture2D" uid="uid://dnepoc7wgc1ho" path="res://Textures/Game Jam Sky Scraper_1.png" id="14_bquv1"]
+[ext_resource type="Texture2D" uid="uid://bl7t1e5l0oiab" path="res://Textures/Backup Building _Glass_albedo002.png" id="15_eqgia"]
+[ext_resource type="Texture2D" uid="uid://cmwlkgbxp7e1h" path="res://Textures/Backup Building _Glass_albedo003.png" id="16_au23g"]
+[ext_resource type="Texture2D" uid="uid://ciapatvrrtbem" path="res://Textures/Backup Building _Rails_albedo004.png" id="17_0nttb"]
+[ext_resource type="Texture2D" uid="uid://cge0q81x1o7tw" path="res://Textures/Backup Building _Rails_albedo007.png" id="18_61k8r"]
+[ext_resource type="Texture2D" uid="uid://bu1rrqjctogw7" path="res://Textures/Backup Building _Door frame_albedo000.png" id="19_k2u6g"]
+[ext_resource type="Texture2D" uid="uid://decusflg2vqcd" path="res://Textures/Backup Building _Plant_albedo000.png" id="20_poytw"]
+[ext_resource type="Texture2D" uid="uid://c2nf3fk0uup1t" path="res://Textures/Backup Building _Rails_albedo002.png" id="21_rltil"]
+[ext_resource type="Texture2D" uid="uid://cfn37ldwa5ste" path="res://Textures/Backup Building _Light_albedo000.png" id="22_4pws7"]
+[ext_resource type="Texture2D" uid="uid://xtjn68v1esq5" path="res://Textures/Backup Building _Couch_albedo000.png" id="23_j8s07"]
+[ext_resource type="Texture2D" uid="uid://dsfxgj5idgel7" path="res://Textures/Backup Building _Water Cooler_albedo000.png" id="24_6p1rl"]
+[ext_resource type="Texture2D" uid="uid://ql7y0uxpa5hj" path="res://Textures/Backup Building _Rails_albedo006.png" id="25_gk2bw"]
 [ext_resource type="PackedScene" uid="uid://u1vgfeia861q" path="res://ui/ui.tscn" id="27_ldaxu"]
 [ext_resource type="PackedScene" uid="uid://dgaexk2mqn6j8" path="res://game/player/trial_player/player.tscn" id="28_m0j6m"]
 [ext_resource type="PackedScene" uid="uid://bahvf2v6h6slc" path="res://game/player/player_controller.tscn" id="29_xqxqv"]
@@ -2571,8 +2570,7 @@ dof_blur_near_distance = 0.01
 auto_exposure_min_sensitivity = 8.01
 
 [node name="Backup Building " type="Node3D"]
-script = ExtResource("1_odb85")
-default_mapping_context = ExtResource("2_fevv2")
+script = ExtResource("1_lmwtd")
 
 [node name="Walls" type="MeshInstance3D" parent="."]
 transform = Transform3D(-15.9737, 0, 0, 0, -6.13983, 0, 0, 0, -15.9451, 0, 6.63494, 0)
@@ -3227,6 +3225,12 @@ transform = Transform3D(-3, 0, -2.62268e-07, 0, 3, 0, 2.62268e-07, 0, -3, -2.715
 
 [node name="PopUp" parent="NPC" index="4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.06876, 0)
+
+[node name="Sphere_001" parent="NPC/Cartoon Bear/rig/Skeleton3D" index="0"]
+transform = Transform3D(0.0377471, -1.31117e-05, -3.3013e-05, -3.31892e-05, -0.000516053, -0.0377436, 1.26591e-05, 0.0377436, -0.000516068, 0.0718712, 0.828039, 0.181788)
+
+[node name="Circle" parent="NPC/Cartoon Bear/rig/Skeleton3D" index="1"]
+transform = Transform3D(0.308932, -0.00315403, -7.67686e-05, 0.000839128, 0.0893893, -0.295732, 0.00304132, 0.295717, 0.0893932, -0.00634815, 0.513443, 0.202102)
 
 [node name="Places" type="Node3D" parent="."]
 
