@@ -3275,6 +3275,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.827, 0.56683, 4.83043)
 [node name="Butterfly full_001" parent="Player/playermodel/Butterfly" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.961475, 0.274891, 0, -0.274891, 0.961475, 0.71502, 0.25416, 0)
 
+[node name="Butterfly full_002" parent="Player/playermodel/Butterfly" index="2"]
+transform = Transform3D(1, 0, 0, 0, 0.957391, -0.288793, 0, 0.288793, 0.957392, 0.71502, 0.25416, 0)
+
 [node name="InteractionDetection" parent="Player/playermodel" index="1"]
 collision_mask = 4
 
@@ -3307,14 +3310,8 @@ transform = Transform3D(-3, 0, -2.62268e-07, 0, 3, 0, 2.62268e-07, 0, -3, -2.715
 [node name="PopUp" parent="NPC" index="4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.06876, 0)
 
-[node name="Sphere_001" parent="NPC/Cartoon Bear/rig/Skeleton3D" index="0"]
-transform = Transform3D(0.0377471, 7.2927e-13, -5.05941e-13, -5.0589e-13, 7.45058e-09, -0.0377471, -7.29248e-13, 0.0377471, 0, 0.0714508, 0.829955, 0.174487)
-
 [node name="Sphere_001" parent="NPC/Cartoon Bear/rig/Skeleton3D/Sphere_001" index="0"]
 material_overlay = SubResource("ShaderMaterial_tuhhj")
-
-[node name="Circle" parent="NPC/Cartoon Bear/rig/Skeleton3D" index="1"]
-transform = Transform3D(0.308932, -0.00313345, 0.000213236, 0.00115082, 0.0934216, -0.294482, 0.00292225, 0.294468, 0.0934285, -0.00648507, 0.515599, 0.199128)
 
 [node name="Circle" parent="NPC/Cartoon Bear/rig/Skeleton3D/Circle" index="0"]
 material_overlay = SubResource("ShaderMaterial_tuhhj")
@@ -3333,4 +3330,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.2876, 1.67507, 3.49074)
 [editable path="Player/playermodel/Butterfly"]
 [editable path="Player/camera_pivot"]
 [editable path="NPC"]
-[editable path="NPC/Cartoon Bear"]
