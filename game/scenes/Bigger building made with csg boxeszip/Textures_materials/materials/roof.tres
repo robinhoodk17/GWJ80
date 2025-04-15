@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bk1dm3de6u0q7"]
+
+[ext_resource type="Texture2D" uid="uid://caio7bek7e5gj" path="res://Textures/Backup Building _Roof_albedo000.png" id="1_rvm62"]
+
+[resource]
+resource_name = "Roof"
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("1_rvm62")
+roughness = 0.0
+uv1_scale = Vector3(0.23, 0.23, 0.23)

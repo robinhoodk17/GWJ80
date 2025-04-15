@@ -24,6 +24,7 @@ var original_position : Vector3
 var original_rotation : Basis
 
 func _ready() -> void:
+	Dialogic.timeline_ended.connect(unpause)
 	original_position = global_position
 	original_rotation = global_basis
 	timer.timeout.connect(start_walking)
@@ -102,7 +103,6 @@ func start_dialogue(timeline : String) -> void:
 	Dialogic.start(timeline).process_mode = Node.PROCESS_MODE_ALWAYS
 	Dialogic.process_mode = Node.PROCESS_MODE_ALWAYS
 	@warning_ignore("untyped_declaration")
-	Dialogic.timeline_ended.connect(unpause)
 	#Dialogic.timeline_ended.connect(func():get_tree().set('paused', false))
 	get_tree().paused = true
 
