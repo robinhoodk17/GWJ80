@@ -39,9 +39,9 @@ gdscript/warnings/inferred_declaration=1
 
 directories/dch_directory={}
 directories/dtl_directory={
-"cube": "res://game/npc/bear/cube.dtl",
+"cube": "res://game/npc/bear/timelines/cube.dtl",
 "freeze_in_time": "res://game/timelines/freeze_in_time.dtl",
-"no_cube": "res://game/npc/bear/no_cube.dtl"
+"no_cube": "res://game/npc/bear/timelines/no_cube.dtl"
 }
 
 [display]
