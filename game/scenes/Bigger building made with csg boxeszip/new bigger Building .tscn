@@ -5,8 +5,8 @@
 [ext_resource type="Shader" uid="uid://4y8o05ght0li" path="res://shaders/outline.gdshader" id="3_uos3j"]
 [ext_resource type="Shader" uid="uid://ctb5cm6drg2w4" path="res://shaders/cel-shader-base.gdshader" id="4_5koc2"]
 [ext_resource type="PackedScene" uid="uid://u1vgfeia861q" path="res://ui/ui.tscn" id="27_ldaxu"]
-[ext_resource type="PackedScene" uid="uid://dgaexk2mqn6j8" path="res://game/player/trial_player/player.tscn" id="28_m0j6m"]
-[ext_resource type="PackedScene" uid="uid://bahvf2v6h6slc" path="res://game/player/player_controller.tscn" id="29_xqxqv"]
+[ext_resource type="PackedScene" uid="uid://dgaexk2mqn6j8" path="res://game/player/player.tscn" id="28_m0j6m"]
+[ext_resource type="PackedScene" uid="uid://bahvf2v6h6slc" path="res://game/player/player_controllers/player_controller.tscn" id="29_xqxqv"]
 [ext_resource type="PackedScene" uid="uid://md7ncws5btwi" path="res://game/interactables/trial.tscn" id="30_i3tum"]
 [ext_resource type="PackedScene" uid="uid://s60xl4keq2rt" path="res://game/npc/bear/bear_npc.tscn" id="31_hqqhn"]
 
@@ -3275,6 +3275,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.827, 0.56683, 4.83043)
 [node name="Butterfly full_001" parent="Player/playermodel/Butterfly" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.961475, 0.274891, 0, -0.274891, 0.961475, 0.71502, 0.25416, 0)
 
+[node name="Butterfly full_002" parent="Player/playermodel/Butterfly" index="2"]
+transform = Transform3D(1, 0, 0, 0, 0.957391, -0.288793, 0, 0.288793, 0.957392, 0.71502, 0.25416, 0)
+
 [node name="InteractionDetection" parent="Player/playermodel" index="1"]
 collision_mask = 4
 
@@ -3308,13 +3311,13 @@ transform = Transform3D(-3, 0, -2.62268e-07, 0, 3, 0, 2.62268e-07, 0, -3, -2.715
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.06876, 0)
 
 [node name="Sphere_001" parent="NPC/Cartoon Bear/rig/Skeleton3D" index="0"]
-transform = Transform3D(0.0377471, -1.31117e-05, -3.3013e-05, -3.31892e-05, -0.000516053, -0.0377436, 1.26591e-05, 0.0377436, -0.000516068, 0.0718712, 0.828039, 0.181788)
+transform = Transform3D(0.0377471, 7.2927e-13, -5.05941e-13, -5.0589e-13, 7.45058e-09, -0.0377471, -7.29248e-13, 0.0377471, 0, 0.0714508, 0.829955, 0.174487)
 
 [node name="Sphere_001" parent="NPC/Cartoon Bear/rig/Skeleton3D/Sphere_001" index="0"]
 material_overlay = SubResource("ShaderMaterial_tuhhj")
 
 [node name="Circle" parent="NPC/Cartoon Bear/rig/Skeleton3D" index="1"]
-transform = Transform3D(0.308932, -0.00315403, -7.67686e-05, 0.000839128, 0.0893893, -0.295732, 0.00304132, 0.295717, 0.0893932, -0.00634815, 0.513443, 0.202102)
+transform = Transform3D(0.308932, -0.00313345, 0.000213236, 0.00115082, 0.0934216, -0.294482, 0.00292225, 0.294468, 0.0934285, -0.00648507, 0.515599, 0.199128)
 
 [node name="Circle" parent="NPC/Cartoon Bear/rig/Skeleton3D/Circle" index="0"]
 material_overlay = SubResource("ShaderMaterial_tuhhj")

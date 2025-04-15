@@ -1,0 +1,45 @@
+[gd_scene load_steps=10 format=3 uid="uid://bahvf2v6h6slc"]
+
+[ext_resource type="Script" uid="uid://bpq84bf3t0mv1" path="res://game/player/player_controllers/player_controller.gd" id="1_nv744"]
+[ext_resource type="Resource" uid="uid://dig8hnr4lgk3o" path="res://input/time_freeze.tres" id="2_5df8n"]
+[ext_resource type="Resource" uid="uid://c6tovgnwacf3x" path="res://input/move.tres" id="2_robka"]
+[ext_resource type="Resource" uid="uid://b1fqbn0g2j3ff" path="res://input/fly.tres" id="3_w85yc"]
+[ext_resource type="Resource" uid="uid://7bvnpytk6bwy" path="res://input/camera.tres" id="4_5df8n"]
+[ext_resource type="Resource" uid="uid://dr3iky0gcpwi5" path="res://input/interact.tres" id="5_bcob5"]
+[ext_resource type="Resource" uid="uid://dn3lfk06ljxi0" path="res://input/reset_camera.tres" id="6_w85yc"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_robka"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_robka"]
+size = Vector3(2.5, 2.42421, 3.00579)
+
+[node name="PlayerControler" type="Node3D"]
+script = ExtResource("1_nv744")
+time_freeze = ExtResource("2_5df8n")
+move_action = ExtResource("2_robka")
+fly_action = ExtResource("3_w85yc")
+camera_control = ExtResource("4_5df8n")
+interact_action = ExtResource("5_bcob5")
+reset_camera = ExtResource("6_w85yc")
+offset = Vector3(0, 1.25, 0)
+
+[node name="SpringArm3D" type="SpringArm3D" parent="."]
+shape = SubResource("SphereShape3D_robka")
+spring_length = 0.1
+
+[node name="Camera3D" type="Camera3D" parent="SpringArm3D"]
+transform = Transform3D(1, 0, 0, 0, 0.981627, 0.190809, 0, -0.190809, 0.981627, 0, 0, 0)
+
+[node name="CameraFraming" type="Area3D" parent="SpringArm3D/Camera3D"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpringArm3D/Camera3D/CameraFraming"]
+transform = Transform3D(1, 0, 0, 0, 0.999998, 3.57628e-07, 0, -3.57628e-07, 0.999998, 0, -0.572154, -3.17903)
+shape = SubResource("BoxShape3D_robka")
+
+[node name="HoverTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="CameraTimer" type="Timer" parent="."]
+one_shot = true

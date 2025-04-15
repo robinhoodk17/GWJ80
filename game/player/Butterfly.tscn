@@ -1,6 +1,6 @@
 [gd_scene load_steps=19 format=4 uid="uid://dlhyqkhdji50i"]
 
-[ext_resource type="Texture2D" uid="uid://cqkodldi0a28x" path="res://game/player/Butterfly_ButterflyTexture.jpg" id="1_1oi8g"]
+[ext_resource type="Texture2D" uid="uid://cqkodldi0a28x" path="res://game/player/Textures/Butterfly_ButterflyTexture.jpg" id="1_1oi8g"]
 [ext_resource type="Shader" uid="uid://4y8o05ght0li" path="res://shaders/outline.gdshader" id="1_a44gv"]
 [ext_resource type="Shader" uid="uid://ctb5cm6drg2w4" path="res://shaders/cel-shader-base.gdshader" id="2_snk13"]
 
