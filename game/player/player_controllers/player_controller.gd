@@ -47,6 +47,9 @@ var dampened_y_array : Array[float] = [0.0, 0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,
 var current_y : int = 0
 var averaged_y : float = 0.0
 func  _ready() -> void:
+	time_freeze.triggered.connect(handle_time_freeze)
+	fly_action.triggered.connect(handle_jump)
+	interact_action.triggered.connect(handle_interaction)
 	Globals.restart.connect(restarted)
 	await get_tree().process_frame
 	original_position = player.global_position
@@ -93,22 +96,22 @@ func _physics_process(delta: float) -> void:
 		if hover_timer.is_stopped():
 			player.velocity.y = 0.0
 			current_speed = gliding_speed
-	if fly_action.is_triggered():
-		player.velocity.y = jump_velocity
-		hover_timer.start(hover_delay)
+	#if fly_action.is_triggered():
+		#player.velocity.y = jump_velocity
+		#hover_timer.start(hover_delay)
 		
 	var talk : Dictionary = {"talk_started" : false, "npc" : null, "talk_result" : NPC.gamestate.NORMAL}
-	if time_freeze.is_triggered():
-		if interaction_detection.showing_which != null:
-			if interaction_detection.showing_which.is_in_group("item"):
-				interaction_detection.showing_which.freeze_in_time()
-	if interact_action.is_triggered():
-		if interaction_detection.showing_which != null:
-			interaction_detection.showing_which.interact(playermodel, self)
-		else:
-			if grabbing != null:
-				grabbing.drop()
-				grabbing = null
+	#if time_freeze.is_triggered():
+		#if interaction_detection.showing_which != null:
+			#if interaction_detection.showing_which.is_in_group("item"):
+				#interaction_detection.showing_which.freeze_in_time()
+	#if interact_action.is_triggered():
+		#if interaction_detection.showing_which != null:
+			#interaction_detection.showing_which.interact(playermodel, self)
+		#else:
+			#if grabbing != null:
+				#grabbing.drop()
+				#grabbing = null
 	var frame_info : Dictionary = {"position" : player.global_position, "rotation" : playermodel.global_basis, "talk" : talk}
 	Globals.append_frame_data(frame_info)
 	
@@ -171,3 +174,26 @@ func rotate_model(direction: Vector3, delta : float) -> void:
 func  restarted() -> void:
 	player.global_position = original_position
 	player.global_basis = original_rotation
+
+
+func handle_time_freeze() -> void:
+	if interaction_detection.showing_which != null:
+		if interaction_detection.showing_which.is_in_group("item"):
+			interaction_detection.showing_which.freeze_in_time()
+	#print_debug("froze successfully")
+
+
+func handle_jump() -> void:
+	player.velocity.y = jump_velocity
+	hover_timer.start(hover_delay)
+	print_debug("jumped successfully")
+
+
+func handle_interaction() -> void:
+	if interaction_detection.showing_which != null:
+		interaction_detection.showing_which.interact(playermodel, self)
+	else:
+		if grabbing != null:
+			grabbing.drop()
+			grabbing = null
+	print_debug("interacted succesfully")

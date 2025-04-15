@@ -3275,9 +3275,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.827, 0.56683, 4.83043)
 [node name="Butterfly full_001" parent="Player/playermodel/Butterfly" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.961475, 0.274891, 0, -0.274891, 0.961475, 0.71502, 0.25416, 0)
 
-[node name="Butterfly full_002" parent="Player/playermodel/Butterfly" index="2"]
-transform = Transform3D(1, 0, 0, 0, 0.957391, -0.288793, 0, 0.288793, 0.957392, 0.71502, 0.25416, 0)
-
 [node name="InteractionDetection" parent="Player/playermodel" index="1"]
 collision_mask = 4
 
