@@ -35,9 +35,7 @@ func _ready() -> void:
 		animation_player.play("Idle")
 	for i : float in moving_times.keys():
 		if i < expected_time:
-			print_debug(i)
 			current_event = i
-	print_debug(current_event, "current event")
 	timer.start(current_event)
 	Globals.restart.connect(restart)
 
