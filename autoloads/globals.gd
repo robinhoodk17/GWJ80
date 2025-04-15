@@ -16,8 +16,8 @@ signal found_item
 signal lost_item
 signal restart
 
-const PREWRITTEN_CONTROLLER : PackedScene = preload("res://game/player/prewritten_controller.tscn")
-const PLAYER : PackedScene = preload("res://game/player/trial_player/player.tscn")
+const PREWRITTEN_CONTROLLER : PackedScene = preload("res://game/player/player_controllers/player_controller.tscn")
+const PLAYER : PackedScene = preload("res://game/player/player.tscn")
 var run_number : int = 1
 var run_limit : int = 3
 var current_time : float = 0.0

@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://bcupkmds1o63m"]
+[gd_scene load_steps=2 format=3 uid="uid://boxptffl7bp2j"]
 
-[ext_resource type="Script" uid="uid://bo6elnnhoph1q" path="res://game/player/dialogic_test.gd" id="1_v6loi"]
+[sub_resource type="GDScript" id="GDScript_6wcxv"]
+script/source = "extends Node
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	Dialogic.start(\"trial_timeline\")
+"
 
 [node name="Node" type="Node"]
-script = ExtResource("1_v6loi")
+script = SubResource("GDScript_6wcxv")
