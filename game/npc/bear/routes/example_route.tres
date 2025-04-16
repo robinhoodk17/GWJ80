@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1_px4co")
-acceptable_states = Array[int]([0, 1, 2])
+acceptable_states = Array[int]([2])
 route = "route1"
 metadata/_custom_type_script = "uid://cea3ewphuupof"
