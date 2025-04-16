@@ -1,7 +1,7 @@
 [gd_scene load_steps=26 format=4 uid="uid://t1bf83l55o6"]
 
-[ext_resource type="Texture2D" uid="uid://dyt44a2ijqrea" path="res://game/npc/bee/Bee_grandient texture.png" id="1_6uirh"]
-[ext_resource type="Material" uid="uid://dh4ugbf0mb2oy" path="res://game/scenes/Bigger building made with csg boxeszip/Textures_materials/materials/materials/materials/wood-2.tres" id="1_v8t8v"]
+[ext_resource type="Texture2D" uid="uid://dyt44a2ijqrea" path="res://game/npc/mee hive/Bee_grandient texture.png" id="1_6uirh"]
+[ext_resource type="Material" uid="uid://dh4ugbf0mb2oy" path="res://materials/materials/wood-2.tres" id="1_v8t8v"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wdcd2"]
 resource_name = "Material.001"

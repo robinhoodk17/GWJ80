@@ -2,21 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyt44a2ijqrea"
-path.s3tc="res://.godot/imported/Bee_grandient texture.png-f678bd84adbae9608ba928195df0571b.s3tc.ctex"
-path.etc2="res://.godot/imported/Bee_grandient texture.png-f678bd84adbae9608ba928195df0571b.etc2.ctex"
+uid="uid://j2vdnuyidd0s"
+path.s3tc="res://.godot/imported/Janitor floor _Glass_albedo003.png-a598a8a899ec9cdfe31a0635c331cd75.s3tc.ctex"
+path.etc2="res://.godot/imported/Janitor floor _Glass_albedo003.png-a598a8a899ec9cdfe31a0635c331cd75.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "09ce4991aea43c9cbc1cd97fd8e45286"
+"md5": "144538bed14ac560454f350c77cc922c"
 }
 
 [deps]
 
-source_file="res://game/npc/bee/Bee_grandient texture.png"
-dest_files=["res://.godot/imported/Bee_grandient texture.png-f678bd84adbae9608ba928195df0571b.s3tc.ctex", "res://.godot/imported/Bee_grandient texture.png-f678bd84adbae9608ba928195df0571b.etc2.ctex"]
+source_file="res://Janitor floor _Glass_albedo003.png"
+dest_files=["res://.godot/imported/Janitor floor _Glass_albedo003.png-a598a8a899ec9cdfe31a0635c331cd75.s3tc.ctex", "res://.godot/imported/Janitor floor _Glass_albedo003.png-a598a8a899ec9cdfe31a0635c331cd75.etc2.ctex"]
 
 [params]
 

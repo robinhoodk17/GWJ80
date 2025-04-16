@@ -1,4 +1,6 @@
-[gd_scene load_steps=37 format=4 uid="uid://dcue1okxqd16a"]
+[gd_scene load_steps=38 format=4 uid="uid://dcue1okxqd16a"]
+
+[ext_resource type="Material" uid="uid://dh4ugbf0mb2oy" path="res://materials/materials/wood-2.tres" id="1_oav7h"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wakxb"]
 
@@ -11109,65 +11111,72 @@ bones/636/bone_meta/extras = {
 }
 
 [node name="Ant_001" type="BoneAttachment3D" parent="char_grp/rig/Skeleton3D"]
-transform = Transform3D(0.999922, 0.012222, -0.00258292, -0.0122637, 0.999784, -0.0167734, 0.00237735, 0.0168038, 0.999856, -0.018755, 0.00160527, -0.0260428)
+transform = Transform3D(0.999922, 0.012222, -0.00258292, -0.0122637, 0.999784, -0.0167735, 0.00237735, 0.0168038, 0.999856, -0.018755, 0.00160527, -0.0260428)
 bone_name = "Ant.001"
 bone_idx = 57
 
 [node name="Ant_001" type="MeshInstance3D" parent="char_grp/rig/Skeleton3D/Ant_001"]
+material_overlay = ExtResource("1_oav7h")
 mesh = SubResource("ArrayMesh_kx8wl")
 skeleton = NodePath("")
 
 [node name="Ant_003" type="BoneAttachment3D" parent="char_grp/rig/Skeleton3D"]
-transform = Transform3D(0.999922, 0.012222, -0.00258292, -0.0122637, 0.999784, -0.0167734, 0.00237735, 0.0168038, 0.999856, -0.018755, 0.00160217, -0.0260428)
+transform = Transform3D(0.999922, 0.012222, -0.00258292, -0.0122637, 0.999784, -0.0167735, 0.00237735, 0.0168038, 0.999856, -0.018755, 0.00160241, -0.0260428)
 bone_name = "Ant.003"
 bone_idx = 182
 
 [node name="Ant_003" type="MeshInstance3D" parent="char_grp/rig/Skeleton3D/Ant_003"]
+material_overlay = ExtResource("1_oav7h")
 mesh = SubResource("ArrayMesh_v8lru")
 skeleton = NodePath("")
 
 [node name="Ant_002" type="BoneAttachment3D" parent="char_grp/rig/Skeleton3D"]
-transform = Transform3D(0.999922, 0.012222, -0.00258292, -0.0122637, 0.999784, -0.0167734, 0.00237735, 0.0168038, 0.999856, -0.018755, 0.00160527, -0.0260428)
+transform = Transform3D(0.999922, 0.012222, -0.00258292, -0.0122637, 0.999784, -0.0167735, 0.00237735, 0.0168038, 0.999856, -0.018755, 0.00160527, -0.0260428)
 bone_name = "Ant.002"
 bone_idx = 183
 
 [node name="Ant_002" type="MeshInstance3D" parent="char_grp/rig/Skeleton3D/Ant_002"]
+material_overlay = ExtResource("1_oav7h")
 mesh = SubResource("ArrayMesh_q8aeo")
 skeleton = NodePath("")
 
 [node name="Ant" type="BoneAttachment3D" parent="char_grp/rig/Skeleton3D"]
-transform = Transform3D(0.999922, 0.012222, -0.00258291, -0.0122637, 0.999784, -0.0167734, 0.00237735, 0.0168037, 0.999856, -0.0187545, 0.00159717, -0.0260436)
+transform = Transform3D(0.999922, 0.012222, -0.00258291, -0.0122637, 0.999784, -0.0167735, 0.00237735, 0.0168037, 0.999856, -0.0187545, 0.00159693, -0.0260436)
 bone_name = "Ant"
 bone_idx = 187
 
 [node name="Ant" type="MeshInstance3D" parent="char_grp/rig/Skeleton3D/Ant"]
+material_overlay = ExtResource("1_oav7h")
 mesh = SubResource("ArrayMesh_e22b6")
 skeleton = NodePath("")
 
 [node name="Ant_012" type="BoneAttachment3D" parent="char_grp/rig/Skeleton3D"]
-transform = Transform3D(0.999922, 0.012222, -0.00258291, -0.0122637, 0.999784, -0.0167734, 0.00237735, 0.0168037, 0.999856, -0.0187545, 0.00159717, -0.0260436)
+transform = Transform3D(0.999922, 0.012222, -0.00258291, -0.0122637, 0.999784, -0.0167735, 0.00237735, 0.0168037, 0.999856, -0.0187545, 0.00159693, -0.0260436)
 bone_name = "Ant.012"
 bone_idx = 188
 
 [node name="Ant_012" type="MeshInstance3D" parent="char_grp/rig/Skeleton3D/Ant_012"]
+material_overlay = ExtResource("1_oav7h")
 mesh = SubResource("ArrayMesh_pqpmc")
 skeleton = NodePath("")
 
 [node name="Ant_013" type="BoneAttachment3D" parent="char_grp/rig/Skeleton3D"]
-transform = Transform3D(0.999922, 0.012222, -0.00258291, -0.0122637, 0.999784, -0.0167734, 0.00237735, 0.0168037, 0.999856, -0.0187545, 0.00159717, -0.0260436)
+transform = Transform3D(0.999922, 0.012222, -0.00258291, -0.0122637, 0.999784, -0.0167735, 0.00237735, 0.0168037, 0.999856, -0.0187545, 0.00159693, -0.0260436)
 bone_name = "Ant.013"
 bone_idx = 189
 
 [node name="Ant_013" type="MeshInstance3D" parent="char_grp/rig/Skeleton3D/Ant_013"]
+material_overlay = ExtResource("1_oav7h")
 mesh = SubResource("ArrayMesh_83i8d")
 skeleton = NodePath("")
 
 [node name="Ant_014" type="BoneAttachment3D" parent="char_grp/rig/Skeleton3D"]
-transform = Transform3D(0.999922, 0.012222, -0.00258291, -0.0122637, 0.999784, -0.0167734, 0.00237735, 0.0168037, 0.999856, -0.0187545, 0.00159717, -0.0260436)
+transform = Transform3D(0.999922, 0.012222, -0.00258291, -0.0122637, 0.999784, -0.0167735, 0.00237735, 0.0168037, 0.999856, -0.0187545, 0.00159693, -0.0260436)
 bone_name = "Ant.014"
 bone_idx = 190
 
 [node name="Ant_014" type="MeshInstance3D" parent="char_grp/rig/Skeleton3D/Ant_014"]
+material_overlay = ExtResource("1_oav7h")
 mesh = SubResource("ArrayMesh_b1fpo")
 skeleton = NodePath("")
 
@@ -11177,38 +11186,47 @@ bone_name = "Roundcube.001"
 bone_idx = 191
 
 [node name="Roundcube_001" type="MeshInstance3D" parent="char_grp/rig/Skeleton3D/Roundcube_001"]
+material_overlay = ExtResource("1_oav7h")
 mesh = SubResource("ArrayMesh_rub84")
 skeleton = NodePath("")
 
 [node name="Ant_004" type="MeshInstance3D" parent="char_grp/rig/Skeleton3D"]
+material_overlay = ExtResource("1_oav7h")
 mesh = SubResource("ArrayMesh_c6r5e")
 skin = SubResource("Skin_cp0n0")
 
 [node name="Ant_005" type="MeshInstance3D" parent="char_grp/rig/Skeleton3D"]
+material_overlay = ExtResource("1_oav7h")
 mesh = SubResource("ArrayMesh_3h6i4")
 skin = SubResource("Skin_cp0n0")
 
 [node name="Ant_006" type="MeshInstance3D" parent="char_grp/rig/Skeleton3D"]
+material_overlay = ExtResource("1_oav7h")
 mesh = SubResource("ArrayMesh_pgpee")
 skin = SubResource("Skin_cp0n0")
 
 [node name="Ant_007" type="MeshInstance3D" parent="char_grp/rig/Skeleton3D"]
+material_overlay = ExtResource("1_oav7h")
 mesh = SubResource("ArrayMesh_vsvrp")
 skin = SubResource("Skin_cp0n0")
 
 [node name="Ant_008" type="MeshInstance3D" parent="char_grp/rig/Skeleton3D"]
+material_overlay = ExtResource("1_oav7h")
 mesh = SubResource("ArrayMesh_vedao")
 skin = SubResource("Skin_cp0n0")
 
 [node name="Ant_009" type="MeshInstance3D" parent="char_grp/rig/Skeleton3D"]
+material_overlay = ExtResource("1_oav7h")
 mesh = SubResource("ArrayMesh_a0v55")
 skin = SubResource("Skin_cp0n0")
 
 [node name="Ant_010" type="MeshInstance3D" parent="char_grp/rig/Skeleton3D"]
+material_overlay = ExtResource("1_oav7h")
 mesh = SubResource("ArrayMesh_5hqqf")
 skin = SubResource("Skin_cp0n0")
 
 [node name="Ant_011" type="MeshInstance3D" parent="char_grp/rig/Skeleton3D"]
+material_overlay = ExtResource("1_oav7h")
 mesh = SubResource("ArrayMesh_wg3v1")
 skin = SubResource("Skin_cp0n0")
 

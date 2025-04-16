@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cbd586kq2osst"
-path="res://.godot/imported/Bee.glb-e6bb8fdc95b85a8936be3a221dc28bf1.scn"
+uid="uid://b8nug3r4sa5od"
+path="res://.godot/imported/Dee Hive.glb-70b76aeab45b96bdebef29878e9d5fef.scn"
 
 [deps]
 
-source_file="res://game/npc/bee/Bee.glb"
-dest_files=["res://.godot/imported/Bee.glb-e6bb8fdc95b85a8936be3a221dc28bf1.scn"]
+source_file="res://game/npc/Dee/Dee Hive.glb"
+dest_files=["res://.godot/imported/Dee Hive.glb-70b76aeab45b96bdebef29878e9d5fef.scn"]
 
 [params]
 

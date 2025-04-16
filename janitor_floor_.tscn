@@ -1,6 +1,7 @@
-[gd_scene load_steps=134 format=4 uid="uid://cxd8a86qfj6ml"]
+[gd_scene load_steps=135 format=4 uid="uid://cxd8a86qfj6ml"]
 
 [ext_resource type="Texture2D" uid="uid://b5ivgatsnsnc3" path="res://Textures/Janitor floor _Black_albedo000.png" id="1_2qrx1"]
+[ext_resource type="Material" uid="uid://dh4ugbf0mb2oy" path="res://materials/materials/wood-2.tres" id="1_jwoc0"]
 [ext_resource type="Texture2D" uid="uid://cc35qx7j4inp4" path="res://Textures/Janitor floor _Material_albedo000.png" id="2_jwoc0"]
 [ext_resource type="Texture2D" uid="uid://3wslharmkdi5" path="res://Textures/Janitor floor _Glass_albedo000.png" id="3_iujxa"]
 [ext_resource type="Texture2D" uid="uid://dr3c41wori3o" path="res://Textures/Janitor floor _Glass_albedo002.png" id="4_i1y3g"]
@@ -1792,6 +1793,7 @@ data = PackedVector3Array(44.3951, 4.3534, 23.1955, 50.0311, 4.3534, 23.1955, 44
 
 [node name="Text" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, 0.310635, 0, 9.25765e-09, -2.759e-16, -0.310635, -0.310635, 0, -9.25765e-09, -5.71009, -5.80543, 15.0231)
+material_overlay = ExtResource("1_jwoc0")
 mesh = SubResource("ArrayMesh_vytf6")
 skeleton = NodePath("")
 
@@ -1802,6 +1804,7 @@ shape = SubResource("ConcavePolygonShape3D_2qrx1")
 
 [node name="Shelves_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.228432, 0, 0, 0, 0.0540016, 0, 0, 0, -0.768215, 14.4633, -11.6135, -9.30844)
+material_overlay = ExtResource("1_jwoc0")
 mesh = SubResource("ArrayMesh_3u35s")
 skeleton = NodePath("")
 
@@ -1812,6 +1815,7 @@ shape = SubResource("ConcavePolygonShape3D_jwoc0")
 
 [node name="Shelve Holders_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.170224, 0, 0, 0, 0.326001, 0, 0, 0, 0.170224, 14.5352, -11.9869, -9.58673)
+material_overlay = ExtResource("1_jwoc0")
 mesh = SubResource("ArrayMesh_wle3t")
 skeleton = NodePath("")
 
@@ -1822,6 +1826,7 @@ shape = SubResource("ConcavePolygonShape3D_iujxa")
 
 [node name="Cleaner cupboard" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.241165, 0, 0, 0, 0.241165, 0, 0, 0, 0.241165, 13.2669, -9.61865, -1.87338)
+material_overlay = ExtResource("1_jwoc0")
 mesh = SubResource("ArrayMesh_lqkqh")
 skeleton = NodePath("")
 
@@ -1832,6 +1837,7 @@ shape = SubResource("ConcavePolygonShape3D_i1y3g")
 
 [node name="Big janitor sink" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, 0, -0.609789, 0, 0.609789, 0, 0.609789, 0, 0, 5.80539, -11.5019, -15.2464)
+material_overlay = ExtResource("1_jwoc0")
 mesh = SubResource("ArrayMesh_7frov")
 skeleton = NodePath("")
 
@@ -1842,6 +1848,7 @@ shape = SubResource("ConcavePolygonShape3D_dcwo3")
 
 [node name="Washing machine" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, 0, -0.530838, 0, 0.530838, 0, 0.530838, 0, 0, 8.97652, -8.76225, -15.0738)
+material_overlay = ExtResource("1_jwoc0")
 mesh = SubResource("ArrayMesh_ihhow")
 skeleton = NodePath("")
 
@@ -1852,6 +1859,7 @@ shape = SubResource("ConcavePolygonShape3D_008ld")
 
 [node name="Dryer" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, 0, -0.605956, 0, 0.605956, 0, 0.605956, 0, 0, 11.9267, -11.5021, -15.0738)
+material_overlay = ExtResource("1_jwoc0")
 mesh = SubResource("ArrayMesh_qt2q4")
 skeleton = NodePath("")
 
@@ -1862,6 +1870,7 @@ shape = SubResource("ConcavePolygonShape3D_k33to")
 
 [node name="Broom" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1.12368e-08, 0.464983, 0.092491, 0.0153716, 2.33349, -0.0179401, -0.0929997, 0.385696, -0.00296528, 14.1638, -9.23093, 2.93726)
+material_overlay = ExtResource("1_jwoc0")
 mesh = SubResource("ArrayMesh_a1lm2")
 skeleton = NodePath("")
 
@@ -1872,6 +1881,7 @@ shape = SubResource("ConcavePolygonShape3D_dfta2")
 
 [node name="Cube_008" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.0426695, -0.122447, 0, 0.0054945, 0.950904, 0, 0, 0, 0.809553, 14.0991, -11.1453, 1.00701)
+material_overlay = ExtResource("1_jwoc0")
 mesh = SubResource("ArrayMesh_6bl37")
 skeleton = NodePath("")
 
@@ -1882,6 +1892,7 @@ shape = SubResource("ConcavePolygonShape3D_u18yd")
 
 [node name="Spray bottle" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, 0, -0.0728486, 0, 0.109208, 0, 0.109208, 0, 0, 14.0235, -8.86385, -8.99297)
+material_overlay = ExtResource("1_jwoc0")
 mesh = SubResource("ArrayMesh_a2esf")
 skeleton = NodePath("")
 
@@ -1892,6 +1903,7 @@ shape = SubResource("ConcavePolygonShape3D_72xyu")
 
 [node name="Cube_007" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, 0, -0.250989, 0, 0.250989, 0, 0.250989, 0, 0, 14.2322, -8.71559, -8.38823)
+material_overlay = ExtResource("1_jwoc0")
 mesh = SubResource("ArrayMesh_r663d")
 skeleton = NodePath("")
 
@@ -1902,6 +1914,7 @@ shape = SubResource("ConcavePolygonShape3D_k31ph")
 
 [node name="Cube_009" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, 0, -0.250989, 0, 0.250989, 0, 0.250989, 0, 0, 14.2322, -8.71559, -7.81819)
+material_overlay = ExtResource("1_jwoc0")
 mesh = SubResource("ArrayMesh_o7d5t")
 skeleton = NodePath("")
 
@@ -1912,6 +1925,7 @@ shape = SubResource("ConcavePolygonShape3D_ew0rf")
 
 [node name="Cube_010" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, 0, -0.250989, 0, 0.250989, 0, 0.250989, 0, 0, 14.2322, -8.71559, -7.21543)
+material_overlay = ExtResource("1_jwoc0")
 mesh = SubResource("ArrayMesh_ar2xk")
 skeleton = NodePath("")
 
@@ -1922,6 +1936,7 @@ shape = SubResource("ConcavePolygonShape3D_bcv36")
 
 [node name="Cube_011" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, 0, -0.250989, 0, 0.250989, 0, 0.250989, 0, 0, 14.2322, -8.71559, -6.61092)
+material_overlay = ExtResource("1_jwoc0")
 mesh = SubResource("ArrayMesh_riknb")
 skeleton = NodePath("")
 
@@ -1932,6 +1947,7 @@ shape = SubResource("ConcavePolygonShape3D_56eci")
 
 [node name="Spray bottle_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, 0, -0.0728486, 0, 0.109208, 0, 0.109208, 0, 0, 14.0235, -8.86385, -9.39859)
+material_overlay = ExtResource("1_jwoc0")
 mesh = SubResource("ArrayMesh_wv0as")
 skeleton = NodePath("")
 
@@ -1942,6 +1958,7 @@ shape = SubResource("ConcavePolygonShape3D_nwwiy")
 
 [node name="Spray bottle_002" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, 0, -0.0728486, 0, 0.109208, 0, 0.109208, 0, 0, 14.0235, -8.86385, -9.84838)
+material_overlay = ExtResource("1_jwoc0")
 mesh = SubResource("ArrayMesh_q5cvb")
 skeleton = NodePath("")
 
@@ -1952,6 +1969,7 @@ shape = SubResource("ConcavePolygonShape3D_qb3aa")
 
 [node name="Cylinder" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, 0, -0.363041, 0, 0.363041, 0, 0.363041, 0, 0, 14.2251, -9.47207, -9.44104)
+material_overlay = ExtResource("1_jwoc0")
 mesh = SubResource("ArrayMesh_os1hb")
 skeleton = NodePath("")
 
@@ -1962,6 +1980,7 @@ shape = SubResource("ConcavePolygonShape3D_0qath")
 
 [node name="Cylinder_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, 0, -0.363041, 0, 0.363041, 0, 0.363041, 0, 0, 14.2251, -9.47207, -8.65994)
+material_overlay = ExtResource("1_jwoc0")
 mesh = SubResource("ArrayMesh_eat82")
 skeleton = NodePath("")
 
@@ -1972,6 +1991,7 @@ shape = SubResource("ConcavePolygonShape3D_fq5kg")
 
 [node name="Cylinder_002" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, 0, -0.363041, 0, 0.363041, 0, 0.363041, 0, 0, 14.2251, -9.47207, -7.86259)
+material_overlay = ExtResource("1_jwoc0")
 mesh = SubResource("ArrayMesh_6x38b")
 skeleton = NodePath("")
 
@@ -1982,6 +2002,7 @@ shape = SubResource("ConcavePolygonShape3D_m8ch3")
 
 [node name="Cylinder_003" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, 0, -0.363041, 0, 0.363041, 0, 0.363041, 0, 0, 14.2251, -9.47207, -7.04472)
+material_overlay = ExtResource("1_jwoc0")
 mesh = SubResource("ArrayMesh_8hsae")
 skeleton = NodePath("")
 
@@ -1992,6 +2013,7 @@ shape = SubResource("ConcavePolygonShape3D_esmgs")
 
 [node name="Cylinder_011" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, 0, -0.230161, 0, 0.230161, 0, 0.230161, 0, 0, 13.8886, -10.3661, -7.9728)
+material_overlay = ExtResource("1_jwoc0")
 mesh = SubResource("ArrayMesh_vhmx2")
 skeleton = NodePath("")
 
@@ -2002,6 +2024,7 @@ shape = SubResource("ConcavePolygonShape3D_c2oro")
 
 [node name="Cylinder_012" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, -0.32458, 0, 0, 0, -0.179284, 0.179284, 0, 0, 14.1063, -11.3802, -9.85805)
+material_overlay = ExtResource("1_jwoc0")
 mesh = SubResource("ArrayMesh_lo4k1")
 skeleton = NodePath("")
 
@@ -2012,6 +2035,7 @@ shape = SubResource("ConcavePolygonShape3D_pq32v")
 
 [node name="Cylinder_013" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, -0.32458, 0, 0, 0, -0.179284, 0.179284, 0, 0, 14.1063, -11.0873, -9.65491)
+material_overlay = ExtResource("1_jwoc0")
 mesh = SubResource("ArrayMesh_reb7b")
 skeleton = NodePath("")
 
@@ -2022,6 +2046,7 @@ shape = SubResource("ConcavePolygonShape3D_ya0s8")
 
 [node name="clothes" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, 0, -2.15461, 0, 2.15461, 0, 2.15461, 0, 0, 13.6874, -8.7351, -13.9135)
+material_overlay = ExtResource("1_jwoc0")
 mesh = SubResource("ArrayMesh_osy7g")
 skeleton = NodePath("")
 
@@ -2032,6 +2057,7 @@ shape = SubResource("ConcavePolygonShape3D_pqg4f")
 
 [node name="Dovey Swift Room_005" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, -1, 0, 0, 0, -0.259695, 1, 0, 0, -5.7955, 3.87489, 14.1482)
+material_overlay = ExtResource("1_jwoc0")
 mesh = SubResource("ArrayMesh_3bbvn")
 skeleton = NodePath("")
 
@@ -2043,6 +2069,7 @@ shape = SubResource("ConcavePolygonShape3D_lnq8j")
 [node name="Walls_002" type="MeshInstance3D" parent="."]
 transform = Transform3D(-15.9737, 0, 0, 0, -6.13983, 0, 0, 0, -15.9451, 0, 6.63494, 0)
 visible = false
+material_overlay = ExtResource("1_jwoc0")
 mesh = SubResource("ArrayMesh_wy4ft")
 skeleton = NodePath("")
 
@@ -2050,14 +2077,18 @@ skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Walls_002/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_btymu")
+disabled = true
 
 [node name="Cubic walls side_002" type="CSGBox3D" parent="."]
 transform = Transform3D(-1.65805e-08, 0.565279, 0, -0.139087, -6.73865e-08, 0, 0, 0, 1, -6.17999, -8.9945, 3.50641)
+material_overlay = ExtResource("1_jwoc0")
+use_collision = true
 size = Vector3(53.8066, 1, 18.0173)
 material = SubResource("StandardMaterial3D_y8fxm")
 
 [node name="Cubic walls side_003" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1.65805e-08, 6.73865e-08, 1, -0.139087, -6.73865e-08, -1.19209e-07, 1.65805e-08, -0.565279, 1.19209e-07, -12.979, -8.68261, -5.37612)
+material_overlay = ExtResource("1_jwoc0")
 mesh = SubResource("ArrayMesh_e46vt")
 skeleton = NodePath("")
 
@@ -2068,6 +2099,7 @@ shape = SubResource("ConcavePolygonShape3D_f3pu2")
 
 [node name="Cubic walls side_005" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1.65805e-08, 6.73865e-08, 1, -0.139087, -6.73865e-08, -1.19209e-07, 1.65805e-08, -0.565279, 1.19209e-07, -11.4214, 0.891455, 6.8657)
+material_overlay = ExtResource("1_jwoc0")
 mesh = SubResource("ArrayMesh_5xx04")
 skeleton = NodePath("")
 
@@ -2078,6 +2110,7 @@ shape = SubResource("ConcavePolygonShape3D_wenqc")
 
 [node name="Door_008_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, 0.0170923, -0.0987558, -0.0995493, 8.02058e-09, 7.47683e-10, -5.9336e-09, -0.134563, -0.012544, -8.00721, 0.488658, 12.7778)
+material_overlay = ExtResource("1_jwoc0")
 mesh = SubResource("ArrayMesh_aqkgn")
 skeleton = NodePath("")
 
@@ -2088,6 +2121,7 @@ shape = SubResource("ConcavePolygonShape3D_sw53x")
 
 [node name="Plane_007_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(-8.29023e-09, 2.98023e-08, 1, -0.139087, 2.98023e-08, -5.96046e-08, 4.14512e-09, 1, -2.98023e-08, -28.9673, 0.891456, 7.98133)
+material_overlay = ExtResource("1_jwoc0")
 mesh = SubResource("ArrayMesh_dns7v")
 skeleton = NodePath("")
 
