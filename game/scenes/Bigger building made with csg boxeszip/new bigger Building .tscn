@@ -1,10 +1,11 @@
-[gd_scene load_steps=262 format=4 uid="uid://dgmox4dyoefyf"]
+[gd_scene load_steps=263 format=4 uid="uid://dgmox4dyoefyf"]
 
 [ext_resource type="Script" uid="uid://1cbekppiubgu" path="res://game/scenes/Bigger building made with csg boxeszip/game_jam_sky_scraper.gd" id="1_lmwtd"]
 [ext_resource type="Resource" uid="uid://v5u0dyabni7e" path="res://input/default_mapping_context.tres" id="2_odb85"]
 [ext_resource type="Shader" uid="uid://4y8o05ght0li" path="res://shaders/outline.gdshader" id="3_uos3j"]
 [ext_resource type="Shader" uid="uid://ctb5cm6drg2w4" path="res://shaders/cel-shader-base.gdshader" id="4_5koc2"]
 [ext_resource type="Material" uid="uid://pcwey42twfwu" path="res://materials/materials/janiter walls.tres" id="5_5i77c"]
+[ext_resource type="PackedScene" uid="uid://jowdm0hucqo8" path="res://game/interactables/cheese/cheese.tscn" id="8_axi67"]
 [ext_resource type="PackedScene" uid="uid://cxd8a86qfj6ml" path="res://janitor_floor_.tscn" id="11_2m30o"]
 [ext_resource type="Script" uid="uid://cea3ewphuupof" path="res://game/npc/routes/route.gd" id="11_mb0xo"]
 [ext_resource type="PackedScene" uid="uid://dcue1okxqd16a" path="res://ant.tscn" id="12_a5cuj"]
@@ -2841,6 +2842,21 @@ tracks/1/keys = {
 "values": [Vector3(0, -3.14159, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_36qhl"]
+resource_name = "room"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.243, -11.098, -4.855)]
+}
+
 [sub_resource type="Animation" id="Animation_agy81"]
 resource_name = "route1"
 length = 105.0
@@ -3000,6 +3016,34 @@ tracks/2/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_8b3yv"]
+resource_name = "route2"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.2, 2, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.243, -11.098, -4.855), Vector3(-1.243, -11.098, -10), Vector3(-1.243, -11.098, -10), Vector3(-13.258, -11.098, -10)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.25, 1.43333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 1.5708, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_6k0m7"]
 resource_name = "watch_tv"
 length = 5.0
@@ -3040,49 +3084,6 @@ tracks/2/keys = {
 "args": [&"walk", -1, 1.0, false],
 "method": &"play"
 }]
-}
-
-[sub_resource type="Animation" id="Animation_8b3yv"]
-resource_name = "route2"
-length = 5.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.2, 2, 5),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(-1.243, -11.098, -4.855), Vector3(-1.243, -11.098, -10), Vector3(-1.243, -11.098, -10), Vector3(-13.258, -11.098, -10)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.25, 1.43333),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 1.5708, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_36qhl"]
-resource_name = "room"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-1.243, -11.098, -4.855)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sjqqi"]
@@ -3858,6 +3859,9 @@ transform = Transform3D(0.455, 0, 0, 0, 0.455, 0, 0, 0, 0.455, 5.58837, -9.13765
 [node name="StaticBody3D2" parent="Interactables" instance=ExtResource("30_i3tum")]
 transform = Transform3D(0.455, 0, 0, 0, 0.455, 0, 0, 0, 0.455, 5.58837, -9.13765, -3.80967)
 
+[node name="cheese" parent="Interactables" instance=ExtResource("8_axi67")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.243, -11.604, 13.31)
+
 [node name="NPCs" type="Node3D" parent="."]
 
 [node name="NPC" parent="NPCs" instance=ExtResource("31_hqqhn")]
@@ -3917,6 +3921,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.315795, -5.54853, 0.459668
 
 [node name="Butterfly full_001" parent="NPCs/Player/playermodel/Butterfly" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.961475, 0.274891, 0, -0.274891, 0.961475, 0.71502, 0.25416, 0)
+
+[node name="Butterfly full_002" parent="NPCs/Player/playermodel/Butterfly" index="2"]
+transform = Transform3D(1, 0, 0, 0, 0.957391, -0.288793, 0, 0.288793, 0.957392, 0.71502, 0.25416, 0)
 
 [node name="InteractionDetection" parent="NPCs/Player/playermodel" index="1"]
 collision_mask = 4

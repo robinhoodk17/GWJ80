@@ -27,6 +27,7 @@ var player_spawn_position : Vector3
 var player_spawn_rotation : Basis
 #How many physics ticks pass between refreshing the position of items
 var item_refresh_rate : int = 10
+var time_scale : int = 1
 
 var sensitivity : float = 1.0
 func _restart() -> void:
