@@ -1,7 +1,17 @@
-[gd_scene load_steps=16 format=4 uid="uid://dlhyqkhdji50i"]
+[gd_scene load_steps=19 format=4 uid="uid://dlhyqkhdji50i"]
 
-[ext_resource type="Texture2D" uid="uid://cqkodldi0a28x" path="res://game/player/Butterfly_ButterflyTexture.jpg" id="1_1oi8g"]
-[ext_resource type="Material" uid="uid://dh4ugbf0mb2oy" path="res://materials/materials/wood-2.tres" id="1_o58vo"]
+[ext_resource type="Texture2D" uid="uid://cqkodldi0a28x" path="res://game/player/Textures/Butterfly_ButterflyTexture.jpg" id="1_1oi8g"]
+[ext_resource type="Shader" uid="uid://4y8o05ght0li" path="res://shaders/outline.gdshader" id="1_a44gv"]
+[ext_resource type="Shader" uid="uid://ctb5cm6drg2w4" path="res://shaders/cel-shader-base.gdshader" id="2_snk13"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b2s5l"]
+render_priority = 0
+shader = ExtResource("1_a44gv")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tuhhj"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_b2s5l")
+shader = ExtResource("2_snk13")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2svhl"]
 resource_name = "Material.001"
@@ -245,19 +255,19 @@ _data = {
 
 [node name="Butterfly full" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.71502, 0.249582, 0)
-material_overlay = ExtResource("1_o58vo")
+material_overlay = SubResource("ShaderMaterial_tuhhj")
 mesh = SubResource("ArrayMesh_lpx5h")
 skeleton = NodePath("")
 
 [node name="Butterfly full_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.961475, 0.274891, 0, -0.274891, 0.961475, 0.71502, 0.25416, 0)
-material_overlay = ExtResource("1_o58vo")
+material_overlay = SubResource("ShaderMaterial_tuhhj")
 mesh = SubResource("ArrayMesh_aqmlh")
 skeleton = NodePath("")
 
 [node name="Butterfly full_002" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.957391, -0.288793, 0, 0.288793, 0.957392, 0.71502, 0.25416, 0)
-material_overlay = ExtResource("1_o58vo")
+material_overlay = SubResource("ShaderMaterial_tuhhj")
 mesh = SubResource("ArrayMesh_vwk4a")
 skeleton = NodePath("")
 

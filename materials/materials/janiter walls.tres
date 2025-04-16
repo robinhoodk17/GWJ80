@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://pcwey42twfwu"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hqqhn"]
+load_path = "res://.godot/imported/Backup Building _walls_albedo004.png-5af789e0bf8783dd9acac828d33f900a.s3tc.ctex"
+
+[resource]
+resource_name = "walls2"
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.2142, 0.28966, 0.42, 1)
+albedo_texture = SubResource("CompressedTexture2D_hqqhn")
+roughness = 0.0
+uv1_scale = Vector3(0.43, 0.43, 0.43)
+uv1_world_triplanar = true

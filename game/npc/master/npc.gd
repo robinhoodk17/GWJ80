@@ -3,18 +3,17 @@ class_name NPC
 
 enum states{IDLE, WALKING, TALKING}
 enum gamestate{NORMAL, SABOTAGED, HELPED}
+@export_subgroup("Nodes")
 @export var animation_player : AnimationPlayer
 @export var route_manager : AnimationPlayer
 @export var timer : Timer
-@export var speed : float = 5.0
-@export var current_location : Marker3D
-##stores the position to move to and the times (in seconds) when it happens
-@export var moving_times : Dictionary[float, Marker3D]
-##stores where should it move to, depending on the npc state
-@export var moving_locations : Dictionary[Marker3D, gamestate]
-@export var timelines : Dictionary[Marker3D, String]
-##stores which animation to use to move somewhere
-@export var routes : Dictionary[Marker3D, String]
+@export_subgroup("Dialogue and routes")
+##the keys are when the event happens, and the values are eventRoute resources with
+##the event's data, i.e. the gamestates {NORMAL, SABOTAGED, HELPED} where the NPC
+##can move with this route and the route's name
+@export var moving_times : Dictionary[float, eventRoute]
+##the keys are the timeline's name and the values are the actual timelines, this is just so it's easier to access them
+@export var timelines : Dictionary[String, String]
 @onready var pop_up: Node3D = $PopUp
 
 var moving_towards : Marker3D = null
@@ -25,6 +24,7 @@ var original_position : Vector3
 var original_rotation : Basis
 
 func _ready() -> void:
+	Dialogic.timeline_ended.connect(unpause)
 	original_position = global_position
 	original_rotation = global_basis
 	timer.timeout.connect(start_walking)
@@ -41,7 +41,6 @@ func _ready() -> void:
 
 
 func back_to_idle() -> void:
-	current_location = moving_towards
 	current_state = states.IDLE
 	if animation_player.has_animation("idle"):
 		animation_player.play("idle")
@@ -50,15 +49,17 @@ func back_to_idle() -> void:
 
 
 func start_walking() -> void:
-	var possible_move : Marker3D = moving_times[current_event]
-	if moving_locations[possible_move] == current_gamestate:
-		moving_towards = possible_move
+	if current_event <= 0.0:
+		return
+	var acceptable_states : Array[gamestate] = moving_times[current_event].acceptable_states
+	if current_gamestate in acceptable_states:
 		current_state = states.WALKING
+		route_manager.play(moving_times[current_event].route)
+
 	if animation_player.has_animation("walk"):
 		animation_player.play("walk")
 	if animation_player.has_animation("Walk"):
 		animation_player.play("Walk")
-	route_manager.play(routes[moving_towards])
 
 	var candidate_time : float = 6000
 	for i : float in moving_times.keys():
@@ -93,8 +94,27 @@ func turn_off_prompt() -> void:
 
 
 func interact(_playermodel, _player_controller) -> void:
-	Dialogic.start(timelines[current_location]).process_mode = Node.PROCESS_MODE_ALWAYS
+	handle_dialogue_start(_player_controller)
+
+
+func start_dialogue(timeline : String) -> void:
+	Dialogic.start(timeline).process_mode = Node.PROCESS_MODE_ALWAYS
 	Dialogic.process_mode = Node.PROCESS_MODE_ALWAYS
 	@warning_ignore("untyped_declaration")
-	Dialogic.timeline_ended.connect(func():get_tree().set('paused', false))
+	#Dialogic.timeline_ended.connect(func():get_tree().set('paused', false))
 	get_tree().paused = true
+
+
+func unpause() -> void:
+	get_tree().paused = false
+	handle_dialogue_end()
+	
+
+func handle_dialogue_start(_player_controller) -> void:
+	###Implemented by sub-classes###
+	pass
+
+
+func  handle_dialogue_end() -> void:
+	###Implemented by sub-classes###
+	pass

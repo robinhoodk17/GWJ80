@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://s4ptkehqnd63"]
+[gd_scene load_steps=2 format=3 uid="uid://cajboxx0h7hra"]
 
-[ext_resource type="Script" uid="uid://54a24882rxo7" path="res://game/player/prewritten_controller.gd" id="1_ofuk7"]
+[ext_resource type="Script" uid="uid://c2mrs8snia1do" path="res://game/player/player_controllers/prewritten_controller.gd" id="1_ofuk7"]
 
 [node name="Node" type="Node"]
 script = ExtResource("1_ofuk7")

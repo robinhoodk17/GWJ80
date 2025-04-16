@@ -1,89 +1,40 @@
-[gd_scene load_steps=6 format=3 uid="uid://c813lymkbjvd"]
+[gd_scene load_steps=6 format=3 uid="uid://dgaexk2mqn6j8"]
 
-[ext_resource type="Resource" uid="uid://c6tovgnwacf3x" path="res://input/move.tres" id="1_b2mth"]
-[ext_resource type="Resource" uid="uid://7bvnpytk6bwy" path="res://input/camera.tres" id="2_8soms"]
-[ext_resource type="PackedScene" uid="uid://bminmqpgueom7" path="res://game/player/little_cartoon_dog.glb" id="2_a4w0n"]
+[ext_resource type="Script" uid="uid://ctk7duxndd7bf" path="res://game/player/player_ready.gd" id="1_8soms"]
+[ext_resource type="PackedScene" uid="uid://dlhyqkhdji50i" path="res://game/player/Butterfly.tscn" id="2_a4w0n"]
+[ext_resource type="Script" uid="uid://cb4ku2htwkhhc" path="res://game/player/interaction_detection.gd" id="3_5fytw"]
 
-[sub_resource type="GDScript" id="GDScript_b2mth"]
-script/source = "extends CharacterBody3D
+[sub_resource type="SphereShape3D" id="SphereShape3D_y2f5q"]
+margin = 0.01
+radius = 0.2
 
-enum states{IDLE, WALKING, TALKING}
-
-@onready var _camera := %Camera3D as Camera3D
-@onready var _camera_pivot := %CameraPivot as Node3D
-
-@export_range(0.0, 1.0) var mouse_sensitivity = 0.01
-@export var tilt_limit = deg_to_rad(75)
-# How fast the player moves in meters per second.
-@export var speed = 14
-# The downward acceleration when in the air, in meters per second squared.
-@export var fall_acceleration = 75
-@export var move_action : GUIDEAction
-@export var camera_rotation : GUIDEAction
-
-func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventMouseMotion:
-		_camera_pivot.rotation.x -= event.relative.y * mouse_sensitivity
-		# Prevent the camera from rotating too far up or down.
-		_camera_pivot.rotation.x = clampf(_camera_pivot.rotation.x, -tilt_limit, tilt_limit)
-		_camera_pivot.rotation.y += -event.relative.x * mouse_sensitivity
-
-var target_velocity = Vector3.ZERO
-
-
-func _physics_process(delta):
-	var direction = Vector3.ZERO
-	
-	if Input.is_action_pressed(\"move_right\"):
-		direction.x += 1
-	if Input.is_action_pressed(\"move_left\"):
-		direction.x -= 1
-	if Input.is_action_pressed(\"move_back\"):
-		direction.z += 1
-	if Input.is_action_pressed(\"move_forward\"):
-		direction.z -= 1
-		
-	if direction != Vector3.ZERO:
-		direction = direction.normalized()
-		$Pivot.basis = Basis.looking_at(direction)
-
-	# Ground Velocity
-	target_velocity.x = direction.x * speed
-	target_velocity.z = direction.z * speed
-
-	# Vertical Velocity
-	if not is_on_floor(): # If in the air, fall towards the floor. Literally gravity
-		target_velocity.y = target_velocity.y - (fall_acceleration * delta)
-
-	# Moving the Character
-	velocity = target_velocity
-	move_and_slide()
-"
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_a4w0n"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_6sduc"]
+size = Vector3(2.5, 2, 3.5)
 
 [node name="Player" type="CharacterBody3D"]
-script = SubResource("GDScript_b2mth")
-mouse_sensitivity = 1.0
-move_action = ExtResource("1_b2mth")
-camera_rotation = ExtResource("2_8soms")
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+collision_layer = 2
+script = ExtResource("1_8soms")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
-shape = SubResource("CapsuleShape3D_a4w0n")
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.206989, 0)
+shape = SubResource("SphereShape3D_y2f5q")
 
-[node name="Pivot" type="Node3D" parent="."]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1.13139, 0)
+[node name="playermodel" type="Node3D" parent="."]
 
-[node name="Character" parent="Pivot" instance=ExtResource("2_a4w0n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+[node name="Butterfly" parent="playermodel" instance=ExtResource("2_a4w0n")]
+transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 0.0326834, 0, 0.332607)
 
-[node name="CameraPivot" type="Node3D" parent="."]
-unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 0.750111, 0.661312, 0, -0.661312, 0.750111, 0, 7, 5)
+[node name="Butterfly full_001" parent="playermodel/Butterfly" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.961475, 0.274891, 0, -0.274891, 0.961475, 0.71502, 0.25416, 0)
 
-[node name="SpringArm3D" type="SpringArm3D" parent="CameraPivot"]
-spring_length = 3.0
+[node name="InteractionDetection" type="Area3D" parent="playermodel"]
+collision_layer = 0
+collision_mask = 5
+script = ExtResource("3_5fytw")
 
-[node name="Camera3D" type="Camera3D" parent="CameraPivot"]
-unique_name_in_owner = true
+[node name="CollisionShape3D" type="CollisionShape3D" parent="playermodel/InteractionDetection"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.572418)
+shape = SubResource("BoxShape3D_6sduc")
+
+[editable path="playermodel/Butterfly"]

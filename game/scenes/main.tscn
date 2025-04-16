@@ -1,28 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://b600ql2so1y32"]
+[gd_scene load_steps=4 format=3 uid="uid://b600ql2so1y32"]
 
-[ext_resource type="PackedScene" uid="uid://c813lymkbjvd" path="res://game/player/player.tscn" id="1_20rwd"]
-[ext_resource type="Script" uid="uid://bgk0daoh4xwkv" path="res://game/player/player.gd" id="2_jbjdl"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_4il1u"]
-size = Vector3(100, 2, 100)
-
-[sub_resource type="BoxMesh" id="BoxMesh_20rwd"]
-size = Vector3(100, 2, 100)
+[ext_resource type="Script" uid="uid://bvr8gs45y6h57" path="res://game/scenes/main.gd" id="1_cii0i"]
+[ext_resource type="PackedScene" uid="uid://u1vgfeia861q" path="res://ui/ui.tscn" id="2_e2kwd"]
+[ext_resource type="Resource" uid="uid://v5u0dyabni7e" path="res://input/default_mapping_context.tres" id="2_gp8w2"]
 
 [node name="Main" type="Node"]
+script = ExtResource("1_cii0i")
+default_mapping_context = ExtResource("2_gp8w2")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("BoxShape3D_4il1u")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
-mesh = SubResource("BoxMesh_20rwd")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -0.5, 0.866025, 0, -0.866025, -0.5, 0, 33, 0)
-
-[node name="Player" parent="." instance=ExtResource("1_20rwd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
-script = ExtResource("2_jbjdl")
+[node name="UI" parent="." instance=ExtResource("2_e2kwd")]
