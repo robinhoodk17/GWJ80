@@ -69,6 +69,8 @@ func interact(playermodel, _player_controller) -> void:
 	grab(playermodel, _player_controller)
 	
 func grab(_player_model : Node3D, _player_controller) -> void:
+	if _player_controller.grabbing != null:
+		_player_controller.grabbing.drop()
 	_player_controller.grabbing = self
 	collision_layer = 0
 	collision_mask = 0

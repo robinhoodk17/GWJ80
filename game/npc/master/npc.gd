@@ -36,6 +36,7 @@ func _ready() -> void:
 	for i : float in moving_times.keys():
 		if i < expected_time:
 			current_event = i
+			print_debug(current_event, name)
 	timer.start(current_event)
 	Globals.restart.connect(restart)
 
@@ -48,6 +49,10 @@ func back_to_idle() -> void:
 		animation_player.play("Idle")
 
 
+func play(animation_name : String) -> void:
+	animation_player.play(animation_name)
+
+
 func start_walking() -> void:
 	if current_event <= 0.0:
 		return
@@ -55,6 +60,7 @@ func start_walking() -> void:
 	if current_gamestate in acceptable_states:
 		current_state = states.WALKING
 		route_manager.play(moving_times[current_event].route)
+		print_debug(moving_times[current_event].route)
 
 	if animation_player.has_animation("walk"):
 		animation_player.play("walk")
@@ -110,7 +116,7 @@ func unpause() -> void:
 	handle_dialogue_end()
 	
 
-func handle_dialogue_start(_player_controller) -> void:
+func handle_dialogue_start(_player_controller : player_controller) -> void:
 	###Implemented by sub-classes###
 	pass
 

@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://bltoelro6d67q"]
+
+[ext_resource type="PackedScene" uid="uid://88f70ly0w5b4" path="res://game/npc/master/npc.tscn" id="1_s0fck"]
+[ext_resource type="Script" uid="uid://bqe7orti3pgem" path="res://game/npc/albert/albert.gd" id="2_iu43e"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_iu43e"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_7o5ji"]
+size = Vector3(0.4, 0.2, 0.555)
+
+[node name="Albert" instance=ExtResource("1_s0fck")]
+script = ExtResource("2_iu43e")
+
+[node name="MeshInstance3D" parent="." index="1"]
+mesh = SubResource("CapsuleMesh_iu43e")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.568759, -0.38477)
+mesh = SubResource("BoxMesh_7o5ji")

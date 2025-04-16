@@ -1,4 +1,5 @@
 extends Node3D
+class_name player_controller
 
 @export_category("GUIDE actions")
 @export var time_freeze : GUIDEAction
@@ -47,6 +48,7 @@ var dampened_y_array : Array[float] = [0.0, 0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,
 var current_y : int = 0
 var averaged_y : float = 0.0
 func  _ready() -> void:
+	top_level = true
 	time_freeze.triggered.connect(handle_time_freeze)
 	fly_action.triggered.connect(handle_jump)
 	interact_action.triggered.connect(handle_interaction)
@@ -180,13 +182,11 @@ func handle_time_freeze() -> void:
 	if interaction_detection.showing_which != null:
 		if interaction_detection.showing_which.is_in_group("item"):
 			interaction_detection.showing_which.freeze_in_time()
-	#print_debug("froze successfully")
 
 
 func handle_jump() -> void:
 	player.velocity.y = jump_velocity
 	hover_timer.start(hover_delay)
-	print_debug("jumped successfully")
 
 
 func handle_interaction() -> void:
@@ -196,4 +196,3 @@ func handle_interaction() -> void:
 		if grabbing != null:
 			grabbing.drop()
 			grabbing = null
-	print_debug("interacted succesfully")
