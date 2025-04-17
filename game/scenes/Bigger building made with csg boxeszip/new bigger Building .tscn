@@ -1,16 +1,22 @@
-[gd_scene load_steps=263 format=4 uid="uid://dgmox4dyoefyf"]
+[gd_scene load_steps=269 format=4 uid="uid://dgmox4dyoefyf"]
 
 [ext_resource type="Script" uid="uid://1cbekppiubgu" path="res://game/scenes/Bigger building made with csg boxeszip/game_jam_sky_scraper.gd" id="1_lmwtd"]
 [ext_resource type="Resource" uid="uid://v5u0dyabni7e" path="res://input/default_mapping_context.tres" id="2_odb85"]
 [ext_resource type="Shader" uid="uid://4y8o05ght0li" path="res://shaders/outline.gdshader" id="3_uos3j"]
 [ext_resource type="Shader" uid="uid://ctb5cm6drg2w4" path="res://shaders/cel-shader-base.gdshader" id="4_5koc2"]
 [ext_resource type="Material" uid="uid://pcwey42twfwu" path="res://materials/materials/janiter walls.tres" id="5_5i77c"]
+[ext_resource type="PackedScene" uid="uid://c1ag2gakf6v0s" path="res://game/audio/master_music.tscn" id="7_ywvlw"]
 [ext_resource type="PackedScene" uid="uid://jowdm0hucqo8" path="res://game/interactables/cheese/cheese.tscn" id="8_axi67"]
+[ext_resource type="AudioStream" uid="uid://6wpl7hpo7h22" path="res://game/audio/assets/music/Butterfly_1st_min.mp3" id="8_nvp0a"]
+[ext_resource type="AudioStream" uid="uid://bd2xxahf3jydh" path="res://game/audio/assets/music/Butterfly_2nd_min.mp3" id="9_nlspl"]
+[ext_resource type="AudioStream" uid="uid://btj68aytfcgch" path="res://game/audio/assets/music/Butterfly_3rd_min.mp3" id="10_hdwqv"]
 [ext_resource type="PackedScene" uid="uid://cxd8a86qfj6ml" path="res://janitor_floor_.tscn" id="11_2m30o"]
+[ext_resource type="AudioStream" uid="uid://b42wght0evhu7" path="res://game/audio/assets/music/Butterfly_4th_min.mp3" id="11_lmwtd"]
 [ext_resource type="Script" uid="uid://cea3ewphuupof" path="res://game/npc/routes/route.gd" id="11_mb0xo"]
 [ext_resource type="PackedScene" uid="uid://dcue1okxqd16a" path="res://ant.tscn" id="12_a5cuj"]
 [ext_resource type="Resource" uid="uid://dc2ikbv1bpjmp" path="res://game/npc/bear/routes/example_route.tres" id="12_jxqt2"]
 [ext_resource type="Resource" uid="uid://cyaqc7qre8s7i" path="res://game/npc/albert/watch_tv.tres" id="12_lxl27"]
+[ext_resource type="AudioStream" uid="uid://bvxl8wlawv6pu" path="res://game/audio/assets/music/Butterfly_5th_min.mp3" id="12_odb85"]
 [ext_resource type="Resource" uid="uid://cfm06d82m5fr6" path="res://game/npc/albert/route2.tres" id="14_agy81"]
 [ext_resource type="PackedScene" uid="uid://bltoelro6d67q" path="res://game/npc/albert/albert.tscn" id="15_jxqt2"]
 [ext_resource type="Resource" uid="uid://dd8h44jxin75a" path="res://game/npc/albert/room.tres" id="15_sjqqi"]
@@ -3845,6 +3851,29 @@ directional_shadow_mode = 0
 [node name="ReflectionProbe" type="ReflectionProbe" parent="WorldEnvironment"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.8991, 25.834, -30.0061)
 size = Vector3(10000, 10000, 1000)
+
+[node name="Music" type="Node" parent="."]
+
+[node name="Minute1" parent="Music" node_paths=PackedStringArray("next_player") instance=ExtResource("7_ywvlw")]
+stream = ExtResource("8_nvp0a")
+next_player = NodePath("../Minute2")
+first_minute = true
+
+[node name="Minute2" parent="Music" node_paths=PackedStringArray("next_player") instance=ExtResource("7_ywvlw")]
+stream = ExtResource("9_nlspl")
+next_player = NodePath("../Minute3")
+
+[node name="Minute3" parent="Music" node_paths=PackedStringArray("next_player") instance=ExtResource("7_ywvlw")]
+stream = ExtResource("10_hdwqv")
+next_player = NodePath("../Minute4")
+
+[node name="Minute4" parent="Music" node_paths=PackedStringArray("next_player") instance=ExtResource("7_ywvlw")]
+stream = ExtResource("11_lmwtd")
+next_player = NodePath("../Minute5")
+
+[node name="Minute5" parent="Music" node_paths=PackedStringArray("next_player") instance=ExtResource("7_ywvlw")]
+stream = ExtResource("12_odb85")
+next_player = NodePath("../Minute1")
 
 [node name="Places" type="Node3D" parent="."]
 
