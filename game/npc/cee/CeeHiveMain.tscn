@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlo2fp5slhed7"]
+
+[ext_resource type="PackedScene" uid="uid://88f70ly0w5b4" path="res://game/npc/master/npc.tscn" id="1_6oblu"]
+[ext_resource type="PackedScene" uid="uid://cdpyyybi138c8" path="res://game/npc/cee/Cee Hive.tscn" id="2_u57a2"]
+
+[node name="NPC" instance=ExtResource("1_6oblu")]
+
+[node name="cee hive" parent="." index="6" instance=ExtResource("2_u57a2")]
+
+[editable path="cee hive"]
