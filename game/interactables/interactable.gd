@@ -79,6 +79,7 @@ func grab(_player_model : Node3D, _player_controller) -> void:
 
 
 func drop() -> void:
+	global_position = player_model.global_position + Vector3.UP
 	collision_layer = 4
 	collision_mask = 1
 	grabbed = false
