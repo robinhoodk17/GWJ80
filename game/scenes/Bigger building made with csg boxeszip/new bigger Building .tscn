@@ -1,4 +1,4 @@
-[gd_scene load_steps=286 format=4 uid="uid://dgmox4dyoefyf"]
+[gd_scene load_steps=287 format=4 uid="uid://dgmox4dyoefyf"]
 
 [ext_resource type="Script" uid="uid://1cbekppiubgu" path="res://game/scenes/Bigger building made with csg boxeszip/game_jam_sky_scraper.gd" id="1_lmwtd"]
 [ext_resource type="Resource" uid="uid://v5u0dyabni7e" path="res://input/default_mapping_context.tres" id="2_odb85"]
@@ -3132,10 +3132,10 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": []
+"values": [Vector3(0, 0, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -3144,10 +3144,10 @@ tracks/1/path = NodePath(".:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": []
+"values": [Vector3(0, 0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_fevv2"]
@@ -3181,17 +3181,8 @@ tracks/1/keys = {
 [sub_resource type="Animation" id="Animation_xt6ak"]
 resource_name = "route4de"
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_lmwtd"]
-_data = {
-&"route1dee": SubResource("Animation_nlspl"),
-&"route2dee": SubResource("Animation_odb85"),
-&"route3dee": SubResource("Animation_fevv2"),
-&"route4de": SubResource("Animation_xt6ak")
-}
-
-[sub_resource type="Animation" id="Animation_kcvwx"]
-resource_name = "route2ceehive"
-loop_mode = 1
+[sub_resource type="Animation" id="Animation_xqxqv"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -3202,7 +3193,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(9.00348, 3.56534, -12.2947)]
+"values": [Vector3(0, 0, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -3214,7 +3205,16 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0, 1.5708, 0)]
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lmwtd"]
+_data = {
+&"RESET": SubResource("Animation_xqxqv"),
+&"route1dee": SubResource("Animation_nlspl"),
+&"route2dee": SubResource("Animation_odb85"),
+&"route3dee": SubResource("Animation_fevv2"),
+&"route4de": SubResource("Animation_xt6ak")
 }
 
 [sub_resource type="Animation" id="Animation_6lxsc"]
@@ -3242,6 +3242,34 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector3(0, 1.5708, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_m0j6m"]
+resource_name = "route1bceehive"
+length = 15.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 5, 7, 9, 10, 11, 13, 14, 15),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(13.4101, -9.78222, 4.18055), Vector3(13.4101, -2.12009, 4.18055), Vector3(0.393023, -2.12009, 4.18055), Vector3(0.393023, -2.12009, 1.01259), Vector3(0.393023, 6.16852, 1.01259), Vector3(0.393023, 6.16852, -4.69225), Vector3(6.14408, 6.16852, -4.69225), Vector3(6.14408, 6.16852, -11.8418), Vector3(10.2137, 6.16852, -11.8418), Vector3(10.2137, 2.83101, -11.8418)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5, 10, 11, 13),
+"transitions": PackedFloat32Array(0, 0, 0, 0, 0),
+"update": 0,
+"values": [Vector3(0, 1.5708, 0), Vector3(0, 0, 0), Vector3(0, -1.5708, 0), Vector3(0, 0, 0), Vector3(0, 1.5708, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_ldaxu"]
@@ -3272,9 +3300,9 @@ tracks/1/keys = {
 "values": [Vector3(0, 1.5708, 0), Vector3(0, 3.14159, 0), Vector3(0, 1.5708, 0), Vector3(0, 0, 0), Vector3(0, -1.5708, 0), Vector3(0, -3.14159, 0), Vector3(0, -1.5708, 0), Vector3(0, -1.5708, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_m0j6m"]
-resource_name = "route1bceehive"
-length = 15.0
+[sub_resource type="Animation" id="Animation_kcvwx"]
+resource_name = "route2ceehive"
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -3282,10 +3310,10 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 3, 5, 7, 9, 10, 11, 13, 14, 15),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(13.4101, -9.78222, 4.18055), Vector3(13.4101, -2.12009, 4.18055), Vector3(0.393023, -2.12009, 4.18055), Vector3(0.393023, -2.12009, 1.01259), Vector3(0.393023, 6.16852, 1.01259), Vector3(0.393023, 6.16852, -4.69225), Vector3(6.14408, 6.16852, -4.69225), Vector3(6.14408, 6.16852, -11.8418), Vector3(10.2137, 6.16852, -11.8418), Vector3(10.2137, 2.83101, -11.8418)]
+"values": [Vector3(9.00348, 3.56534, -12.2947)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -3294,10 +3322,10 @@ tracks/1/path = NodePath(".:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 5, 10, 11, 13),
-"transitions": PackedFloat32Array(0, 0, 0, 0, 0),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0, 1.5708, 0), Vector3(0, 0, 0), Vector3(0, -1.5708, 0), Vector3(0, 0, 0), Vector3(0, 1.5708, 0)]
+"values": [Vector3(0, 1.5708, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xt6ak"]
@@ -4171,7 +4199,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.41491)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.5)
 
 [node name="DeeHive" parent="NPCs" node_paths=PackedStringArray("animation_player", "route_manager", "timer") instance=ExtResource("25_ywvlw")]
-transform = Transform3D(-3.61999e-06, 0, -1, 0, 1, 0, 1, 0, -3.61999e-06, -13.9769, -9.05667, -6.55608)
 collision_layer = 2
 script = ExtResource("27_lmwtd")
 animation_player = NodePath("AnimationPlayer")
@@ -4187,13 +4214,19 @@ moving_times = Dictionary[float, ExtResource("11_mb0xo")]({
 540.01: ExtResource("31_6lxsc")
 })
 
+[node name="dee hive" parent="NPCs/DeeHive" index="6"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.66246, 3.56534, -12.2947)
+
+[node name="Body_002" parent="NPCs/DeeHive/dee hive/Dee Hive" index="0"]
+transform = Transform3D(0.681835, 0, 0, 0, 0, -0.681835, 0, 0.89309, 0, 0.00224018, -0.627492, 0.00905275)
+
 [node name="RouteManager2" type="AnimationPlayer" parent="NPCs/DeeHive"]
 libraries = {
 &"": SubResource("AnimationLibrary_lmwtd")
 }
 
 [node name="CeeHive" parent="NPCs" node_paths=PackedStringArray("route_manager") instance=ExtResource("30_odb85")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9.00348, 3.56534, -12.2947)
+transform = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, 9.00348, 3.56534, -12.2947)
 route_manager = NodePath("../DeeHive/RouteManager")
 moving_times = Dictionary[float, ExtResource("11_mb0xo")]({
 0.01: ExtResource("33_6lxsc")
