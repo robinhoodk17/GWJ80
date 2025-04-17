@@ -11,6 +11,7 @@ enum gamestate{NORMAL, SABOTAGED, HELPED}
 ##the keys are when the event happens, and the values are eventRoute resources with
 ##the event's data, i.e. the gamestates {NORMAL, SABOTAGED, HELPED} where the NPC
 ##can move with this route and the route's name
+@export var can_interact : bool = true
 @export var moving_times : Dictionary[float, eventRoute]
 ##the keys are the timeline's name and the values are the actual timelines, this is just so it's easier to access them
 @export var timelines : Dictionary[String, String]
