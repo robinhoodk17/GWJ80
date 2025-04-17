@@ -1,7 +1,9 @@
 extends CharacterBody3D
+class_name interactable
 
 @export var already_interacted : bool = false
 @export var affected_by_time : bool = true
+@export var can_interact : bool = true
 @onready var pop_up: Node3D = $PopUp
 
 var frozen_in_time : bool = false
@@ -29,7 +31,7 @@ func _physics_process(delta: float) -> void:
 			rotations_array.append(global_basis)
 	current_refresh = (current_refresh + 1) % Globals.item_refresh_rate
 
-	if !grabbed and array_index >= positions_array.size():
+	if !grabbed and (array_index >= positions_array.size() or frozen_in_time):
 		velocity += get_gravity() * delta
 		move_and_slide()
 
@@ -79,7 +81,7 @@ func grab(_player_model : Node3D, _player_controller) -> void:
 
 
 func drop() -> void:
-	global_position = player_model.global_position + Vector3.UP
+	global_position = global_position + Vector3.UP
 	collision_layer = 4
 	collision_mask = 1
 	grabbed = false

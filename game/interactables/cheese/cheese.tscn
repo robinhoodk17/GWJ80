@@ -1,15 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://jowdm0hucqo8"]
+[gd_scene load_steps=5 format=3 uid="uid://jowdm0hucqo8"]
 
 [ext_resource type="PackedScene" uid="uid://dvcvga3y78p25" path="res://game/interactables/master.tscn" id="1_fnti4"]
+[ext_resource type="Script" uid="uid://ce5eibq0kywxl" path="res://game/interactables/cheese/cheese.gd" id="2_a88il"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_fnti4"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_a88il"]
 
-[node name="cheese" instance=ExtResource("1_fnti4")]
+[node name="cheese" node_paths=PackedStringArray("experiment_timer") instance=ExtResource("1_fnti4")]
+script = ExtResource("2_a88il")
+experiment_timer = NodePath("Timer")
+experiment_length = 120.0
+can_interact = false
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." index="1"]
 mesh = SubResource("BoxMesh_fnti4")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." index="2"]
 shape = SubResource("BoxShape3D_a88il")
+
+[node name="Timer" type="Timer" parent="." index="3"]
