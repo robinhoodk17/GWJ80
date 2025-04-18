@@ -50,8 +50,7 @@ glossary/default_case_sensitive=true
 layout/style_list=[]
 layout/default_style="Default"
 variables={}
-<<<<<<< Updated upstream
-extensions_folder="res://addons/dialogic_additions"
+<<<<<<<Updatedupstreamextensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
 text/text_reveal_skip_delay=0.1
@@ -84,8 +83,6 @@ audio/channel_defaults={
 "volume": 0.0
 }
 }
-=======
->>>>>>> Stashed changes
 
 [display]
 
