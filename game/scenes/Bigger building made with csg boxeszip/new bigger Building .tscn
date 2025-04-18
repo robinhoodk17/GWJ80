@@ -1,4 +1,4 @@
-[gd_scene load_steps=269 format=4 uid="uid://dgmox4dyoefyf"]
+[gd_scene load_steps=268 format=4 uid="uid://dgmox4dyoefyf"]
 
 [ext_resource type="Script" uid="uid://1cbekppiubgu" path="res://game/scenes/Bigger building made with csg boxeszip/game_jam_sky_scraper.gd" id="1_lmwtd"]
 [ext_resource type="Resource" uid="uid://v5u0dyabni7e" path="res://input/default_mapping_context.tres" id="2_odb85"]
@@ -17,7 +17,6 @@
 [ext_resource type="Resource" uid="uid://dc2ikbv1bpjmp" path="res://game/npc/bear/routes/example_route.tres" id="12_jxqt2"]
 [ext_resource type="Resource" uid="uid://cyaqc7qre8s7i" path="res://game/npc/albert/watch_tv.tres" id="12_lxl27"]
 [ext_resource type="Resource" uid="uid://cfm06d82m5fr6" path="res://game/npc/albert/route2.tres" id="14_agy81"]
-[ext_resource type="Script" uid="uid://ce5eibq0kywxl" path="res://game/interactables/cheese/cheese.gd" id="14_ywvlw"]
 [ext_resource type="PackedScene" uid="uid://bltoelro6d67q" path="res://game/npc/albert/albert.tscn" id="15_jxqt2"]
 [ext_resource type="Resource" uid="uid://dd8h44jxin75a" path="res://game/npc/albert/room.tres" id="15_sjqqi"]
 [ext_resource type="Resource" uid="uid://cjs35wgcidw3b" path="res://game/npc/albert/route1.tres" id="16_fppav"]
@@ -3885,38 +3884,37 @@ transform = Transform3D(0.455, 0, 0, 0, 0.455, 0, 0, 0, 0.455, 5.58837, -9.13765
 
 [node name="cheese" parent="Interactables" instance=ExtResource("8_axi67")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.243, -11.604, 13.31)
-script = ExtResource("14_ywvlw")
-experiment_length = 120.0
 
 [node name="NPCs" type="Node3D" parent="."]
 
-[node name="NPC" parent="NPCs" instance=ExtResource("31_hqqhn")]
+[node name="Bear" parent="NPCs" node_paths=PackedStringArray("barry") instance=ExtResource("31_hqqhn")]
 transform = Transform3D(-3, 0, -7.60554e-06, 0, 3, 0, 7.60554e-06, 0, -3, -2.71593, 0.541723, 5.48797)
+barry = NodePath("../Albert")
 moving_times = Dictionary[float, ExtResource("11_mb0xo")]({
 10.0: ExtResource("12_jxqt2")
 })
 
-[node name="PopUp" parent="NPCs/NPC" index="4"]
+[node name="PopUp" parent="NPCs/Bear" index="4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.06876, 0)
 
-[node name="RouteManager" parent="NPCs/NPC" index="5"]
+[node name="RouteManager" parent="NPCs/Bear" index="5"]
 libraries = {
 &"": SubResource("AnimationLibrary_agy81")
 }
 
-[node name="Sphere_001" parent="NPCs/NPC/Cartoon Bear/rig/Skeleton3D" index="0"]
+[node name="Sphere_001" parent="NPCs/Bear/Cartoon Bear/rig/Skeleton3D" index="0"]
 transform = Transform3D(0.0377471, -1.31117e-05, -3.3013e-05, -3.31892e-05, -0.000516053, -0.0377436, 1.26591e-05, 0.0377436, -0.000516068, 0.0718712, 0.828039, 0.181788)
 
-[node name="Sphere_001" parent="NPCs/NPC/Cartoon Bear/rig/Skeleton3D/Sphere_001" index="0"]
+[node name="Sphere_001" parent="NPCs/Bear/Cartoon Bear/rig/Skeleton3D/Sphere_001" index="0"]
 material_overlay = SubResource("ShaderMaterial_tuhhj")
 
-[node name="Circle" parent="NPCs/NPC/Cartoon Bear/rig/Skeleton3D" index="1"]
+[node name="Circle" parent="NPCs/Bear/Cartoon Bear/rig/Skeleton3D" index="1"]
 transform = Transform3D(0.308932, -0.00315403, -7.67686e-05, 0.000839128, 0.0893893, -0.295732, 0.00304132, 0.295717, 0.0893932, -0.00634815, 0.513443, 0.202102)
 
-[node name="Circle" parent="NPCs/NPC/Cartoon Bear/rig/Skeleton3D/Circle" index="0"]
+[node name="Circle" parent="NPCs/Bear/Cartoon Bear/rig/Skeleton3D/Circle" index="0"]
 material_overlay = SubResource("ShaderMaterial_tuhhj")
 
-[node name="Cube" parent="NPCs/NPC/Cartoon Bear/rig/Skeleton3D" index="2"]
+[node name="Cube" parent="NPCs/Bear/Cartoon Bear/rig/Skeleton3D" index="2"]
 material_overlay = SubResource("ShaderMaterial_tuhhj")
 
 [node name="Albert" parent="NPCs" instance=ExtResource("15_jxqt2")]
@@ -3948,6 +3946,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.315795, -5.54853, 0.459668
 [node name="Butterfly full_001" parent="NPCs/Player/playermodel/Butterfly" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.961475, 0.274891, 0, -0.274891, 0.961475, 0.71502, 0.25416, 0)
 
+[node name="Butterfly full_002" parent="NPCs/Player/playermodel/Butterfly" index="2"]
+transform = Transform3D(1, 0, 0, 0, 0.957391, -0.288793, 0, 0.288793, 0.957392, 0.71502, 0.25416, 0)
+
 [node name="InteractionDetection" parent="NPCs/Player/playermodel" index="1"]
 collision_mask = 4
 
@@ -3963,7 +3964,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.5)
 [editable path="UI/Game"]
 [editable path="Interactables/StaticBody3D"]
 [editable path="Interactables/StaticBody3D2"]
-[editable path="NPCs/NPC"]
+[editable path="NPCs/Bear"]
 [editable path="NPCs/Albert"]
 [editable path="NPCs/Player"]
 [editable path="NPCs/Player/playermodel/Butterfly"]
