@@ -1,30 +1,39 @@
-[gd_scene load_steps=268 format=4 uid="uid://dgmox4dyoefyf"]
+[gd_scene load_steps=286 format=4 uid="uid://dgmox4dyoefyf"]
 
 [ext_resource type="Script" uid="uid://1cbekppiubgu" path="res://game/scenes/Bigger building made with csg boxeszip/game_jam_sky_scraper.gd" id="1_lmwtd"]
 [ext_resource type="Resource" uid="uid://v5u0dyabni7e" path="res://input/default_mapping_context.tres" id="2_odb85"]
 [ext_resource type="Shader" uid="uid://4y8o05ght0li" path="res://shaders/outline.gdshader" id="3_uos3j"]
 [ext_resource type="Shader" uid="uid://ctb5cm6drg2w4" path="res://shaders/cel-shader-base.gdshader" id="4_5koc2"]
 [ext_resource type="Material" uid="uid://pcwey42twfwu" path="res://materials/materials/janiter walls.tres" id="5_5i77c"]
-[ext_resource type="AudioStream" uid="uid://bj3te0dl1fykk" path="res://game/audio/assets/music/Butterfly loop.mp3" id="7_8b3yv"]
-[ext_resource type="Script" uid="uid://cxhxrna5b8gs1" path="res://game/audio/music.gd" id="8_36qhl"]
+[ext_resource type="PackedScene" uid="uid://c1ag2gakf6v0s" path="res://game/audio/master_music.tscn" id="7_ywvlw"]
 [ext_resource type="PackedScene" uid="uid://jowdm0hucqo8" path="res://game/interactables/cheese/cheese.tscn" id="8_axi67"]
-[ext_resource type="AudioStream" uid="uid://de5dlgvwpg67s" path="res://game/audio/assets/music/clock_spawn.wav" id="9_ywvlw"]
-[ext_resource type="AudioStream" uid="uid://ckx7yvdx3r3g1" path="res://game/audio/assets/music/clock_last_minute_before_reset.wav" id="10_nvp0a"]
+[ext_resource type="AudioStream" uid="uid://6wpl7hpo7h22" path="res://game/audio/assets/music/Butterfly_1st_min.mp3" id="8_nvp0a"]
+[ext_resource type="AudioStream" uid="uid://bd2xxahf3jydh" path="res://game/audio/assets/music/Butterfly_2nd_min.mp3" id="9_nlspl"]
+[ext_resource type="AudioStream" uid="uid://btj68aytfcgch" path="res://game/audio/assets/music/Butterfly_3rd_min.mp3" id="10_hdwqv"]
 [ext_resource type="PackedScene" uid="uid://cxd8a86qfj6ml" path="res://janitor_floor_.tscn" id="11_2m30o"]
-[ext_resource type="Script" uid="uid://nroaa1ow40nk" path="res://game/audio/last_minute_before_spawn.gd" id="11_36qhl"]
+[ext_resource type="AudioStream" uid="uid://b42wght0evhu7" path="res://game/audio/assets/music/Butterfly_4th_min.mp3" id="11_lmwtd"]
 [ext_resource type="Script" uid="uid://cea3ewphuupof" path="res://game/npc/routes/route.gd" id="11_mb0xo"]
 [ext_resource type="PackedScene" uid="uid://dcue1okxqd16a" path="res://ant.tscn" id="12_a5cuj"]
 [ext_resource type="Resource" uid="uid://dc2ikbv1bpjmp" path="res://game/npc/bear/routes/example_route.tres" id="12_jxqt2"]
 [ext_resource type="Resource" uid="uid://cyaqc7qre8s7i" path="res://game/npc/albert/watch_tv.tres" id="12_lxl27"]
+[ext_resource type="AudioStream" uid="uid://bvxl8wlawv6pu" path="res://game/audio/assets/music/Butterfly_5th_min.mp3" id="12_odb85"]
 [ext_resource type="Resource" uid="uid://cfm06d82m5fr6" path="res://game/npc/albert/route2.tres" id="14_agy81"]
 [ext_resource type="PackedScene" uid="uid://bltoelro6d67q" path="res://game/npc/albert/albert.tscn" id="15_jxqt2"]
 [ext_resource type="Resource" uid="uid://dd8h44jxin75a" path="res://game/npc/albert/room.tres" id="15_sjqqi"]
 [ext_resource type="Resource" uid="uid://cjs35wgcidw3b" path="res://game/npc/albert/route1.tres" id="16_fppav"]
+[ext_resource type="PackedScene" uid="uid://wu80y2tmaeqw" path="res://game/npc/Dee/dee_hive_main.tscn" id="25_ywvlw"]
 [ext_resource type="PackedScene" uid="uid://u1vgfeia861q" path="res://ui/ui.tscn" id="27_ldaxu"]
+[ext_resource type="Script" uid="uid://bb8xs12cb7owb" path="res://game/npc/Dee/dee_hive_main.gd" id="27_lmwtd"]
 [ext_resource type="PackedScene" uid="uid://dgaexk2mqn6j8" path="res://game/player/player.tscn" id="28_m0j6m"]
+[ext_resource type="Resource" uid="uid://d2r47suca0sin" path="res://game/npc/Dee/routes/route1dee.tres" id="29_fevv2"]
+[ext_resource type="Resource" uid="uid://dpro7h4p6dhpp" path="res://game/npc/Dee/routes/route2dee.tres" id="29_lmwtd"]
 [ext_resource type="PackedScene" uid="uid://bahvf2v6h6slc" path="res://game/player/player_controllers/player_controller.tscn" id="29_xqxqv"]
 [ext_resource type="PackedScene" uid="uid://md7ncws5btwi" path="res://game/interactables/trial.tscn" id="30_i3tum"]
+[ext_resource type="Resource" uid="uid://bu1wexisih3js" path="res://game/npc/Dee/routes/route3dee.tres" id="30_kcvwx"]
+[ext_resource type="PackedScene" uid="uid://dlo2fp5slhed7" path="res://game/npc/cee/CeeHiveMain.tscn" id="30_odb85"]
+[ext_resource type="Resource" uid="uid://dg0jksj5x4axe" path="res://game/npc/Dee/routes/route4dee(cafeteriamissing).tres" id="31_6lxsc"]
 [ext_resource type="PackedScene" uid="uid://s60xl4keq2rt" path="res://game/npc/bear/bear_npc.tscn" id="31_hqqhn"]
+[ext_resource type="Resource" uid="uid://bfyheyntole47" path="res://game/npc/cee/routes/route1bceehive.tres" id="33_6lxsc"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2m30o"]
 load_path = "res://.godot/imported/Backup Building _Carpet fabric_albedo000.png-aac8890c03b3eeb897b9ae775915ba6f.s3tc.ctex"
@@ -2693,8 +2702,10 @@ dof_blur_far_distance = 1.44
 dof_blur_near_distance = 0.01
 auto_exposure_min_sensitivity = 8.01
 
-[sub_resource type="Animation" id="Animation_lxl27"]
-length = 0.001
+[sub_resource type="Animation" id="Animation_nvp0a"]
+resource_name = "route1deehive"
+length = 20.0
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -2702,10 +2713,10 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 3, 6, 8, 10, 11, 15, 18),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(-2.71593, 0.541723, 5.48797)]
+"values": [Vector3(-13.9769, -9.05667, -6.55608), Vector3(-3.98699, -9.05667, -6.55608), Vector3(-3.98699, -9.05667, 13.9396), Vector3(9.20359, -9.05667, 13.9396), Vector3(9.20359, -9.05667, 9.0666), Vector3(1.35555, -9.05667, 9.0666), Vector3(1.35555, -9.05667, -12.5423), Vector3(-12.3726, -9.05667, -12.5423)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -2714,44 +2725,27 @@ tracks/1/path = NodePath(".:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
+"times": PackedFloat32Array(0, 3, 6, 8, 10, 11, 15, 18),
+"transitions": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0),
+"update": 0,
+"values": [Vector3(0, -1.5708, 0), Vector3(0, 3.14159, 0), Vector3(0, -1.5708, 0), Vector3(0, 0, 0), Vector3(0, 1.5708, 0), Vector3(0, 0, 0), Vector3(0, 1.5708, 0), Vector3(0, 1.5708, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:moving_times")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, -3.14159, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_fppav"]
-resource_name = "route1"
-length = 3.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.6, 2.86),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector3(-2.71593, 0.541723, 5.48797), Vector3(3.99133, 0.541723, 5.48797), Vector3(12.4356, 0.541723, 5.48797)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.56, 2.64, 3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(0, -3.14159, 0), Vector3(0, 1.5708, 0), Vector3(0, 1.5708, 0), Vector3(0, -1.5708, 0)]
+"update": 1,
+"values": [Dictionary[float, ExtResource("11_mb0xo")]({})]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_agy81"]
 _data = {
-&"RESET": SubResource("Animation_lxl27"),
-&"route1": SubResource("Animation_fppav")
+&"route1deehive": SubResource("Animation_nvp0a")
 }
 
 [sub_resource type="Animation" id="Animation_axi67"]
@@ -3098,6 +3092,220 @@ _data = {
 &"route1": SubResource("Animation_agy81"),
 &"route2": SubResource("Animation_8b3yv"),
 &"watch_tv": SubResource("Animation_6k0m7")
+}
+
+[sub_resource type="Animation" id="Animation_nlspl"]
+resource_name = "route1dee"
+length = 20.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 6, 9, 11, 12, 14, 16),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-13.9769, -9.05667, -6.55608), Vector3(-3.23495, -9.05667, -6.55608), Vector3(-3.24875, -9.04938, 13.5645), Vector3(10.0257, -9.04938, 13.5645), Vector3(10.0257, -9.04938, 8.94722), Vector3(1.39918, -9.04938, 8.94722), Vector3(1.39918, -9.04938, -12.5848), Vector3(-13.1792, -9.05181, -10.5752)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3, 6, 9, 11, 12, 14, 16),
+"transitions": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0),
+"update": 0,
+"values": [Vector3(0, -1.5708, 0), Vector3(0, -3.14159, 0), Vector3(0, -1.5708, 0), Vector3(0, 0, 0), Vector3(0, 1.5708, 0), Vector3(0, 0, 0), Vector3(0, 1.5708, 0), Vector3(0, 3.14159, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_odb85"]
+resource_name = "route2dee"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="Animation" id="Animation_fevv2"]
+resource_name = "route3dee"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 5, 7, 8, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(6.74662, 3.56534, -12.2947), Vector3(10.6368, 3.56534, -12.2947), Vector3(10.6368, 5.81953, -12.2947), Vector3(10.6368, 5.81953, -21.6604), Vector3(10.637, 13.656, -21.66), Vector3(10.637, 13.656, -15.3009)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3, 7),
+"transitions": PackedFloat32Array(0, 0, 0),
+"update": 0,
+"values": [Vector3(0, -1.5708, 0), Vector3(0, 0, 0), Vector3(0, -3.14159, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_xt6ak"]
+resource_name = "route4de"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lmwtd"]
+_data = {
+&"route1dee": SubResource("Animation_nlspl"),
+&"route2dee": SubResource("Animation_odb85"),
+&"route3dee": SubResource("Animation_fevv2"),
+&"route4de": SubResource("Animation_xt6ak")
+}
+
+[sub_resource type="Animation" id="Animation_kcvwx"]
+resource_name = "route2ceehive"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(9.00348, 3.56534, -12.2947)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.5708, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_6lxsc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(9.00348, 3.56534, -12.2947)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.5708, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ldaxu"]
+resource_name = "route1ceehive"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 2, 4, 6, 8, 10, 12, 14, 16, 18),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(9.00348, 3.56534, -12.2947), Vector3(6.44181, 3.56534, -12.2947), Vector3(6.44181, 3.56534, -0.936604), Vector3(6.44181, 7.38084, -0.936604), Vector3(0.843367, 7.38084, -0.936604), Vector3(0.843367, -9.78222, -0.936604), Vector3(0.843367, -9.78222, -4.63519), Vector3(10.7182, -9.78222, -4.63519), Vector3(10.7182, -9.78222, 4.18055), Vector3(13.4101, -9.78222, 4.18055)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1, 2, 4, 10, 12, 14, 16, 18),
+"transitions": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0),
+"update": 0,
+"values": [Vector3(0, 1.5708, 0), Vector3(0, 3.14159, 0), Vector3(0, 1.5708, 0), Vector3(0, 0, 0), Vector3(0, -1.5708, 0), Vector3(0, -3.14159, 0), Vector3(0, -1.5708, 0), Vector3(0, -1.5708, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_m0j6m"]
+resource_name = "route1bceehive"
+length = 15.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 5, 7, 9, 10, 11, 13, 14, 15),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(13.4101, -9.78222, 4.18055), Vector3(13.4101, -2.12009, 4.18055), Vector3(0.393023, -2.12009, 4.18055), Vector3(0.393023, -2.12009, 1.01259), Vector3(0.393023, 6.16852, 1.01259), Vector3(0.393023, 6.16852, -4.69225), Vector3(6.14408, 6.16852, -4.69225), Vector3(6.14408, 6.16852, -11.8418), Vector3(10.2137, 6.16852, -11.8418), Vector3(10.2137, 2.83101, -11.8418)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5, 10, 11, 13),
+"transitions": PackedFloat32Array(0, 0, 0, 0, 0),
+"update": 0,
+"values": [Vector3(0, 1.5708, 0), Vector3(0, 0, 0), Vector3(0, -1.5708, 0), Vector3(0, 0, 0), Vector3(0, 1.5708, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xt6ak"]
+_data = {
+&"RESET": SubResource("Animation_6lxsc"),
+&"route1bceehive": SubResource("Animation_m0j6m"),
+&"route1ceehive": SubResource("Animation_ldaxu"),
+&"route2ceehive": SubResource("Animation_kcvwx")
 }
 
 [node name="Backup Building " type="Node3D"]
@@ -3796,7 +4004,7 @@ size = Vector3(0.928711, 0.001, 0.358795)
 material = SubResource("StandardMaterial3D_ldaxu")
 
 [node name="Floor Janitor level" type="CSGBox3D" parent="."]
-transform = Transform3D(35.2624, 0, 0, 0, 25.517, 0, 0, 0, 35.2624, -0.0516539, -12.117, 0.115145)
+transform = Transform3D(35.2624, 0, 0, 0, 25.517, 0, 0, 0, 35.2624, -0.0505057, -12.1094, 0.112577)
 use_collision = true
 size = Vector3(0.928711, 0.001, 0.942078)
 material = SubResource("StandardMaterial3D_m0j6m")
@@ -3853,21 +4061,26 @@ size = Vector3(10000, 10000, 1000)
 
 [node name="Music" type="Node" parent="."]
 
-[node name="ButterflyLoop" type="AudioStreamPlayer" parent="Music"]
-stream = ExtResource("7_8b3yv")
-autoplay = true
-script = ExtResource("8_36qhl")
+[node name="Minute1" parent="Music" node_paths=PackedStringArray("next_player") instance=ExtResource("7_ywvlw")]
+stream = ExtResource("8_nvp0a")
+next_player = NodePath("../Minute2")
 first_minute = true
 
-[node name="ClockSpawn" type="AudioStreamPlayer" parent="Music"]
-stream = ExtResource("9_ywvlw")
-autoplay = true
-script = ExtResource("8_36qhl")
-first_minute = true
+[node name="Minute2" parent="Music" node_paths=PackedStringArray("next_player") instance=ExtResource("7_ywvlw")]
+stream = ExtResource("9_nlspl")
+next_player = NodePath("../Minute3")
 
-[node name="LastMinuteBeforeSpawn" type="AudioStreamPlayer" parent="Music"]
-stream = ExtResource("10_nvp0a")
-script = ExtResource("11_36qhl")
+[node name="Minute3" parent="Music" node_paths=PackedStringArray("next_player") instance=ExtResource("7_ywvlw")]
+stream = ExtResource("10_hdwqv")
+next_player = NodePath("../Minute4")
+
+[node name="Minute4" parent="Music" node_paths=PackedStringArray("next_player") instance=ExtResource("7_ywvlw")]
+stream = ExtResource("11_lmwtd")
+next_player = NodePath("../Minute5")
+
+[node name="Minute5" parent="Music" node_paths=PackedStringArray("next_player") instance=ExtResource("7_ywvlw")]
+stream = ExtResource("12_odb85")
+next_player = NodePath("../Minute1")
 
 [node name="Places" type="Node3D" parent="."]
 
@@ -3887,34 +4100,33 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.243, -11.604, 13.31)
 
 [node name="NPCs" type="Node3D" parent="."]
 
-[node name="Bear" parent="NPCs" node_paths=PackedStringArray("barry") instance=ExtResource("31_hqqhn")]
+[node name="NPC" parent="NPCs" instance=ExtResource("31_hqqhn")]
 transform = Transform3D(-3, 0, -7.60554e-06, 0, 3, 0, 7.60554e-06, 0, -3, -2.71593, 0.541723, 5.48797)
-barry = NodePath("../Albert")
 moving_times = Dictionary[float, ExtResource("11_mb0xo")]({
 10.0: ExtResource("12_jxqt2")
 })
 
-[node name="PopUp" parent="NPCs/Bear" index="4"]
+[node name="PopUp" parent="NPCs/NPC" index="4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.06876, 0)
 
-[node name="RouteManager" parent="NPCs/Bear" index="5"]
+[node name="RouteManager" parent="NPCs/NPC" index="5"]
 libraries = {
 &"": SubResource("AnimationLibrary_agy81")
 }
 
-[node name="Sphere_001" parent="NPCs/Bear/Cartoon Bear/rig/Skeleton3D" index="0"]
+[node name="Sphere_001" parent="NPCs/NPC/Cartoon Bear/rig/Skeleton3D" index="0"]
 transform = Transform3D(0.0377471, -1.31117e-05, -3.3013e-05, -3.31892e-05, -0.000516053, -0.0377436, 1.26591e-05, 0.0377436, -0.000516068, 0.0718712, 0.828039, 0.181788)
 
-[node name="Sphere_001" parent="NPCs/Bear/Cartoon Bear/rig/Skeleton3D/Sphere_001" index="0"]
+[node name="Sphere_001" parent="NPCs/NPC/Cartoon Bear/rig/Skeleton3D/Sphere_001" index="0"]
 material_overlay = SubResource("ShaderMaterial_tuhhj")
 
-[node name="Circle" parent="NPCs/Bear/Cartoon Bear/rig/Skeleton3D" index="1"]
+[node name="Circle" parent="NPCs/NPC/Cartoon Bear/rig/Skeleton3D" index="1"]
 transform = Transform3D(0.308932, -0.00315403, -7.67686e-05, 0.000839128, 0.0893893, -0.295732, 0.00304132, 0.295717, 0.0893932, -0.00634815, 0.513443, 0.202102)
 
-[node name="Circle" parent="NPCs/Bear/Cartoon Bear/rig/Skeleton3D/Circle" index="0"]
+[node name="Circle" parent="NPCs/NPC/Cartoon Bear/rig/Skeleton3D/Circle" index="0"]
 material_overlay = SubResource("ShaderMaterial_tuhhj")
 
-[node name="Cube" parent="NPCs/Bear/Cartoon Bear/rig/Skeleton3D" index="2"]
+[node name="Cube" parent="NPCs/NPC/Cartoon Bear/rig/Skeleton3D" index="2"]
 material_overlay = SubResource("ShaderMaterial_tuhhj")
 
 [node name="Albert" parent="NPCs" instance=ExtResource("15_jxqt2")]
@@ -3958,15 +4170,56 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.41491)
 [node name="SpringArm3D" parent="NPCs/Player/camera_pivot" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.5)
 
+[node name="DeeHive" parent="NPCs" node_paths=PackedStringArray("animation_player", "route_manager", "timer") instance=ExtResource("25_ywvlw")]
+transform = Transform3D(-3.61999e-06, 0, -1, 0, 1, 0, 1, 0, -3.61999e-06, -13.9769, -9.05667, -6.55608)
+collision_layer = 2
+script = ExtResource("27_lmwtd")
+animation_player = NodePath("AnimationPlayer")
+route_manager = NodePath("RouteManager2")
+timer = NodePath("dee hive/Timer")
+moving_times = Dictionary[float, ExtResource("11_mb0xo")]({
+0.01: ExtResource("29_fevv2"),
+240.0: ExtResource("29_lmwtd"),
+360.0: ExtResource("29_lmwtd"),
+360.01: ExtResource("30_kcvwx"),
+480.0: ExtResource("29_lmwtd"),
+540.0: ExtResource("29_lmwtd"),
+540.01: ExtResource("31_6lxsc")
+})
+
+[node name="RouteManager2" type="AnimationPlayer" parent="NPCs/DeeHive"]
+libraries = {
+&"": SubResource("AnimationLibrary_lmwtd")
+}
+
+[node name="CeeHive" parent="NPCs" node_paths=PackedStringArray("route_manager") instance=ExtResource("30_odb85")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9.00348, 3.56534, -12.2947)
+route_manager = NodePath("../DeeHive/RouteManager")
+moving_times = Dictionary[float, ExtResource("11_mb0xo")]({
+0.01: ExtResource("33_6lxsc")
+})
+
+[node name="RouteManager" parent="NPCs/CeeHive" index="5"]
+libraries = {
+&"": SubResource("AnimationLibrary_xt6ak")
+}
+
+[node name="Body_004" parent="NPCs/CeeHive/cee hive/Cee Hive" index="7"]
+transform = Transform3D(0.681835, 0, 0, 0, -3.90382e-08, -0.681835, 0, 0.89309, -2.9804e-08, 0, -0.627492, 0)
+
 [node name="Janitor floor " parent="." instance=ExtResource("11_2m30o")]
 
 [editable path="UI"]
 [editable path="UI/Game"]
 [editable path="Interactables/StaticBody3D"]
 [editable path="Interactables/StaticBody3D2"]
-[editable path="NPCs/Bear"]
+[editable path="NPCs/NPC"]
 [editable path="NPCs/Albert"]
 [editable path="NPCs/Player"]
 [editable path="NPCs/Player/playermodel/Butterfly"]
 [editable path="NPCs/Player/camera_pivot"]
+[editable path="NPCs/DeeHive"]
+[editable path="NPCs/DeeHive/dee hive"]
+[editable path="NPCs/CeeHive"]
+[editable path="NPCs/CeeHive/cee hive"]
 [editable path="Janitor floor "]
