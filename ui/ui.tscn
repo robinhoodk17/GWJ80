@@ -14,6 +14,7 @@
 
 [node name="UI" type="CanvasLayer"]
 process_mode = 3
+layer = -1
 script = ExtResource("1_yeoin")
 
 [node name="ProjectUISoundController" parent="." instance=ExtResource("1_v2lrn")]

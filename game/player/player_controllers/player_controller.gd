@@ -29,7 +29,7 @@ var _target_rotation : Vector3 = Vector3.ZERO
 var reset_tween : Tween
 var reset_position_tween : Tween
 @export_subgroup("Item Manipulation")
-var grabbing : CharacterBody3D
+var grabbing : interactable
 
 #slowly rotate the charcter to point in the direction of the camera_pivot
 @onready var playermodel : Node3D = $"../playermodel"
