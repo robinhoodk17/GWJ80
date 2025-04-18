@@ -1,5 +1,7 @@
 extends NPC
 
+var quest_started : bool = false
+
 func handle_dialogue_start(_player_controller : player_controller) -> void:
 	if Globals.current_time < 120:
 		start_dialogue("doing_experiment")
