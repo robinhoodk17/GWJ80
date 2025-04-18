@@ -1,9 +1,10 @@
 extends CharacterBody3D
 class_name interactable
-
+enum item_type{CHEESE, LETTER, PIGGY, FILES, BADGE, ROLLERBLADES, MAIL}
 @export var already_interacted : bool = false
 @export var affected_by_time : bool = true
 @export var can_interact : bool = true
+@export var type = item_type.CHEESE
 @onready var pop_up: Node3D = $PopUp
 
 var frozen_in_time : bool = false

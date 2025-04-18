@@ -1,0 +1,16 @@
+mama_bear_character: Oh, I want to buy presents for the worker bees. They have been very busy bees lately. What should I get Cee?
+- Uhhhh a toaster?
+	mama_bear_character: A toaster? That's ridiculous. The bread always comes out too hot.
+- He likes hockey, so maybe he'll like a hockey stick?
+	mama_bear_character: Oh! That sounds just right for him. What about Dee?
+	- Well, he loves flowers...
+		mama_bear_character: That sounds lovely! Now we just need a gift for me.
+		margarine_character: For you? What about the bees?
+		mama_bear_character: No, no, for Mee the bee.
+		- Oh! You should get him a badge holder. [br]Trust me, he needs it but I can't tell you why.
+			mama_bear_character: Ok, sweetie, if you say so. Thanks for your help, I feel much more confident now.
+			[signal arg="mama_bear_quest_finished"]
+		- What about some coupons for a massage?
+			mama_bear_character: A massage? I don't know, maybe...
+	- Probably some honey. Cut the intermediaries
+		mama_bear_character: Oh, no. I don't think he would enjoy that.

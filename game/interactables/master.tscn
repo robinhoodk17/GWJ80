@@ -1,10 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://dvcvga3y78p25"]
+[gd_scene load_steps=4 format=3 uid="uid://dvcvga3y78p25"]
 
 [ext_resource type="Script" uid="uid://dmc3pp52mr4o7" path="res://game/interactables/interactable.gd" id="1_txa34"]
 [ext_resource type="PackedScene" uid="uid://v6l3630gxqxn" path="res://game/npc/pop_up.tscn" id="2_fbqqa"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fbqqa"]
 
 [node name="CharacterBody" type="CharacterBody3D" groups=["interactable", "item"]]
 collision_layer = 4
 script = ExtResource("1_txa34")
 
 [node name="PopUp" parent="." instance=ExtResource("2_fbqqa")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_fbqqa")

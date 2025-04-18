@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5lgibd624wcy"]
+
+[ext_resource type="PackedScene" uid="uid://88f70ly0w5b4" path="res://game/npc/master/npc.tscn" id="1_ealid"]
+[ext_resource type="Script" uid="uid://cwww23bvc3s81" path="res://game/npc/queen_bee/queen_bee.gd" id="2_0f0bj"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_0f0bj"]
+radius = 0.25
+height = 1.0
+
+[node name="QueenBee" instance=ExtResource("1_ealid")]
+script = ExtResource("2_0f0bj")
+
+[node name="MeshInstance3D" parent="." index="1"]
+mesh = SubResource("CapsuleMesh_0f0bj")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="MeshInstance3D" index="0"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, -0.386264, 0)
+mesh = SubResource("CapsuleMesh_0f0bj")
+skeleton = NodePath("../..")

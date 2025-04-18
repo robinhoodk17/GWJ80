@@ -37,18 +37,26 @@ gdscript/warnings/inferred_declaration=1
 
 [dialogic]
 
-directories/dch_directory={}
+directories/dch_directory={
+"barry_character": "res://game/npc/barry/timelines/barry_character.dch",
+"jaws_character": "res://game/npc/jaws/jaws_character.dch",
+"mama_bear_character": "res://game/npc/bear/timelines/mama_bear_character.dch",
+"margarine_character": "res://game/player/margarine_character.dch",
+"vinny_character": "res://game/npc/vinny/vinny_character.dch"
+}
 directories/dtl_directory={
-"cube": "res://game/npc/bear/timelines/cube.dtl",
-"first_talk": "res://game/npc/bear/timelines/first_talk.dtl",
+"barry_asks_for_help": "res://game/npc/barry/timelines/barry_asks_for_help.dtl",
 "freeze_in_time": "res://game/timelines/freeze_in_time.dtl",
-"no_cube": "res://game/npc/bear/timelines/no_cube.dtl",
-"second_talk": "res://game/npc/bear/timelines/second_talk.dtl",
+"jaws_stop_that": "res://game/npc/jaws/jaws_stop_that.dtl",
+"mama_bear_barry_idea": "res://game/npc/bear/timelines/mama_bear_barry_idea.dtl",
+"mama_bear_correct_choices": "res://game/npc/bear/timelines/mama_bear_correct_choices.dtl",
+"mama_bear_decision_tree": "res://game/npc/bear/timelines/mama_bear_decision_tree.dtl",
+"please_deliver": "res://game/npc/vinny/timelines/please_deliver.dtl",
 "timeline": "res://game/quest/timeline.dtl"
 }
 glossary/default_case_sensitive=true
-layout/style_list=[]
-layout/default_style="Default"
+layout/style_list=["res://game/timelines/game_style.tres"]
+layout/default_style="res://game/timelines/game_style.tres"
 variables={}
 <<<<<<<Updatedupstreamextensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
