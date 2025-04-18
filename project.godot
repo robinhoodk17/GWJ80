@@ -43,12 +43,14 @@ directories/dtl_directory={
 "first_talk": "res://game/npc/bear/timelines/first_talk.dtl",
 "freeze_in_time": "res://game/timelines/freeze_in_time.dtl",
 "no_cube": "res://game/npc/bear/timelines/no_cube.dtl",
-"second_talk": "res://game/npc/bear/timelines/second_talk.dtl"
+"second_talk": "res://game/npc/bear/timelines/second_talk.dtl",
+"timeline": "res://game/quest/timeline.dtl"
 }
 glossary/default_case_sensitive=true
 layout/style_list=[]
 layout/default_style="Default"
 variables={}
+<<<<<<< Updated upstream
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
@@ -82,6 +84,8 @@ audio/channel_defaults={
 "volume": 0.0
 }
 }
+=======
+>>>>>>> Stashed changes
 
 [display]
 
