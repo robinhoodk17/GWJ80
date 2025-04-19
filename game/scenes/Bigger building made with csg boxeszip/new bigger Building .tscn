@@ -3117,6 +3117,7 @@ _data = {
 }
 
 [node name="Backup Building " type="Node3D"]
+process_mode = 1
 script = ExtResource("1_lmwtd")
 default_mapping_context = ExtResource("2_odb85")
 
@@ -3871,15 +3872,11 @@ size = Vector3(10000, 10000, 1000)
 
 [node name="ButterflyLoop" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource("7_8b3yv")
-autoplay = true
 script = ExtResource("8_36qhl")
-first_minute = true
 
 [node name="ClockSpawn" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource("9_ywvlw")
-autoplay = true
 script = ExtResource("8_36qhl")
-first_minute = true
 
 [node name="LastMinuteBeforeSpawn" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource("10_nvp0a")
@@ -3898,6 +3895,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.243, -11.604, 13.31)
 [node name="Letter" parent="Interactables" instance=ExtResource("14_xt6ak")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5446, 16.3552, -1.85143)
 type = 1
+
+[node name="Mail" parent="Interactables" instance=ExtResource("14_xt6ak")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.04729, 2.16989, -5.52253)
+type = 6
 
 [node name="Piggy" parent="Interactables" instance=ExtResource("14_m0j6m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1133, 1.44132, -2.72934)
