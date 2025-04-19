@@ -2,10 +2,12 @@ extends CharacterBody3D
 class_name interactable
 enum item_type{CHEESE, LETTER, PIGGY, FILES, BADGE, ROLLERBLADES, MAIL}
 @export var already_interacted : bool = false
+@export var freezable : bool = false
 @export var affected_by_time : bool = true
 @export var can_interact : bool = true
-@export var type = item_type.CHEESE
+@export var type : item_type = item_type.CHEESE
 @onready var pop_up: Node3D = $PopUp
+@onready var quest_finished : bool = false
 
 var frozen_in_time : bool = false
 var first_encounter : bool = false
@@ -68,10 +70,17 @@ func freeze_in_time() -> void:
 
 
 
-func interact(playermodel, _player_controller) -> void:
+func interact(playermodel : Node3D, _player_controller : player_controller) -> void:
 	grab(playermodel, _player_controller)
 	
-func grab(_player_model : Node3D, _player_controller) -> void:
+func grab(_player_model : Node3D, _player_controller : player_controller) -> void:
+	if quest_finished:
+		Dialogic.start("butterfly_council").process_mode = Node.PROCESS_MODE_ALWAYS
+		Dialogic.process_mode = Node.PROCESS_MODE_ALWAYS
+		@warning_ignore("untyped_declaration")
+		Dialogic.timeline_ended.connect(func():get_tree().set('paused', false))
+		get_tree().paused = true
+		
 	if _player_controller.grabbing != null:
 		_player_controller.grabbing.drop()
 	_player_controller.grabbing = self
@@ -89,7 +98,7 @@ func drop() -> void:
 
 
 func display_prompt() -> void:
-	if first_encounter:
+	if first_encounter and freezable:
 		Globals.found_item.emit()
 	if pop_up:
 		if pop_up.visible:

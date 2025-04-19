@@ -32,27 +32,95 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [debug]
 
 gdscript/warnings/unused_parameter=0
-gdscript/warnings/untyped_declaration=1
+gdscript/warnings/unused_signal=0
 gdscript/warnings/inferred_declaration=1
 
 [dialogic]
 
 directories/dch_directory={
+"albert_character": "res://game/npc/albert/albert_character.dch",
 "barry_character": "res://game/npc/barry/timelines/barry_character.dch",
+"cee_character": "res://game/npc/cee/timelines/cee_character.dch",
+"chester_character": "res://game/npc/chester/chester_character.dch",
+"dovey_character": "res://game/npc/Dovey/timelines/dovey_character.dch",
+"hiro_character": "res://game/npc/hiro/timelines/hiro_character.dch",
 "jaws_character": "res://game/npc/jaws/jaws_character.dch",
 "mama_bear_character": "res://game/npc/bear/timelines/mama_bear_character.dch",
 "margarine_character": "res://game/player/margarine_character.dch",
+"ollie_character": "res://game/npc/ollie/ollie_character.dch",
+"ollie_time_travel": "res://game/npc/ollie/time_travel_timelines/ollie_time_travel.dch",
+"queen_bee_character": "res://game/npc/queen_bee/queen_bee_character.dch",
 "vinny_character": "res://game/npc/vinny/vinny_character.dch"
 }
 directories/dtl_directory={
+"albert_delivered_cheese": "res://game/npc/albert/albert_delivered_cheese.dtl",
+"albert_delivered_cheese_late": "res://game/npc/albert/albert_delivered_cheese_late.dtl",
+"albert_failed_experiment": "res://game/npc/albert/albert_failed_experiment.dtl",
+"albert_helped_ollie": "res://game/npc/albert/albert_helped_ollie.dtl",
+"albert_room_meeting": "res://game/npc/albert/albert_room_meeting.dtl",
+"albert_waiting_cheese": "res://game/npc/albert/albert_waiting_cheese.dtl",
+"albert_waiting_experiment": "res://game/npc/albert/albert_waiting_experiment.dtl",
+"albert_waiting_for_quest": "res://game/npc/albert/albert_waiting_for_quest.dtl",
+"albert_was_late_to_meeting": "res://game/npc/albert/albert_was_late_to_meeting.dtl",
 "barry_asks_for_help": "res://game/npc/barry/timelines/barry_asks_for_help.dtl",
+"barry_waits_for_help": "res://game/npc/barry/timelines/barry_waits_for_help.dtl",
+"better_working_conditions": "res://game/npc/barry/timelines/better_working_conditions.dtl",
+"chester_convince": "res://game/npc/chester/chester_convince.dtl",
+"chester_give_rollerblades": "res://game/npc/chester/chester_give_rollerblades.dtl",
+"chester_holidays_approved": "res://game/npc/chester/chester_holidays_approved.dtl",
+"chester_holidays_denied": "res://game/npc/chester/chester_holidays_denied.dtl",
+"chester_quest_start": "res://game/npc/chester/chester_quest_start.dtl",
+"chester_received_rollerblades": "res://game/npc/chester/chester_received_rollerblades.dtl",
+"chester_shattered_dreams": "res://game/npc/chester/chester_shattered_dreams.dtl",
+"confident_about_motion": "res://game/npc/barry/timelines/confident_about_motion.dtl",
+"convince_barry": "res://game/npc/barry/timelines/convince_barry.dtl",
+"convince_queen": "res://game/npc/queen_bee/convince_queen.dtl",
+"dovey_chilling": "res://game/npc/Dovey/timelines/dovey_chilling.dtl",
+"dovey_convince_piggy_bank": "res://game/npc/Dovey/timelines/dovey_convince_piggy_bank.dtl",
+"dovey_found_mail": "res://game/npc/Dovey/timelines/dovey_found_mail.dtl",
+"dovey_looking_for_mail": "res://game/npc/Dovey/timelines/dovey_looking_for_mail.dtl",
+"dovey_not_understand_early": "res://game/npc/Dovey/timelines/dovey_not_understand_early.dtl",
+"dovey_not_understand_late": "res://game/npc/Dovey/timelines/dovey_not_understand_late.dtl",
+"dovey_receive_mail": "res://game/npc/Dovey/timelines/dovey_receive_mail.dtl",
 "freeze_in_time": "res://game/timelines/freeze_in_time.dtl",
+"hiro_getting_away": "res://game/npc/hiro/timelines/hiro_getting_away.dtl",
+"hiro_piggy_bank_attempt": "res://game/npc/hiro/timelines/hiro_piggy_bank_attempt.dtl",
+"hiro_waiting_for_police": "res://game/npc/hiro/timelines/hiro_waiting_for_police.dtl",
+"how_could_this_happen": "res://game/npc/vinny/timelines/how_could_this_happen.dtl",
+"how_could_this_happen_queen_bee": "res://game/npc/queen_bee/how_could_this_happen_queen_bee.dtl",
+"i_love_office_news": "res://game/npc/vinny/timelines/i_love_office_news.dtl",
+"i_love_office_news_queen_bee": "res://game/npc/queen_bee/i_love_office_news_queen_bee.dtl",
+"its_too_late_romulus_cant_stop_us": "res://game/npc/vinny/timelines/its_too_late_romulus_cant_stop_us.dtl",
 "jaws_stop_that": "res://game/npc/jaws/jaws_stop_that.dtl",
 "mama_bear_barry_idea": "res://game/npc/bear/timelines/mama_bear_barry_idea.dtl",
 "mama_bear_correct_choices": "res://game/npc/bear/timelines/mama_bear_correct_choices.dtl",
 "mama_bear_decision_tree": "res://game/npc/bear/timelines/mama_bear_decision_tree.dtl",
+"mama_bear_mee_badge": "res://game/npc/bear/timelines/mama_bear_mee_badge.dtl",
+"mama_bear_no_overtime": "res://game/npc/bear/timelines/mama_bear_no_overtime.dtl",
+"mama_bear_too_early": "res://game/npc/bear/timelines/mama_bear_too_early.dtl",
+"motion_rejected": "res://game/npc/barry/timelines/motion_rejected.dtl",
+"ollie_brave": "res://game/npc/ollie/ollie_brave.dtl",
+"ollie_going_to_albert": "res://game/npc/ollie/ollie_going_to_albert.dtl",
+"ollie_paradox": "res://game/npc/ollie/ollie_paradox.dtl",
+"ollie_queen_bee": "res://game/npc/ollie/time_travel_timelines/ollie_queen_bee.dtl",
+"ollie_regrets": "res://game/npc/ollie/ollie_regrets.dtl",
+"ollie_regrets_variant": "res://game/npc/ollie/ollie_regrets_variant.dtl",
+"ollie_snoring": "res://game/npc/ollie/ollie_snoring.dtl",
+"ollie_too_late": "res://game/npc/ollie/ollie_too_late.dtl",
+"ollie_traveller__avoids_himself": "res://game/npc/ollie/time_travel_timelines/ollie_traveller__avoids_himself.dtl",
+"ollie_traveller_caught_thief": "res://game/npc/ollie/time_travel_timelines/ollie_traveller_caught_thief.dtl",
+"ollie_traveller_drinking_coffee": "res://game/npc/ollie/time_travel_timelines/ollie_traveller_drinking_coffee.dtl",
+"ollie_traveller_paradox": "res://game/npc/ollie/time_travel_timelines/ollie_traveller_paradox.dtl",
+"our_love_is_doomed": "res://game/npc/vinny/timelines/our_love_is_doomed.dtl",
 "please_deliver": "res://game/npc/vinny/timelines/please_deliver.dtl",
-"timeline": "res://game/quest/timeline.dtl"
+"queen_bee_plan": "res://game/npc/queen_bee/queen_bee_plan.dtl",
+"still_need_approval": "res://game/npc/barry/timelines/still_need_approval.dtl",
+"timeline": "res://game/quest/timeline.dtl",
+"timelines/were_running_away": "res://game/npc/vinny/timelines/were_running_away.dtl",
+"too_late_for_the_plan": "res://game/npc/queen_bee/too_late_for_the_plan.dtl",
+"waiting_for_the_plan": "res://game/npc/queen_bee/waiting_for_the_plan.dtl",
+"waiting_to_run_away": "res://game/npc/queen_bee/waiting_to_run_away.dtl",
+"were_running_away": "res://game/npc/queen_bee/were_running_away.dtl"
 }
 glossary/default_case_sensitive=true
 layout/style_list=["res://game/timelines/game_style.tres"]

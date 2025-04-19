@@ -2,6 +2,7 @@ extends UiPage
 
 var pausable : bool = false
 @export var pause_action : GUIDEAction
+@export var pause_music : AudioStreamPlayer
 var current_run : int = 1
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,8 +13,11 @@ func _connect_buttons() -> void:
 	if ui:
 		%Resume.pressed.connect(_resume)
 		%Restart.pressed.connect(_restart)
+		%Restart.pressed.connect($Buttons/Restart/TimeTravel.play)
 		%Settings.pressed.connect(ui.go_to.bind("Settings"))
+		%Settings.pressed.connect($Buttons/Settings/SettingsSFX.play)
 		%Controls.pressed.connect(ui.go_to.bind("Controls"))
+		%Controls.pressed.connect($Buttons/Controls/ControlsSFX.play)
 		%MainMenu.pressed.connect(_main_menu)
 		%Quit.pressed.connect(quit)
 
@@ -28,9 +32,14 @@ func _input(event: InputEvent) -> void:
 			ui.go_to("PauseMenu")
 			%Restart.grab_focus()
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+			$PauseSFX.play()
+			#await get_tree().create_timer(.5).timeout
+			pause_music.play()
 
 
 func _resume() -> void:
+	pause_music.stop()
+	$UnpauseSFX.play()
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	if ui:
 		ui.go_to("Game")
@@ -51,6 +60,8 @@ func _main_menu() -> void:
 
 
 func quit() -> void:
+	var quit_player : AudioStreamPlayer = $Buttons/Quit/QuitSFX
+	quit_player.play()
 	get_tree().quit()
 
 

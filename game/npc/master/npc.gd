@@ -102,7 +102,7 @@ func turn_off_prompt() -> void:
 		pop_up.turn_off_prompt()
 
 
-func interact(_playermodel, _player_controller : player_controller) -> void:
+func interact(_playermodel : Node3D, _player_controller : player_controller) -> void:
 	handle_dialogue_start(_player_controller)
 
 

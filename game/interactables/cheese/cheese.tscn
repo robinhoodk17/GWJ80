@@ -9,6 +9,7 @@
 script = ExtResource("2_a88il")
 experiment_timer = NodePath("Timer")
 experiment_length = 120.0
+freezable = true
 can_interact = false
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." index="1"]

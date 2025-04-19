@@ -1,4 +1,4 @@
-[gd_scene load_steps=282 format=4 uid="uid://dgmox4dyoefyf"]
+[gd_scene load_steps=284 format=4 uid="uid://dgmox4dyoefyf"]
 
 [ext_resource type="Script" uid="uid://1cbekppiubgu" path="res://game/scenes/Bigger building made with csg boxeszip/game_jam_sky_scraper.gd" id="1_lmwtd"]
 [ext_resource type="Resource" uid="uid://v5u0dyabni7e" path="res://input/default_mapping_context.tres" id="2_odb85"]
@@ -28,7 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://u1vgfeia861q" path="res://ui/ui.tscn" id="27_ldaxu"]
 [ext_resource type="PackedScene" uid="uid://wu80y2tmaeqw" path="res://game/npc/Dee/dee_hive_main.tscn" id="28_lmwtd"]
 [ext_resource type="PackedScene" uid="uid://dgaexk2mqn6j8" path="res://game/player/player.tscn" id="28_m0j6m"]
-[ext_resource type="PackedScene" path="res://game/npc/Dee/routes/route_manager_2.tscn" id="29_lmwtd"]
+[ext_resource type="PackedScene" uid="uid://t6k70bk4jsq" path="res://game/npc/Dee/routes/route_manager_2.tscn" id="29_lmwtd"]
 [ext_resource type="PackedScene" uid="uid://bahvf2v6h6slc" path="res://game/player/player_controllers/player_controller.tscn" id="29_xqxqv"]
 [ext_resource type="PackedScene" uid="uid://p10ewavm88bd" path="res://game/npc/mee hive/mee_main.tscn" id="30_odb85"]
 [ext_resource type="PackedScene" uid="uid://ds0ndvja6tf3k" path="res://game/npc/jaws/jaws.tscn" id="31_fevv2"]
@@ -39,6 +39,8 @@
 [ext_resource type="PackedScene" uid="uid://dxxwv6dpi4ubx" path="res://game/npc/hiro/hiro.tscn" id="36_xqxqv"]
 [ext_resource type="PackedScene" uid="uid://dwmj7ifqavdg3" path="res://game/npc/chester/chester.tscn" id="37_xqxqv"]
 [ext_resource type="PackedScene" uid="uid://dmcac8682metn" path="res://game/npc/Dovey/dovey_npc.tscn" id="38_i3tum"]
+[ext_resource type="PackedScene" uid="uid://d362eya2ajhk1" path="res://game/npc/ollie/ollie.tscn" id="38_sdl5r"]
+[ext_resource type="PackedScene" uid="uid://phf2r7pbivdy" path="res://game/npc/ollie/ollie_traveller.tscn" id="39_p0hlo"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2m30o"]
 load_path = "res://.godot/imported/Backup Building _Carpet fabric_albedo000.png-aac8890c03b3eeb897b9ae775915ba6f.s3tc.ctex"
@@ -3909,7 +3911,7 @@ type = 3
 
 [node name="Player" parent="NPCs" instance=ExtResource("28_m0j6m")]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.88844, 2.95521, 4.82852)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.88844, 0.665254, 4.82852)
 
 [node name="Butterfly full_001" parent="NPCs/Player/playermodel/Butterfly" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.961475, 0.274891, 0, -0.274891, 0.961475, 0.71502, 0.25416, 0)
@@ -3949,14 +3951,8 @@ libraries = {
 &"": SubResource("AnimationLibrary_agy81")
 }
 
-[node name="Sphere_001" parent="NPCs/MamaBear/Cartoon Bear/rig/Skeleton3D" index="0"]
-transform = Transform3D(0.0377471, -1.31117e-05, -3.3013e-05, -3.31892e-05, -0.000516053, -0.0377436, 1.26591e-05, 0.0377436, -0.000516068, 0.0718712, 0.828039, 0.181788)
-
 [node name="Sphere_001" parent="NPCs/MamaBear/Cartoon Bear/rig/Skeleton3D/Sphere_001" index="0"]
 material_overlay = SubResource("ShaderMaterial_tuhhj")
-
-[node name="Circle" parent="NPCs/MamaBear/Cartoon Bear/rig/Skeleton3D" index="1"]
-transform = Transform3D(0.308932, -0.00315403, -7.67686e-05, 0.000839128, 0.0893893, -0.295732, 0.00304132, 0.295717, 0.0893932, -0.00634815, 0.513443, 0.202102)
 
 [node name="Circle" parent="NPCs/MamaBear/Cartoon Bear/rig/Skeleton3D/Circle" index="0"]
 material_overlay = SubResource("ShaderMaterial_tuhhj")
@@ -4040,14 +4036,29 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.98417, 1.54172, -6.27359)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.46916, 1.54172, 7.12193)
 letter = NodePath("../../Interactables/Letter")
 
-[node name="Romulus" parent="NPCs" instance=ExtResource("34_xt6ak")]
+[node name="Romulus" parent="NPCs" node_paths=PackedStringArray("vinny", "queen", "albert") instance=ExtResource("34_xt6ak")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.55357, 0.541724, 5.94599)
+vinny = NodePath("../Vinny")
+queen = NodePath("../QueenBee")
+albert = NodePath("../Albert")
 
 [node name="Hiro" parent="NPCs" instance=ExtResource("36_xqxqv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.32483, 1.68077, -5.84909)
 
 [node name="Chester" parent="NPCs" instance=ExtResource("37_xqxqv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.31551, 1.04172, 2.32387)
+
+[node name="Ollie" parent="NPCs" node_paths=PackedStringArray("albert", "ollie_traveller", "queen") instance=ExtResource("38_sdl5r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.45007, 1.04968, -3.0476)
+albert = NodePath("../Albert")
+ollie_traveller = NodePath("../Ollie_traveller")
+queen = NodePath("../QueenBee")
+
+[node name="Ollie_traveller" parent="NPCs" node_paths=PackedStringArray("ollie", "hiro", "queen") instance=ExtResource("39_p0hlo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 23)
+ollie = NodePath("../Ollie")
+hiro = NodePath("../Hiro")
+queen = NodePath("../QueenBee")
 
 [node name="Dovey" parent="NPCs" node_paths=PackedStringArray("romulus") instance=ExtResource("38_i3tum")]
 romulus = NodePath("../Romulus")
@@ -4063,4 +4074,5 @@ romulus = NodePath("../Romulus")
 [editable path="NPCs/Barry"]
 [editable path="NPCs/Barry/ant"]
 [editable path="NPCs/Albert"]
+[editable path="NPCs/Ollie_traveller"]
 [editable path="Janitor floor "]

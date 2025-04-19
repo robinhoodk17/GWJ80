@@ -1,11 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://3s7lo7jd53un"]
+[gd_scene load_steps=12 format=3 uid="uid://3s7lo7jd53un"]
 
 [ext_resource type="Script" uid="uid://p060qdoqdgi7" path="res://ui/pause_menu/pause_menu.gd" id="1_fpgrf"]
 [ext_resource type="Resource" uid="uid://diop7pt8pl55a" path="res://input/pause.tres" id="2_b4b0p"]
 [ext_resource type="PackedScene" uid="uid://doodjmci2iujk" path="res://ui/UI_animator.tscn" id="2_le02u"]
 [ext_resource type="PackedScene" uid="uid://dgxrcxbe8s24d" path="res://ui/build_info/build_info.tscn" id="2_q2yd3"]
+[ext_resource type="AudioStream" uid="uid://ckx7yvdx3r3g1" path="res://game/audio/assets/music/clock_last_minute_before_reset.wav" id="4_f2x4c"]
+[ext_resource type="AudioStream" uid="uid://cny24i16174n3" path="res://game/audio/assets/music/butterfly_sfx_pause_menu_controls.wav" id="4_uraes"]
+[ext_resource type="AudioStream" uid="uid://dvifhwsoejsy3" path="res://game/audio/assets/music/butterfly_pause_menu_ost.wav" id="5_c3jo5"]
+[ext_resource type="AudioStream" uid="uid://dtjr6v231owb1" path="res://game/audio/assets/music/butterfly_sfx_pause_menu_settings.wav" id="5_lhp7q"]
+[ext_resource type="AudioStream" uid="uid://co83yitteg7ij" path="res://game/audio/assets/music/butterfly_sfx_pause_menu_quit.wav" id="7_j11rl"]
+[ext_resource type="AudioStream" uid="uid://dosyiy8ihfroq" path="res://game/audio/assets/music/butterfly_sfx_pause_menu_main_menu.wav" id="10_pu65w"]
+[ext_resource type="AudioStream" uid="uid://c2mg1gvb3twr2" path="res://game/audio/assets/music/butterfly_sfx_pause_menu_resume.wav" id="11_nkwjh"]
 
-[node name="PauseMenu" type="Control" node_paths=PackedStringArray("default_focus_control")]
+[node name="PauseMenu" type="Control" node_paths=PackedStringArray("pause_music", "default_focus_control")]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 15
@@ -15,6 +22,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_fpgrf")
 pause_action = ExtResource("2_b4b0p")
+pause_music = NodePath("PauseMusic")
 default_focus_control = NodePath("Buttons/Resume")
 
 [node name="Panel" type="Panel" parent="."]
@@ -63,6 +71,10 @@ wait_for = NodePath("../../../Node")
 hover_rotation = 0.4
 random_entrance = true
 
+[node name="TimeTravel" type="AudioStreamPlayer" parent="Buttons/Restart"]
+stream = ExtResource("4_f2x4c")
+bus = &"SFX"
+
 [node name="Settings" type="Button" parent="Buttons"]
 unique_name_in_owner = true
 layout_mode = 2
@@ -75,6 +87,10 @@ wait_for = NodePath("../../../Node")
 hover_rotation = 0.4
 random_entrance = true
 
+[node name="SettingsSFX" type="AudioStreamPlayer" parent="Buttons/Settings"]
+stream = ExtResource("5_lhp7q")
+bus = &"SFX"
+
 [node name="Controls" type="Button" parent="Buttons"]
 unique_name_in_owner = true
 layout_mode = 2
@@ -86,6 +102,10 @@ entrance_animation = true
 wait_for = NodePath("../../../Node")
 hover_rotation = 0.4
 random_entrance = true
+
+[node name="ControlsSFX" type="AudioStreamPlayer" parent="Buttons/Controls"]
+stream = ExtResource("4_uraes")
+bus = &"SFX"
 
 [node name="MainMenu" type="Button" parent="Buttons"]
 unique_name_in_owner = true
@@ -112,6 +132,10 @@ wait_for = NodePath("../../../Node")
 hover_rotation = 0.4
 random_entrance = true
 
+[node name="QuitSFX" type="AudioStreamPlayer" parent="Buttons/Quit"]
+stream = ExtResource("7_j11rl")
+bus = &"SFX"
+
 [node name="BuildInfo" parent="." instance=ExtResource("2_q2yd3")]
 layout_mode = 1
 anchors_preset = 3
@@ -129,3 +153,16 @@ entrance_animation = true
 entrance_time = 0.2
 entrance_transition = 11
 hover_easing = 1
+
+[node name="PauseMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_c3jo5")
+volume_db = -10.0
+bus = &"Music"
+
+[node name="PauseSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_pu65w")
+bus = &"SFX"
+
+[node name="UnpauseSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_nkwjh")
+bus = &"SFX"

@@ -1,0 +1,16 @@
+\dovey_character: [lspeed=.035]helo frien
+- I want you to take this honey, Dovey
+	\dovey_character: [lspeed=.035]that not mail [pause=.75] dovey only deliver mail
+- Hi, Dovey, I would like to make a delivery
+	\dovey_character: [lspeed=.035]that not look like mail
+	- It's a package delivery. I would like to send this to the Bermudas Triangle
+		\dovey_character: [lspeed=.035]dovey not see stamp. dovey cant deliver
+		- It's a new type of stamp. They are invisible to avoid forgery
+			\dovey_character: [lspeed=.035]dovey understan [pause=.75] dovey deliver
+			[signal arg="dovey_romulus_piggy"]
+		- Can't you make an exception just this once? It's urgent
+			\dovey_character: [lspeed=.035]frien [pause=.75] what mean exception? [pause=.75] dovey confused
+	- It's not mail, it's a bribe. I want you to take the honey
+		\dovey_character: [lspeed=.035]dovey not understand [pause=.75] dovey brain tired
+	- It's a special request. I want you to make this disappear
+		\dovey_character: [lspeed=.035]sorry frien [pause=.75] dovey not wizard

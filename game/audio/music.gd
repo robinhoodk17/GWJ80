@@ -10,7 +10,7 @@ func _ready() -> void:
 		play()
 
 
-func play_next():
+func play_next() -> void:
 	if next_player != null:
 		next_player.play()
 
