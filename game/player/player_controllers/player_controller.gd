@@ -11,7 +11,7 @@ class_name player_controller
 
 @export_category("Player Movement")
 @export var speed : float = 3.0
-@export var gliding_speed : float = 7.0
+@export var gliding_speed : float = 6.0
 @export var jump_velocity : float= 3.5
 @export var hover_delay : float = 0.35
 const ROTATION_SPEED : float = 6.0
@@ -92,12 +92,12 @@ func _physics_process(delta: float) -> void:
 		spring_arm.rotation.x = clamp(spring_arm.rotation.x - camera_rotation.y,-0.6,0.4)
 	if not player.is_on_floor():
 		player.velocity += player.get_gravity() * delta / Globals.time_scale
+		current_speed = gliding_speed
 
 	
 	if fly_action.value_bool:
 		if hover_timer.is_stopped():
 			player.velocity.y = 0.0
-			current_speed = gliding_speed
 	#if fly_action.is_triggered():
 		#player.velocity.y = jump_velocity
 		#hover_timer.start(hover_delay)
