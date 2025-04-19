@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://btp2cive3sotx"]
+
+[ext_resource type="Script" uid="uid://b58susv2jw8cw" path="res://ui/game/loading_screen.gd" id="1_pojjl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1kfex"]
+bg_color = Color(0.0885599, 0.0885599, 0.0885599, 1)
+
+[sub_resource type="Animation" id="Animation_e66os"]
+resource_name = "exit"
+length = 3.0
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_to6u5"]
+_data = {
+&"exit": SubResource("Animation_e66os")
+}
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_pojjl")
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1kfex")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_to6u5")
+}
