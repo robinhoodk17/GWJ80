@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfm8w6ljovpr4"]
+
+[ext_resource type="Script" uid="uid://drnpveo6s3dr7" path="res://ui/pause_menu/npc_row.gd" id="1_8uyn5"]
+[ext_resource type="Texture2D" uid="uid://d36ltwx4dv6py" path="res://game/npc/master/placeholder.png" id="1_ct0oc"]
+
+[node name="NPCRow" type="VBoxContainer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 68.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = -1
+script = ExtResource("1_8uyn5")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Queen Bees"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Portrait" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_ct0oc")
+texture_pressed = ExtResource("1_ct0oc")
+texture_hover = ExtResource("1_ct0oc")
+texture_disabled = ExtResource("1_ct0oc")
+texture_focused = ExtResource("1_ct0oc")
+
+[node name="HSeparator" type="HSeparator" parent="."]
+layout_mode = 2
