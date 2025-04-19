@@ -4054,15 +4054,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.32483, 1.68077, -5.84909)
 [node name="Chester" parent="NPCs" instance=ExtResource("37_xqxqv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.31551, 1.04172, 2.32387)
 
-[node name="Ollie" parent="NPCs" node_paths=PackedStringArray("albert", "ollie_traveller") instance=ExtResource("38_sdl5r")]
+[node name="Ollie" parent="NPCs" node_paths=PackedStringArray("albert", "ollie_traveller", "queen") instance=ExtResource("38_sdl5r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.45007, 1.04968, -3.0476)
 albert = NodePath("../Albert")
 ollie_traveller = NodePath("../Ollie_traveller")
+queen = NodePath("../QueenBee")
 
-[node name="Ollie_traveller" parent="NPCs" node_paths=PackedStringArray("ollie", "hiro") instance=ExtResource("39_p0hlo")]
+[node name="Ollie_traveller" parent="NPCs" node_paths=PackedStringArray("ollie", "hiro", "queen") instance=ExtResource("39_p0hlo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 23)
 ollie = NodePath("../Ollie")
 hiro = NodePath("../Hiro")
+queen = NodePath("../QueenBee")
 
 [node name="Dovey" parent="NPCs" node_paths=PackedStringArray("romulus") instance=ExtResource("38_i3tum")]
 romulus = NodePath("../Romulus")
