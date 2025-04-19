@@ -14,6 +14,8 @@ signal last_minute
 signal on_quest_start(quest_name : String, help_or_sabotage : NPC.gamestate)
 signal on_quest_end(quest_name : String, help_or_sabotage : NPC.gamestate)
 signal on_quest_progress(quest_name : String)
+signal item_grabbed
+signal item_dropped
 
 const PREWRITTEN_CONTROLLER : PackedScene = preload("res://game/player/player_controllers/prewritten_controller.tscn")
 const PLAYER : PackedScene = preload("res://game/player/player.tscn")
@@ -68,7 +70,6 @@ func quest_finished(quest_name : String, help_or_sabotage : NPC.gamestate, karma
 	if karma < 0:
 		naughty_quests += -karma
 	print_debug(running_karma)
-
 
 
 func quest_progress(quest_name : String) -> void:
