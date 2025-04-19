@@ -1,0 +1,27 @@
+[gd_scene load_steps=8 format=3 uid="uid://pesljimvifvy"]
+
+[ext_resource type="PackedScene" uid="uid://c33eejqyhtjv0" path="res://ui/game/sabotage.tscn" id="1_gitwg"]
+[ext_resource type="Gradient" uid="uid://bu6icbh0cqwc4" path="res://ui/game/sabotage_or_help_texture.tres" id="2_1vp4k"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_8far6"]
+gradient = ExtResource("2_1vp4k")
+width = 1
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_4c6ud"]
+gradient = ExtResource("2_1vp4k")
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_lrq4w"]
+gradient = ExtResource("2_1vp4k")
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_vnsku"]
+gradient = ExtResource("2_1vp4k")
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_svaba"]
+gradient = ExtResource("2_1vp4k")
+
+[node name="HelpOrSabotage" instance=ExtResource("1_gitwg")]
+texture_normal = SubResource("GradientTexture1D_8far6")
+texture_pressed = SubResource("GradientTexture1D_4c6ud")
+texture_hover = SubResource("GradientTexture1D_lrq4w")
+texture_disabled = SubResource("GradientTexture1D_vnsku")
+texture_focused = SubResource("GradientTexture1D_svaba")
