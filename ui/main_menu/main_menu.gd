@@ -19,7 +19,7 @@ func _connect_buttons() -> void:
 
 
 func _start_game() -> void:
-	ui.get_node("PauseMenu").pausable = true
 	get_tree().paused = true
+	LoadingScreen.start_load()
+	await LoadingScreen.finished_entering
 	get_tree().change_scene_to_file("uid://dgmox4dyoefyf")
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
