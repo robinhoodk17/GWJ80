@@ -4,7 +4,7 @@ enum item_type{CHEESE, LETTER, PIGGY, FILES, BADGE, ROLLERBLADES, MAIL}
 @export var already_interacted : bool = false
 @export var affected_by_time : bool = true
 @export var can_interact : bool = true
-@export var type = item_type.CHEESE
+@export var type : item_type = item_type.CHEESE
 @onready var pop_up: Node3D = $PopUp
 
 var frozen_in_time : bool = false
@@ -68,10 +68,10 @@ func freeze_in_time() -> void:
 
 
 
-func interact(playermodel, _player_controller) -> void:
+func interact(playermodel : Node3D, _player_controller : player_controller) -> void:
 	grab(playermodel, _player_controller)
 	
-func grab(_player_model : Node3D, _player_controller) -> void:
+func grab(_player_model : Node3D, _player_controller : player_controller) -> void:
 	if _player_controller.grabbing != null:
 		_player_controller.grabbing.drop()
 	_player_controller.grabbing = self

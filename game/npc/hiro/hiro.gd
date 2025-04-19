@@ -2,6 +2,7 @@ extends NPC
 
 var quest_started = false
 var quest_finished = false
+var currently_trapped : bool = false
 @export	var safe_timer : Timer
 @export var safe_crack_time : float = 480.0
 
@@ -26,6 +27,7 @@ func _ready() -> void:
 	Globals.restart.connect(restart)
 
 func crack_safe() -> void:
+	currently_trapped = true
 	if current_state == gamestate.SABOTAGED:
 		make_jail_appear()
 		if !quest_finished:
@@ -56,6 +58,7 @@ func handle_dialogue_start(_player_controller) -> void:
 			start_dialogue("hiro_getting_away")
 
 func restart() -> void:
+	currently_trapped = false
 	safe_timer.start(safe_crack_time)
 	animation_player.stop()
 	route_manager.stop()
@@ -71,3 +74,4 @@ func restart() -> void:
 func handle_dialogue_end(signal_argument : String) -> void:
 	if signal_argument == "hiro_sabotaged":
 		current_gamestate = gamestate.SABOTAGED
+		Globals.quest_progress("hiro")

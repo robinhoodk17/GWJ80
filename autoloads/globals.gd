@@ -3,22 +3,17 @@ extends Node
 # What goes into globals.gd?
 # If the function depends on the something in the game, it's a global.
 # If it's independent, it (probably) belongs in utils.gd
-@warning_ignore("unused_signal")
 ## Use UI/MessageBox to display a status update message to the player
-@warning_ignore("unused_signal")
 signal post_ui_message(text: String)
 ## Emitted by UI/Controls when a action is remapped
-@warning_ignore("unused_signal")
 signal controls_changed(config: GUIDERemappingConfig)
-@warning_ignore("unused_signal")
 signal found_item
-@warning_ignore("unused_signal")
 signal lost_item
 signal restart
 signal last_minute
-signal on_quest_start(quest_name, help_or_sabotage)
-signal on_quest_end(quest_name, help_or_sabotage)
-signal on_quest_progress(quest_name)
+signal on_quest_start(quest_name : String, help_or_sabotage : NPC.gamestate)
+signal on_quest_end(quest_name : String, help_or_sabotage : NPC.gamestate)
+signal on_quest_progress(quest_name : String)
 
 const PREWRITTEN_CONTROLLER : PackedScene = preload("res://game/player/player_controllers/prewritten_controller.tscn")
 const PLAYER : PackedScene = preload("res://game/player/player.tscn")
@@ -76,7 +71,7 @@ func quest_finished(quest_name : String, help_or_sabotage : NPC.gamestate, karma
 
 
 
-func quest_progress(quest_name : String):
+func quest_progress(quest_name : String) -> void:
 	on_quest_progress.emit(quest_name)
 
 
