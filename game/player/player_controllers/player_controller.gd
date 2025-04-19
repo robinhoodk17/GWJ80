@@ -173,7 +173,7 @@ func rotate_model(direction: Vector3, delta : float) -> void:
 	playermodel.basis = lerp(playermodel.basis, Basis.looking_at(direction), 10.0 * delta)
 
 
-func  restarted() -> void:
+func restarted() -> void:
 	player.global_position = original_position
 	player.global_basis = original_rotation
 
@@ -181,6 +181,8 @@ func  restarted() -> void:
 func handle_time_freeze() -> void:
 	if interaction_detection.showing_which != null:
 		if interaction_detection.showing_which.is_in_group("item"):
+			if !interaction_detection.showing_which.freezable:
+				return
 			interaction_detection.showing_which.freeze_in_time()
 
 

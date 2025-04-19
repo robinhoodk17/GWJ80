@@ -1,0 +1,10 @@
+barry_character: What! You aint pulling one of my many legs now are you Ms Walker? This would be a great opportuniy, but if I'm not the union rep, who will take care of the workers?
+- You will, as the new CEO
+	barry_character: Oh, that's where you're confused, Ms Walker. CEOs take care of investors, not workers.
+	- Can't you bee (pun intended) the union rep at the same time as the CEO?
+		barry_character: I'm afraid that would be some major conflict of interest, Ms Walker. I can't, in good conscience, take both positions. 
+	- As long as the honey keeps flowing, investors won't know who you are really working for
+		barry_character: You know what? You are right. There will come other representatives, and they will have me as a man on the inside! Of course I accept the position! I thank you and Miss Bees on behalf of the union. 
+		[signal arg="barry_queen_quest_success"]
+- Forget the workers, this is a geat opportunity for you
+	barry_character: Ms Walker! My ant ears can't believe what they're hearing! Forget the workers? I'm afraid I'll have to decline this position, thank you very much.

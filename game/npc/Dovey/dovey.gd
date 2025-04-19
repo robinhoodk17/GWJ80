@@ -15,6 +15,7 @@ func handle_dialogue_start(_player_controller) -> void:
 					Globals.quest_finished("dovey", gamestate.HELPED)
 					current_gamestate = gamestate.HELPED
 					var item : Node3D = _player_controller.grabbing
+					item.quest_finished = true
 					item.drop()
 					_player_controller.grabbing = null
 					item.global_position = Vector3(0,1000,0)
