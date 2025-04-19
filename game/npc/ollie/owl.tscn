@@ -1,6 +1,6 @@
 [gd_scene load_steps=31 format=4 uid="uid://dbemtombk72y6"]
 
-[ext_resource type="Texture2D" uid="uid://d25m6wbikhd7x" path="res://game/npc/owl/cosmic owl_grandient texture.png" id="1_c2sll"]
+[ext_resource type="Texture2D" uid="uid://d25m6wbikhd7x" path="res://game/npc/ollie/cosmic owl_grandient texture.png" id="1_c2sll"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n6ckk"]
 

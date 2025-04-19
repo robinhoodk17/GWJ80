@@ -8,8 +8,9 @@
 [sub_resource type="PrismMesh" id="PrismMesh_kfxkt"]
 size = Vector3(1.21, 1, 0.795)
 
-[node name="Hiro" instance=ExtResource("1_4ccpc")]
+[node name="Hiro" node_paths=PackedStringArray("safe_timer") instance=ExtResource("1_4ccpc")]
 script = ExtResource("2_kfxkt")
+safe_timer = NodePath("Timer2")
 safe_crack_time = 480.0
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." index="6"]

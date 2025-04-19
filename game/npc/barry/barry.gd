@@ -4,7 +4,7 @@ var first_talk : bool = false
 var convinced : bool = false
 var quest_started : bool = false
 @export var queen : NPC
-var quest_progression = 5
+var quest_progression : int = 6
 
 func handle_dialogue_start(_player_controller) -> void:
 	if queen.waiting_plan and !convinced:
@@ -36,12 +36,13 @@ func handle_dialogue_start(_player_controller) -> void:
 func quest_progressed() -> void:
 	quest_progression -= 1
 	if quest_progression == 0:
-		Globals.quest_finished("barry", gamestate.HELPED, 2)
+		Globals.quest_finished("barry", gamestate.HELPED, 3)
 		print_debug(Globals.quest_status["barry"])
 	else:
 		Globals.quest_progress("barry")
 		
 		
 func handle_dialogue_end(signal_argument : String) -> void:
-	pass
-	##handle convincing barry for the queen's quest
+	if signal_argument == "barry_queen_quest_success":
+		queen.quest_progressed()
+		convinced = true

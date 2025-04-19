@@ -18,6 +18,7 @@ func handle_dialogue_start(_player_controller) -> void:
 				Globals.quest_finished("mee", gamestate.SABOTAGED, -1)
 				var item : Node3D = _player_controller.grabbing
 				item.drop()
+				item.quest_finished = true
 				_player_controller.grabbing = null
 				item.global_position = Vector3(0,1000,0)
 				return

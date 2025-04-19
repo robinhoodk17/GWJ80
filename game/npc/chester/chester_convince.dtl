@@ -1,0 +1,24 @@
+chester_character: [speed=.25]Hello there, Ms new employee. Forgive me if I cut this short, I have a meeting to attend.
+- Of course. Go, Chester, become the best racer in the Speed Forest Grand Prix
+	chester_character: [speed=.25]Will do, Ms new employee. If this works, you will have to find someone else to get settled. [pause = 3]Altough, I just wish I had a way to get to the meeting [color=red]faster[/color]
+	chester_character: [speed=.25]See you later, Ms new employee.
+- A Nascar racer? That's a big risk.
+	chester_character: [speed=.25]You mean the crashes? Nah, I'm a great driver.[pause=3] You'll see.
+	- Driving skills don't matter. You still have to get chosen by a team, get sponsorships, and so on.
+		chester_character: [speed=.5]Look at that. The new employee looking after the veteran.
+		chester_character: [speed=.5]Luckily, you have no reason to worry, a small indie team is already interested in me. [pause=2][speed=1]We just need to find sponsors.
+		- That's excellent. You got this, Chester
+			chester_character: [speed=.25]Haha you had me worried there for a bit. [pause=3]Thanks! I have to go now
+		- Sponsors are the hard part. They don't look at the driving, they only look at the drivers.
+			chester_character: [speed=2]You really think so?[pause=.5][speed=4] They probably won't be interested in an old tortoise like myself...
+			- Yes, I think that's right
+				chester_character: [speed=6]You really think I should abandon my dreams?
+				- Of course not! You just need to be aware of the challenges. Go get them!
+					chester_character: [speed=.25]You know what?[pause=3] I will![pause=3] Thanks!
+				- Yes
+					chester_character: [speed=6]Maybe you're right. I should have followed my dreams when I was young. It's too late now. I'll attend my meeting to ask Romulus for more responsibilities.
+					margarine_character: It's for the best. You have friends, a safe job, and a loving community here. You can still drive in your free time.
+					[signal arg="chester_sabotaged"]
+			- What are you talking about? You're part of a legacy! They'll love that! Go follow your dreams.
+				chester_character: [speed=.25]Thanks, newbie. I'll do that!
+	- I believe you. You got this.

@@ -4,13 +4,15 @@
 &"_translation_id": "",
 &"color": Color(1, 1, 1, 1),
 &"custom_info": {
+"prefix": "",
 "sound_mood_default": "",
 "sound_moods": {},
-"style": ""
+"style": "",
+"suffix": ""
 },
 &"default_portrait": "",
 &"description": "",
-&"display_name": "vinny_character",
+&"display_name": "Vinny Vacuum",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),

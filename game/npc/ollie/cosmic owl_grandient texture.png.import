@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d25m6wbikhd7x"
-path.s3tc="res://.godot/imported/cosmic owl_grandient texture.png-48c53047929be5d322b633e07c26f5b8.s3tc.ctex"
-path.etc2="res://.godot/imported/cosmic owl_grandient texture.png-48c53047929be5d322b633e07c26f5b8.etc2.ctex"
+path.s3tc="res://.godot/imported/cosmic owl_grandient texture.png-bbfdbc65f18617a2c4f6372fd9e8f332.s3tc.ctex"
+path.etc2="res://.godot/imported/cosmic owl_grandient texture.png-bbfdbc65f18617a2c4f6372fd9e8f332.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -15,8 +15,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://game/npc/owl/cosmic owl_grandient texture.png"
-dest_files=["res://.godot/imported/cosmic owl_grandient texture.png-48c53047929be5d322b633e07c26f5b8.s3tc.ctex", "res://.godot/imported/cosmic owl_grandient texture.png-48c53047929be5d322b633e07c26f5b8.etc2.ctex"]
+source_file="res://game/npc/ollie/cosmic owl_grandient texture.png"
+dest_files=["res://.godot/imported/cosmic owl_grandient texture.png-bbfdbc65f18617a2c4f6372fd9e8f332.s3tc.ctex", "res://.godot/imported/cosmic owl_grandient texture.png-bbfdbc65f18617a2c4f6372fd9e8f332.etc2.ctex"]
 
 [params]
 
