@@ -2,7 +2,7 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyt44a2ijqrea"
+uid="uid://d3v73gufujfer"
 path.s3tc="res://.godot/imported/Bee_grandient texture.png-3bbc3eac7c2ad907341dd04a25082846.s3tc.ctex"
 path.etc2="res://.godot/imported/Bee_grandient texture.png-3bbc3eac7c2ad907341dd04a25082846.etc2.ctex"
 metadata={
@@ -10,7 +10,7 @@ metadata={
 "vram_texture": true
 }
 generator_parameters={
-"md5": "09ce4991aea43c9cbc1cd97fd8e45286"
+"md5": "2db7fd0acef3fb3cc22889e1575ad494"
 }
 
 [deps]

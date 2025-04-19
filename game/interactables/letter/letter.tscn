@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://ckg0lnbj2kv6f"]
+
+[ext_resource type="PackedScene" uid="uid://dvcvga3y78p25" path="res://game/interactables/master.tscn" id="1_djbnb"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_dkh1v"]
+size = Vector3(1, 0.4, 0.05)
+
+[sub_resource type="Animation" id="Animation_dkh1v"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_djbnb"]
+resource_name = "new_animation"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gk50t"]
+_data = {
+&"RESET": SubResource("Animation_dkh1v"),
+&"new_animation": SubResource("Animation_djbnb")
+}
+
+[node name="Letter" instance=ExtResource("1_djbnb")]
+freezable = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="1"]
+mesh = SubResource("BoxMesh_dkh1v")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="3"]
+libraries = {
+&"": SubResource("AnimationLibrary_gk50t")
+}
+autoplay = "new_animation"
