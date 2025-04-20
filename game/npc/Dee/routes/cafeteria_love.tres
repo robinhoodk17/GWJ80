@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="eventRoute" load_steps=2 format=3 uid="uid://dhydurt20q2ds"]
+
+[ext_resource type="Script" uid="uid://cea3ewphuupof" path="res://game/npc/routes/route.gd" id="1_4a4pf"]
+
+[resource]
+script = ExtResource("1_4a4pf")
+acceptable_states = Array[int]([2])
+route = "cafeteria_love"
+metadata/_custom_type_script = "uid://cea3ewphuupof"

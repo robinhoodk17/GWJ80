@@ -9,6 +9,10 @@ var quest_completed : bool = false
 @export var barry : NPC
 
 func handle_dialogue_start(_player_controller) -> void:
+	if Globals.current_time < 240.0:
+		start_dialogue("vinny_and_queen")
+		return
+		
 	if Globals.current_time > 300.0 and Globals.current_time < 360.0:
 		start_dialogue("i_love_office_news_queen_bee")
 		return

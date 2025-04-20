@@ -1,4 +1,4 @@
-[gd_scene load_steps=284 format=4 uid="uid://dgmox4dyoefyf"]
+[gd_scene load_steps=324 format=4 uid="uid://dgmox4dyoefyf"]
 
 [ext_resource type="Script" uid="uid://1cbekppiubgu" path="res://game/scenes/Bigger building made with csg boxeszip/game_jam_sky_scraper.gd" id="1_lmwtd"]
 [ext_resource type="Resource" uid="uid://v5u0dyabni7e" path="res://input/default_mapping_context.tres" id="2_odb85"]
@@ -28,19 +28,36 @@
 [ext_resource type="PackedScene" uid="uid://u1vgfeia861q" path="res://ui/ui.tscn" id="27_ldaxu"]
 [ext_resource type="PackedScene" uid="uid://wu80y2tmaeqw" path="res://game/npc/Dee/dee_hive_main.tscn" id="28_lmwtd"]
 [ext_resource type="PackedScene" uid="uid://dgaexk2mqn6j8" path="res://game/player/player.tscn" id="28_m0j6m"]
-[ext_resource type="PackedScene" uid="uid://t6k70bk4jsq" path="res://game/npc/Dee/routes/route_manager_2.tscn" id="29_lmwtd"]
 [ext_resource type="PackedScene" uid="uid://bahvf2v6h6slc" path="res://game/player/player_controllers/player_controller.tscn" id="29_xqxqv"]
 [ext_resource type="PackedScene" uid="uid://p10ewavm88bd" path="res://game/npc/mee hive/mee_main.tscn" id="30_odb85"]
+[ext_resource type="Resource" uid="uid://cxxs2isrrffcs" path="res://game/npc/cee/routes/bottom_floor.tres" id="30_ulkdk"]
 [ext_resource type="PackedScene" uid="uid://ds0ndvja6tf3k" path="res://game/npc/jaws/jaws.tscn" id="31_fevv2"]
 [ext_resource type="PackedScene" uid="uid://s60xl4keq2rt" path="res://game/npc/bear/bear_npc.tscn" id="31_hqqhn"]
+[ext_resource type="Resource" uid="uid://chh3bnrjwth2g" path="res://game/npc/cee/routes/back_to_room.tres" id="31_ielwj"]
+[ext_resource type="Resource" uid="uid://u6rh3ygxf1va" path="res://game/npc/Dee/routes/look_for_vinny.tres" id="31_vb8bx"]
+[ext_resource type="Resource" uid="uid://sk24fk8tq2uq" path="res://game/npc/cee/routes/bottom_floor_again.tres" id="32_1h1gy"]
 [ext_resource type="PackedScene" uid="uid://8ystjctyqkk4" path="res://game/interactables/jaws_files/jaws_files.tscn" id="32_kcvwx"]
+[ext_resource type="Resource" uid="uid://p6axeckgqie6" path="res://game/npc/cee/routes/cafeteria.tres" id="32_n4sbw"]
+[ext_resource type="Resource" uid="uid://w7po8c1y6d8w" path="res://game/npc/Dee/routes/back_to_room.tres" id="32_q78fk"]
+[ext_resource type="Resource" uid="uid://cg40emrkmhe44" path="res://game/npc/cee/routes/back_to_room_again.tres" id="33_84r8h"]
+[ext_resource type="Resource" uid="uid://b3k7tswnu8ddn" path="res://game/npc/Dee/routes/leave_building.tres" id="33_h4heb"]
 [ext_resource type="PackedScene" uid="uid://d2bnwf63bmeve" path="res://game/npc/vinny/vinny.tscn" id="34_ldaxu"]
+[ext_resource type="Resource" uid="uid://nh0llwpff0gc" path="res://game/npc/Dee/routes/into_cee_room.tres" id="34_v8om6"]
 [ext_resource type="PackedScene" uid="uid://c5b4hoeedmukr" path="res://game/npc/romulus/romulus.tscn" id="34_xt6ak"]
+[ext_resource type="Resource" uid="uid://dhydurt20q2ds" path="res://game/npc/Dee/routes/cafeteria_love.tres" id="35_h0lcc"]
+[ext_resource type="Resource" uid="uid://b84k0ioni2cft" path="res://game/npc/Dee/routes/back_from_cee.tres" id="36_0tjic"]
 [ext_resource type="PackedScene" uid="uid://dxxwv6dpi4ubx" path="res://game/npc/hiro/hiro.tscn" id="36_xqxqv"]
 [ext_resource type="PackedScene" uid="uid://dwmj7ifqavdg3" path="res://game/npc/chester/chester.tscn" id="37_xqxqv"]
 [ext_resource type="PackedScene" uid="uid://dmcac8682metn" path="res://game/npc/Dovey/dovey_npc.tscn" id="38_i3tum"]
 [ext_resource type="PackedScene" uid="uid://d362eya2ajhk1" path="res://game/npc/ollie/ollie.tscn" id="38_sdl5r"]
 [ext_resource type="PackedScene" uid="uid://phf2r7pbivdy" path="res://game/npc/ollie/ollie_traveller.tscn" id="39_p0hlo"]
+[ext_resource type="Resource" uid="uid://54xmtafb76ed" path="res://game/npc/Dovey/routes/route1.tres" id="41_en0af"]
+[ext_resource type="Resource" uid="uid://70662a0juhca" path="res://game/npc/Dovey/routes/route2.tres" id="42_6bile"]
+[ext_resource type="Resource" uid="uid://da05qvftn086i" path="res://game/npc/vinny/routes/looking_news.tres" id="45_84r8h"]
+[ext_resource type="Resource" uid="uid://cwhv0xvyiis3u" path="res://game/npc/vinny/routes/chilling.tres" id="46_3yd25"]
+[ext_resource type="Resource" uid="uid://d06erfrgb3eb5" path="res://game/npc/vinny/routes/go_to_room.tres" id="47_3yd25"]
+[ext_resource type="Resource" uid="uid://dak42tbdfjvcg" path="res://game/npc/vinny/routes/leave_the_building.tres" id="48_jk4c8"]
+[ext_resource type="Resource" uid="uid://b40brs6u4u28s" path="res://game/npc/ollie/routes/ollie_cafeteria.tres" id="53_3coud"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2m30o"]
 load_path = "res://.godot/imported/Backup Building _Carpet fabric_albedo000.png-aac8890c03b3eeb897b9ae775915ba6f.s3tc.ctex"
@@ -2714,60 +2731,60 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
+tracks/0/path = NodePath("../Ollie:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(-2.71593, 0.541723, 5.48797)]
+"values": [Vector3(14.545, 1.78935, -0.503786)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
+tracks/1/path = NodePath("../Ollie:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0, -3.14159, 0)]
+"values": [Vector3(0, -1.5708, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_fppav"]
-resource_name = "route1"
-length = 3.0
+[sub_resource type="Animation" id="Animation_etfy6"]
+resource_name = "ollie_cafeteria"
+length = 10.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
+tracks/0/path = NodePath("../Ollie:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.6, 2.86),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(-2.71593, 0.541723, 5.48797), Vector3(3.99133, 0.541723, 5.48797), Vector3(12.4356, 0.541723, 5.48797)]
+"values": [Vector3(14.545, 1.78935, -0.503786)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
+tracks/1/path = NodePath("../Ollie:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.56, 2.64, 3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0, -3.14159, 0), Vector3(0, 1.5708, 0), Vector3(0, 1.5708, 0), Vector3(0, -1.5708, 0)]
+"values": [Vector3(0, -1.5708, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_agy81"]
 _data = {
 &"RESET": SubResource("Animation_lxl27"),
-&"route1": SubResource("Animation_fppav")
+&"ollie_cafeteria": SubResource("Animation_etfy6")
 }
 
 [sub_resource type="Animation" id="Animation_axi67"]
@@ -2865,6 +2882,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_36qhl"]
 resource_name = "room"
+length = 7.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -2872,10 +2890,22 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 3.6, 3.8, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(-1.243, -11.098, -4.855)]
+"values": [Vector3(-1.243, -11.098, -4.855), Vector3(-1.243, -11.098, 11.2), Vector3(-1.243, -11.098, 11.2), Vector3(11.9795, -11.098, 11.2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.5, 3.95, 6, 7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -3.14159, 0), Vector3(0, -3.14159, 0), Vector3(0, -1.5708, 0), Vector3(0, -1.5708, 0), Vector3(0, 1.5708, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_agy81"]
@@ -3116,6 +3146,569 @@ _data = {
 &"watch_tv": SubResource("Animation_6k0m7")
 }
 
+[sub_resource type="Animation" id="Animation_ulkdk"]
+resource_name = "cafeteria"
+length = 12.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 12),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(5.919, 3, -13.249), Vector3(5.919, 3, -13.249), Vector3(-14.4395, 3, 0.0573362)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2, 12),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -3.14159, 0), Vector3(0, -3.14159, 0), Vector3(0, -1.5708, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ielwj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(5.919, 3, -13.249)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -3.14159, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_n4sbw"]
+resource_name = "bottom_floor"
+length = 15.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4.70106, 15),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(5.919, 3, -13.249), Vector3(5.919, 3, -0.14182), Vector3(-9.85329, -8.27669, -11.2974), Vector3(-1.61299, -8.27669, -11.2974)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2, 4.70106),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -3.14159, 0), Vector3(0, -3.14159, 0), Vector3(0, -3.14159, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_0tjic"]
+resource_name = "back_to_room"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-1.61299, -8.27669, -11.2974), Vector3(5.919, 3, -13.249)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0666667, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -3.14159, 0), Vector3(0, -3.14159, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1h1gy"]
+_data = {
+&"RESET": SubResource("Animation_ielwj"),
+&"back_to_room": SubResource("Animation_0tjic"),
+&"bottom_floor": SubResource("Animation_n4sbw"),
+&"cafeteria": SubResource("Animation_ulkdk")
+}
+
+[sub_resource type="Animation" id="Animation_6bile"]
+resource_name = "looking"
+length = 16.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.50766, 4.31359, 5.94752, 7.40946, 10.3333, 11.435, 14.5479, 15.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-2, 3, -12), Vector3(-2, 3, -5.51022), Vector3(-2, 5.41913, -5.51022), Vector3(-0.450356, 5.41913, -0.36054), Vector3(-0.450356, -5.76846, -0.36054), Vector3(-0.450356, -5.76846, 14.1143), Vector3(-0.450356, -5.76846, 14.1143), Vector3(-10.6608, -8.46668, 14.1143), Vector3(-10.6608, -8.46668, 14.1143)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 10.3333, 11, 14.5479, 15.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 3.14159, 0), Vector3(0, 3.14159, 0), Vector3(0, 1.5708, 0), Vector3(0, 1.5708, 0), Vector3(0, -0.0666193, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_vb8bx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2, 3, -12)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -3.14159, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_q78fk"]
+resource_name = "back_to_room"
+length = 17.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.65, 2.86667, 3, 5, 7.16667, 10.4333, 13.1333, 16),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-10.6608, -8.46668, 14.1143), Vector3(-10.6608, -8.46668, 14.1143), Vector3(-0.450356, -5.76846, 14.1143), Vector3(-0.450356, -5.76846, 14.1143), Vector3(-0.450356, -5.76846, -0.36054), Vector3(-0.450356, 5.41913, -0.36054), Vector3(-2, 5.41913, -5.51022), Vector3(-2, 3, -5.51022), Vector3(-2, 3, -12)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.65, 2.46667, 3, 16, 16.65),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -0.0666193, 0), Vector3(0, -1.5708, 0), Vector3(0, -1.5708, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 3.14159, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_v8om6"]
+resource_name = "leave_building"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.84231, 3.43051),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-2, 3, -12), Vector3(-4.71167, 5.38163, -12), Vector3(-4.71167, 5.38163, -18.9327)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.84231),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -3.14159, 0), Vector3(0, 0.0480488, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_h0lcc"]
+resource_name = "into_cee_room"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.6, 3, 3.5, 4.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-2, 3, -12), Vector3(-2, 3, -5.41987), Vector3(-2, 3, -5.41987), Vector3(6.2416, 3, -5.41987), Vector3(6.2416, 3, -5.41987), Vector3(6.2416, 3, -10.6876)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 1.65, 3, 3.65),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 3.14159, 0), Vector3(0, 3.14159, 0), Vector3(0, 4.71239, 0), Vector3(0, 4.71239, 0), Vector3(0, 6.28319, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_84r8h"]
+resource_name = "back_from_cee"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.3, 2.6, 3, 5.2, 5.85, 7.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(6.2416, 3, -10.6876), Vector3(6.2416, 3, -10.6876), Vector3(6.2416, 3, -5.41987), Vector3(6.2416, 3, -5.41987), Vector3(-2, 3, -5.41987), Vector3(-2, 3, -5.41987), Vector3(-2, 3, -12)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.3, 2.85, 3.5, 5.2, 5.85, 5.96667, 7.4, 8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 6.28319, 0), Vector3(0, 3.14159, 0), Vector3(0, 3.14159, 0), Vector3(0, 1.5708, 0), Vector3(0, 1.5708, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 3.14159, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_3yd25"]
+resource_name = "cafeteria_love"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(6.2416, 3, -10.6876), Vector3(-14.8539, 3, 1.91432)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 6.28319, 0), Vector3(0, -1.5708, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q78fk"]
+_data = {
+&"RESET": SubResource("Animation_vb8bx"),
+&"back_from_cee": SubResource("Animation_84r8h"),
+&"back_to_room": SubResource("Animation_q78fk"),
+&"cafeteria_love": SubResource("Animation_3yd25"),
+&"into_cee_room": SubResource("Animation_h0lcc"),
+&"leave_building": SubResource("Animation_v8om6"),
+&"looking": SubResource("Animation_6bile")
+}
+
+[sub_resource type="Animation" id="Animation_1h1gy"]
+resource_name = "look_at_news"
+length = 5.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5.08223),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(12.4019, -11.0416, -9.07114), Vector3(0.821465, -11.0416, -5.00531)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5.08223),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5708, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jk4c8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(12.4019, -11.0416, -9.07114)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.5708, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_3coud"]
+resource_name = "chilling"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 2.15, 3.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.821465, -11.0416, -5.00531), Vector3(0.821465, -11.0416, -7.73579), Vector3(0.821465, -11.0416, -7.73579), Vector3(-1.62835, -11.0416, -7.73579)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5, 2.15, 2.47759, 3.8, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 1.5708, 0), Vector3(0, 1.5708, 0), Vector3(0, 1.5708, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_e17wb"]
+resource_name = "going_to_room"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-1.62835, -11.0416, -7.73579), Vector3(-12.4849, -11.0416, 0.494136)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_qd0wp"]
+resource_name = "leave_the_building"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 6.67043),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-12.4849, -11.0416, 0.494136), Vector3(-17.6172, -11.0416, 0.494136)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 6.67043),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e17wb"]
+_data = {
+&"RESET": SubResource("Animation_jk4c8"),
+&"chilling": SubResource("Animation_3coud"),
+&"going_to_room": SubResource("Animation_e17wb"),
+&"leave_the_building": SubResource("Animation_qd0wp"),
+&"look_at_news": SubResource("Animation_1h1gy")
+}
+
+[sub_resource type="Animation" id="Animation_sdl5r"]
+resource_name = "route1"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.65, 4.65, 5.3, 6.3, 6.95, 8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-12.5, 3.855, 7.434), Vector3(-12.5, 3.855, 7.434), Vector3(5.5, 3.855, 7.434), Vector3(5.5, 3.855, 7.434), Vector3(5.5, 3.855, 11.9), Vector3(5.5, 3.855, 11.9), Vector3(12.8917, 0.430844, 11.9)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.65, 4.65, 5.3, 6.3, 6.95),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -1.5708, 0), Vector3(0, -3.14159, 0), Vector3(0, 3.14159, 0), Vector3(0, 1.5708, 0), Vector3(0, 1.5708, 0), Vector3(0, 3.14159, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_p0hlo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-12.4622, 3.85501, 7.43358)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -1.5708, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_en0af"]
+resource_name = "route2"
+length = 28.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.3, 3, 3.7, 8.7, 15.3, 17.7, 18.35, 19.35, 21.35, 21.9333, 23.3, 23.75, 25.25, 25.6, 27),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(12.8917, 0.430844, 11.9), Vector3(12.8917, 0.430844, 11.9), Vector3(5.5, 3.855, 11.9), Vector3(5.5, 3.855, 11.9), Vector3(5.5, 3.855, -10.6), Vector3(5.5, 3.855, -10.6), Vector3(5.5, 3.855, 0), Vector3(5.5, 3.855, 0), Vector3(0, 3.855, 0), Vector3(0, -8.72863, 0), Vector3(0, -8.72863, 0), Vector3(0, -8.72863, -4.78609), Vector3(0, -8.72863, -4.78609), Vector3(6.8, -8.729, -4.786), Vector3(6.8, -8.729, -4.786), Vector3(6.8, -12.2534, 3.2748)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.3, 3, 3.7, 8.7, 9.35, 9.36667, 11.25, 12.65, 14.65, 15.3, 17.7, 18.35, 21.35, 22, 23.3, 23.95, 25, 25.65),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 3.14159, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, -1.5708, 0), Vector3(0, -1.5708, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 3.14159, 0), Vector3(0, 3.14159, 0), Vector3(0, 1.5708, 0), Vector3(0, 1.5708, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, -1.5708, 0), Vector3(0, -1.5708, 0), Vector3(0, -3.14159, 0), Vector3(0, -3.14159, 0), Vector3(0, -4.71239, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6bile"]
+_data = {
+&"RESET": SubResource("Animation_p0hlo"),
+&"route1": SubResource("Animation_sdl5r"),
+&"route2": SubResource("Animation_en0af")
+}
+
 [node name="Backup Building " type="Node3D"]
 process_mode = 1
 script = ExtResource("1_lmwtd")
@@ -3128,6 +3721,7 @@ mesh = SubResource("ArrayMesh_7guf0")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Walls"]
+collision_layer = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Walls/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_sdl5r")
@@ -3930,7 +4524,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.41491)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.5)
 
 [node name="QueenBee" parent="NPCs" node_paths=PackedStringArray("vinny", "barry") instance=ExtResource("16_nvp0a")]
-transform = Transform3D(0.0797466, 0, 0.996815, 0, 1, 0, -0.996815, 0, 0.0797466, -12, 1, 1)
+transform = Transform3D(0.0797466, 0, 0.996815, 0, 1, 0, -0.996815, 0, 0.0797466, 10.5331, -11.3011, -9.20044)
 vinny = NodePath("../Vinny")
 barry = NodePath("../Barry")
 moving_times = Dictionary[float, ExtResource("11_mb0xo")]({
@@ -3938,7 +4532,7 @@ moving_times = Dictionary[float, ExtResource("11_mb0xo")]({
 })
 
 [node name="MamaBear" parent="NPCs" node_paths=PackedStringArray("barry") instance=ExtResource("31_hqqhn")]
-transform = Transform3D(-3, 0, -7.60554e-06, 0, 3, 0, 7.60554e-06, 0, -3, -2.71593, 0.541723, 5.48797)
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -12.1619, 0.541723, 4.59031)
 barry = NodePath("../Barry")
 moving_times = Dictionary[float, ExtResource("11_mb0xo")]({
 10.0: ExtResource("12_jxqt2")
@@ -4021,16 +4615,39 @@ libraries = {
 }
 
 [node name="Cee" parent="NPCs" node_paths=PackedStringArray("dee", "barry") instance=ExtResource("27_hdwqv")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.919, 3, -13.249)
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 5.919, 3, -13.249)
 dee = NodePath("../Dee")
 barry = NodePath("../Barry")
 ice_skates_appear_time = 0.0
+moving_times = Dictionary[float, ExtResource("11_mb0xo")]({
+90.0: ExtResource("30_ulkdk"),
+180.0: ExtResource("31_ielwj"),
+300.0: ExtResource("32_1h1gy"),
+440.0: ExtResource("33_84r8h"),
+540.0: ExtResource("32_n4sbw")
+})
 
-[node name="Dee" parent="NPCs" node_paths=PackedStringArray("barry", "route_manager") instance=ExtResource("28_lmwtd")]
+[node name="RouteManager" parent="NPCs/Cee" index="5"]
+libraries = {
+&"": SubResource("AnimationLibrary_1h1gy")
+}
+
+[node name="Dee" parent="NPCs" node_paths=PackedStringArray("barry") instance=ExtResource("28_lmwtd")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -2, 3, -12)
 barry = NodePath("../Barry")
-route_manager = NodePath("RouteManager2")
+moving_times = Dictionary[float, ExtResource("11_mb0xo")]({
+0.1: ExtResource("31_vb8bx"),
+180.0: ExtResource("32_q78fk"),
+300.0: ExtResource("33_h4heb"),
+480.0: ExtResource("34_v8om6"),
+540.0: ExtResource("35_h0lcc"),
+541.0: ExtResource("36_0tjic")
+})
 
-[node name="RouteManager2" parent="NPCs/Dee" instance=ExtResource("29_lmwtd")]
+[node name="RouteManager" parent="NPCs/Dee" index="5"]
+libraries = {
+&"": SubResource("AnimationLibrary_q78fk")
+}
 
 [node name="Mee" parent="NPCs" node_paths=PackedStringArray("barry") instance=ExtResource("30_odb85")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -12.904, 3, -6.48818)
@@ -4040,8 +4657,19 @@ barry = NodePath("../Barry")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.98417, 1.54172, -6.27359)
 
 [node name="Vinny" parent="NPCs" node_paths=PackedStringArray("letter") instance=ExtResource("34_ldaxu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.46916, 1.54172, 7.12193)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 12.4019, -11.0416, -9.07114)
 letter = NodePath("../../Interactables/Letter")
+moving_times = Dictionary[float, ExtResource("11_mb0xo")]({
+240.0: ExtResource("45_84r8h"),
+300.0: ExtResource("46_3yd25"),
+480.0: ExtResource("47_3yd25"),
+540.0: ExtResource("48_jk4c8")
+})
+
+[node name="RouteManager" parent="NPCs/Vinny" index="5"]
+libraries = {
+&"": SubResource("AnimationLibrary_e17wb")
+}
 
 [node name="Romulus" parent="NPCs" node_paths=PackedStringArray("vinny", "queen", "albert") instance=ExtResource("34_xt6ak")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.55357, 0.541724, 5.94599)
@@ -4056,10 +4684,25 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.32483, 1.68077, -5.84909)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.31551, 1.04172, 2.32387)
 
 [node name="Ollie" parent="NPCs" node_paths=PackedStringArray("albert", "ollie_traveller", "queen") instance=ExtResource("38_sdl5r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.45007, 1.04968, -3.0476)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14.545, 1.78935, -0.503786)
 albert = NodePath("../Albert")
 ollie_traveller = NodePath("../Ollie_traveller")
 queen = NodePath("../QueenBee")
+moving_times = Dictionary[float, ExtResource("11_mb0xo")]({
+360.0: ExtResource("53_3coud")
+})
+
+[node name="Cube_001" parent="NPCs/Ollie/cosmic owl/char_grp/rig/Skeleton3D" index="0"]
+transform = Transform3D(-0.999234, 0.0385572, 0.00667393, 0.0365578, 0.980682, -0.192164, -0.0139543, -0.191773, -0.98134, -0.622265, 1.81779, 0.0828031)
+
+[node name="Cube_002" parent="NPCs/Ollie/cosmic owl/char_grp/rig/Skeleton3D" index="1"]
+transform = Transform3D(0.999234, 0.0365017, 0.0141004, -0.0365578, 0.999325, 0.00374273, 0.0139543, 0.004255, -0.999894, 0.0238228, 0.966212, -0.044431)
+
+[node name="Cube_003" parent="NPCs/Ollie/cosmic owl/char_grp/rig/Skeleton3D" index="2"]
+transform = Transform3D(0.18895, -0.212681, 0.0118455, 0.21269, 0.188978, 0.00314415, 0.0034606, -0.00229192, -0.839991, 0.0186512, 1.23941, 0.562312)
+
+[node name="Cube_004" parent="NPCs/Ollie/cosmic owl/char_grp/rig/Skeleton3D" index="3"]
+transform = Transform3D(0.999234, 0.0385572, 0.00667392, -0.0365578, 0.980682, -0.192164, 0.0139543, -0.191773, -0.98134, 0.7266, 1.76844, 0.10164)
 
 [node name="Ollie_traveller" parent="NPCs" node_paths=PackedStringArray("ollie", "hiro", "queen") instance=ExtResource("39_p0hlo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 23)
@@ -4068,9 +4711,47 @@ hiro = NodePath("../Hiro")
 queen = NodePath("../QueenBee")
 
 [node name="Dovey" parent="NPCs" node_paths=PackedStringArray("romulus") instance=ExtResource("38_i3tum")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -12.4622, 3.85501, 7.43358)
 romulus = NodePath("../Romulus")
+moving_times = Dictionary[float, ExtResource("11_mb0xo")]({
+240.0: ExtResource("41_en0af"),
+420.0: ExtResource("42_6bile")
+})
+
+[node name="RouteManager" parent="NPCs/Dovey" index="5"]
+libraries = {
+&"": SubResource("AnimationLibrary_6bile")
+}
+
+[node name="Armature" parent="NPCs/Dovey/Dovey" index="0"]
+transform = Transform3D(0.459024, -0.888424, -2.34934e-09, 0.888424, 0.459024, -2.01309e-08, 1.89632e-08, 7.15336e-09, 1, 0.0553485, 0.416965, 0)
+
+[node name="Skeleton3D" parent="NPCs/Dovey/Dovey/Armature" index="0"]
+bones/1/rotation = Quaternion(2.91269e-07, 1.23946e-07, -0.388366, 0.921505)
+bones/2/rotation = Quaternion(3.25391e-08, -9.86617e-09, -0.0862903, 0.99627)
+bones/4/rotation = Quaternion(0.686841, 0.168074, 0.686841, -0.168074)
+bones/7/rotation = Quaternion(-0.533624, 0.463945, 0.689464, 0.15697)
+bones/8/rotation = Quaternion(-0.257109, 0.0645304, -0.234725, 0.935219)
+bones/9/rotation = Quaternion(-0.0419062, 0.0180019, -0.0959529, 0.99434)
+bones/18/rotation = Quaternion(0.689464, -0.15697, -0.533624, -0.463946)
+bones/19/rotation = Quaternion(-0.253683, -0.0636705, 0.23496, 0.936154)
+bones/20/rotation = Quaternion(-0.0419062, 0.0180019, -0.0959529, 0.99434)
+bones/29/rotation = Quaternion(-0.0364693, 0.039753, 0.9733, 0.223105)
+bones/32/rotation = Quaternion(0.0158529, -0.0538077, 0.978058, 0.200641)
+
+[node name="body" parent="NPCs/Dovey/Dovey/Armature/Skeleton3D" index="0"]
+transform = Transform3D(0.576204, 0.817306, 1.10316e-07, -0.817306, 0.576204, -5.70113e-08, -1.1016e-07, -5.73114e-08, 1, -0.218169, -0.08609, 1.72741e-08)
+
+[node name="Right wing_001" parent="NPCs/Dovey/Dovey/Armature/Skeleton3D" index="1"]
+transform = Transform3D(0.240212, 0.962645, -0.124947, -0.970402, 0.234841, -0.0562925, -0.024847, 0.134771, 0.990565, -0.303978, 0.0509059, -0.0598821)
+
+[node name="Right wing" parent="NPCs/Dovey/Dovey/Armature/Skeleton3D" index="2"]
+transform = Transform3D(0.280853, 0.956848, 0.0745934, -0.959568, 0.278431, 0.041299, 0.0187477, -0.0831764, 0.996358, -0.290749, 0.0357214, 0.0369675)
 
 [node name="Janitor floor " parent="." instance=ExtResource("11_2m30o")]
+
+[node name="StaticBody3D" parent="Janitor floor /Walls_002" index="0"]
+collision_layer = 0
 
 [editable path="UI"]
 [editable path="UI/Game"]
@@ -4081,5 +4762,14 @@ romulus = NodePath("../Romulus")
 [editable path="NPCs/Barry"]
 [editable path="NPCs/Barry/ant"]
 [editable path="NPCs/Albert"]
+[editable path="NPCs/Cee"]
+[editable path="NPCs/Cee/cee hive"]
+[editable path="NPCs/Dee"]
+[editable path="NPCs/Dee/dee hive"]
+[editable path="NPCs/Vinny"]
+[editable path="NPCs/Ollie"]
+[editable path="NPCs/Ollie/cosmic owl"]
 [editable path="NPCs/Ollie_traveller"]
+[editable path="NPCs/Dovey"]
+[editable path="NPCs/Dovey/Dovey"]
 [editable path="Janitor floor "]
