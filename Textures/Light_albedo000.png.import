@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bsw4l5cjg5c57"
-path.s3tc="res://.godot/imported/Light_albedo000.png-13ba5b8f76cc78dda51bd666e24e7f84.s3tc.ctex"
-path.etc2="res://.godot/imported/Light_albedo000.png-13ba5b8f76cc78dda51bd666e24e7f84.etc2.ctex"
+path.s3tc="res://.godot/imported/Light_albedo000.png-ad4fc6b4f693dce37c7e43841e997a74.s3tc.ctex"
+path.etc2="res://.godot/imported/Light_albedo000.png-ad4fc6b4f693dce37c7e43841e997a74.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -13,8 +13,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://textures/Light_albedo000.png"
-dest_files=["res://.godot/imported/Light_albedo000.png-13ba5b8f76cc78dda51bd666e24e7f84.s3tc.ctex", "res://.godot/imported/Light_albedo000.png-13ba5b8f76cc78dda51bd666e24e7f84.etc2.ctex"]
+source_file="res://Textures/Light_albedo000.png"
+dest_files=["res://.godot/imported/Light_albedo000.png-ad4fc6b4f693dce37c7e43841e997a74.s3tc.ctex", "res://.godot/imported/Light_albedo000.png-ad4fc6b4f693dce37c7e43841e997a74.etc2.ctex"]
 
 [params]
 

@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://xxsnjp3v6veq"
-path.s3tc="res://.godot/imported/Roughness white Flower.jpg-ca8f4386fe08b76ed53bb3855f459c6e.s3tc.ctex"
-path.etc2="res://.godot/imported/Roughness white Flower.jpg-ca8f4386fe08b76ed53bb3855f459c6e.etc2.ctex"
+path.s3tc="res://.godot/imported/Roughness white Flower.jpg-cb496590366568f38a349dc51f1c79ac.s3tc.ctex"
+path.etc2="res://.godot/imported/Roughness white Flower.jpg-cb496590366568f38a349dc51f1c79ac.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -13,8 +13,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://textures/Roughness white Flower.jpg"
-dest_files=["res://.godot/imported/Roughness white Flower.jpg-ca8f4386fe08b76ed53bb3855f459c6e.s3tc.ctex", "res://.godot/imported/Roughness white Flower.jpg-ca8f4386fe08b76ed53bb3855f459c6e.etc2.ctex"]
+source_file="res://Textures/Roughness white Flower.jpg"
+dest_files=["res://.godot/imported/Roughness white Flower.jpg-cb496590366568f38a349dc51f1c79ac.s3tc.ctex", "res://.godot/imported/Roughness white Flower.jpg-cb496590366568f38a349dc51f1c79ac.etc2.ctex"]
 
 [params]
 
