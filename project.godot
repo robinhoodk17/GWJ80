@@ -51,6 +51,7 @@ directories/dch_directory={
 "ollie_character": "res://game/npc/ollie/ollie_character.dch",
 "ollie_time_travel": "res://game/npc/ollie/time_travel_timelines/ollie_time_travel.dch",
 "queen_bee_character": "res://game/npc/queen_bee/queen_bee_character.dch",
+"romulus_character": "res://game/npc/romulus/romulus_character.dch",
 "vinny_character": "res://game/npc/vinny/vinny_character.dch"
 }
 directories/dtl_directory={
@@ -66,6 +67,7 @@ directories/dtl_directory={
 "barry_asks_for_help": "res://game/npc/barry/timelines/barry_asks_for_help.dtl",
 "barry_waits_for_help": "res://game/npc/barry/timelines/barry_waits_for_help.dtl",
 "better_working_conditions": "res://game/npc/barry/timelines/better_working_conditions.dtl",
+"cee_barry_quest": "res://game/timelines/cee_barry_quest.dtl",
 "chester_convince": "res://game/npc/chester/chester_convince.dtl",
 "chester_give_rollerblades": "res://game/npc/chester/chester_give_rollerblades.dtl",
 "chester_holidays_approved": "res://game/npc/chester/chester_holidays_approved.dtl",
@@ -116,6 +118,7 @@ directories/dtl_directory={
 "please_deliver": "res://game/npc/vinny/timelines/please_deliver.dtl",
 "queen_bee/were_running_away": "res://game/npc/queen_bee/were_running_away.dtl",
 "queen_bee_plan": "res://game/npc/queen_bee/queen_bee_plan.dtl",
+"romulus_stop_that": "res://game/npc/romulus/romulus_stop_that.dtl",
 "still_need_approval": "res://game/npc/barry/timelines/still_need_approval.dtl",
 "this_is_a_paper_shredder": "res://game/interactables/shredder/this_is_a_paper_shredder.dtl",
 "timeline": "res://game/quest/timeline.dtl",
@@ -124,6 +127,7 @@ directories/dtl_directory={
 "waiting_for_the_plan": "res://game/npc/queen_bee/waiting_for_the_plan.dtl",
 "waiting_to_run_away": "res://game/npc/queen_bee/waiting_to_run_away.dtl",
 "were_running_away": "res://game/npc/vinny/timelines/were_running_away.dtl",
+"whoops": "res://game/timelines/whoops.dtl",
 "you_cant_shred_this": "res://game/interactables/shredder/you_cant_shred_this.dtl",
 "you_destroyed_this_mail": "res://game/interactables/shredder/you_destroyed_this_mail.dtl"
 }
@@ -164,6 +168,8 @@ audio/channel_defaults={
 "volume": 0.0
 }
 }
+extensions_folder="res://addons/dialogic_additions"
+audio/type_sound_bus="SFX"
 
 [display]
 

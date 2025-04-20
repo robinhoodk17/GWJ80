@@ -77,6 +77,9 @@ shadow_mesh = SubResource("ArrayMesh_jydx0")
 [node name="Piggy" instance=ExtResource("1_nss8e")]
 script = ExtResource("2_3b4tk")
 
+[node name="PopUp" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.640737, 0)
+
 [node name="piggy bank" type="MeshInstance3D" parent="." index="2"]
 transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
 material_overlay = ExtResource("3_3b4tk")
