@@ -1,12 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://ds0ndvja6tf3k"]
+[gd_scene load_steps=5 format=3 uid="uid://ds0ndvja6tf3k"]
 
 [ext_resource type="PackedScene" uid="uid://88f70ly0w5b4" path="res://game/npc/master/npc.tscn" id="1_ebeua"]
 [ext_resource type="Script" uid="uid://0qvf2sxyc4up" path="res://game/npc/jaws/jaws.gd" id="2_jwnfs"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ebeua"]
 
+[sub_resource type="BoxMesh" id="BoxMesh_ebeua"]
+size = Vector3(1, 0.5, 1)
+
 [node name="Jaws" instance=ExtResource("1_ebeua")]
 script = ExtResource("2_jwnfs")
 
 [node name="MeshInstance3D" parent="." index="1"]
 mesh = SubResource("CapsuleMesh_ebeua")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.298306, 0.568868)
+mesh = SubResource("BoxMesh_ebeua")
