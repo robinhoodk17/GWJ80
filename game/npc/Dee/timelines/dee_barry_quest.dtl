@@ -1,0 +1,4 @@
+dee_character: Repeat the rumor about a union?
+- Working bees and ants need an updated insurance policy and housing support. Would you join Barry's union in support?
+	dee_character: Sure as long as productivity increases and work doesn't stop you'll have my support.
+	[signal arg="dee_union"]

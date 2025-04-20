@@ -7,4 +7,7 @@
 [node name="Ollie_traveller" instance=ExtResource("1_tgtre")]
 script = ExtResource("2_27eae")
 
+[node name="PopUp" parent="." index="4"]
+transform = Transform3D(0.966027, 0.256375, 0.0326078, -0.256817, 0.966407, 0.0100962, -0.028924, -0.0181275, 0.999417, 0, 1.55626, 0)
+
 [node name="cosmic owl" parent="." index="6" instance=ExtResource("3_ahp8f")]
