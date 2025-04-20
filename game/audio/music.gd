@@ -1,13 +1,15 @@
 extends AudioStreamPlayer
 
 @export var next_player : AudioStreamPlayer
-@export var first_minute : bool = false
 
 func _ready() -> void:
-	finished.connect(next_player.play)
+	finished.connect(play_next)
 	Globals.restart.connect(on_restart)
-	if first_minute:
-		play()
+
+
+func play_next() -> void:
+	if next_player != null:
+		next_player.play()
 
 
 func transition(current_player : AudioStreamPlayer) -> void:
@@ -17,8 +19,4 @@ func transition(current_player : AudioStreamPlayer) -> void:
 
 
 func on_restart() -> void:
-	if !first_minute:
-		stop()
-		return
-
 	play()

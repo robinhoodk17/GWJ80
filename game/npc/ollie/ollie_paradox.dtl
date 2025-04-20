@@ -1,0 +1,19 @@
+ollie_character: What's happening? Why are there two of me?
+margarine_character: This is your past self. You have to go back in time to become him or there will be a paradox
+ollie_character: A paradox? Isn't that like, everyday butterfly business?
+- Paradoxes are not meant for normal animals.
+	label bifurcation (bifurcation)
+	ollie_character: Oh, no, what have I gotten into? [font_size=12][i]scared hoot[/i][/font_size]
+	- Everything is fine, you just have to get into Albert's time machine again
+		ollie_character: But what if something goes wrong? Or if I mess something up?
+		- You won't mess anything up. You already did this once. You can do it again.
+			ollie_character: You're right. I'll do it. I'll be brave for you. Thanks, buddy.
+			[signal arg="ollie_convince_travel"]
+		- Time travel is easy. I do it every day.[br]And Albert will take care of you.
+			ollie_character: OK. I trust you. I'll do it. [font_size=12][i]determined hoot[/i][/font_size]
+			[signal arg="ollie_convince_travel"]
+	- It's ok. I'm here. Breath. You can do this.
+		ollie_character: You're right. You go to the past every day. I can do it too.
+		[signal arg="ollie_convince_travel"]
+- It's different, butteflies thrive in chaos
+	jump bifurcation

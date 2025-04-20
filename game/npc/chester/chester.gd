@@ -4,31 +4,47 @@ var quest_started = false
 var quest_finished = false
 var approved = false
 
-###Override this function to handle dialogue logic###
 func handle_dialogue_start(_player_controller) -> void:
-	if !quest_finished:
-		if !quest_started:
-			Globals.quest_started("chester", gamestate.HELPED)
-			quest_started = true
+	if !quest_started and Globals.current_time < 480.0:
 		start_dialogue("chester_quest_start")
+		quest_started = true
 		return
 
-	if quest_finished:
-		start_dialogue("chester_give_rollerblades")
-	elif quest_finished: 
+	if _player_controller.grabbing != null:
+		if _player_controller.grabbing.type == interactable.item_type.ROLLERBLADES:
+			quest_finished = true
+			start_dialogue("chester_give_rollerblades")
+			route_manager.speed_scale = 2.0
+			current_gamestate = gamestate.HELPED
+			Globals.quest_finished("chester", gamestate.HELPED, 1)
+			var item : Node3D = _player_controller.grabbing
+			item.drop()
+			_player_controller.grabbing = null
+			item.global_position = Vector3(0,1000,0)
+			item.quest_finished = true
+			return
+
+	if quest_finished and current_gamestate == gamestate.HELPED and Globals.current_time < 480.0:
 		start_dialogue("chester_received_rollerblades")
-	elif quest_finished and Globals.current_time > 480.0 and Globals.current_time < 600.0:
-		start_dialogue("chester_holidays_approved")
-		approved = true
-	elif quest_finished: 
-		start_dialogue("chester_holidays_denied")
-	elif quest_finished: 
-		start_dialogue("chester_convince")
+		return
 
-	else:
+	if quest_finished and current_gamestate == gamestate.SABOTAGED:
 		start_dialogue("chester_shattered_dreams")
-		
+		return
 
-###Override this function to handle what happens after the dialogue ###
-func  handle_dialogue_end() -> void:
-	current_gamestate = gamestate.SABOTAGED
+	if quest_started and Globals.current_time < 480.0 and !quest_finished:
+		start_dialogue("chester_convince")
+	
+	if Globals.current_time > 480.0:
+		if current_gamestate == gamestate.NORMAL:
+			start_dialogue("chester_holidays_denied")
+
+		if current_gamestate == gamestate.HELPED:
+			start_dialogue("chester_holidays_approved")
+
+
+func  handle_dialogue_end(signal_argument : String) -> void:
+	if signal_argument == "chester_sabotaged":
+		quest_finished = true
+		current_gamestate = gamestate.SABOTAGED
+		Globals.quest_finished("chester", gamestate.SABOTAGED, -2)

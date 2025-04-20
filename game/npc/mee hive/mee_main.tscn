@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://p10ewavm88bd"]
+
+[ext_resource type="PackedScene" uid="uid://88f70ly0w5b4" path="res://game/npc/master/npc.tscn" id="1_55xi1"]
+[ext_resource type="Script" uid="uid://dwmwlbrij5cl6" path="res://game/npc/mee hive/mee_main.gd" id="2_1y41p"]
+[ext_resource type="PackedScene" uid="uid://glkhgwert3j4" path="res://game/npc/mee hive/mee Hive.tscn" id="2_w80bp"]
+
+[node name="Mee" node_paths=PackedStringArray("animation_player") instance=ExtResource("1_55xi1")]
+script = ExtResource("2_1y41p")
+animation_player = NodePath("mee hive/Bee/AnimationPlayer")
+
+[node name="mee hive" parent="." index="6" instance=ExtResource("2_w80bp")]
+
+[editable path="mee hive"]

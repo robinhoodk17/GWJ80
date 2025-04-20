@@ -9,3 +9,6 @@ script = ExtResource("1_cii0i")
 default_mapping_context = ExtResource("2_gp8w2")
 
 [node name="UI" parent="." instance=ExtResource("2_e2kwd")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+autoplay = true

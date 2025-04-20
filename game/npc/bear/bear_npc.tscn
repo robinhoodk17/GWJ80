@@ -5929,7 +5929,7 @@ bones/217/rotation = Quaternion(4.29064e-07, 0.0152333, -4.89316e-09, 0.999884)
 bones/217/scale = Vector3(1, 1, 1)
 
 [node name="Sphere_001" type="BoneAttachment3D" parent="Cartoon Bear/rig/Skeleton3D" index="0"]
-transform = Transform3D(0.0377471, -1.31118e-05, -3.30131e-05, -3.31893e-05, -0.00051612, -0.0377436, 1.26591e-05, 0.0377436, -0.000516135, 0.0718712, 0.828039, 0.181788)
+transform = Transform3D(0.0377471, -1.31117e-05, -3.3013e-05, -3.31892e-05, -0.000516053, -0.0377436, 1.26591e-05, 0.0377436, -0.000516068, 0.0718712, 0.828039, 0.181788)
 bone_name = "Sphere.001"
 bone_idx = 72
 
@@ -5938,7 +5938,7 @@ mesh = SubResource("ArrayMesh_4g4mm")
 skeleton = NodePath("")
 
 [node name="Circle" type="BoneAttachment3D" parent="Cartoon Bear/rig/Skeleton3D" index="1"]
-transform = Transform3D(0.308932, -0.00315402, -7.67671e-05, 0.000839129, 0.0893893, -0.295732, 0.00304132, 0.295717, 0.0893932, -0.00634814, 0.513443, 0.202102)
+transform = Transform3D(0.308932, -0.00315403, -7.67686e-05, 0.000839128, 0.0893893, -0.295732, 0.00304132, 0.295717, 0.0893932, -0.00634815, 0.513443, 0.202102)
 bone_name = "Circle"
 bone_idx = 122
 
