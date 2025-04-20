@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://v6l3630gxqxn"]
+
+[ext_resource type="Script" uid="uid://bjjwj3332crxc" path="res://game/npc/pop_up_show.gd" id="1_ui8ff"]
+[ext_resource type="Resource" uid="uid://dr3iky0gcpwi5" path="res://input/interact.tres" id="2_vln5t"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_vln5t"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vln5t"]
+resource_local_to_scene = true
+transparency = 1
+vertex_color_use_as_albedo = true
+albedo_texture = SubResource("ViewportTexture_vln5t")
+billboard_mode = 1
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_tsqhh"]
+viewport_path = NodePath("SubViewport")
+
+[node name="PopUp" type="Node3D"]
+script = ExtResource("1_ui8ff")
+interact_action = ExtResource("2_vln5t")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+size = Vector2i(300, 300)
+
+[node name="Label" type="RichTextLabel" parent="SubViewport"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_outline_size = 5
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "Hello"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+material_override = SubResource("StandardMaterial3D_vln5t")
+texture = SubResource("ViewportTexture_tsqhh")

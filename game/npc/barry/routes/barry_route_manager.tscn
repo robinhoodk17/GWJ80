@@ -1,0 +1,72 @@
+[gd_scene load_steps=5 format=3 uid="uid://crub75qedm1y3"]
+
+[sub_resource type="Animation" id="Animation_nsjdi"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_4q8v3"]
+resource_name = "barry_meets_jaws"
+length = 3.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-18.0753, 14.736, 3.06539), Vector3(-18.0753, 14.736, 3.06539), Vector3(-19.1239, 14.736, -4.4289)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 2.5, 3.15),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 2.30432, 0), Vector3(0, 3.14159, 0), Vector3(0, 3.14159, 0), Vector3(0, 1.5708, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_uvoyj"]
+resource_name = "barry_meets_queen"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-18.0753, 14.736, 3.06539), Vector3(15.352, 14.736, 21.666)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 2.30432, 0), Vector3(0, 1.5708, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nsjdi"]
+_data = {
+&"RESET": SubResource("Animation_nsjdi"),
+&"barry_meets_jaws": SubResource("Animation_4q8v3"),
+&"barry_meets_queen": SubResource("Animation_uvoyj")
+}
+
+[node name="RouteManager" type="AnimationPlayer"]
+libraries = {
+&"": SubResource("AnimationLibrary_nsjdi")
+}

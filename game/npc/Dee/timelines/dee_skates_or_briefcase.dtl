@@ -1,0 +1,7 @@
+dee_character: Today is Cee's birthday and would like to give him a gift, but unsure what to give him.
+- Briefcase.
+	dee_character: The more work the better.
+	[signal arg="dee_briefcase"]
+- Ice Skates.
+	dee_character: Hopefully this breaks the ice between us.
+	[signal arg="dee_skates"]

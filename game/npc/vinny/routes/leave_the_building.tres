@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="eventRoute" load_steps=2 format=3 uid="uid://dak42tbdfjvcg"]
+
+[ext_resource type="Script" uid="uid://cea3ewphuupof" path="res://game/npc/routes/route.gd" id="1_nalkd"]
+
+[resource]
+script = ExtResource("1_nalkd")
+acceptable_states = Array[int]([2])
+route = "leave_the_building"
+metadata/_custom_type_script = "uid://cea3ewphuupof"

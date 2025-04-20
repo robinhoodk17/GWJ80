@@ -1,0 +1,22 @@
+queen_bee_character: What's that, honey? Barry wants to give workers insurance and housing support? I am obligated by professionalism to try and maximize profits for the investors. I can't support this motion.
+- You have to spend honey to make honey
+	queen_bee_character: I'm sorry, honey, but I don't see how we could profit from this choice.
+	- Happy workers are productive workers
+		queen_bee_character: Hmmm you might be going somewhere with this.
+		- Let your workers know that their future is safe and they will be more productive in the present
+			queen_bee_character: You make a good point, Margarine Walker. Tell Barry that he has the support of the CEO.
+			[signal arg="queen_barry_quest"]
+		- After all, what are hives if not big families?
+			queen_bee_character: The big family spiel is something less professional CEOs tell their employees. I refuse to stoop to that level.
+	- It's not all about the honey.
+		queen_bee_character: For a CEO, that is demonstrably false. Have a nice day.
+- Is professionalism really worth your integrity?
+	queen_bee_character: Do not take that tone with me, Margarine Walker. You may be the daughter of the previous CEO but you must still act professionally.
+	- Your workers work hard. They deserve this.
+		queen_bee_character: It is not a matter of deserving, honey. It is a matter of what's best for the investors. I'm sorry but I can't approve this.
+	- All I meant is that a CEO has a duty to their workers too
+		queen_bee_character: I understand what you mean, honey, but truth is that I signed a contract to take care of the investors first.
+		- Reducing employment benefits is theft, so that is unprofessional too.
+			queen_bee_character: ... [pause = 1] [br]You're right. I must be better. I will approve this motion. Thanks for your brave words, Madame Walker.
+		- As I said, your integrity should come before any contracts. You must look after your employees.
+			queen_bee_character: I'm sorry, honey, but in the end I must be professional. I can't approve this motion.

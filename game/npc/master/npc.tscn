@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://88f70ly0w5b4"]
+
+[ext_resource type="Script" uid="uid://cq7kng0d2y4lm" path="res://game/npc/master/npc.gd" id="1_gixkv"]
+[ext_resource type="PackedScene" uid="uid://v6l3630gxqxn" path="res://game/npc/pop_up.tscn" id="2_j63dq"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_j63dq"]
+radius = 1.0
+
+[node name="NPC" type="CharacterBody3D" node_paths=PackedStringArray("animation_player", "route_manager", "timer") groups=["interactable"]]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_gixkv")
+animation_player = NodePath("AnimationPlayer")
+route_manager = NodePath("RouteManager")
+timer = NodePath("Timer")
+
+[node name="Collider" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_j63dq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="PopUp" parent="." instance=ExtResource("2_j63dq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.703859, 0)
+
+[node name="RouteManager" type="AnimationPlayer" parent="."]

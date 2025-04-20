@@ -1,0 +1,72 @@
+[gd_scene load_steps=9 format=3 uid="uid://usp2lujggsnh"]
+
+[ext_resource type="PackedScene" uid="uid://88f70ly0w5b4" path="res://game/npc/master/npc.tscn" id="1_jeuoq"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jeuoq"]
+height = 1.5
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_s8fug"]
+height = 1.5
+
+[sub_resource type="BoxMesh" id="BoxMesh_wts3t"]
+size = Vector3(0.5, 0.2, 0.2)
+
+[sub_resource type="Animation" id="Animation_wts3t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D/MeshInstance3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jeuoq"]
+resource_name = "idle"
+loop_mode = 1
+
+[sub_resource type="Animation" id="Animation_s8fug"]
+resource_name = "walk"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D/MeshInstance3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 6.28319)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wts3t"]
+_data = {
+&"RESET": SubResource("Animation_wts3t"),
+&"idle": SubResource("Animation_jeuoq"),
+&"walk": SubResource("Animation_s8fug")
+}
+
+[node name="NPC" instance=ExtResource("1_jeuoq")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="Collider" parent="." index="0"]
+shape = SubResource("CapsuleShape3D_jeuoq")
+
+[node name="MeshInstance3D" parent="." index="1"]
+mesh = SubResource("CapsuleMesh_s8fug")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.456605, -0.523374)
+mesh = SubResource("BoxMesh_wts3t")
+
+[node name="AnimationPlayer" parent="." index="2"]
+libraries = {
+&"": SubResource("AnimationLibrary_wts3t")
+}
