@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="eventRoute" load_steps=2 format=3 uid="uid://bwck5g4v5tw5"]
+
+[ext_resource type="Script" uid="uid://cea3ewphuupof" path="res://game/npc/routes/route.gd" id="1_bc1y1"]
+
+[resource]
+script = ExtResource("1_bc1y1")
+acceptable_states = Array[int]([0, 1, 2])
+route = "romulus_meeting_jaws"
+metadata/_custom_type_script = "uid://cea3ewphuupof"

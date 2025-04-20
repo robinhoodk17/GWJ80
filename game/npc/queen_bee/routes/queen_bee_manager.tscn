@@ -1,0 +1,154 @@
+[gd_scene load_steps=7 format=3 uid="uid://dg8ato1h2fjql"]
+
+[sub_resource type="Animation" id="Animation_tau0r"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(10.908, -10.273, -9.20044)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -1.5708, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_fce6o"]
+resource_name = "queen_back_to_office"
+length = 21.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.5, 5, 10, 11.3, 13.5, 14.1, 17, 17.4, 20),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(10.908, -10.273, -9.20044), Vector3(8.59955, -10.273, -9.20044), Vector3(8.59955, -10.273, -9.20044), Vector3(-0.319981, -0.991205, 0.684849), Vector3(-0.32, 17, 0.685), Vector3(-0.32, 17, 0.685), Vector3(-0.32, 17, -16.3777), Vector3(-0.32, 17, -16.3777), Vector3(-17.6726, 17, -16.3777), Vector3(-17.6726, 17, -16.3777), Vector3(-17.6726, 18.207, -4.38289)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 1.5, 5, 10, 11.3, 13.4, 14.1, 16.8, 17.5, 18.2333, 19.8, 20.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -1.5708, 0), Vector3(0, -1.5708, 0), Vector3(0, -3.14159, 0), Vector3(0, -3.14159, 0), Vector3(0, -3.14159, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 1.5708, 0), Vector3(0, 1.5708, 0), Vector3(0, 3.14159, 0), Vector3(0, 3.14159, 0), Vector3(0, 3.14159, 0), Vector3(0, 4.71239, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_pjgch"]
+resource_name = "queen_elopes"
+length = 37.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 30, 37),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(17.6118, 16.4631, 21.8878), Vector3(-11.0734, -10.7857, 0.0903643), Vector3(-17.7369, -10.7857, 0.0903645)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 30, 37),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5708, 0), Vector3(0, 0, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_md155"]
+resource_name = "queen_leaves"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 3, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(17.6118, 16.4631, 21.8878), Vector3(17.6118, 16.4631, 21.8878), Vector3(30.1772, 18.0406, 21.8878), Vector3(30.1772, 27.0599, 21.8878)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 3, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5708, 0), Vector3(0, -1.5708, 0), Vector3(0, -1.5708, 0), Vector3(0, -1.5708, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_v8562"]
+resource_name = "queen_meeting_romulus"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.65, 5, 5.65, 9, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-17.6726, 18.207, -4.38289), Vector3(-17.6726, 18.207, -4.38289), Vector3(-10.715, 18.207, 11.691), Vector3(-10.715, 18.207, 11.691), Vector3(19.7188, 18.2116, 22.2659), Vector3(17.6118, 16.4631, 21.8878)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.65, 5, 5.65, 8.8, 9.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -1.5708, 0), Vector3(0, -2.5796, 0), Vector3(0, -2.5796, 0), Vector3(0, -1.92066, 0), Vector3(0, -1.92066, 0), Vector3(0, 1.5708, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3uye3"]
+_data = {
+&"RESET": SubResource("Animation_tau0r"),
+&"queen_back_to_office": SubResource("Animation_fce6o"),
+&"queen_elopes": SubResource("Animation_pjgch"),
+&"queen_leaves": SubResource("Animation_md155"),
+&"queen_meeting_romulus": SubResource("Animation_v8562")
+}
+
+[node name="RouteManager" type="AnimationPlayer"]
+libraries = {
+&"": SubResource("AnimationLibrary_3uye3")
+}
