@@ -119,6 +119,7 @@ directories/dtl_directory={
 "timeline": "res://game/quest/timeline.dtl",
 "timelines/were_running_away": "res://game/npc/vinny/timelines/were_running_away.dtl",
 "too_late_for_the_plan": "res://game/npc/queen_bee/too_late_for_the_plan.dtl",
+"vinny_and_queen": "res://game/npc/vinny/timelines/vinny_and_queen.dtl",
 "waiting_for_the_plan": "res://game/npc/queen_bee/waiting_for_the_plan.dtl",
 "waiting_to_run_away": "res://game/npc/queen_bee/waiting_to_run_away.dtl",
 "were_running_away": "res://game/npc/queen_bee/were_running_away.dtl"
