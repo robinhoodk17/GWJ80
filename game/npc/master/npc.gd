@@ -14,7 +14,7 @@ enum gamestate{NORMAL, SABOTAGED, HELPED}
 @export var can_interact : bool = true
 @export var moving_times : Dictionary[float, eventRoute]
 ##the keys are the timeline's name and the values are the actual timelines, this is just so it's easier to access them
-@export var timelines : Dictionary[String, String]
+#@export var timelines : Dictionary[String, String]
 @onready var pop_up: Node3D = $PopUp
 
 var moving_towards : Marker3D = null
