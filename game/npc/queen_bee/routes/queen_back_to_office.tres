@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="eventRoute" load_steps=2 format=3 uid="uid://bmcclnsamcxrq"]
+
+[ext_resource type="Script" uid="uid://cea3ewphuupof" path="res://game/npc/routes/route.gd" id="1_x6utg"]
+
+[resource]
+script = ExtResource("1_x6utg")
+acceptable_states = Array[int]([0, 1, 2])
+route = "queen_back_to_office"
+metadata/_custom_type_script = "uid://cea3ewphuupof"
