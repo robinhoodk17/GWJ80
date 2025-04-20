@@ -1,0 +1,7 @@
+romulus_character: Time travel could be very beneficial or dangerous. 
+- Maybe we should keep Albert around for our own personal benefit.
+	[signal arg="albert_helped"]
+- Time travel is very dangerous and one small change could create a chain reaction causing alternate timelines. | [if {} != "albert_sabotaged"]
+	romulus_character: Going to fire Albert in order to preserve our universe. 
+	romulus_character: Don't want to make our timelines worse than it already is. 
+	[signal arg="albert_sabotaged"]
