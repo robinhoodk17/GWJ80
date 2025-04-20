@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dvippsfrp55w3"
-path.s3tc="res://.godot/imported/Rails_albedo000.png-e9be42c7b43ed9de0e2d36d9eeb6c590.s3tc.ctex"
-path.etc2="res://.godot/imported/Rails_albedo000.png-e9be42c7b43ed9de0e2d36d9eeb6c590.etc2.ctex"
+path.s3tc="res://.godot/imported/Rails_albedo000.png-3b69a14f76a6bf5658e1289bbdced057.s3tc.ctex"
+path.etc2="res://.godot/imported/Rails_albedo000.png-3b69a14f76a6bf5658e1289bbdced057.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -13,8 +13,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://textures/Rails_albedo000.png"
-dest_files=["res://.godot/imported/Rails_albedo000.png-e9be42c7b43ed9de0e2d36d9eeb6c590.s3tc.ctex", "res://.godot/imported/Rails_albedo000.png-e9be42c7b43ed9de0e2d36d9eeb6c590.etc2.ctex"]
+source_file="res://Textures/Rails_albedo000.png"
+dest_files=["res://.godot/imported/Rails_albedo000.png-3b69a14f76a6bf5658e1289bbdced057.s3tc.ctex", "res://.godot/imported/Rails_albedo000.png-3b69a14f76a6bf5658e1289bbdced057.etc2.ctex"]
 
 [params]
 

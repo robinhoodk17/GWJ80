@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dwbqk01ck2rt7"
-path.s3tc="res://.godot/imported/roughness yellow Flower.jpg-569ba4f40c026b0f9dce424c939f2d19.s3tc.ctex"
-path.etc2="res://.godot/imported/roughness yellow Flower.jpg-569ba4f40c026b0f9dce424c939f2d19.etc2.ctex"
+path.s3tc="res://.godot/imported/roughness yellow Flower.jpg-cb4c79fb1ef3755152c9510976ff8425.s3tc.ctex"
+path.etc2="res://.godot/imported/roughness yellow Flower.jpg-cb4c79fb1ef3755152c9510976ff8425.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -13,8 +13,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://textures/roughness yellow Flower.jpg"
-dest_files=["res://.godot/imported/roughness yellow Flower.jpg-569ba4f40c026b0f9dce424c939f2d19.s3tc.ctex", "res://.godot/imported/roughness yellow Flower.jpg-569ba4f40c026b0f9dce424c939f2d19.etc2.ctex"]
+source_file="res://Textures/roughness yellow Flower.jpg"
+dest_files=["res://.godot/imported/roughness yellow Flower.jpg-cb4c79fb1ef3755152c9510976ff8425.s3tc.ctex", "res://.godot/imported/roughness yellow Flower.jpg-cb4c79fb1ef3755152c9510976ff8425.etc2.ctex"]
 
 [params]
 
