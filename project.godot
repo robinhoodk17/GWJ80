@@ -114,15 +114,15 @@ directories/dtl_directory={
 "ollie_traveller_paradox": "res://game/npc/ollie/time_travel_timelines/ollie_traveller_paradox.dtl",
 "our_love_is_doomed": "res://game/npc/vinny/timelines/our_love_is_doomed.dtl",
 "please_deliver": "res://game/npc/vinny/timelines/please_deliver.dtl",
+"queen_bee/were_running_away": "res://game/npc/queen_bee/were_running_away.dtl",
 "queen_bee_plan": "res://game/npc/queen_bee/queen_bee_plan.dtl",
 "still_need_approval": "res://game/npc/barry/timelines/still_need_approval.dtl",
 "timeline": "res://game/quest/timeline.dtl",
-"timelines/were_running_away": "res://game/npc/vinny/timelines/were_running_away.dtl",
 "too_late_for_the_plan": "res://game/npc/queen_bee/too_late_for_the_plan.dtl",
 "vinny_and_queen": "res://game/npc/vinny/timelines/vinny_and_queen.dtl",
 "waiting_for_the_plan": "res://game/npc/queen_bee/waiting_for_the_plan.dtl",
 "waiting_to_run_away": "res://game/npc/queen_bee/waiting_to_run_away.dtl",
-"were_running_away": "res://game/npc/queen_bee/were_running_away.dtl"
+"were_running_away": "res://game/npc/vinny/timelines/were_running_away.dtl"
 }
 glossary/default_case_sensitive=true
 layout/style_list=["res://game/timelines/game_style.tres"]
