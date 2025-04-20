@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="eventRoute" load_steps=2 format=3 uid="uid://dhdaktei4dkjf"]
+
+[ext_resource type="Script" uid="uid://cea3ewphuupof" path="res://game/npc/routes/route.gd" id="1_c5y21"]
+
+[resource]
+script = ExtResource("1_c5y21")
+acceptable_states = Array[int]([2])
+route = "ollie_time_travel"
+metadata/_custom_type_script = "uid://cea3ewphuupof"

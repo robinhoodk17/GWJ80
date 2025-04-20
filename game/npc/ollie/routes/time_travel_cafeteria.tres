@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="eventRoute" load_steps=2 format=3 uid="uid://bp6uaep1g8ggm"]
+
+[ext_resource type="Script" uid="uid://cea3ewphuupof" path="res://game/npc/routes/route.gd" id="1_pnp2t"]
+
+[resource]
+script = ExtResource("1_pnp2t")
+acceptable_states = Array[int]([2])
+route = "time_travel_cafeteria"
+metadata/_custom_type_script = "uid://cea3ewphuupof"

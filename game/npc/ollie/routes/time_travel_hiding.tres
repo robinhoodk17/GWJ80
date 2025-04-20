@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="eventRoute" load_steps=2 format=3 uid="uid://b3eagwjq77117"]
+
+[ext_resource type="Script" uid="uid://cea3ewphuupof" path="res://game/npc/routes/route.gd" id="1_n7myk"]
+
+[resource]
+script = ExtResource("1_n7myk")
+acceptable_states = Array[int]([2])
+route = "time_travel_hiding"
+metadata/_custom_type_script = "uid://cea3ewphuupof"
