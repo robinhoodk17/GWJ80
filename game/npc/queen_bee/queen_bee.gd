@@ -1,7 +1,7 @@
 extends NPC
 
 var waiting_plan : bool = false
-var quest_progression = 2
+var quest_progression : int = 2
 var convinced_barry_quest : bool = false
 var letter_delivered : bool = false
 var quest_completed : bool = false
@@ -51,7 +51,7 @@ func quest_progressed() -> void:
 	quest_progression -= 1
 	if quest_progression == 0:
 		vinny.current_gamestate = gamestate.HELPED
-		current_gamestate == gamestate.HELPED
+		current_gamestate = gamestate.HELPED
 		Globals.quest_finished("vinny", gamestate.HELPED, 2)
 	else:
 		Globals.quest_progress("vinny")

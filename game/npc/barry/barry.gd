@@ -4,7 +4,7 @@ var first_talk : bool = false
 var convinced : bool = false
 var quest_started : bool = false
 @export var queen : NPC
-var quest_progression = 5
+var quest_progression : int = 5
 
 func handle_dialogue_start(_player_controller) -> void:
 	if queen.waiting_plan and !convinced:
