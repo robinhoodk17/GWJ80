@@ -11,10 +11,9 @@ enum gamestate{NORMAL, SABOTAGED, HELPED}
 ##the keys are when the event happens, and the values are eventRoute resources with
 ##the event's data, i.e. the gamestates {NORMAL, SABOTAGED, HELPED} where the NPC
 ##can move with this route and the route's name
-@export var can_interact : bool = true
 @export var moving_times : Dictionary[float, eventRoute]
 ##the keys are the timeline's name and the values are the actual timelines, this is just so it's easier to access them
-#@export var timelines : Dictionary[String, String]
+@export var timelines : Dictionary[String, String]
 @onready var pop_up: Node3D = $PopUp
 
 var moving_towards : Marker3D = null
@@ -26,7 +25,6 @@ var original_rotation : Basis
 
 func _ready() -> void:
 	Dialogic.timeline_ended.connect(unpause)
-	Dialogic.signal_event.connect(handle_dialogue_end)
 	original_position = global_position
 	original_rotation = global_basis
 	timer.timeout.connect(start_walking)
@@ -38,7 +36,7 @@ func _ready() -> void:
 	for i : float in moving_times.keys():
 		if i < expected_time:
 			current_event = i
-			#print_debug(current_event, name)
+			print_debug(current_event, name)
 	timer.start(current_event)
 	Globals.restart.connect(restart)
 
@@ -62,7 +60,7 @@ func start_walking() -> void:
 	if current_gamestate in acceptable_states:
 		current_state = states.WALKING
 		route_manager.play(moving_times[current_event].route)
-		#print_debug(moving_times[current_event].route)
+		print_debug(moving_times[current_event].route)
 
 	if animation_player.has_animation("walk"):
 		animation_player.play("walk")
@@ -79,7 +77,6 @@ func start_walking() -> void:
 
 func restart() -> void:
 	animation_player.stop()
-	route_manager.stop()
 	route_manager.stop()
 	global_position = original_position
 	global_basis = original_rotation
@@ -102,26 +99,21 @@ func turn_off_prompt() -> void:
 		pop_up.turn_off_prompt()
 
 
-func interact(_playermodel : Node3D, _player_controller : player_controller) -> void:
+func interact(_playermodel, _player_controller) -> void:
 	handle_dialogue_start(_player_controller)
 
 
 func start_dialogue(timeline : String) -> void:
-	Input.mouse_mode = Input.MOUSE_MODE_CONFINED
 	Dialogic.start(timeline).process_mode = Node.PROCESS_MODE_ALWAYS
 	Dialogic.process_mode = Node.PROCESS_MODE_ALWAYS
 	@warning_ignore("untyped_declaration")
 	#Dialogic.timeline_ended.connect(func():get_tree().set('paused', false))
 	get_tree().paused = true
-	Global.playing = false
-	
 
 
 func unpause() -> void:
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	Global.playing = true
 	get_tree().paused = false
-	#handle_dialogue_end()
+	handle_dialogue_end()
 	
 
 func handle_dialogue_start(_player_controller : player_controller) -> void:
@@ -129,6 +121,6 @@ func handle_dialogue_start(_player_controller : player_controller) -> void:
 	pass
 
 
-func handle_dialogue_end(signal_argument : String) -> void:
+func  handle_dialogue_end() -> void:
 	###Implemented by sub-classes###
 	pass

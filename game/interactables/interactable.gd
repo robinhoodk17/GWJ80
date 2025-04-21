@@ -1,13 +1,8 @@
 extends CharacterBody3D
-class_name interactable
-enum item_type{CHEESE, LETTER, PIGGY, FILES, BADGE, ROLLERBLADES, MAIL}
+
 @export var already_interacted : bool = false
-@export var freezable : bool = false
 @export var affected_by_time : bool = true
-@export var can_interact : bool = true
-@export var type : item_type = item_type.CHEESE
 @onready var pop_up: Node3D = $PopUp
-@onready var quest_finished : bool = false
 
 var frozen_in_time : bool = false
 var first_encounter : bool = false
@@ -34,7 +29,7 @@ func _physics_process(delta: float) -> void:
 			rotations_array.append(global_basis)
 	current_refresh = (current_refresh + 1) % Globals.item_refresh_rate
 
-	if !grabbed and (array_index >= positions_array.size() or frozen_in_time):
+	if !grabbed and array_index >= positions_array.size():
 		velocity += get_gravity() * delta
 		move_and_slide()
 
@@ -70,17 +65,10 @@ func freeze_in_time() -> void:
 
 
 
-func interact(playermodel : Node3D, _player_controller : player_controller) -> void:
+func interact(playermodel, _player_controller) -> void:
 	grab(playermodel, _player_controller)
 	
-func grab(_player_model : Node3D, _player_controller : player_controller) -> void:
-	if quest_finished:
-		Dialogic.start("butterfly_council").process_mode = Node.PROCESS_MODE_ALWAYS
-		Dialogic.process_mode = Node.PROCESS_MODE_ALWAYS
-		@warning_ignore("untyped_declaration")
-		Dialogic.timeline_ended.connect(func():get_tree().set('paused', false))
-		get_tree().paused = true
-		
+func grab(_player_model : Node3D, _player_controller) -> void:
 	if _player_controller.grabbing != null:
 		_player_controller.grabbing.drop()
 	_player_controller.grabbing = self
@@ -88,19 +76,16 @@ func grab(_player_model : Node3D, _player_controller : player_controller) -> voi
 	collision_mask = 0
 	player_model = _player_model
 	grabbed = true
-	Globals.item_grabbed.emit()
 
 
 func drop() -> void:
-	global_position = global_position + Vector3.UP
 	collision_layer = 4
 	collision_mask = 1
 	grabbed = false
-	Globals.item_dropped.emit()
 
 
 func display_prompt() -> void:
-	if first_encounter and freezable:
+	if first_encounter:
 		Globals.found_item.emit()
 	if pop_up:
 		if pop_up.visible:
