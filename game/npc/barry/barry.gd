@@ -43,5 +43,6 @@ func quest_progressed() -> void:
 		
 		
 func handle_dialogue_end(signal_argument : String) -> void:
-	pass
-	##handle convincing barry for the queen's quest
+	if signal_argument == "barry_queen_quest_success":
+		queen.quest_progressed()
+		convinced = true

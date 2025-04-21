@@ -38,21 +38,32 @@ gdscript/warnings/inferred_declaration=1
 [dialogic]
 
 directories/dch_directory={
+"albert_character": "res://game/npc/albert/albert_character.dch",
 "barry_character": "res://game/npc/barry/timelines/barry_character.dch",
 "jaws_character": "res://game/npc/jaws/jaws_character.dch",
 "mama_bear_character": "res://game/npc/bear/timelines/mama_bear_character.dch",
 "margarine_character": "res://game/player/margarine_character.dch",
+"queen_bee_character": "res://game/npc/queen_bee/queen_bee_character.dch",
 "vinny_character": "res://game/npc/vinny/vinny_character.dch"
 }
 directories/dtl_directory={
+"albert_waiting_experiment": "res://game/npc/albert/albert_waiting_experiment.dtl",
 "barry_asks_for_help": "res://game/npc/barry/timelines/barry_asks_for_help.dtl",
+"convince_queen": "res://game/npc/queen_bee/convince_queen.dtl",
 "freeze_in_time": "res://game/timelines/freeze_in_time.dtl",
+"how_could_this_happen_queen_bee": "res://game/npc/queen_bee/how_could_this_happen_queen_bee.dtl",
+"i_love_office_news_queen_bee": "res://game/npc/queen_bee/i_love_office_news_queen_bee.dtl",
 "jaws_stop_that": "res://game/npc/jaws/jaws_stop_that.dtl",
 "mama_bear_barry_idea": "res://game/npc/bear/timelines/mama_bear_barry_idea.dtl",
 "mama_bear_correct_choices": "res://game/npc/bear/timelines/mama_bear_correct_choices.dtl",
 "mama_bear_decision_tree": "res://game/npc/bear/timelines/mama_bear_decision_tree.dtl",
 "please_deliver": "res://game/npc/vinny/timelines/please_deliver.dtl",
-"timeline": "res://game/quest/timeline.dtl"
+"queen_bee_plan": "res://game/npc/queen_bee/queen_bee_plan.dtl",
+"timeline": "res://game/quest/timeline.dtl",
+"too_late_for_the_plan": "res://game/npc/queen_bee/too_late_for_the_plan.dtl",
+"waiting_for_the_plan": "res://game/npc/queen_bee/waiting_for_the_plan.dtl",
+"waiting_to_run_away": "res://game/npc/queen_bee/waiting_to_run_away.dtl",
+"were_running_away": "res://game/npc/queen_bee/were_running_away.dtl"
 }
 glossary/default_case_sensitive=true
 layout/style_list=["res://game/timelines/game_style.tres"]
