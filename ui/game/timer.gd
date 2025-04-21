@@ -15,8 +15,6 @@ func _process(delta: float) -> void:
 	if Globals.current_time >= 540.0 and !last_minute:
 		Globals.last_minute.emit()
 		last_minute = true
-	if Globals.current_time > 600.0:
-		Globals._restart()
 	update_ui(Globals.current_time)
 
 func on_restart() -> void:
