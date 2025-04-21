@@ -10,8 +10,11 @@ func _ready() -> void:
 	LoadingScreen.start_animation()
 	await LoadingScreen.finished_loading
 	get_tree().paused = false
+	await get_tree().process_frame
+
+	Dialogic.start("opening_scrawl")
+
 	$Music/ButterflyLoop.play()
 	$Music/ClockSpawn.play()
-	#await get_tree().process_frame
 	$UI.go_to("Game")
 	$UI/Game/Label.start_counting = true

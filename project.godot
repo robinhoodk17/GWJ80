@@ -143,6 +143,7 @@ directories/dtl_directory={
 "ollie_traveller_caught_thief": "res://game/npc/ollie/time_travel_timelines/ollie_traveller_caught_thief.dtl",
 "ollie_traveller_drinking_coffee": "res://game/npc/ollie/time_travel_timelines/ollie_traveller_drinking_coffee.dtl",
 "ollie_traveller_paradox": "res://game/npc/ollie/time_travel_timelines/ollie_traveller_paradox.dtl",
+"opening_scrawl": "res://game/timelines/opening_scrawl.dtl",
 "our_love_is_doomed": "res://game/npc/vinny/timelines/our_love_is_doomed.dtl",
 "please_deliver": "res://game/npc/vinny/timelines/please_deliver.dtl",
 "queen_bee/were_running_away": "res://game/npc/queen_bee/were_running_away.dtl",

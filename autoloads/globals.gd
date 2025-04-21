@@ -63,7 +63,7 @@ func quest_started(quest_name : String, help_or_sabotage : NPC.gamestate = NPC.g
 
 func quest_finished(quest_name : String, help_or_sabotage : NPC.gamestate, karma : int = 0) -> void:
 	quest_status[quest_name] = "finished"
-	on_quest_end.emit(quest_name, help_or_sabotage)
+	on_quest_end.emit(quest_name)
 	running_karma += karma
 	if karma > 0:
 		nice_quests += karma

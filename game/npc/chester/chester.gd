@@ -14,7 +14,7 @@ func handle_dialogue_start(_player_controller) -> void:
 		if _player_controller.grabbing.type == interactable.item_type.ROLLERBLADES:
 			quest_finished = true
 			start_dialogue("chester_give_rollerblades")
-			route_manager.speed_scale = 2.0
+			route_manager.speed_scale = 10.0
 			current_gamestate = gamestate.HELPED
 			Globals.quest_finished("chester", gamestate.HELPED, 1)
 			var item : Node3D = _player_controller.grabbing

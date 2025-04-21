@@ -38,6 +38,7 @@ func _ready() -> void:
 	for i : float in moving_times.keys():
 		if i < expected_time:
 			current_event = i
+			expected_time = i
 			#print_debug(current_event, name)
 	timer.start(current_event)
 	Globals.restart.connect(restart)

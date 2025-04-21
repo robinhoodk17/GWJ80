@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://c5vae1hbrs6qu"]
+[gd_scene load_steps=2 format=3 uid="uid://c5vae1hbrs6qu"]
+
+[ext_resource type="Script" uid="uid://be8kcwm55rauu" path="res://game/scenes/final score.gd" id="1_i8sdr"]
 
 [node name="Node2D" type="Control"]
 layout_mode = 3
@@ -18,7 +20,18 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Label" type="Label" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 40
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Game finished!"
+script = ExtResource("1_i8sdr")
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Game finished!"
