@@ -22,7 +22,6 @@ func handle_dialogue_start(_player_controller) -> void:
 					start_dialogue("romulus_will_publish_this_to_become_ceo")
 					var item : Node3D = _player_controller.grabbing
 					item.drop()
-					item.quest_finished = true
 					_player_controller.grabbing = null
 					item.global_position = Vector3(0,1000,0)
 					vinny.current_gamestate = gamestate.SABOTAGED
@@ -57,9 +56,7 @@ func handle_dialogue_start(_player_controller) -> void:
 func handle_dialogue_end(signal_argument : String) -> void:
 	if signal_argument == "albert_helped":
 		albert.quest_completed = true
-		albert.current_gamestate = gamestate.HELPED
 		Globals.quest_finished("albert", gamestate.HELPED, 2)
 	if signal_argument == "albert_sabotaged":
 		albert.quest_completed = true
 		Globals.quest_finished("albert", gamestate.SABOTAGED, -2)
-		albert.current_gamestate = gamestate.SABOTAGED

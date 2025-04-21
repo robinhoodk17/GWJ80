@@ -1,4 +1,4 @@
-[gd_scene load_steps=269 format=4 uid="uid://dgmox4dyoefyf"]
+[gd_scene load_steps=282 format=4 uid="uid://dgmox4dyoefyf"]
 
 [ext_resource type="Script" uid="uid://1cbekppiubgu" path="res://game/scenes/Bigger building made with csg boxeszip/game_jam_sky_scraper.gd" id="1_lmwtd"]
 [ext_resource type="Resource" uid="uid://v5u0dyabni7e" path="res://input/default_mapping_context.tres" id="2_odb85"]
@@ -13,19 +13,32 @@
 [ext_resource type="PackedScene" uid="uid://cxd8a86qfj6ml" path="res://janitor_floor_.tscn" id="11_2m30o"]
 [ext_resource type="Script" uid="uid://nroaa1ow40nk" path="res://game/audio/last_minute_before_spawn.gd" id="11_36qhl"]
 [ext_resource type="Script" uid="uid://cea3ewphuupof" path="res://game/npc/routes/route.gd" id="11_mb0xo"]
-[ext_resource type="PackedScene" uid="uid://dcue1okxqd16a" path="res://ant.tscn" id="12_a5cuj"]
 [ext_resource type="Resource" uid="uid://dc2ikbv1bpjmp" path="res://game/npc/bear/routes/example_route.tres" id="12_jxqt2"]
 [ext_resource type="Resource" uid="uid://cyaqc7qre8s7i" path="res://game/npc/albert/watch_tv.tres" id="12_lxl27"]
 [ext_resource type="Resource" uid="uid://cfm06d82m5fr6" path="res://game/npc/albert/route2.tres" id="14_agy81"]
-[ext_resource type="Script" uid="uid://ce5eibq0kywxl" path="res://game/interactables/cheese/cheese.gd" id="14_ywvlw"]
+[ext_resource type="PackedScene" uid="uid://440kxxhiv7vh" path="res://game/interactables/piggy/piggy.tscn" id="14_m0j6m"]
+[ext_resource type="PackedScene" uid="uid://ckg0lnbj2kv6f" path="res://game/interactables/letter/letter.tscn" id="14_xt6ak"]
 [ext_resource type="PackedScene" uid="uid://bltoelro6d67q" path="res://game/npc/albert/albert.tscn" id="15_jxqt2"]
 [ext_resource type="Resource" uid="uid://dd8h44jxin75a" path="res://game/npc/albert/room.tres" id="15_sjqqi"]
 [ext_resource type="Resource" uid="uid://cjs35wgcidw3b" path="res://game/npc/albert/route1.tres" id="16_fppav"]
+[ext_resource type="PackedScene" uid="uid://c5lgibd624wcy" path="res://game/npc/queen_bee/queen_bee.tscn" id="16_nvp0a"]
+[ext_resource type="Resource" uid="uid://dl05ru3whpjdg" path="res://game/npc/routes/example_route.tres" id="18_nlspl"]
+[ext_resource type="PackedScene" uid="uid://kng2bc4sswh1" path="res://game/npc/barry/barry.tscn" id="21_hdwqv"]
+[ext_resource type="PackedScene" uid="uid://dlo2fp5slhed7" path="res://game/npc/cee/CeeHiveMain.tscn" id="27_hdwqv"]
 [ext_resource type="PackedScene" uid="uid://u1vgfeia861q" path="res://ui/ui.tscn" id="27_ldaxu"]
+[ext_resource type="PackedScene" uid="uid://wu80y2tmaeqw" path="res://game/npc/Dee/dee_hive_main.tscn" id="28_lmwtd"]
 [ext_resource type="PackedScene" uid="uid://dgaexk2mqn6j8" path="res://game/player/player.tscn" id="28_m0j6m"]
+[ext_resource type="PackedScene" path="res://game/npc/Dee/routes/route_manager_2.tscn" id="29_lmwtd"]
 [ext_resource type="PackedScene" uid="uid://bahvf2v6h6slc" path="res://game/player/player_controllers/player_controller.tscn" id="29_xqxqv"]
-[ext_resource type="PackedScene" uid="uid://md7ncws5btwi" path="res://game/interactables/trial.tscn" id="30_i3tum"]
+[ext_resource type="PackedScene" uid="uid://p10ewavm88bd" path="res://game/npc/mee hive/mee_main.tscn" id="30_odb85"]
+[ext_resource type="PackedScene" uid="uid://ds0ndvja6tf3k" path="res://game/npc/jaws/jaws.tscn" id="31_fevv2"]
 [ext_resource type="PackedScene" uid="uid://s60xl4keq2rt" path="res://game/npc/bear/bear_npc.tscn" id="31_hqqhn"]
+[ext_resource type="PackedScene" uid="uid://8ystjctyqkk4" path="res://game/interactables/jaws_files/jaws_files.tscn" id="32_kcvwx"]
+[ext_resource type="PackedScene" uid="uid://d2bnwf63bmeve" path="res://game/npc/vinny/vinny.tscn" id="34_ldaxu"]
+[ext_resource type="PackedScene" uid="uid://c5b4hoeedmukr" path="res://game/npc/romulus/romulus.tscn" id="34_xt6ak"]
+[ext_resource type="PackedScene" uid="uid://dxxwv6dpi4ubx" path="res://game/npc/hiro/hiro.tscn" id="36_xqxqv"]
+[ext_resource type="PackedScene" uid="uid://dwmj7ifqavdg3" path="res://game/npc/chester/chester.tscn" id="37_xqxqv"]
+[ext_resource type="PackedScene" uid="uid://dmcac8682metn" path="res://game/npc/Dovey/dovey_npc.tscn" id="38_i3tum"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2m30o"]
 load_path = "res://.godot/imported/Backup Building _Carpet fabric_albedo000.png-aac8890c03b3eeb897b9ae775915ba6f.s3tc.ctex"
@@ -3877,47 +3890,113 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.2876, 1.67507, 3.49074)
 
 [node name="Interactables" type="Node3D" parent="."]
 
-[node name="StaticBody3D" parent="Interactables" instance=ExtResource("30_i3tum")]
-transform = Transform3D(0.455, 0, 0, 0, 0.455, 0, 0, 0, 0.455, 5.58837, -9.13765, -12.7713)
-
-[node name="StaticBody3D2" parent="Interactables" instance=ExtResource("30_i3tum")]
-transform = Transform3D(0.455, 0, 0, 0, 0.455, 0, 0, 0, 0.455, 5.58837, -9.13765, -3.80967)
-
 [node name="cheese" parent="Interactables" instance=ExtResource("8_axi67")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.243, -11.604, 13.31)
-script = ExtResource("14_ywvlw")
-experiment_length = 120.0
+
+[node name="Letter" parent="Interactables" instance=ExtResource("14_xt6ak")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5446, 16.3552, -1.85143)
+type = 1
+
+[node name="Piggy" parent="Interactables" instance=ExtResource("14_m0j6m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1133, 1.44132, -2.72934)
+type = 2
+
+[node name="JawsFiles" parent="Interactables" instance=ExtResource("32_kcvwx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.0173, 2.21912, 7.16714)
+type = 3
 
 [node name="NPCs" type="Node3D" parent="."]
 
-[node name="NPC" parent="NPCs" instance=ExtResource("31_hqqhn")]
+[node name="Player" parent="NPCs" instance=ExtResource("28_m0j6m")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.88844, 2.95521, 4.82852)
+
+[node name="Butterfly full_001" parent="NPCs/Player/playermodel/Butterfly" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.961475, 0.274891, 0, -0.274891, 0.961475, 0.71502, 0.25416, 0)
+
+[node name="Butterfly full_002" parent="NPCs/Player/playermodel/Butterfly" index="2"]
+transform = Transform3D(1, 0, 0, 0, 0.957391, -0.288793, 0, 0.288793, 0.957392, 0.71502, 0.25416, 0)
+
+[node name="InteractionDetection" parent="NPCs/Player/playermodel" index="1"]
+collision_mask = 4
+
+[node name="camera_pivot" parent="NPCs/Player" instance=ExtResource("29_xqxqv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.41491)
+
+[node name="SpringArm3D" parent="NPCs/Player/camera_pivot" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.5)
+
+[node name="QueenBee" parent="NPCs" node_paths=PackedStringArray("vinny", "barry") instance=ExtResource("16_nvp0a")]
+transform = Transform3D(0.0797466, 0, 0.996815, 0, 1, 0, -0.996815, 0, 0.0797466, -12, 1, 1)
+vinny = NodePath("../Vinny")
+barry = NodePath("../Barry")
+moving_times = Dictionary[float, ExtResource("11_mb0xo")]({
+610.0: ExtResource("18_nlspl")
+})
+
+[node name="MamaBear" parent="NPCs" node_paths=PackedStringArray("barry") instance=ExtResource("31_hqqhn")]
 transform = Transform3D(-3, 0, -7.60554e-06, 0, 3, 0, 7.60554e-06, 0, -3, -2.71593, 0.541723, 5.48797)
+barry = NodePath("../Barry")
 moving_times = Dictionary[float, ExtResource("11_mb0xo")]({
 10.0: ExtResource("12_jxqt2")
 })
 
-[node name="PopUp" parent="NPCs/NPC" index="4"]
+[node name="PopUp" parent="NPCs/MamaBear" index="4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.06876, 0)
 
-[node name="RouteManager" parent="NPCs/NPC" index="5"]
+[node name="RouteManager" parent="NPCs/MamaBear" index="5"]
 libraries = {
 &"": SubResource("AnimationLibrary_agy81")
 }
 
-[node name="Sphere_001" parent="NPCs/NPC/Cartoon Bear/rig/Skeleton3D" index="0"]
+[node name="Sphere_001" parent="NPCs/MamaBear/Cartoon Bear/rig/Skeleton3D" index="0"]
 transform = Transform3D(0.0377471, -1.31117e-05, -3.3013e-05, -3.31892e-05, -0.000516053, -0.0377436, 1.26591e-05, 0.0377436, -0.000516068, 0.0718712, 0.828039, 0.181788)
 
-[node name="Sphere_001" parent="NPCs/NPC/Cartoon Bear/rig/Skeleton3D/Sphere_001" index="0"]
+[node name="Sphere_001" parent="NPCs/MamaBear/Cartoon Bear/rig/Skeleton3D/Sphere_001" index="0"]
 material_overlay = SubResource("ShaderMaterial_tuhhj")
 
-[node name="Circle" parent="NPCs/NPC/Cartoon Bear/rig/Skeleton3D" index="1"]
+[node name="Circle" parent="NPCs/MamaBear/Cartoon Bear/rig/Skeleton3D" index="1"]
 transform = Transform3D(0.308932, -0.00315403, -7.67686e-05, 0.000839128, 0.0893893, -0.295732, 0.00304132, 0.295717, 0.0893932, -0.00634815, 0.513443, 0.202102)
 
-[node name="Circle" parent="NPCs/NPC/Cartoon Bear/rig/Skeleton3D/Circle" index="0"]
+[node name="Circle" parent="NPCs/MamaBear/Cartoon Bear/rig/Skeleton3D/Circle" index="0"]
 material_overlay = SubResource("ShaderMaterial_tuhhj")
 
-[node name="Cube" parent="NPCs/NPC/Cartoon Bear/rig/Skeleton3D" index="2"]
+[node name="Cube" parent="NPCs/MamaBear/Cartoon Bear/rig/Skeleton3D" index="2"]
 material_overlay = SubResource("ShaderMaterial_tuhhj")
+
+[node name="Barry" parent="NPCs" node_paths=PackedStringArray("queen") instance=ExtResource("21_hdwqv")]
+transform = Transform3D(0.0147824, 0, -0.999891, 0, 1, 0, 0.999891, 0, 0.0147824, 13.9448, 0.577852, -5.81003)
+queen = NodePath("../QueenBee")
+
+[node name="PopUp" parent="NPCs/Barry" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.85236, 0)
+
+[node name="ant" parent="NPCs/Barry" index="6"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="Ant_001" parent="NPCs/Barry/ant/char_grp/rig/Skeleton3D" index="0"]
+transform = Transform3D(0.999922, 0.0122133, -0.002581, -0.0123649, 0.997437, -0.0704713, 0.00171369, 0.0704978, 0.99751, -0.0187417, -0.146895, -0.108545)
+
+[node name="Ant_003" parent="NPCs/Barry/ant/char_grp/rig/Skeleton3D" index="1"]
+transform = Transform3D(0.999922, 0.0122133, -0.002581, -0.0123649, 0.997437, -0.0704714, 0.00171369, 0.0704978, 0.99751, -0.0187417, -0.146898, -0.108545)
+
+[node name="Ant_002" parent="NPCs/Barry/ant/char_grp/rig/Skeleton3D" index="2"]
+transform = Transform3D(0.999922, 0.0122133, -0.002581, -0.0123649, 0.997437, -0.0704713, 0.00171369, 0.0704978, 0.99751, -0.0187417, -0.146895, -0.108545)
+
+[node name="Ant" parent="NPCs/Barry/ant/char_grp/rig/Skeleton3D" index="3"]
+transform = Transform3D(0.999922, 0.0122133, -0.002581, -0.0123649, 0.997437, -0.0704713, 0.0017137, 0.0704978, 0.99751, -0.0187419, -0.146936, -0.108549)
+
+[node name="Ant_012" parent="NPCs/Barry/ant/char_grp/rig/Skeleton3D" index="4"]
+transform = Transform3D(0.999922, 0.0122133, -0.002581, -0.0123649, 0.997437, -0.0704713, 0.0017137, 0.0704978, 0.99751, -0.0187419, -0.146936, -0.108549)
+
+[node name="Ant_013" parent="NPCs/Barry/ant/char_grp/rig/Skeleton3D" index="5"]
+transform = Transform3D(0.999922, 0.0122133, -0.002581, -0.0123649, 0.997437, -0.0704713, 0.0017137, 0.0704978, 0.99751, -0.0187419, -0.146936, -0.108549)
+
+[node name="Ant_014" parent="NPCs/Barry/ant/char_grp/rig/Skeleton3D" index="6"]
+transform = Transform3D(0.999922, 0.0122133, -0.002581, -0.0123649, 0.997437, -0.0704713, 0.0017137, 0.0704978, 0.99751, -0.0187419, -0.146936, -0.108549)
+
+[node name="Roundcube_001" parent="NPCs/Barry/ant/char_grp/rig/Skeleton3D" index="7"]
+transform = Transform3D(0.0678855, 0.000829174, -0.000175226, -0.000839463, 0.0677168, -0.00478435, 0.000116344, 0.00478615, 0.0677218, -0.299179, 4.60439, 1.09474)
 
 [node name="Albert" parent="NPCs" instance=ExtResource("15_jxqt2")]
 transform = Transform3D(-1, 0, -2.53518e-06, 0, 1, 0, 2.53518e-06, 0, -1, -1.24281, -11.0977, 9.32459)
@@ -3938,34 +4017,50 @@ libraries = {
 &"": SubResource("AnimationLibrary_sjqqi")
 }
 
-[node name="ant" parent="NPCs" instance=ExtResource("12_a5cuj")]
-transform = Transform3D(0.296175, 0, -0.955134, 0, 1, 0, 0.955134, 0, 0.296175, 9.33315, -12.1601, -6.65877)
+[node name="Cee" parent="NPCs" node_paths=PackedStringArray("dee", "barry") instance=ExtResource("27_hdwqv")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.919, 3, -13.249)
+dee = NodePath("../Dee")
+barry = NodePath("../Barry")
+ice_skates_appear_time = 0.0
 
-[node name="Player" parent="NPCs" instance=ExtResource("28_m0j6m")]
-unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.315795, -5.54853, 0.459668)
+[node name="Dee" parent="NPCs" node_paths=PackedStringArray("barry", "route_manager") instance=ExtResource("28_lmwtd")]
+barry = NodePath("../Barry")
+route_manager = NodePath("RouteManager2")
 
-[node name="Butterfly full_001" parent="NPCs/Player/playermodel/Butterfly" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.961475, 0.274891, 0, -0.274891, 0.961475, 0.71502, 0.25416, 0)
+[node name="RouteManager2" parent="NPCs/Dee" instance=ExtResource("29_lmwtd")]
 
-[node name="InteractionDetection" parent="NPCs/Player/playermodel" index="1"]
-collision_mask = 4
+[node name="Mee" parent="NPCs" node_paths=PackedStringArray("barry") instance=ExtResource("30_odb85")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -12.904, 3, -6.48818)
+barry = NodePath("../Barry")
 
-[node name="camera_pivot" parent="NPCs/Player" instance=ExtResource("29_xqxqv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.41491)
+[node name="Jaws" parent="NPCs" instance=ExtResource("31_fevv2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.98417, 1.54172, -6.27359)
 
-[node name="SpringArm3D" parent="NPCs/Player/camera_pivot" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.5)
+[node name="Vinny" parent="NPCs" node_paths=PackedStringArray("letter") instance=ExtResource("34_ldaxu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.46916, 1.54172, 7.12193)
+letter = NodePath("../../Interactables/Letter")
+
+[node name="Romulus" parent="NPCs" instance=ExtResource("34_xt6ak")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.55357, 0.541724, 5.94599)
+
+[node name="Hiro" parent="NPCs" instance=ExtResource("36_xqxqv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.32483, 1.68077, -5.84909)
+
+[node name="Chester" parent="NPCs" instance=ExtResource("37_xqxqv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.31551, 1.04172, 2.32387)
+
+[node name="Dovey" parent="NPCs" node_paths=PackedStringArray("romulus") instance=ExtResource("38_i3tum")]
+romulus = NodePath("../Romulus")
 
 [node name="Janitor floor " parent="." instance=ExtResource("11_2m30o")]
 
 [editable path="UI"]
 [editable path="UI/Game"]
-[editable path="Interactables/StaticBody3D"]
-[editable path="Interactables/StaticBody3D2"]
-[editable path="NPCs/NPC"]
-[editable path="NPCs/Albert"]
 [editable path="NPCs/Player"]
 [editable path="NPCs/Player/playermodel/Butterfly"]
 [editable path="NPCs/Player/camera_pivot"]
+[editable path="NPCs/MamaBear"]
+[editable path="NPCs/Barry"]
+[editable path="NPCs/Barry/ant"]
+[editable path="NPCs/Albert"]
 [editable path="Janitor floor "]

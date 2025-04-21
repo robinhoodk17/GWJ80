@@ -26,6 +26,7 @@ var original_rotation : Basis
 
 func _ready() -> void:
 	Dialogic.timeline_ended.connect(unpause)
+	Dialogic.signal_event.connect(handle_dialogue_end)
 	original_position = global_position
 	original_rotation = global_basis
 	timer.timeout.connect(start_walking)
@@ -101,11 +102,12 @@ func turn_off_prompt() -> void:
 		pop_up.turn_off_prompt()
 
 
-func interact(_playermodel, _player_controller) -> void:
+func interact(_playermodel, _player_controller : player_controller) -> void:
 	handle_dialogue_start(_player_controller)
 
 
 func start_dialogue(timeline : String) -> void:
+	Input.mouse_mode = Input.MOUSE_MODE_CONFINED
 	Dialogic.start(timeline).process_mode = Node.PROCESS_MODE_ALWAYS
 	Dialogic.process_mode = Node.PROCESS_MODE_ALWAYS
 	@warning_ignore("untyped_declaration")
@@ -114,8 +116,9 @@ func start_dialogue(timeline : String) -> void:
 
 
 func unpause() -> void:
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	get_tree().paused = false
-	handle_dialogue_end()
+	#handle_dialogue_end()
 	
 
 func handle_dialogue_start(_player_controller : player_controller) -> void:
@@ -123,6 +126,6 @@ func handle_dialogue_start(_player_controller : player_controller) -> void:
 	pass
 
 
-func  handle_dialogue_end() -> void:
+func handle_dialogue_end(signal_argument : String) -> void:
 	###Implemented by sub-classes###
 	pass

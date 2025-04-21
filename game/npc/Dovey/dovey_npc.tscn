@@ -13,4 +13,13 @@ animation_player = NodePath("Dovey/AnimationPlayer")
 [node name="Armature" parent="Dovey" index="0"]
 transform = Transform3D(0.459024, -0.888424, -2.34934e-09, 0.888424, 0.459024, -2.01309e-08, 1.89632e-08, 7.15336e-09, 1, 0.0553485, 0.416965, 0)
 
+[node name="body" parent="Dovey/Armature/Skeleton3D" index="0"]
+transform = Transform3D(0.576204, 0.817306, 1.10316e-07, -0.817306, 0.576204, -5.70113e-08, -1.1016e-07, -5.73115e-08, 1, -0.218169, -0.08609, 1.72741e-08)
+
+[node name="Right wing_001" parent="Dovey/Armature/Skeleton3D" index="1"]
+transform = Transform3D(0.240212, 0.962646, -0.124947, -0.970402, 0.234841, -0.0562925, -0.024847, 0.134771, 0.990565, -0.303978, 0.0509058, -0.0598821)
+
+[node name="Right wing" parent="Dovey/Armature/Skeleton3D" index="2"]
+transform = Transform3D(0.280853, 0.956848, 0.0745934, -0.959568, 0.278431, 0.041299, 0.0187477, -0.0831764, 0.996358, -0.290749, 0.0357214, 0.0369675)
+
 [editable path="Dovey"]

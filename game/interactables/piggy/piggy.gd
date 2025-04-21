@@ -1,6 +1,6 @@
 extends interactable
 
-func interact(playermodel : Node3D, _player_controller : player_controller) -> void:
+func interact(playermodel, _player_controller) -> void:
 	if Globals.current_time < 300.0 and !frozen_in_time:
 		Input.mouse_mode = Input.MOUSE_MODE_CONFINED
 		Dialogic.start("romulus_stop_that").process_mode = Node.PROCESS_MODE_ALWAYS

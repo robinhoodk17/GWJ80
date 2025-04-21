@@ -1,7 +1,7 @@
 extends NPC
 
 var waiting_plan : bool = false
-var quest_progression : int = 2
+var quest_progression = 2
 var convinced_barry_quest : bool = false
 var letter_delivered : bool = false
 var quest_completed : bool = false
@@ -9,10 +9,6 @@ var quest_completed : bool = false
 @export var barry : NPC
 
 func handle_dialogue_start(_player_controller) -> void:
-	if Globals.current_time < 240.0:
-		start_dialogue("vinny_and_queen")
-		return
-		
 	if Globals.current_time > 300.0 and Globals.current_time < 360.0:
 		start_dialogue("i_love_office_news_queen_bee")
 		return
@@ -34,7 +30,6 @@ func handle_dialogue_start(_player_controller) -> void:
 				_player_controller.grabbing = null
 				item.global_position = Vector3(0,1000,0)
 				letter_delivered = true
-				item.quest_finished = true
 				start_dialogue("queen_bee_plan")
 				waiting_plan = true
 			else:
@@ -56,7 +51,7 @@ func quest_progressed() -> void:
 	quest_progression -= 1
 	if quest_progression == 0:
 		vinny.current_gamestate = gamestate.HELPED
-		current_gamestate = gamestate.HELPED
+		current_gamestate == gamestate.HELPED
 		Globals.quest_finished("vinny", gamestate.HELPED, 2)
 	else:
 		Globals.quest_progress("vinny")
