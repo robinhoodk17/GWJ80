@@ -84,6 +84,3 @@ func append_frame_data(frame_data : Dictionary) -> void:
 			second_run.append(frame_data)
 		3:
 			return
-
-func finished_loading() -> void:
-	get_tree().paused = false
