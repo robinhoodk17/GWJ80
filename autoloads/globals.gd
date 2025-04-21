@@ -33,6 +33,7 @@ var naughty_quests : int = 0
 var nice_quests : int = 0
 #How many physics ticks pass between refreshing the position of items
 var item_refresh_rate : int = 10
+var time_scale : int = 1
 
 var sensitivity : float = 1.0
 
