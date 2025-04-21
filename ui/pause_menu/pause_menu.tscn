@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://3s7lo7jd53un"]
+[gd_scene load_steps=22 format=3 uid="uid://3s7lo7jd53un"]
 
 [ext_resource type="Script" uid="uid://p060qdoqdgi7" path="res://ui/pause_menu/pause_menu.gd" id="1_fpgrf"]
 [ext_resource type="Resource" uid="uid://diop7pt8pl55a" path="res://input/pause.tres" id="2_b4b0p"]
@@ -9,10 +9,25 @@
 [ext_resource type="AudioStream" uid="uid://dvifhwsoejsy3" path="res://game/audio/assets/music/butterfly_pause_menu_ost.wav" id="5_c3jo5"]
 [ext_resource type="AudioStream" uid="uid://dtjr6v231owb1" path="res://game/audio/assets/music/butterfly_sfx_pause_menu_settings.wav" id="5_lhp7q"]
 [ext_resource type="AudioStream" uid="uid://co83yitteg7ij" path="res://game/audio/assets/music/butterfly_sfx_pause_menu_quit.wav" id="7_j11rl"]
+[ext_resource type="PackedScene" uid="uid://bfm8w6ljovpr4" path="res://ui/pause_menu/npc_row.tscn" id="8_lhp7q"]
+[ext_resource type="Texture2D" uid="uid://b67or72oiiutw" path="res://game/npc/master/empty.png" id="8_pu65w"]
+[ext_resource type="Texture2D" uid="uid://cuke616fa6026" path="res://ui/pause_menu/timer.png" id="9_nkwjh"]
 [ext_resource type="AudioStream" uid="uid://dosyiy8ihfroq" path="res://game/audio/assets/music/butterfly_sfx_pause_menu_main_menu.wav" id="10_pu65w"]
 [ext_resource type="AudioStream" uid="uid://c2mg1gvb3twr2" path="res://game/audio/assets/music/butterfly_sfx_pause_menu_resume.wav" id="11_nkwjh"]
+[ext_resource type="PackedScene" uid="uid://c33eejqyhtjv0" path="res://ui/game/sabotage.tscn" id="11_wdlyj"]
+[ext_resource type="PackedScene" uid="uid://dn5pi8iifwba1" path="res://ui/game/help.tscn" id="12_tfo3w"]
+[ext_resource type="PackedScene" uid="uid://pesljimvifvy" path="res://ui/game/help_or_sabotage.tscn" id="13_tfo3w"]
 
-[node name="PauseMenu" type="Control" node_paths=PackedStringArray("pause_music", "default_focus_control")]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f2x4c"]
+bg_color = Color(0.253238, 0.253238, 0.253238, 0.588235)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wdlyj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tfo3w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8cp71"]
+
+[node name="PauseMenu" type="Control" node_paths=PackedStringArray("pause_music", "timer_clock", "timer_sprite", "default_focus_control")]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 15
@@ -23,7 +38,9 @@ grow_vertical = 2
 script = ExtResource("1_fpgrf")
 pause_action = ExtResource("2_b4b0p")
 pause_music = NodePath("PauseMusic")
-default_focus_control = NodePath("Buttons/Resume")
+timer_clock = NodePath("Panel/MarginContainer/VBoxContainer/Timer/Slider")
+timer_sprite = NodePath("Panel/MarginContainer/VBoxContainer/Timer/Slider/Time")
+default_focus_control = NodePath("Panel/MarginContainer/VBoxContainer/Buttons/Resume")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -32,109 +49,379 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_f2x4c")
 
-[node name="Buttons" type="VBoxContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -35.0
-offset_top = -50.5
-offset_right = 35.0
-offset_bottom = 50.5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
 
-[node name="Resume" type="Button" parent="Buttons"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="Buttons" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+
+[node name="Resume" type="Button" parent="Panel/MarginContainer/VBoxContainer/Buttons"]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_left = NodePath("../Quit")
+focus_neighbor_top = NodePath("../Quit")
+focus_neighbor_right = NodePath("../Restart")
+focus_neighbor_bottom = NodePath("../../ScrollContainer/MarginContainer/VBoxContainer/QueenBee/HBoxContainer/Portrait")
+focus_next = NodePath("../Restart")
+focus_previous = NodePath("../Quit")
 text = "Resume"
 
-[node name="Node" parent="Buttons/Resume" node_paths=PackedStringArray("wait_for") instance=ExtResource("2_le02u")]
+[node name="Node" parent="Panel/MarginContainer/VBoxContainer/Buttons/Resume" node_paths=PackedStringArray("wait_for") instance=ExtResource("2_le02u")]
 connect_as_button = true
 entrance_animation = true
-wait_for = NodePath("../../../Node")
+wait_for = NodePath("../../../../../../Node")
 hover_rotation = 0.4
 random_entrance = true
 
-[node name="Restart" type="Button" parent="Buttons"]
+[node name="Restart" type="Button" parent="Panel/MarginContainer/VBoxContainer/Buttons"]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_left = NodePath("../Resume")
+focus_neighbor_top = NodePath("../Resume")
+focus_neighbor_right = NodePath("../Settings")
+focus_neighbor_bottom = NodePath("../../ScrollContainer/MarginContainer/VBoxContainer/QueenBee/HBoxContainer/Portrait")
+focus_next = NodePath("../Settings")
+focus_previous = NodePath("../Resume")
 text = "Time travel"
 
-[node name="Node" parent="Buttons/Restart" node_paths=PackedStringArray("wait_for") instance=ExtResource("2_le02u")]
+[node name="Node" parent="Panel/MarginContainer/VBoxContainer/Buttons/Restart" node_paths=PackedStringArray("wait_for") instance=ExtResource("2_le02u")]
 connect_as_button = true
 entrance_animation = true
-wait_for = NodePath("../../../Node")
+wait_for = NodePath("../../../../../../Node")
 hover_rotation = 0.4
 random_entrance = true
 
-[node name="TimeTravel" type="AudioStreamPlayer" parent="Buttons/Restart"]
+[node name="TimeTravel" type="AudioStreamPlayer" parent="Panel/MarginContainer/VBoxContainer/Buttons/Restart"]
+unique_name_in_owner = true
 stream = ExtResource("4_f2x4c")
 bus = &"SFX"
 
-[node name="Settings" type="Button" parent="Buttons"]
+[node name="Settings" type="Button" parent="Panel/MarginContainer/VBoxContainer/Buttons"]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_left = NodePath("../Restart")
+focus_neighbor_top = NodePath("../Restart")
+focus_neighbor_right = NodePath("../Controls")
+focus_neighbor_bottom = NodePath("../../ScrollContainer/MarginContainer/VBoxContainer/QueenBee/HBoxContainer/Portrait")
+focus_next = NodePath("../Controls")
+focus_previous = NodePath("../Restart")
 text = "Settings"
 
-[node name="Node" parent="Buttons/Settings" node_paths=PackedStringArray("wait_for") instance=ExtResource("2_le02u")]
+[node name="Node" parent="Panel/MarginContainer/VBoxContainer/Buttons/Settings" node_paths=PackedStringArray("wait_for") instance=ExtResource("2_le02u")]
 connect_as_button = true
 entrance_animation = true
-wait_for = NodePath("../../../Node")
+wait_for = NodePath("../../../../../../Node")
 hover_rotation = 0.4
 random_entrance = true
 
-[node name="SettingsSFX" type="AudioStreamPlayer" parent="Buttons/Settings"]
+[node name="SettingsSFX" type="AudioStreamPlayer" parent="Panel/MarginContainer/VBoxContainer/Buttons/Settings"]
+unique_name_in_owner = true
 stream = ExtResource("5_lhp7q")
 bus = &"SFX"
 
-[node name="Controls" type="Button" parent="Buttons"]
+[node name="Controls" type="Button" parent="Panel/MarginContainer/VBoxContainer/Buttons"]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_left = NodePath("../Settings")
+focus_neighbor_top = NodePath("../MainMenu")
+focus_neighbor_right = NodePath("../MainMenu")
+focus_neighbor_bottom = NodePath("../../ScrollContainer/MarginContainer/VBoxContainer/QueenBee/HBoxContainer/Portrait")
+focus_next = NodePath("../MainMenu")
+focus_previous = NodePath("../Settings")
 text = "Controls"
 
-[node name="Node" parent="Buttons/Controls" node_paths=PackedStringArray("wait_for") instance=ExtResource("2_le02u")]
+[node name="Node" parent="Panel/MarginContainer/VBoxContainer/Buttons/Controls" node_paths=PackedStringArray("wait_for") instance=ExtResource("2_le02u")]
 connect_as_button = true
 entrance_animation = true
-wait_for = NodePath("../../../Node")
+wait_for = NodePath("../../../../../../Node")
 hover_rotation = 0.4
 random_entrance = true
 
-[node name="ControlsSFX" type="AudioStreamPlayer" parent="Buttons/Controls"]
+[node name="ControlsSFX" type="AudioStreamPlayer" parent="Panel/MarginContainer/VBoxContainer/Buttons/Controls"]
+unique_name_in_owner = true
 stream = ExtResource("4_uraes")
 bus = &"SFX"
 
-[node name="MainMenu" type="Button" parent="Buttons"]
+[node name="MainMenu" type="Button" parent="Panel/MarginContainer/VBoxContainer/Buttons"]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_left = NodePath("../Controls")
+focus_neighbor_top = NodePath("../Controls")
+focus_neighbor_right = NodePath("../Quit")
+focus_neighbor_bottom = NodePath("../../ScrollContainer/MarginContainer/VBoxContainer/QueenBee/HBoxContainer/Portrait")
+focus_next = NodePath("../Quit")
+focus_previous = NodePath("../Controls")
 text = "Main menu
 "
 
-[node name="Node" parent="Buttons/MainMenu" node_paths=PackedStringArray("wait_for") instance=ExtResource("2_le02u")]
+[node name="Node" parent="Panel/MarginContainer/VBoxContainer/Buttons/MainMenu" node_paths=PackedStringArray("wait_for") instance=ExtResource("2_le02u")]
 connect_as_button = true
 entrance_animation = true
-wait_for = NodePath("../../../Node")
+wait_for = NodePath("../../../../../../Node")
 hover_rotation = 0.4
 random_entrance = true
 
-[node name="Quit" type="Button" parent="Buttons"]
+[node name="Quit" type="Button" parent="Panel/MarginContainer/VBoxContainer/Buttons"]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 3
+focus_neighbor_left = NodePath("../MainMenu")
+focus_neighbor_top = NodePath("../MainMenu")
+focus_neighbor_right = NodePath("../Resume")
+focus_neighbor_bottom = NodePath("../../ScrollContainer/MarginContainer/VBoxContainer/QueenBee/HBoxContainer/Portrait")
+focus_next = NodePath("../Resume")
+focus_previous = NodePath("../MainMenu")
 text = "Quit"
 
-[node name="Node" parent="Buttons/Quit" node_paths=PackedStringArray("wait_for") instance=ExtResource("2_le02u")]
+[node name="Node" parent="Panel/MarginContainer/VBoxContainer/Buttons/Quit" node_paths=PackedStringArray("wait_for") instance=ExtResource("2_le02u")]
 connect_as_button = true
 entrance_animation = true
-wait_for = NodePath("../../../Node")
+wait_for = NodePath("../../../../../../Node")
 hover_rotation = 0.4
 random_entrance = true
 
-[node name="QuitSFX" type="AudioStreamPlayer" parent="Buttons/Quit"]
+[node name="QuitSFX" type="AudioStreamPlayer" parent="Panel/MarginContainer/VBoxContainer/Buttons/Quit"]
 stream = ExtResource("7_j11rl")
 bus = &"SFX"
+
+[node name="Timer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/Timer"]
+layout_mode = 2
+texture = ExtResource("8_pu65w")
+
+[node name="Slider" type="HSlider" parent="Panel/MarginContainer/VBoxContainer/Timer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.0
+theme_override_styles/slider = SubResource("StyleBoxEmpty_wdlyj")
+theme_override_styles/grabber_area = SubResource("StyleBoxEmpty_tfo3w")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxEmpty_8cp71")
+max_value = 10.0
+step = 0.01
+value = 10.0
+editable = false
+scrollable = false
+tick_count = 11
+
+[node name="Time" type="Sprite2D" parent="Panel/MarginContainer/VBoxContainer/Timer/Slider"]
+z_index = 1
+scale = Vector2(1, 1000)
+texture = ExtResource("9_nkwjh")
+offset = Vector2(10, 0.5)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 9.0
+scroll_vertical = 250
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="QueenBee" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("8_lhp7q")]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Portrait" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/QueenBee/HBoxContainer" index="0"]
+focus_neighbor_left = NodePath("../../../../../../Buttons/Resume")
+focus_neighbor_top = NodePath("../../../../../../Buttons/Resume")
+focus_neighbor_right = NodePath("../Sabotage")
+focus_neighbor_bottom = NodePath("../../../MamaBear/HBoxContainer/Portrait")
+focus_next = NodePath("../../../MamaBear/HBoxContainer/Portrait")
+focus_previous = NodePath("../../../../../../Buttons/Resume")
+
+[node name="Sabotage" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/QueenBee/HBoxContainer" index="1" instance=ExtResource("11_wdlyj")]
+layout_mode = 2
+focus_neighbor_left = NodePath("../Portrait")
+focus_neighbor_top = NodePath("../../../../../../Buttons/Restart")
+focus_neighbor_right = NodePath("../Help")
+focus_next = NodePath("../Help")
+focus_previous = NodePath("../Portrait")
+
+[node name="Separator" type="Control" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/QueenBee/HBoxContainer" index="2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Help" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/QueenBee/HBoxContainer" index="3" instance=ExtResource("12_tfo3w")]
+layout_mode = 2
+size_flags_vertical = 1
+
+[node name="Label" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/QueenBee/HBoxContainer/Help" index="0"]
+text = "Convince Barry 
+and Ollie"
+
+[node name="Separator2" type="Control" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/QueenBee/HBoxContainer" index="4"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="MamaBear" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("8_lhp7q")]
+layout_mode = 2
+NPC_name = "mama_bear"
+
+[node name="Label" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/MamaBear" index="0"]
+text = "Big Mama Bear"
+
+[node name="Help2" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/MamaBear/HBoxContainer" index="1" instance=ExtResource("12_tfo3w")]
+layout_mode = 2
+size_flags_vertical = 1
+size_flags_stretch_ratio = 3.0
+
+[node name="Label" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/MamaBear/HBoxContainer/Help2" index="0"]
+scale = Vector2(1.00435, 1)
+text = "Give her 
+advice"
+
+[node name="Separator" type="Control" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/MamaBear/HBoxContainer" index="2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+
+[node name="Help" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/MamaBear/HBoxContainer" index="3" instance=ExtResource("12_tfo3w")]
+layout_mode = 2
+size_flags_vertical = 1
+
+[node name="Label" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/MamaBear/HBoxContainer/Help" index="0"]
+text = "Give her 
+advice"
+
+[node name="Barry" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("8_lhp7q")]
+layout_mode = 2
+NPC_name = "barry"
+
+[node name="Label" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/Barry" index="0"]
+text = "Barry Bargain"
+
+[node name="Help" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/Barry/HBoxContainer" index="1" instance=ExtResource("12_tfo3w")]
+layout_mode = 2
+size_flags_vertical = 1
+size_flags_stretch_ratio = 7.0
+
+[node name="Label" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/Barry/HBoxContainer/Help" index="0"]
+text = "Form the Bee union and 
+convince the power players"
+
+[node name="Separator" type="Control" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/Barry/HBoxContainer" index="2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+
+[node name="Cee" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("8_lhp7q")]
+layout_mode = 2
+NPC_name = "cee"
+
+[node name="Label" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/Cee" index="0"]
+text = "Cee"
+
+[node name="Help" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/Cee/HBoxContainer" index="1" instance=ExtResource("12_tfo3w")]
+layout_mode = 2
+size_flags_vertical = 1
+size_flags_stretch_ratio = 1.0
+
+[node name="Label" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/Cee/HBoxContainer/Help" index="0"]
+text = "Help Cee with
+his stain"
+
+[node name="Separator" type="Control" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/Cee/HBoxContainer" index="2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 4.0
+
+[node name="Help2" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/Cee/HBoxContainer" index="3" instance=ExtResource("12_tfo3w")]
+layout_mode = 2
+size_flags_vertical = 1
+size_flags_stretch_ratio = 3.0
+
+[node name="Label" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/Cee/HBoxContainer/Help2" index="0"]
+text = "Maybe someone else 
+can help with 
+the stain"
+
+[node name="Separator2" type="Control" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/Cee/HBoxContainer" index="4"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="Dee" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("8_lhp7q")]
+layout_mode = 2
+NPC_name = "dee"
+
+[node name="Label" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/Dee" index="0"]
+text = "Dee"
+
+[node name="HelpOrSabotage" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/Dee/HBoxContainer" index="1" instance=ExtResource("13_tfo3w")]
+layout_mode = 2
+size_flags_stretch_ratio = 5.0
+
+[node name="Label" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/Dee/HBoxContainer/HelpOrSabotage" index="0"]
+text = "Help Dee decide which gift
+to purchase"
+
+[node name="Control" type="Control" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/Dee/HBoxContainer" index="2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 5.0
+
+[node name="NPCRow6" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("8_lhp7q")]
+layout_mode = 2
+
+[node name="NPCRow7" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("8_lhp7q")]
+layout_mode = 2
+
+[node name="NPCRow8" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("8_lhp7q")]
+layout_mode = 2
+
+[node name="NPCRow9" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("8_lhp7q")]
+layout_mode = 2
+
+[node name="NPCRow10" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("8_lhp7q")]
+layout_mode = 2
+
+[node name="NPCRow11" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("8_lhp7q")]
+layout_mode = 2
+
+[node name="NPCRow12" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("8_lhp7q")]
+layout_mode = 2
+
+[node name="NPCRow13" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("8_lhp7q")]
+layout_mode = 2
+
+[node name="NPCRow14" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("8_lhp7q")]
+layout_mode = 2
 
 [node name="BuildInfo" parent="." instance=ExtResource("2_q2yd3")]
 layout_mode = 1
@@ -166,3 +453,16 @@ bus = &"SFX"
 [node name="UnpauseSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_nkwjh")
 bus = &"SFX"
+
+[editable path="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/QueenBee"]
+[editable path="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/QueenBee/HBoxContainer/Help"]
+[editable path="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/MamaBear"]
+[editable path="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/MamaBear/HBoxContainer/Help2"]
+[editable path="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/MamaBear/HBoxContainer/Help"]
+[editable path="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/Barry"]
+[editable path="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/Barry/HBoxContainer/Help"]
+[editable path="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/Cee"]
+[editable path="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/Cee/HBoxContainer/Help"]
+[editable path="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/Cee/HBoxContainer/Help2"]
+[editable path="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/Dee"]
+[editable path="Panel/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/Dee/HBoxContainer/HelpOrSabotage"]
