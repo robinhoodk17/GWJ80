@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://wae3hmn07t34" path="res://ui/settings/settings.gd" id="1_dabjx"]
 
-[node name="Settings" type="Control" node_paths=PackedStringArray("sensitivity_slider", "default_focus_control")]
+[node name="Settings" type="Control" node_paths=PackedStringArray("sensitivity_slider", "time_slider", "default_focus_control")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,6 +11,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_dabjx")
 sensitivity_slider = NodePath("VBoxContainer/Sensitivity")
+time_slider = NodePath("VBoxContainer/TimeSpeed")
 default_focus_control = NodePath("HBoxContainer/Back")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -82,6 +83,21 @@ size_flags_vertical = 4
 max_value = 3.0
 step = 0.01
 value = 1.0
+ticks_on_borders = true
+
+[node name="Time" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Time speed"
+horizontal_alignment = 1
+
+[node name="TimeSpeed" type="HSlider" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+min_value = 1.0
+max_value = 10.0
+value = 1.0
+tick_count = 10
 ticks_on_borders = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]

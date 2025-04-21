@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bh63rhiareya"
+path="res://.godot/imported/butterfly_sfx__voices Barry.wav-97910d6bb1384a33fbd108871c662455.sample"
+
+[deps]
+
+source_file="res://game/audio/assets/SFX/character instruments/butterfly_sfx__voices Barry.wav"
+dest_files=["res://.godot/imported/butterfly_sfx__voices Barry.wav-97910d6bb1384a33fbd108871c662455.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

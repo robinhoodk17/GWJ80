@@ -1,0 +1,10 @@
+mama_bear_character: What's that, sweetie? Barry wants to give workers insurance and housing support? I would love to help, but I don't know if we have the funding.
+- Don't you care about your employees?
+	mama_bear_character: I do! I see them as my own children, but I don't know if the conditions are just right...
+	- The conditions will never be just right for this. Money will never rain from the sky. [br] Still, the workers deserve better conditions.
+		mama_bear_character: You're right. I'll  make it work, even if I have to take a pay cut myself. Tell Barry that HR is behind him.
+		[signal arg="mama_bear_barry_quest"]
+	- Please! Just look into the budget
+		mama_bear_character: I'm sorry, but we'll just have to wait until the conditions are neither  too hot nor too cold.
+- Come on, there must be something we could to the grease the wheels (butterfly wink)
+	mama_bear_character: I'm sorry, but that is not how things work here.

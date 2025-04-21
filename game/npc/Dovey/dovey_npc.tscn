@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmcac8682metn"]
+
+[ext_resource type="PackedScene" uid="uid://88f70ly0w5b4" path="res://game/npc/master/npc.tscn" id="1_0kv8n"]
+[ext_resource type="Script" uid="uid://0vi8ub3o0ae4" path="res://game/npc/Dovey/dovey.gd" id="2_q0ah6"]
+[ext_resource type="PackedScene" uid="uid://chas0wylaemna" path="res://game/npc/Dovey/Dovey.tscn" id="3_5vo0t"]
+
+[node name="Dovey" node_paths=PackedStringArray("animation_player") instance=ExtResource("1_0kv8n")]
+script = ExtResource("2_q0ah6")
+animation_player = NodePath("Dovey/AnimationPlayer")
+
+[node name="Dovey" parent="." index="6" instance=ExtResource("3_5vo0t")]
+
+[node name="Armature" parent="Dovey" index="0"]
+transform = Transform3D(0.459024, -0.888424, -2.34934e-09, 0.888424, 0.459024, -2.01309e-08, 1.89632e-08, 7.15336e-09, 1, 0.0553485, 0.416965, 0)
+
+[editable path="Dovey"]

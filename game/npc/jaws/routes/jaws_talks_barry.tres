@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="eventRoute" load_steps=2 format=3 uid="uid://ogsrofye02q"]
+
+[ext_resource type="Script" uid="uid://cea3ewphuupof" path="res://game/npc/routes/route.gd" id="1_eew6f"]
+
+[resource]
+script = ExtResource("1_eew6f")
+acceptable_states = Array[int]([0])
+route = "route1"
+metadata/_custom_type_script = "uid://cea3ewphuupof"

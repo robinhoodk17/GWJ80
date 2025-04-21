@@ -1,4 +1,5 @@
 extends Node3D
+class_name player_controller
 
 @export_category("GUIDE actions")
 @export var time_freeze : GUIDEAction
@@ -10,7 +11,7 @@ extends Node3D
 
 @export_category("Player Movement")
 @export var speed : float = 3.0
-@export var gliding_speed : float = 7.0
+@export var gliding_speed : float = 6.0
 @export var jump_velocity : float= 3.5
 @export var hover_delay : float = 0.35
 const ROTATION_SPEED : float = 6.0
@@ -28,7 +29,7 @@ var _target_rotation : Vector3 = Vector3.ZERO
 var reset_tween : Tween
 var reset_position_tween : Tween
 @export_subgroup("Item Manipulation")
-var grabbing : CharacterBody3D
+var grabbing : interactable
 
 #slowly rotate the charcter to point in the direction of the camera_pivot
 @onready var playermodel : Node3D = $"../playermodel"
@@ -47,6 +48,7 @@ var dampened_y_array : Array[float] = [0.0, 0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,
 var current_y : int = 0
 var averaged_y : float = 0.0
 func  _ready() -> void:
+	top_level = true
 	time_freeze.triggered.connect(handle_time_freeze)
 	fly_action.triggered.connect(handle_jump)
 	interact_action.triggered.connect(handle_interaction)
@@ -89,13 +91,13 @@ func _physics_process(delta: float) -> void:
 		rotate_y(camera_rotation.x * Globals.sensitivity)
 		spring_arm.rotation.x = clamp(spring_arm.rotation.x - camera_rotation.y,-0.6,0.4)
 	if not player.is_on_floor():
-		player.velocity += player.get_gravity() * delta
+		player.velocity += player.get_gravity() * delta / Globals.time_scale
+		current_speed = gliding_speed
 
 	
 	if fly_action.value_bool:
 		if hover_timer.is_stopped():
 			player.velocity.y = 0.0
-			current_speed = gliding_speed
 	#if fly_action.is_triggered():
 		#player.velocity.y = jump_velocity
 		#hover_timer.start(hover_delay)
@@ -121,7 +123,7 @@ func _physics_process(delta: float) -> void:
 		input_dir = move_action.value_axis_2d
 		if !camera_timer.is_stopped():
 			camera_timer.start(camera_delay)
-	var direction : Vector3 = (basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	var direction : Vector3 = (basis * Vector3(input_dir.x, 0, input_dir.y)).normalized() / Globals.time_scale
 	
 	if direction:
 		player.velocity.x = direction.x * current_speed
@@ -171,7 +173,7 @@ func rotate_model(direction: Vector3, delta : float) -> void:
 	playermodel.basis = lerp(playermodel.basis, Basis.looking_at(direction), 10.0 * delta)
 
 
-func  restarted() -> void:
+func restarted() -> void:
 	player.global_position = original_position
 	player.global_basis = original_rotation
 
@@ -179,14 +181,14 @@ func  restarted() -> void:
 func handle_time_freeze() -> void:
 	if interaction_detection.showing_which != null:
 		if interaction_detection.showing_which.is_in_group("item"):
+			if !interaction_detection.showing_which.freezable:
+				return
 			interaction_detection.showing_which.freeze_in_time()
-	#print_debug("froze successfully")
 
 
 func handle_jump() -> void:
 	player.velocity.y = jump_velocity
 	hover_timer.start(hover_delay)
-	print_debug("jumped successfully")
 
 
 func handle_interaction() -> void:
@@ -196,4 +198,3 @@ func handle_interaction() -> void:
 		if grabbing != null:
 			grabbing.drop()
 			grabbing = null
-	print_debug("interacted succesfully")

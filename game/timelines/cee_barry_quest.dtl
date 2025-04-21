@@ -1,0 +1,6 @@
+cee_character: Oh! Barry want us to join a union?
+- Yes, that would be cool
+	cee_character: Ok, I'm convinced
+	[signal arg="cee_union"]
+- Not really, it's a scam
+	cee_character: Thanks for the warning

@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://phf2r7pbivdy"]
+
+[ext_resource type="PackedScene" uid="uid://88f70ly0w5b4" path="res://game/npc/master/npc.tscn" id="1_tgtre"]
+[ext_resource type="Script" uid="uid://bxewsirfj7jyg" path="res://game/npc/ollie/ollie_traveller.gd" id="2_27eae"]
+[ext_resource type="PackedScene" uid="uid://dbemtombk72y6" path="res://game/npc/ollie/owl.tscn" id="3_ahp8f"]
+
+[node name="Ollie_traveller" instance=ExtResource("1_tgtre")]
+script = ExtResource("2_27eae")
+
+[node name="PopUp" parent="." index="4"]
+transform = Transform3D(0.966027, 0.256375, 0.0326078, -0.256817, 0.966407, 0.0100962, -0.028924, -0.0181275, 0.999417, 0, 1.55626, 0)
+
+[node name="cosmic owl" parent="." index="6" instance=ExtResource("3_ahp8f")]

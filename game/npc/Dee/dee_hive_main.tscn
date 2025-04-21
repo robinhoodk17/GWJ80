@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://wu80y2tmaeqw"]
+
+[ext_resource type="PackedScene" uid="uid://88f70ly0w5b4" path="res://game/npc/master/npc.tscn" id="1_ovur6"]
+[ext_resource type="Script" uid="uid://bb8xs12cb7owb" path="res://game/npc/Dee/dee_hive_main.gd" id="2_lgtcm"]
+[ext_resource type="PackedScene" uid="uid://bx12xp05cowpt" path="res://game/npc/Dee/Dee Hive.tscn" id="2_or8pd"]
+
+[node name="DeeHive" node_paths=PackedStringArray("timer_for_present") instance=ExtResource("1_ovur6")]
+script = ExtResource("2_lgtcm")
+timer_for_present = NodePath("TimerForPresent")
+time_of_present = 430.0
+
+[node name="dee hive" parent="." index="6" instance=ExtResource("2_or8pd")]
+
+[node name="AnimationPlayer" parent="dee hive/Dee Hive" index="12"]
+autoplay = "idle"
+
+[node name="TimerForPresent" type="Timer" parent="." index="7"]
+
+[editable path="dee hive"]

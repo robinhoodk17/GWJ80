@@ -1,0 +1,125 @@
+[gd_scene load_steps=6 format=3 uid="uid://bs7y3wcm46051"]
+
+[sub_resource type="Animation" id="Animation_pf13u"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-12.904, 3, -6.48818)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -1.5708, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_xllhl"]
+resource_name = "appointment"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(15.146, 15.7521, -14.3389), Vector3(-7.18369, 4, 13.743)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 1.5708, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_5eeym"]
+resource_name = "back_to_room"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.25, 2.65738, 4.43545, 6.6, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-7.18369, 4, 13.743), Vector3(-2.41198, 4, 11.003), Vector3(-2.41198, 5.5846, 4.18022), Vector3(-2.41198, 5.5846, -0.812438), Vector3(-2.412, 3, -6.488), Vector3(-12.904, 3, -6.48818)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.25, 4.43545, 6.5, 7.25, 8.9, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5708, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 1.5708, 0), Vector3(0, 1.5708, 0), Vector3(0, -1.5708, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_dyijb"]
+resource_name = "looking"
+length = 18.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 2.66173, 3.85711, 4.77, 5, 8.2, 10.6, 10.9759, 12.9305, 13.65, 15.8624, 16.5, 17.5163),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-12.904, 3, -6.48818), Vector3(0.648482, 5.85519, -6.48818), Vector3(0.648482, 5.85519, -6.48818), Vector3(0.648482, 11.303, -0.43791), Vector3(0.648482, 15.7521, -0.43791), Vector3(0.648482, 15.7521, -0.43791), Vector3(0.648482, 15.7521, -13.9078), Vector3(-14.6055, 15.7521, -13.9078), Vector3(-14.6055, 15.7521, -13.9078), Vector3(-14.6055, 15.7521, 13.6975), Vector3(-14.6055, 15.7521, 13.6975), Vector3(15.146, 15.7521, 13.6975), Vector3(15.146, 15.7521, 13.6975), Vector3(15.146, 15.7521, -14.3389)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2, 2.65, 4.77, 5, 8.15672, 8.60779, 10.6, 10.9759, 12.9305, 13.65, 15.8624, 16.5, 17.5163),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -1.5708, 0), Vector3(0, -1.5708, 0), Vector3(0, -3.14159, 0), Vector3(0, -3.14159, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 1.5708, 0), Vector3(0, 1.5708, 0), Vector3(0, 3.14159, 0), Vector3(0, 3.14159, 0), Vector3(0, 4.71239, 0), Vector3(0, 4.71239, 0), Vector3(0, 6.28319, 0), Vector3(0, 6.28319, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xllhl"]
+_data = {
+&"RESET": SubResource("Animation_pf13u"),
+&"appointment": SubResource("Animation_xllhl"),
+&"back_to_room": SubResource("Animation_5eeym"),
+&"looking": SubResource("Animation_dyijb")
+}
+
+[node name="RouteManager" type="AnimationPlayer"]
+libraries = {
+&"": SubResource("AnimationLibrary_xllhl")
+}

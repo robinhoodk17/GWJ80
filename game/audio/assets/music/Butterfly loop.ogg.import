@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c3eg66fhq7usb"
+path="res://.godot/imported/Butterfly loop.ogg-a21a6e1f193e398672edeef2eb5aab8b.oggvorbisstr"
+
+[deps]
+
+source_file="res://game/audio/assets/music/Butterfly loop.ogg"
+dest_files=["res://.godot/imported/Butterfly loop.ogg-a21a6e1f193e398672edeef2eb5aab8b.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

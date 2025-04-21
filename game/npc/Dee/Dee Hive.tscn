@@ -1,9 +1,8 @@
-[gd_scene load_steps=36 format=4 uid="uid://bx12xp05cowpt"]
+[gd_scene load_steps=35 format=4 uid="uid://bx12xp05cowpt"]
 
-[ext_resource type="Script" uid="uid://c1gwi5m3c5xr2" path="res://game/npc/Dee/dee_hive.gd" id="1_1almu"]
 [ext_resource type="Material" uid="uid://dh4ugbf0mb2oy" path="res://materials/materials/wood-2.tres" id="1_jgwrk"]
 [ext_resource type="Texture2D" uid="uid://c0slpp8k3ihff" path="res://game/npc/Dee/Dee Hive_grandient texture.png" id="1_w7s7l"]
-[ext_resource type="Texture2D" uid="uid://dyt44a2ijqrea" path="res://game/npc/mee hive/Bee_grandient texture.png" id="2_jgwrk"]
+[ext_resource type="Texture2D" uid="uid://d3v73gufujfer" path="res://game/npc/mee hive/Bee_grandient texture.png" id="2_jgwrk"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f2cbh"]
 resource_name = "Material.001"
@@ -525,7 +524,6 @@ _data = {
 }
 
 [node name="dee hive" type="Node3D"]
-script = ExtResource("1_1almu")
 
 [node name="Dee Hive" type="Node3D" parent="."]
 
@@ -603,7 +601,7 @@ skeleton = NodePath("")
 libraries = {
 &"": SubResource("AnimationLibrary_xwewe")
 }
-speed_scale = 0.75
+speed_scale = 0.5
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.13

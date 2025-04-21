@@ -1,0 +1,102 @@
+[gd_scene load_steps=11 format=4 uid="uid://jowdm0hucqo8"]
+
+[ext_resource type="PackedScene" uid="uid://dvcvga3y78p25" path="res://game/interactables/master.tscn" id="1_fnti4"]
+[ext_resource type="Script" uid="uid://ce5eibq0kywxl" path="res://game/interactables/cheese/cheese.gd" id="2_a88il"]
+[ext_resource type="Material" uid="uid://dnvlpeg4no6w3" path="res://materials/outline.tres" id="3_ohhxc"]
+[ext_resource type="Texture2D" uid="uid://lk088fraslcl" path="res://Textures/quest items_cheese.png" id="4_cnuh2"]
+[ext_resource type="Texture2D" uid="uid://5lvak8mfsur7" path="res://Textures/quest items_cheese2.png" id="5_20bj3"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_fnti4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_45d75"]
+resource_name = "cheese"
+transparency = 4
+shading_mode = 0
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("4_cnuh2")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o0nhm"]
+resource_name = "cheese.001"
+cull_mode = 1
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("5_20bj3")
+albedo_texture_force_srgb = true
+roughness = 0.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_8fc8t"]
+_surfaces = [{
+"aabb": AABB(-1, -1, -1.98165, 2, 2, 2.98165),
+"format": 34896613377,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAQADAAIABAAAAAIABAACAAMAAAAFAAEABQAAAAQABQADAAEABQAEAAMA"),
+"name": "cheese",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("AAAAAP//AAD/f///AAAAAAAA/////wAA////////AAD//wAA//8AAP9/AAAAAAAA")
+}, {
+"aabb": AABB(-0.851346, -0.851339, -1.68706, 1.70268, 1.70268, 2.5384),
+"format": 34896613377,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAQADAAIABAAAAAIABAACAAMAAAAFAAEABQAAAAQABQADAAEABQAEAAMA"),
+"name": "cheese.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("AAAAAP//AAD/f///AAAAAAAA/////wAA////////AAD//wAA//8AAP9/AAAAAAAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_lsomw"]
+resource_name = "quest items_Cube_105"
+_surfaces = [{
+"aabb": AABB(-1, -1, -1.98165, 2, 2, 2.98165),
+"attribute_data": PackedByteArray("/1////+f/7//n////1//v/9f/3//n/8//5//f/9f/z//X/8//58AAP+f/z//XwAA/1//f/8f/z//X/8//9//f/+f/z//3/8/"),
+"format": 34896613399,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADwAQABEA"),
+"material": SubResource("StandardMaterial3D_45d75"),
+"name": "cheese",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 18,
+"vertex_data": PackedByteArray("AAAAAP//T93/f///AABP3QAA/////0/d/38AAAAAT93/fwAAAABP3f///////0/d/3///wAAT93//wAA//9P3f//AAD///+/AAD//////7//////////vwAAAAD///+//38AAAAA/78AAAAA////v///AAD///+//3///wAA/////////////wAA////////7dDt0O3Q7dDt0O3Q7dDt0BEvES8RLxEvES8RLxEvES//////////////////////AAD/fwAA/38AAP9//3//v/9//7//f/+/")
+}, {
+"aabb": AABB(-0.851346, -0.851339, -1.68706, 1.70268, 1.70268, 2.5384),
+"attribute_data": PackedByteArray("/1////+f/7//n////1//v/9f/3//n/8//5//f/9f/z//X/8//58AAP+f/z//XwAA/1//f/8f/z//X/8//9//f/+f/z//3/8/"),
+"format": 34896613399,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADwAQABEA"),
+"material": SubResource("StandardMaterial3D_o0nhm"),
+"name": "cheese.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 18,
+"vertex_data": PackedByteArray("AAAAAP//T93/f///AABP3QAA/////0/d/38AAAAAT93/fwAAAABP3f///////0/d/3///wAAT93//wAA//9P3f//AAD///+/AAD//////7//////////vwAAAAD///+//38AAAAA/78AAAAA////v///AAD///+//3///wAA/////////////wAA////////7dDt0O3Q7dDt0O3Q7dDt0BEvES8RLxEvES8RLxEvES//////////////////////AAD/fwAA/38AAP9//3//v/9//7//f/+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_8fc8t")
+
+[node name="cheese" node_paths=PackedStringArray("experiment_timer") instance=ExtResource("1_fnti4")]
+script = ExtResource("2_a88il")
+experiment_timer = NodePath("Timer")
+experiment_length = 120.0
+freezable = true
+can_interact = false
+
+[node name="PopUp" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.275301, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="1"]
+visible = false
+mesh = SubResource("BoxMesh_fnti4")
+
+[node name="Timer" type="Timer" parent="." index="2"]
+
+[node name="cheese" type="MeshInstance3D" parent="." index="4"]
+transform = Transform3D(0.504, 0, 0, 0, 0.504, 0, 0, 0, 0.504, 0, 0, 0)
+material_overlay = ExtResource("3_ohhxc")
+mesh = SubResource("ArrayMesh_lsomw")
+skeleton = NodePath("")

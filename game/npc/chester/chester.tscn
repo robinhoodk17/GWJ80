@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwmj7ifqavdg3"]
+
+[ext_resource type="PackedScene" uid="uid://88f70ly0w5b4" path="res://game/npc/master/npc.tscn" id="1_c5umu"]
+[ext_resource type="Script" uid="uid://y3oedyfp6hwp" path="res://game/npc/chester/chester.gd" id="2_pqwb0"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_c5umu"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_pqwb0"]
+radius = 0.1
+height = 0.25
+
+[node name="NPC" instance=ExtResource("1_c5umu")]
+script = ExtResource("2_pqwb0")
+
+[node name="MeshInstance3D" parent="." index="1"]
+mesh = SubResource("PrismMesh_c5umu")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.189417, 0.304891, 0.545746)
+mesh = SubResource("CapsuleMesh_pqwb0")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="MeshInstance3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.185587, 0.304891, 0.545746)
+mesh = SubResource("CapsuleMesh_pqwb0")

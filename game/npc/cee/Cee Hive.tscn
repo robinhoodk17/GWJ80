@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://cte4c64v3loea" path="res://game/npc/cee/cee_hive.gd" id="1_ofm1d"]
 [ext_resource type="Texture2D" uid="uid://swdmlkjiq3y5" path="res://game/npc/cee/Cee Hive_Material_albedo000.png" id="2_20rbf"]
 [ext_resource type="Texture2D" uid="uid://xd2armm6sdhx" path="res://game/npc/cee/Cee Hive_walls_albedo000.png" id="3_ofm1d"]
-[ext_resource type="Texture2D" uid="uid://dyt44a2ijqrea" path="res://game/npc/mee hive/Bee_grandient texture.png" id="4_a5fvr"]
+[ext_resource type="Texture2D" uid="uid://d3v73gufujfer" path="res://game/npc/mee hive/Bee_grandient texture.png" id="4_a5fvr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0kkkc"]
 resource_name = "Material.001"
@@ -664,7 +664,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.5, 1),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, 0.903085, 0), Vector3(0, 0, 0)]
+"values": [Vector3(0, 0, 0), Vector3(0, 0.394419, 0), Vector3(0, 0, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xwewe"]
@@ -770,7 +770,6 @@ skeleton = NodePath("")
 libraries = {
 &"": SubResource("AnimationLibrary_xwewe")
 }
-speed_scale = 0.75
 
 [node name="Timer" type="Timer" parent="."]
 
