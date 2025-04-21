@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cismlmfqw7exo"
-path.s3tc="res://.godot/imported/Janitor floor _Checkerboard_pattern.png-0262e8853e3864140a1caaed9169e50b.s3tc.ctex"
-path.etc2="res://.godot/imported/Janitor floor _Checkerboard_pattern.png-0262e8853e3864140a1caaed9169e50b.etc2.ctex"
+uid="uid://f27n448jbjoy"
+path.s3tc="res://.godot/imported/quest items_Checkerboard_pattern.png-24661bf46cdefe629310cfec3e130719.s3tc.ctex"
+path.etc2="res://.godot/imported/quest items_Checkerboard_pattern.png-24661bf46cdefe629310cfec3e130719.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -15,8 +15,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Janitor floor _Checkerboard_pattern.png"
-dest_files=["res://.godot/imported/Janitor floor _Checkerboard_pattern.png-0262e8853e3864140a1caaed9169e50b.s3tc.ctex", "res://.godot/imported/Janitor floor _Checkerboard_pattern.png-0262e8853e3864140a1caaed9169e50b.etc2.ctex"]
+source_file="res://Textures/quest items_Checkerboard_pattern.png"
+dest_files=["res://.godot/imported/quest items_Checkerboard_pattern.png-24661bf46cdefe629310cfec3e130719.s3tc.ctex", "res://.godot/imported/quest items_Checkerboard_pattern.png-24661bf46cdefe629310cfec3e130719.etc2.ctex"]
 
 [params]
 

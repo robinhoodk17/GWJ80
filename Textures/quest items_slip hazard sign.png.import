@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://e2ebm6qjjmvj"
-path.s3tc="res://.godot/imported/Janitor floor _slip hazard sign.png-44c1e6dec3d388be56ae0de25d75fb8c.s3tc.ctex"
-path.etc2="res://.godot/imported/Janitor floor _slip hazard sign.png-44c1e6dec3d388be56ae0de25d75fb8c.etc2.ctex"
+uid="uid://bl8l1s1jtd46j"
+path.s3tc="res://.godot/imported/quest items_slip hazard sign.png-37009afe028860c9056dc35c1e68cee7.s3tc.ctex"
+path.etc2="res://.godot/imported/quest items_slip hazard sign.png-37009afe028860c9056dc35c1e68cee7.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -15,8 +15,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Janitor floor _slip hazard sign.png"
-dest_files=["res://.godot/imported/Janitor floor _slip hazard sign.png-44c1e6dec3d388be56ae0de25d75fb8c.s3tc.ctex", "res://.godot/imported/Janitor floor _slip hazard sign.png-44c1e6dec3d388be56ae0de25d75fb8c.etc2.ctex"]
+source_file="res://Textures/quest items_slip hazard sign.png"
+dest_files=["res://.godot/imported/quest items_slip hazard sign.png-37009afe028860c9056dc35c1e68cee7.s3tc.ctex", "res://.godot/imported/quest items_slip hazard sign.png-37009afe028860c9056dc35c1e68cee7.etc2.ctex"]
 
 [params]
 

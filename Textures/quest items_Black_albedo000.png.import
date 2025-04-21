@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7sop17y1l56t"
-path.s3tc="res://.godot/imported/Janitor floor _Black_albedo000.png-ff0d01f0e05aefb3b2189d7245960da4.s3tc.ctex"
-path.etc2="res://.godot/imported/Janitor floor _Black_albedo000.png-ff0d01f0e05aefb3b2189d7245960da4.etc2.ctex"
+uid="uid://cm76g51gtkxxb"
+path.s3tc="res://.godot/imported/quest items_Black_albedo000.png-82218221ea2e7018054e4db981272e1b.s3tc.ctex"
+path.etc2="res://.godot/imported/quest items_Black_albedo000.png-82218221ea2e7018054e4db981272e1b.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -15,8 +15,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Janitor floor _Black_albedo000.png"
-dest_files=["res://.godot/imported/Janitor floor _Black_albedo000.png-ff0d01f0e05aefb3b2189d7245960da4.s3tc.ctex", "res://.godot/imported/Janitor floor _Black_albedo000.png-ff0d01f0e05aefb3b2189d7245960da4.etc2.ctex"]
+source_file="res://Textures/quest items_Black_albedo000.png"
+dest_files=["res://.godot/imported/quest items_Black_albedo000.png-82218221ea2e7018054e4db981272e1b.s3tc.ctex", "res://.godot/imported/quest items_Black_albedo000.png-82218221ea2e7018054e4db981272e1b.etc2.ctex"]
 
 [params]
 

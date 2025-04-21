@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wgkfwafa6ect"
-path.s3tc="res://.godot/imported/Janitor floor _Rails_albedo000.png-b9b11e863f9007d97256be48fda47281.s3tc.ctex"
-path.etc2="res://.godot/imported/Janitor floor _Rails_albedo000.png-b9b11e863f9007d97256be48fda47281.etc2.ctex"
+uid="uid://hvy741idiimc"
+path.s3tc="res://.godot/imported/quest items_Rails_albedo000.png-62cf6717b89b27c3ed70dce8ae2bf16d.s3tc.ctex"
+path.etc2="res://.godot/imported/quest items_Rails_albedo000.png-62cf6717b89b27c3ed70dce8ae2bf16d.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -15,8 +15,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Janitor floor _Rails_albedo000.png"
-dest_files=["res://.godot/imported/Janitor floor _Rails_albedo000.png-b9b11e863f9007d97256be48fda47281.s3tc.ctex", "res://.godot/imported/Janitor floor _Rails_albedo000.png-b9b11e863f9007d97256be48fda47281.etc2.ctex"]
+source_file="res://Textures/quest items_Rails_albedo000.png"
+dest_files=["res://.godot/imported/quest items_Rails_albedo000.png-62cf6717b89b27c3ed70dce8ae2bf16d.s3tc.ctex", "res://.godot/imported/quest items_Rails_albedo000.png-62cf6717b89b27c3ed70dce8ae2bf16d.etc2.ctex"]
 
 [params]
 

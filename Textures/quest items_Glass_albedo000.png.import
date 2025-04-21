@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbqm5018t70dm"
-path.s3tc="res://.godot/imported/Janitor floor _Glass_albedo002.png-9d5534918c9d6ee4d6d0ee38d2b2f214.s3tc.ctex"
-path.etc2="res://.godot/imported/Janitor floor _Glass_albedo002.png-9d5534918c9d6ee4d6d0ee38d2b2f214.etc2.ctex"
+uid="uid://dfy3uxcbgrjvi"
+path.s3tc="res://.godot/imported/quest items_Glass_albedo000.png-57c72edb59f68e96707ee5bde78d6e16.s3tc.ctex"
+path.etc2="res://.godot/imported/quest items_Glass_albedo000.png-57c72edb59f68e96707ee5bde78d6e16.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -15,8 +15,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Janitor floor _Glass_albedo002.png"
-dest_files=["res://.godot/imported/Janitor floor _Glass_albedo002.png-9d5534918c9d6ee4d6d0ee38d2b2f214.s3tc.ctex", "res://.godot/imported/Janitor floor _Glass_albedo002.png-9d5534918c9d6ee4d6d0ee38d2b2f214.etc2.ctex"]
+source_file="res://Textures/quest items_Glass_albedo000.png"
+dest_files=["res://.godot/imported/quest items_Glass_albedo000.png-57c72edb59f68e96707ee5bde78d6e16.s3tc.ctex", "res://.godot/imported/quest items_Glass_albedo000.png-57c72edb59f68e96707ee5bde78d6e16.etc2.ctex"]
 
 [params]
 

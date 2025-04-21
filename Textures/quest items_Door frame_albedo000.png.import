@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cs0ap10g6cos4"
-path.s3tc="res://.godot/imported/Janitor floor _Door frame_albedo000.png-c0db29d788dc2503d18c1f795ea1d79a.s3tc.ctex"
-path.etc2="res://.godot/imported/Janitor floor _Door frame_albedo000.png-c0db29d788dc2503d18c1f795ea1d79a.etc2.ctex"
+uid="uid://bqgvwjk46pag8"
+path.s3tc="res://.godot/imported/quest items_Door frame_albedo000.png-2fbb8c4748a7428c2e9bab7c48eb9d4a.s3tc.ctex"
+path.etc2="res://.godot/imported/quest items_Door frame_albedo000.png-2fbb8c4748a7428c2e9bab7c48eb9d4a.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -15,8 +15,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Janitor floor _Door frame_albedo000.png"
-dest_files=["res://.godot/imported/Janitor floor _Door frame_albedo000.png-c0db29d788dc2503d18c1f795ea1d79a.s3tc.ctex", "res://.godot/imported/Janitor floor _Door frame_albedo000.png-c0db29d788dc2503d18c1f795ea1d79a.etc2.ctex"]
+source_file="res://Textures/quest items_Door frame_albedo000.png"
+dest_files=["res://.godot/imported/quest items_Door frame_albedo000.png-2fbb8c4748a7428c2e9bab7c48eb9d4a.s3tc.ctex", "res://.godot/imported/quest items_Door frame_albedo000.png-2fbb8c4748a7428c2e9bab7c48eb9d4a.etc2.ctex"]
 
 [params]
 
