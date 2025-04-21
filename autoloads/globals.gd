@@ -14,6 +14,8 @@ signal last_minute
 signal on_quest_start(quest_name : String, help_or_sabotage : NPC.gamestate)
 signal on_quest_end(quest_name : String, help_or_sabotage : NPC.gamestate)
 signal on_quest_progress(quest_name : String)
+signal item_grabbed
+signal item_dropped
 
 const PREWRITTEN_CONTROLLER : PackedScene = preload("res://game/player/player_controllers/prewritten_controller.tscn")
 const PLAYER : PackedScene = preload("res://game/player/player.tscn")
@@ -70,7 +72,6 @@ func quest_finished(quest_name : String, help_or_sabotage : NPC.gamestate, karma
 	print_debug(running_karma)
 
 
-
 func quest_progress(quest_name : String) -> void:
 	on_quest_progress.emit(quest_name)
 
@@ -83,3 +84,6 @@ func append_frame_data(frame_data : Dictionary) -> void:
 			second_run.append(frame_data)
 		3:
 			return
+
+func finished_loading() -> void:
+	get_tree().paused = false

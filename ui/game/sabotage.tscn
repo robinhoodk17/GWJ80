@@ -1,22 +1,16 @@
-[gd_scene load_steps=9 format=3 uid="uid://c33eejqyhtjv0"]
+[gd_scene load_steps=8 format=3 uid="uid://c33eejqyhtjv0"]
 
-[ext_resource type="Gradient" uid="uid://cinkfgepndwh4" path="res://ui/game/sabotage_texture.tres" id="1_2jwxe"]
 [ext_resource type="Script" uid="uid://cqovcij26mdmf" path="res://ui/pause_menu/interaction.gd" id="1_asiqi"]
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_3h1y6"]
-gradient = ExtResource("1_2jwxe")
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_osbut"]
-gradient = ExtResource("1_2jwxe")
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_82glg"]
-gradient = ExtResource("1_2jwxe")
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_l0ss3"]
-gradient = ExtResource("1_2jwxe")
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_rdkna"]
-gradient = ExtResource("1_2jwxe")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tfo3w"]
 bg_color = Color(0.203922, 0.203922, 0.203922, 0.392157)

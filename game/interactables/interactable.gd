@@ -88,6 +88,7 @@ func grab(_player_model : Node3D, _player_controller : player_controller) -> voi
 	collision_mask = 0
 	player_model = _player_model
 	grabbed = true
+	Globals.item_grabbed.emit()
 
 
 func drop() -> void:
@@ -95,6 +96,7 @@ func drop() -> void:
 	collision_layer = 4
 	collision_mask = 1
 	grabbed = false
+	Globals.item_dropped.emit()
 
 
 func display_prompt() -> void:

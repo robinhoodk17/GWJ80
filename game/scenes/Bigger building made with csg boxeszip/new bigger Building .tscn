@@ -3899,6 +3899,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.243, -11.604, 13.31)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5446, 16.3552, -1.85143)
 type = 1
 
+[node name="Mail" parent="Interactables" instance=ExtResource("14_xt6ak")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.04729, 2.16989, -5.52253)
+type = 6
+
 [node name="Piggy" parent="Interactables" instance=ExtResource("14_m0j6m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1133, 1.44132, -2.72934)
 type = 2

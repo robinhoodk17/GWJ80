@@ -28,6 +28,7 @@ ProjectUISoundController="*res://addons/maaacks_ui_sound_controller/base/scenes/
 Utils="*res://autoloads/utils.gd"
 GUIDE="*res://addons/guide/guide.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+LoadingScreen="*res://ui/loading_screen.tscn"
 
 [debug]
 
