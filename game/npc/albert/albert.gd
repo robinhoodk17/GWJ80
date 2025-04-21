@@ -14,6 +14,9 @@ func handle_dialogue_start(_player_controller : player_controller) -> void:
 		return
 
 	if Globals.current_time > 120 and Globals.current_time < 240:
+		if quest_started:
+			start_dialogue("albert_delivered_cheese")
+			return
 		if _player_controller.grabbing:
 			if _player_controller.grabbing.type == interactable.item_type.CHEESE:
 				start_dialogue("albert_delivered_cheese")

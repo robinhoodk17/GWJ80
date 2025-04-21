@@ -1,6 +1,6 @@
 chester_character: [speed=.25]Hello there, Ms new employee. Forgive me if I cut this short, I have a meeting to attend.
 - Of course. Go, Chester, become the best racer in the Speed Forest Grand Prix
-	chester_character: [speed=.25]Will do, Ms new employee. If this works, you will have to find someone else to get settled. [pause = 3]Altough, I just wish I had a way to get to the meeting [color=red]faster[/color]
+	[speed=.25]If this works, you will have to find someone else to get settled. [pause = 3]Altough, it seems like you can handle that yourself. 
 	chester_character: [speed=.25]See you later, Ms new employee.
 - A Nascar racer? That's a big risk.
 	chester_character: [speed=.25]You mean the crashes? Nah, I'm a great driver.[pause=3] You'll see.

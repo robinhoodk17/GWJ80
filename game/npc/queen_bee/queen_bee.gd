@@ -30,6 +30,7 @@ func handle_dialogue_start(_player_controller) -> void:
 				_player_controller.grabbing = null
 				item.global_position = Vector3(0,1000,0)
 				letter_delivered = true
+				item.quest_finished = true
 				start_dialogue("queen_bee_plan")
 				waiting_plan = true
 			else:

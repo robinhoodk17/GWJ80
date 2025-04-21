@@ -22,6 +22,7 @@ func handle_dialogue_start(_player_controller) -> void:
 					start_dialogue("romulus_will_publish_this_to_become_ceo")
 					var item : Node3D = _player_controller.grabbing
 					item.drop()
+					item.quest_finished = true
 					_player_controller.grabbing = null
 					item.global_position = Vector3(0,1000,0)
 					vinny.current_gamestate = gamestate.SABOTAGED
