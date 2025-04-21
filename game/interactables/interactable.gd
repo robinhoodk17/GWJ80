@@ -75,11 +75,13 @@ func interact(playermodel : Node3D, _player_controller : player_controller) -> v
 	
 func grab(_player_model : Node3D, _player_controller : player_controller) -> void:
 	if quest_finished:
-		Dialogic.start("butterfly_council").process_mode = Node.PROCESS_MODE_ALWAYS
-		Dialogic.process_mode = Node.PROCESS_MODE_ALWAYS
-		@warning_ignore("untyped_declaration")
-		Dialogic.timeline_ended.connect(func():get_tree().set('paused', false))
-		get_tree().paused = true
+		#Dialogic.start("butterfly_council").process_mode = Node.PROCESS_MODE_ALWAYS
+		Dialogic.start("butterfly_council")
+		return
+		#Dialogic.process_mode = Node.PROCESS_MODE_ALWAYS
+		#@warning_ignore("untyped_declaration")
+		#Dialogic.timeline_ended.connect(func():get_tree().set('paused', false))
+		#get_tree().paused = true
 		
 	if _player_controller.grabbing != null:
 		_player_controller.grabbing.drop()

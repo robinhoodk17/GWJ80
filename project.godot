@@ -71,6 +71,7 @@ directories/dtl_directory={
 "barry_asks_for_help": "res://game/npc/barry/timelines/barry_asks_for_help.dtl",
 "barry_waits_for_help": "res://game/npc/barry/timelines/barry_waits_for_help.dtl",
 "better_working_conditions": "res://game/npc/barry/timelines/better_working_conditions.dtl",
+"butterfly_council": "res://game/timelines/butterfly_council.dtl",
 "cee_barry_quest": "res://game/timelines/cee_barry_quest.dtl",
 "cee_chils_in_cafeteria": "res://game/npc/cee/timelines/cee_chils_in_cafeteria.dtl",
 "cee_in_clean_room": "res://game/npc/cee/timelines/cee_in_clean_room.dtl",

@@ -23,6 +23,7 @@ var current_gamestate : gamestate = gamestate.NORMAL
 var current_event : float = 0.0
 var original_position : Vector3
 var original_rotation : Basis
+var player_control : player_controller
 
 func _ready() -> void:
 	Dialogic.timeline_ended.connect(unpause)
@@ -105,6 +106,8 @@ func turn_off_prompt() -> void:
 
 func interact(_playermodel : Node3D, _player_controller : player_controller) -> void:
 	handle_dialogue_start(_player_controller)
+	player_control = _player_controller
+	player_control.disable()
 
 
 func start_dialogue(timeline : String) -> void:
@@ -112,9 +115,9 @@ func start_dialogue(timeline : String) -> void:
 	Dialogic.start(timeline).process_mode = Node.PROCESS_MODE_ALWAYS
 	Dialogic.process_mode = Node.PROCESS_MODE_ALWAYS
 	@warning_ignore("untyped_declaration")
-	#Dialogic.timeline_ended.connect(func():get_tree().set('paused', false))
-	get_tree().paused = true
-	Global.playing = false
+	Dialogic.timeline_ended.connect(func():player_control.reenable())
+	#get_tree().paused = true
+	#Global.playing = false
 	
 
 

@@ -15,6 +15,7 @@ class_name player_controller
 @export var jump_velocity : float= 3.5
 @export var hover_delay : float = 0.35
 const ROTATION_SPEED : float = 6.0
+var disabled : bool = false
 @export_category("Camera controls")
 @export var offset : Vector3 = Vector3(0.0, 1.5, 0.0)
 #@onready var look_at_target: Node3D = $"../LookAtTarget"
@@ -125,7 +126,7 @@ func _physics_process(delta: float) -> void:
 			camera_timer.start(camera_delay)
 	var direction : Vector3 = (basis * Vector3(input_dir.x, 0, input_dir.y)).normalized() / Globals.time_scale
 	
-	if direction:
+	if direction and !disabled:
 		player.velocity.x = direction.x * current_speed
 		player.velocity.z = direction.z * current_speed
 		#now rotate the model
@@ -179,6 +180,8 @@ func restarted() -> void:
 
 
 func handle_time_freeze() -> void:
+	if disabled:
+		return
 	if interaction_detection.showing_which != null:
 		if interaction_detection.showing_which.is_in_group("item"):
 			if !interaction_detection.showing_which.freezable:
@@ -187,14 +190,24 @@ func handle_time_freeze() -> void:
 
 
 func handle_jump() -> void:
+	if disabled:
+		return
 	player.velocity.y = jump_velocity
 	hover_timer.start(hover_delay)
 
 
 func handle_interaction() -> void:
+	if disabled:
+		return
 	if interaction_detection.showing_which != null:
 		interaction_detection.showing_which.interact(playermodel, self)
 	else:
 		if grabbing != null:
 			grabbing.drop()
 			grabbing = null
+
+func reenable() -> void:
+	disabled = false
+
+func disable() -> void:
+	disabled = true
