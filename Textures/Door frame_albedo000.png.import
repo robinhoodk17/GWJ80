@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cnr5e0pu3r5tf"
-path.s3tc="res://.godot/imported/Door frame_albedo000.png-a1f5c8afec673162e973b85e5f097800.s3tc.ctex"
-path.etc2="res://.godot/imported/Door frame_albedo000.png-a1f5c8afec673162e973b85e5f097800.etc2.ctex"
+path.s3tc="res://.godot/imported/Door frame_albedo000.png-4277b9ed3087b6f5600f46dbf2d865b8.s3tc.ctex"
+path.etc2="res://.godot/imported/Door frame_albedo000.png-4277b9ed3087b6f5600f46dbf2d865b8.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -13,8 +13,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://Textures/Door frame_albedo000.png"
-dest_files=["res://.godot/imported/Door frame_albedo000.png-a1f5c8afec673162e973b85e5f097800.s3tc.ctex", "res://.godot/imported/Door frame_albedo000.png-a1f5c8afec673162e973b85e5f097800.etc2.ctex"]
+source_file="res://textures/Door frame_albedo000.png"
+dest_files=["res://.godot/imported/Door frame_albedo000.png-4277b9ed3087b6f5600f46dbf2d865b8.s3tc.ctex", "res://.godot/imported/Door frame_albedo000.png-4277b9ed3087b6f5600f46dbf2d865b8.etc2.ctex"]
 
 [params]
 

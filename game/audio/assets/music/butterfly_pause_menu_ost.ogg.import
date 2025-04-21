@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/butterfly_pause_menu_ost.ogg-18d73dd89dd2e03d
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
 bpm=0
 beat_count=0

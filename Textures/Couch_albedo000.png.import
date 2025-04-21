@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c1in7jtv1g2lw"
-path.s3tc="res://.godot/imported/Couch_albedo000.png-01c8477ddd8ffc806a30d2dce78e3b33.s3tc.ctex"
-path.etc2="res://.godot/imported/Couch_albedo000.png-01c8477ddd8ffc806a30d2dce78e3b33.etc2.ctex"
+path.s3tc="res://.godot/imported/Couch_albedo000.png-2461e7641c5eff23cfec7de115911f1a.s3tc.ctex"
+path.etc2="res://.godot/imported/Couch_albedo000.png-2461e7641c5eff23cfec7de115911f1a.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -13,8 +13,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://Textures/Couch_albedo000.png"
-dest_files=["res://.godot/imported/Couch_albedo000.png-01c8477ddd8ffc806a30d2dce78e3b33.s3tc.ctex", "res://.godot/imported/Couch_albedo000.png-01c8477ddd8ffc806a30d2dce78e3b33.etc2.ctex"]
+source_file="res://textures/Couch_albedo000.png"
+dest_files=["res://.godot/imported/Couch_albedo000.png-2461e7641c5eff23cfec7de115911f1a.s3tc.ctex", "res://.godot/imported/Couch_albedo000.png-2461e7641c5eff23cfec7de115911f1a.etc2.ctex"]
 
 [params]
 

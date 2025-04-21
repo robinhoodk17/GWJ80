@@ -11,6 +11,9 @@ time_of_present = 430.0
 
 [node name="dee hive" parent="." index="6" instance=ExtResource("2_or8pd")]
 
+[node name="AnimationPlayer" parent="dee hive/Dee Hive" index="12"]
+autoplay = "idle"
+
 [node name="TimerForPresent" type="Timer" parent="." index="7"]
 
 [editable path="dee hive"]

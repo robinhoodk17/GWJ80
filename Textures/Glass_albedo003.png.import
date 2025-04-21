@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cb5fydk0msker"
-path.s3tc="res://.godot/imported/Glass_albedo003.png-cf56751142fe14bb732a35334d7dd9ae.s3tc.ctex"
-path.etc2="res://.godot/imported/Glass_albedo003.png-cf56751142fe14bb732a35334d7dd9ae.etc2.ctex"
+path.s3tc="res://.godot/imported/Glass_albedo003.png-3e07d088112eadc30bed9ee6b5e9e151.s3tc.ctex"
+path.etc2="res://.godot/imported/Glass_albedo003.png-3e07d088112eadc30bed9ee6b5e9e151.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -13,8 +13,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://Textures/Glass_albedo003.png"
-dest_files=["res://.godot/imported/Glass_albedo003.png-cf56751142fe14bb732a35334d7dd9ae.s3tc.ctex", "res://.godot/imported/Glass_albedo003.png-cf56751142fe14bb732a35334d7dd9ae.etc2.ctex"]
+source_file="res://textures/Glass_albedo003.png"
+dest_files=["res://.godot/imported/Glass_albedo003.png-3e07d088112eadc30bed9ee6b5e9e151.s3tc.ctex", "res://.godot/imported/Glass_albedo003.png-3e07d088112eadc30bed9ee6b5e9e151.etc2.ctex"]
 
 [params]
 

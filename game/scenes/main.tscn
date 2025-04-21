@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://b600ql2so1y32"]
+[gd_scene load_steps=4 format=3 uid="uid://b600ql2so1y32"]
 
 [ext_resource type="Script" uid="uid://bvr8gs45y6h57" path="res://game/scenes/main.gd" id="1_cii0i"]
 [ext_resource type="PackedScene" uid="uid://u1vgfeia861q" path="res://ui/ui.tscn" id="2_e2kwd"]
 [ext_resource type="Resource" uid="uid://v5u0dyabni7e" path="res://input/default_mapping_context.tres" id="2_gp8w2"]
-[ext_resource type="AudioStream" uid="uid://dby7xrqbadsne" path="res://game/audio/assets/music/butterfly_main_menu_ost.wav" id="4_8buom"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_cii0i")
@@ -12,5 +11,4 @@ default_mapping_context = ExtResource("2_gp8w2")
 [node name="UI" parent="." instance=ExtResource("2_e2kwd")]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_8buom")
 autoplay = true
