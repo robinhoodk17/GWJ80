@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dht60f7m1vk30"
-path.s3tc="res://.godot/imported/Water Cooler_albedo000.png-73ac0004e0df3b3ba99645dc3a5bb6fa.s3tc.ctex"
-path.etc2="res://.godot/imported/Water Cooler_albedo000.png-73ac0004e0df3b3ba99645dc3a5bb6fa.etc2.ctex"
+path.s3tc="res://.godot/imported/Water Cooler_albedo000.png-3ad0bb299231aa8b938c81958ef8dbba.s3tc.ctex"
+path.etc2="res://.godot/imported/Water Cooler_albedo000.png-3ad0bb299231aa8b938c81958ef8dbba.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -13,8 +13,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://textures/Water Cooler_albedo000.png"
-dest_files=["res://.godot/imported/Water Cooler_albedo000.png-73ac0004e0df3b3ba99645dc3a5bb6fa.s3tc.ctex", "res://.godot/imported/Water Cooler_albedo000.png-73ac0004e0df3b3ba99645dc3a5bb6fa.etc2.ctex"]
+source_file="res://Textures/Water Cooler_albedo000.png"
+dest_files=["res://.godot/imported/Water Cooler_albedo000.png-3ad0bb299231aa8b938c81958ef8dbba.s3tc.ctex", "res://.godot/imported/Water Cooler_albedo000.png-3ad0bb299231aa8b938c81958ef8dbba.etc2.ctex"]
 
 [params]
 
